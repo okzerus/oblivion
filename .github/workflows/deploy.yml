@@ -13,12 +13,11 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Upload Files via SFTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         server: ${{ secrets.SFTP_HOST }}
         port: ${{ secrets.SFTP_PORT }}
         username: ${{ secrets.SFTP_USER }}
         password: ${{ secrets.SFTP_PASS }}
-        protocol: sftp
-        local-dir: ./
-        server-dir: ./world/datapacks/
+        local_path: './*'
+        remote_path: './world/datapacks/'

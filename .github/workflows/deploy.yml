@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Upload Files via SFTP
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      uses: AfonsoLorenzo/sftp-deploy
       with:
         server: ${{ secrets.SFTP_HOST }}
         port: ${{ secrets.SFTP_PORT }}

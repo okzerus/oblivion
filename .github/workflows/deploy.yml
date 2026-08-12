@@ -1,23 +1,26 @@
-name: Deploy to Server
+name: Deploy Datapack to Minecraft Server
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch: {}
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-    - name: Upload Datapack Files via SFTP
-      uses: nwtgck/actions-sftp-deploy@v1.2.2
-      with:
-        host: ${{ secrets.SFTP_HOST }}
-        port: ${{ secrets.SFTP_PORT }}
-        username: ${{ secrets.SFTP_USER }}
-        password: ${{ secrets.SFTP_PASS }}
-        local_path: './'
-        remote_path: './world/datapacks/'
+      - name: Upload to server via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
+          local_path: './*'
+          remote_path: '/world/datapacks/oblivion'
+          sftp_only: true
+          delete_remote_files: true

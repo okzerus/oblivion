@@ -1,7 +1,12 @@
+scoreboard objectives add zero dummy
+scoreboard players set @a zero 0
 scoreboard objectives add health_current dummy
 scoreboard objectives add health_old dummy
 scoreboard objectives add scorchfield_damage_taken dummy
 scoreboard objectives add fire_damage_total dummy
+scoreboard objectives add fire_damage_total_old dummy
+scoreboard objectives add fire_damage_countdown dummy
+
 
 
 

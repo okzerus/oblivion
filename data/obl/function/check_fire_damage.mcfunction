@@ -1,0 +1,2 @@
+execute if score @s fire_damage_total > @s fire_damage_total_old run scoreboard players set @s fire_damage_countdown 300
+execute if score @s fire_damage_total matches 300.. run scoreboard players set @s fire_damage_total 300

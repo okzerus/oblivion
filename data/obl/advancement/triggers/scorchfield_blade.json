@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:iron_sword"],
+          "predicates": {
+            "minecraft:custom_data": {"obl": "scorchfield_blade"}
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "obl:scorchfield_ability"
+  }
+}

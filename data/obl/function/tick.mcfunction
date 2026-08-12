@@ -15,3 +15,6 @@ execute as @a at @s if score @s fire_damage_countdown > @s zero run function obl
 
 execute as @a at @s run function obl:scorchfield_visual
 
+
+#revoke advancements
+

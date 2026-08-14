@@ -24,6 +24,6 @@
     }
   },
   "rewards": {
-    "function": "obl:tech/player/adv/on.hit.function"
+    "function": "obl:tech/player/adv/on.hit"
   }
 }

@@ -12,7 +12,7 @@ tag @s add obl.temp.success_hit
 
 ###   F U N C T I O N
 # Hit entity found? Proceed to weapon detection.
-execute if entity @s[tag=!obl.temp.success_hit] unless entity @s[tag=obl.hit_cooldown] run function obl:item/weapon/on.hit
+execute if entity @s[tag=!obl.temp.success_hit,tag=!obl.hit_cooldown] run function obl:item/weapon/on.hit
 
 
 ###   H I T   C O O L D O W N

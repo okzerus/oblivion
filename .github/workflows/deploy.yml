@@ -23,3 +23,12 @@ jobs:
           localDir: '.'
           remoteDir: 'world/datapacks/oblivion'
           exclude: '.git/,.github/'
+          removeExtraFilesOnServer: true
+
+      - name: Reload datapack via RCON
+        uses: Plagiatus/RCON-Action@v0.3
+        with:
+          server: ${{ secrets.RCON_HOST }}
+          port: ${{ secrets.RCON_PORT }}
+          password: ${{ secrets.RCON_PASS }}
+          commands: '["reload"]'

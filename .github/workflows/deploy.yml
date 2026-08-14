@@ -1,4 +1,4 @@
-name: Deploy Datapack to Minecraft Server
+name: Deploy Datapack
 
 on:
   push:

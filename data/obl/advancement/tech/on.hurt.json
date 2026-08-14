@@ -5,6 +5,6 @@
     }
   },
   "rewards": {
-    "function": "oblivion:tech/on.hurt.function"
+    "function": "obl:tech/player/adv/on.hurt"
   }
 }

@@ -18,12 +18,12 @@
           }
         },
         "entity": {
-          "type": "#oblivion:all_mobs"
+          "type": "#obl:all_mobs"
         }
       }
     }
   },
   "rewards": {
-    "function": "oblivion:tech/on.hit.function"
+    "function": "obl:tech/player/adv/on.hit.function"
   }
 }

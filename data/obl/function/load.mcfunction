@@ -1,12 +1,3 @@
-<<<<<<< Updated upstream
-#scoreboard setup
-scoreboard objectives add health_current dummy
-scoreboard objectives add health_old dummy
-scoreboard objectives add damage_taken dummy
-scoreboard objectives add fire_damage_total dummy
-scoreboard objectives add fire_damage_total_old dummy
-scoreboard objectives add fire_damage_countdown dummy
-=======
 ### S C O R E S
 
 scoreboard objectives add obl dummy
@@ -20,9 +11,10 @@ scoreboard objectives add obl.hp_old dummy
 #scoreboard objectives add fire_damage_total dummy
 #scoreboard objectives add fire_damage_total_old dummy
 #scoreboard objectives add fire_damage_countdown dummy
->>>>>>> Stashed changes
 
-#Testing and Debugging
+
+
+
 scoreboard objectives setdisplay sidebar fire_damage_total
 
 

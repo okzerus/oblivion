@@ -1,4 +1,4 @@
-# From on.entity.1t
+# From tech/player/adv/on.hit
 
 # Calculates the amount of damage taken, storing in obl.damage_taken
 scoreboard players operation @s obl.damage_taken = @s obl.health_old

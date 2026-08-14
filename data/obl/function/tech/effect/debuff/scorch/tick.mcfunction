@@ -1,7 +1,6 @@
 ###   P A R T I C L E S
-particle lava ~ ~ ~ 0.2 0 0.2 0 1
 particle flame ~ ~0.5 ~ 0.3 0.6 0.3 0.01 2
-particle smoke ~ ~0.5 ~ 0.3 0.6 0.3 0.01 3
+particle smoke ~ ~0.5 ~ 0.3 0.6 0.3 0.01 4
 
 
 
@@ -15,22 +14,22 @@ execute if entity @a[tag=obl.effect.buff.scorchfield,distance=..15] if score @s 
 
 ## Tick up the interval between damage dealing, depending on the strength of the debuff.
 scoreboard players add @s obl.effect.debuff.scorch.interval 1
-execute if entity @s[scores={obl.effect.debuff.scorch.strength=1,obl.effect.debuff.scorch.interval=30}] run scoreboard players set @s obl.effect.debuff.scorch.interval 0
-execute if entity @s[scores={obl.effect.debuff.scorch.strength=2,obl.effect.debuff.scorch.interval=20}] run scoreboard players set @s obl.effect.debuff.scorch.interval 0
+execute if entity @s[scores={obl.effect.debuff.scorch.strength=1,obl.effect.debuff.scorch.interval=30..}] run scoreboard players set @s obl.effect.debuff.scorch.interval 0
+execute if entity @s[scores={obl.effect.debuff.scorch.strength=2,obl.effect.debuff.scorch.interval=20..}] run scoreboard players set @s obl.effect.debuff.scorch.interval 0
 
 
 
 ###   D A M A G E
 # Deal damage depending on effect's strength.
-execute if entity @s[scores={obl.effect.debuff.scorch.strength=1,obl.effect.debuff.scorch.interval=0}] run damage @s 1 obl:scorch
-execute if entity @s[scores={obl.effect.debuff.scorch.strength=2,obl.effect.debuff.scorch.interval=0}] run damage @s 2 obl:scorch
+execute if entity @s[scores={obl.effect.debuff.scorch.strength=1,obl.effect.debuff.scorch.interval=0}] run damage @s 1 obl:scorch by @p[tag=obl.effect.buff.scorchfield]
+execute if entity @s[scores={obl.effect.debuff.scorch.strength=2,obl.effect.debuff.scorch.interval=0}] run damage @s 2 obl:scorch by @p[tag=obl.effect.buff.scorchfield]
 
 ## Add Scorchfield count to nearby players with Scorchfield buff.
 execute if entity @s[scores={obl.effect.debuff.scorch.strength=1,obl.effect.debuff.scorch.interval=0}] run scoreboard players add @a[tag=obl.effect.buff.scorchfield,distance=..15] obl.effect.buff.scorchfield.count 1
 execute if entity @s[scores={obl.effect.debuff.scorch.strength=2,obl.effect.debuff.scorch.interval=0}] run scoreboard players add @a[tag=obl.effect.buff.scorchfield,distance=..15] obl.effect.buff.scorchfield.count 2
 
 ## The target takes Scorch damage; prevent Scorchfield from decaying.
-execute if entity @s[scores={obl.effect.debuff.scorch.interval=0}] run scoreboard players set @a[tag=obl.effect.buff.scorchfield,distance=..15] obl.effect.buff.scorchfield.decay 300
+execute if score @s obl.effect.debuff.scorch.interval matches 0 run scoreboard players set @a[tag=obl.effect.buff.scorchfield,distance=..15] obl.effect.buff.scorchfield.decay 300
 
 
 

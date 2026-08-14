@@ -19,7 +19,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{obl:\"scorchfield_blade\"}"
+              "tag": "{obl.weapon:\"crack_of_dawn\"}"
             },
             {
               "function": "minecraft:set_name",

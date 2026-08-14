@@ -27,6 +27,10 @@ tag @s remove obl.temp.success_hit
 ###   E F F E C T S
 
 ###   O B L I V I O N   E F F E C T S
+## Scorchfield
+execute if score @s obl.effect.buff.scorchfield.count matches 1.. run function obl:tech/effect/buff/scorchfield/tick
+## Cleanup
+execute unless score @s obl.effect.buff.scorchfield.count matches 1.. run tag @s remove obl.effect.buff.scorchfield
 
 ###   M I S C
 

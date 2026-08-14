@@ -13,12 +13,16 @@
               {
                 "id": "minecraft:avoids_guardian_thorns",
                 "expected": false
+              },
+              {
+                "id": "obl:skips_hit",
+                "expected": false
               }
             ]
           }
         },
         "entity": {
-          "type": "#obl:all_mobs"
+          "minecraft:entity_type": "#obl:all_mobs"
         }
       }
     }

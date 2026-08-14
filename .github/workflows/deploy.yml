@@ -1,4 +1,4 @@
-name: Deploy Datapack
+name: Deploy Datapack on Server
 
 on:
   push:

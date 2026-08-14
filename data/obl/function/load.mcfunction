@@ -1,23 +1,24 @@
 ### S C O R E S
 
-scoreboard objectives add obl dummy
+## Operations
 scoreboard objectives add obl.const dummy
 scoreboard players set #zero obl.const 0
 scoreboard players set #two obl.const 2
+## Misc
+scoreboard objectives add obl dummy
 scoreboard objectives add obl.health dummy
 scoreboard objectives add obl.health_old dummy
 scoreboard objectives add obl.damage_taken dummy
-#scoreboard objectives add obl.weapon.cod.
-
-#scorchfield_damage_taken dummy
-#scoreboard objectives add fire_damage_total dummy
-#scoreboard objectives add fire_damage_total_old dummy
-#scoreboard objectives add fire_damage_countdown dummy
-
+scoreboard objectives add obl.effect.buff.scorchfield.count dummy
+scoreboard objectives add obl.effect.buff.scorchfield.decay dummy
+scoreboard objectives add obl.effect.debuff.scorch.tick dummy
+scoreboard objectives add obl.effect.debuff.scorch.strength dummy
+scoreboard objectives add obl.effect.debuff.scorch.interval dummy
 
 
 
-scoreboard objectives setdisplay sidebar fire_damage_total
+
+scoreboard objectives setdisplay sidebar obl.effect.buff.scorchfield.count
 
 
 

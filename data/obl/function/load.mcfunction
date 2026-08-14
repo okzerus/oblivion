@@ -1,10 +1,10 @@
-### S C O R E S
+### С Ч Ё Т Ч И К И
 
-## Operations
+## Операции
 scoreboard objectives add obl.const dummy
 scoreboard players set #zero obl.const 0
 scoreboard players set #two obl.const 2
-## Misc
+## Разное
 scoreboard objectives add obl dummy
 scoreboard objectives add obl.health dummy
 scoreboard objectives add obl.health_old dummy
@@ -22,7 +22,7 @@ scoreboard objectives setdisplay sidebar obl.effect.buff.scorchfield.count
 
 
 
-### E N D
+### К О Н Е Ц
 execute unless score first_load obl matches 1 run tellraw @a {"text": "oblivion datapack successfully installed", "color": "#203ee6","bold": true}
 execute if score first_load obl matches 1 run tellraw @a {"text": "oblivion datapack successfully reloaded", "color": "#203ee6","bold": true}
 execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1

@@ -1,19 +1,19 @@
-# From tick
+# Из tick.mcfunction
 
-###   H E A L T H
-# Update entity's HP from NBT
+###   З Д О Р О В Ь Е
+# Обновить здоровье сущности из NBT
 execute store result score @s obl.health run data get entity @s Health
 
 
-###   E F F E C T S
-# Scorch
+###   Э Ф Ф Е К Т Ы
+# Ожог
 execute if entity @s[tag=obl.effect.debuff.scorch] run function obl:tech/effect/debuff/scorch/tick
 
 
-# Announcement
+# Объявление
 execute if entity @s[type=armor_stand,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
 
 
 
-###   C L E A N U P
+###   О Ч И С Т К А
 tag @s remove obl.temp.took_damage

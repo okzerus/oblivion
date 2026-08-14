@@ -24,7 +24,7 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": "Меч который круто",
+              "name": "Проблеск Зари",
               "target": "item_name"
             }
           ]

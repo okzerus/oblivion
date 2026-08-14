@@ -8,31 +8,31 @@
 #                                                                                                                                                               #
 #################################################################################################################################################################
 
-###   F I R S T   J O I N
+###   П Е Р В Ы Й   З А Х О Д
 
-###   P L A Y E R ' S   N B T   T O   S T O R A G E
+###   N B T   И Г Р О К А   В   Х Р А Н И Л И Щ Е
 
-###   W E A P O N   C D
+###   К У Л Д А У Н   О Р У Ж И Я
 execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
 tag @s remove obl.temp.success_hit
 
-###   L I F E   T I C K
+###   Т И К   Ж И З Н И (?)
 
 #################################################################################################################################################################
 
-###   W A L K I N G   /   S P R I N T I N G   /   F A L L I N G
+###   Х О Д Ь Б А   /   Б Е Г   /   П А Д Е Н И Е
 
-###   D E A T H   /   R E S P A W N
+###   С М Е Р Т Ь   /   Р Е С П А В Н
 
-###   E F F E C T S
+###   Э Ф Ф Е К Т Ы
 
-###   O B L I V I O N   E F F E C T S
-## Scorchfield
+###   Э Ф Ф Е К Т Ы   А Б Л И В О Н А
+## Пепелище (Scorchfield)
 execute if score @s obl.effect.buff.scorchfield.count matches 1.. run function obl:tech/effect/buff/scorchfield/tick
-## Cleanup
+## О Ч И С Т К А
 execute unless score @s obl.effect.buff.scorchfield.count matches 1.. run tag @s remove obl.effect.buff.scorchfield
 
-###   M I S C
+###   Р А З Н О Е
 
 #################################################################################################################################################################
 

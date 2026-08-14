@@ -1,8 +1,8 @@
-# From tech/player/adv/on.hit
+# Из tech/player/adv/on.hit
 
-# Calculates the amount of damage taken, storing in obl.damage_taken
+# Вычисляет количество полученного урона, сохраняет в obl.damage_taken
 scoreboard players operation @s obl.damage_taken = @s obl.health_old
 scoreboard players operation @s obl.damage_taken -= @s obl.health
 
-# Leaves a temp tag indicating that the target did take damage
+# Оставляет временный тэг, указывающий на то, что цель получила урон
 tag @s add obl.temp.took_damage

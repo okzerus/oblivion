@@ -14,6 +14,10 @@ execute if entity @s[tag=obl.effect.debuff.scorch] run function obl:tech/effect/
 execute if entity @s[type=armor_stand,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
 
 
+scoreboard players add @s[type=block_display,tag=obl.crack_of_dawn.slash.vfx] obl 1
+execute as @s[type=block_display,tag=obl.crack_of_dawn.slash.vfx, scores={obl=10..}] run kill @s
+
+
 
 ###   О Ч И С Т К А
 tag @s remove obl.temp.took_damage

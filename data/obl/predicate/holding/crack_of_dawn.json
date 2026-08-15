@@ -5,7 +5,7 @@
     "minecraft:equipment": {
       "mainhand": {
         "items": "minecraft:iron_sword",
-        "components": {
+        "predicates": {
           "minecraft:custom_data": "{obl.weapon.id:\"crack_of_dawn\"}"
         }
       }

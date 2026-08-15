@@ -11,7 +11,7 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:consumable": {
-                  "consume_seconds": 0,
+                  "consume_seconds": 0.05,
                   "sound": "intentionally_empty",
                   "has_consume_particles": false
                 }

@@ -13,8 +13,17 @@
 ###   N B T   И Г Р О К А   В   Х Р А Н И Л И Щ Е
 
 ###   К У Л Д А У Н   О Р У Ж И Я
-execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
+#execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
 tag @s remove obl.temp.success_hit
+
+#Абилка крэка зари
+execute if score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run scoreboard players remove @s obl.weapon.crack_of_dawn.ability.cd 1
+
+###   И С П О Л Ь З О В А Н И Е   О Р У Ж И Я
+#Проблеск зари
+execute if entity @s run scoreboard players operation @s obl.holding_rmb_old = @s obl.holding_rmb
+execute if score @s obl.holding_rmb = @s obl.holding_rmb_old run function obl:tech/general_cancel
+
 
 ###   Т И К   Ж И З Н И (?)
 

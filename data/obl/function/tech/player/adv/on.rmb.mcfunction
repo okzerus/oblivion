@@ -1,10 +1,9 @@
 # Из достижения tech/on.rmb
 
-
-
 ###   У Д Е Р Ж И В А Н И Е   П К М
 tag @s add obl.holding_rmb
 scoreboard players add @s obl.holding_rmb 1
+advancement revoke @s only obl:tech/on.rmb
 
 
 
@@ -13,4 +12,4 @@ scoreboard players add @s obl.holding_rmb 1
 
 ## УДЕРЖИВАНИЕ:
 # Crack of Dawn
-#execute if entity @s[scores={obl.weapon.crack_of_dawn.ability.cd=0,obl.holding_rmb=1}] run function obl
+execute if entity @s[scores={obl.weapon.crack_of_dawn.ability.cd=0,obl.holding_rmb=20}] run function obl:item/weapon/crack_of_dawn/ability/start

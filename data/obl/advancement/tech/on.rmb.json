@@ -5,7 +5,7 @@
       "conditions": {
         "item": {
           "predicates": {
-            "minecraft:custom_data": {"obl.rmb_ability":"1"}
+            "minecraft:custom_data": "{obl.rmb_ability:1}"
           }
         }
       }

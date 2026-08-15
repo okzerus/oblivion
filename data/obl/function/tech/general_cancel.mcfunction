@@ -1,0 +1,1 @@
+scoreboard players set @s obl.holding_rmb 0

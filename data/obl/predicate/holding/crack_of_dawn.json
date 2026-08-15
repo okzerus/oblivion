@@ -6,7 +6,7 @@
       "mainhand": {
         "items": "minecraft:iron_sword",
         "components": {
-          "minecraft:custom_data": "{obl.weapon:\"crack_of_dawn\"}"
+          "minecraft:custom_data": "{obl.weapon.id:\"crack_of_dawn\"}"
         }
       }
     }

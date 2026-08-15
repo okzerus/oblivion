@@ -9,6 +9,7 @@ scoreboard objectives add obl dummy
 scoreboard objectives add obl.health dummy
 scoreboard objectives add obl.health_old dummy
 scoreboard objectives add obl.damage_taken dummy
+scoreboard objectives add obl.holding_rmb dummy
 scoreboard objectives add obl.effect.buff.scorchfield.count dummy
 scoreboard objectives add obl.effect.buff.scorchfield.decay dummy
 scoreboard objectives add obl.effect.debuff.scorch.tick dummy

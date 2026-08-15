@@ -19,7 +19,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{obl.weapon:\"crack_of_dawn\"}"
+              "tag": "{obl.weapon.id:\"crack_of_dawn\",obl.weapon:1,obl.rmb_ability:1}"
             },
             {
               "function": "minecraft:set_name",

@@ -4,15 +4,14 @@
       "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
-          "items": ["minecraft:iron_sword"],
           "predicates": {
-            "minecraft:custom_data": {"obl": "scorchfield_blade"}
+            "minecraft:custom_data": {"obl.rmb_ability":"1"}
           }
         }
       }
     }
   },
   "rewards": {
-    "function": "obl:scorchfield_ability"
+    "function": "obl:tech/player/adv/on.rmb"
   }
 }

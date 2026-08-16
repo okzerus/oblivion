@@ -8,9 +8,9 @@ particle smoke ~ ~0.5 ~ 0.3 0.6 0.3 0.01 4
 ## Убирает дебафф Ожога, если носитель также имеет бафф Пепелища с 100+ счётом.
 execute if entity @s[tag=obl.effect.scorchfield,tag=!obl.scorch_immune,scores={obl.effect.scorchfield.count=100..}] run function obl:effect/scorch/end
 ## Уменьшается когда ЕСТЬ игрок с Пепелищем в радиусе 15 блоков; останавливается на 100 ЕСЛИ у упомянутого игрока есть 200+ счёта Пепелища.
-execute if entity @a[tag=obl.effect.scorchfield,distance=..15,score={obl.effect.scorchfield.count=200..}] if score @s obl.effect.scorch.tick matches 101.. run scoreboard players remove @s obl.effect.scorch.tick 1
+execute if entity @a[tag=obl.effect.scorchfield,distance=..15,scores={obl.effect.scorchfield.count=200..}] if score @s obl.effect.scorch.tick matches 101.. run scoreboard players remove @s obl.effect.scorch.tick 1
 ## Восстановить длительность Ожога на 5 секунд если рядом находится игрок с 200+ счётом Пепелища и длительность ниже 5 секунд.
-execute if entity @a[tag=obl.effect.scorchfield,distance=..15,score={obl.effect.scorchfield.count=200..}] if score @s obl.effect.scorch.tick matches ..99 run scoreboard players set @s obl.effect.scorch.tick 100
+execute if entity @a[tag=obl.effect.scorchfield,distance=..15,scores={obl.effect.scorchfield.count=200..}] if score @s obl.effect.scorch.tick matches ..99 run scoreboard players set @s obl.effect.scorch.tick 100
 ## Уменьшается когда НЕТ игрока с 200+ счётом Пепелища в радиусе 15 блоков, вплоть до 0.
 execute unless entity @a[tag=obl.effect.scorchfield,distance=..15,score={obl.effect.scorchfield.count=200..}] run scoreboard players remove @s obl.effect.scorch.tick 1
 ## Если рядом есть игрок с 300 счётом Пепелища, шанс на то чтобы перебросить Ожог на ближайшего моба без Ожога.

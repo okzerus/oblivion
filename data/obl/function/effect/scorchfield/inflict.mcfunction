@@ -18,7 +18,7 @@ particle large_smoke ~ ~0.5 ~ 0.3 0.6 0.3 0.01 15
 
 ###   С Т А Р Т
 ## Выдаём тег для сущности под эффектом. (Используется для тиканья из on.player.1t в tech/effect/buff/scorchfield/tick)
-tag @s add obl.effect.debuff.scorch
+tag @s add obl.effect.scorch
 
 
 

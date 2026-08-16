@@ -44,10 +44,10 @@ tag @s remove obl.holding_rmb
 
 ###   Э Ф Ф Е К Т Ы   А Б Л И В О Н А
 ## Пепелище (Scorchfield)
-execute if score @s obl.effect.buff.scorchfield.count matches 1.. run function obl:tech/effect/buff/scorchfield/tick
+execute if score @s obl.effect.scorchfield.count matches 1.. run function obl:effect/scorchfield/tick
 ## ОЧИСТКА
-execute unless score @s obl.effect.buff.scorchfield.count matches 100.. run tag @s remove obl.scorch_immune
-execute unless score @s obl.effect.buff.scorchfield.count matches 1.. run tag @s remove obl.effect.buff.scorchfield
+execute unless score @s obl.effect.scorchfield.count matches 100.. run tag @s remove obl.scorch_immune
+execute unless score @s obl.effect.scorchfield.count matches 1.. run tag @s remove obl.effect.scorchfield
 
 ###   Р А З Н О Е
 execute if entity @s[tag=obl.debug] run function obl:cmd/debug/restore_all_cd

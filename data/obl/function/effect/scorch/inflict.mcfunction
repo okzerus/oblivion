@@ -1,5 +1,5 @@
-tag @s add obl.effect.debuff.scorch
-scoreboard players set @s obl.effect.debuff.scorch.strength 1
+tag @s add obl.effect.scorch
+scoreboard players set @s obl.effect.scorch.strength 1
 
 execute anchored eyes positioned ^ ^ ^ run summon armor_stand ~ ~.5 ~ {Marker:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["obl.announce.scorch","obl.announcement_marker"],CustomName:[{"text":"Ожог!","color":"#eb5721"}],CustomNameVisible:1b}
 

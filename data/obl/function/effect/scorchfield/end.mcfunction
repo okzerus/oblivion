@@ -18,7 +18,7 @@ title @s subtitle {"text":"ОЖОГ ПРОШЁЛ!","italic":true,"color":"#eb572
 
 ###   К О Н Е Ц
 ## Убираемся за собой.
-tag @s remove obl.effect.debuff.scorch
-scoreboard players set @s obl.effect.debuff.scorch.tick 0
-scoreboard players set @s obl.effect.debuff.scorch.interval 0
-scoreboard players set @s obl.effect.debuff.scorch.strength 0
+tag @s remove obl.effect.scorch
+scoreboard players set @s obl.effect.scorch.tick 0
+scoreboard players set @s obl.effect.scorch.interval 0
+scoreboard players set @s obl.effect.scorch.strength 0

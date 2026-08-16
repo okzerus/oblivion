@@ -12,7 +12,7 @@
 # Выполнение функций каждую секунду.
 
 ## Ожог: Если рядом есть игрок с 300 счётом Пепелища, шанс на то чтобы перебросить Ожог на ближайшего моба без Ожога.
-execute at @a[tag=obl.effect.buff.scorchfield,scores={obl.effect.buff.scorchfield.count=300}] run function obl:tech/effect/debuff/scorch/spread
+execute at @a[tag=obl.effect.scorchfield,scores={obl.effect.scorchfield.count=300}] run function obl:effect/scorch/spread
 
 
 

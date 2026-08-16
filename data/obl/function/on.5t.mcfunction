@@ -12,7 +12,7 @@
 # Выполнение функций каждые 5 тиков.
 
 ## Пепелище: Когда Спадание эффекта падает до нуля, начинает снижать счётчик Пепелища на 1 каждые 5 тиков.
-execute as @a[scores={obl.effect.buff.scorchfield.decay=0,obl.effect.buff.scorchfield.count=1..}] run scoreboard players remove @s obl.effect.buff.scorchfield.count 1
+execute as @a[scores={obl.effect.scorchfield.decay=0,obl.effect.scorchfield.count=1..}] run scoreboard players remove @s obl.effect.scorchfield.count 1
 
 
 

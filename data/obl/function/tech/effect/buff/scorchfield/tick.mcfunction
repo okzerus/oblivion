@@ -15,9 +15,3 @@ execute if score @s obl.effect.buff.scorchfield.decay matches 1.. run scoreboard
 execute if entity @s[scores={obl.effect.buff.scorchfield.decay=0,obl.effect.buff.scorchfield.count=1..}] run scoreboard players remove @s obl.effect.buff.scorchfield.count 1
 ## еслии слишкам многа то закидываит назат на триста.
 execute if score @s obl.effect.buff.scorchfield.count matches 301.. run scoreboard players set @s obl.effect.buff.scorchfield.count 300
-
-
-
-###   К О Н Е Ц
-execute if score @s obl.effect.debuff.scorch.tick matches 0 run function obl:tech/effect/debuff/scorch/end
-#что это такое бро почему тут конец ожога

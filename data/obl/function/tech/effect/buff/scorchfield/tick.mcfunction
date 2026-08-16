@@ -9,9 +9,11 @@ execute if score @s obl.effect.buff.scorchfield.count matches 250.. run particle
 
 ###   Ф У Н К Ц И Я
 tag @s add obl.effect.buff.scorchfield
+## Неуязвимость к дебаффу Ожог при 100+ счётчике Пепелища.
+execute if score @s obl.effect.buff.scorchfield.count matches 100.. run tag @s add obl.scorch_immune
 ## Спад эффекта. Постоянно устанавливается на 300 при наложении эффекта Пепелища. (item/weapon/crack_of_dawn/hit), Или когда цели получают урон от Ожога в пределах действия Пепелища (tech/effect/debuff/scorch/tick).
 execute if score @s obl.effect.buff.scorchfield.decay matches 1.. run scoreboard players remove @s obl.effect.buff.scorchfield.decay 1
-## Когда спадание эффекта падает до нуля, начинает снижать счётчик Пепелища. (Бафф: Может переместить в 5t функцию чтобы было - 4 счётчика за секунду?)
-execute if entity @s[scores={obl.effect.buff.scorchfield.decay=0,obl.effect.buff.scorchfield.count=1..}] run scoreboard players remove @s obl.effect.buff.scorchfield.count 1
-## еслии слишкам многа то закидываит назат на триста.
+## Когда спадание эффекта падает до нуля, начинает снижать счётчик Пепелища.
+# БЫЛО ПЕРЕМЕЩЕНО В on.5t
+## Избыточный счёт Пепелища устанавливается обратно на 300.
 execute if score @s obl.effect.buff.scorchfield.count matches 301.. run scoreboard players set @s obl.effect.buff.scorchfield.count 300

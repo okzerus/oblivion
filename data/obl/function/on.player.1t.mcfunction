@@ -8,10 +8,13 @@
 #                                                                                                                                                               #
 #################################################################################################################################################################
 
+# Из tick.mcfunction
+# Выполнение функций каждый тик, на каждого игрока.
+
 ###   П Е Р В Ы Й   З А Х О Д
 
 ###   N B T   И Г Р О К А   В   Х Р А Н И Л И Щ Е
-
+# надеюсь не понадобится
 
 
 #################################################################################################################################################################
@@ -42,7 +45,8 @@ tag @s remove obl.holding_rmb
 ###   Э Ф Ф Е К Т Ы   А Б Л И В О Н А
 ## Пепелище (Scorchfield)
 execute if score @s obl.effect.buff.scorchfield.count matches 1.. run function obl:tech/effect/buff/scorchfield/tick
-## О Ч И С Т К А
+## ОЧИСТКА
+execute unless score @s obl.effect.buff.scorchfield.count matches 100.. run tag @s remove obl.scorch_immune
 execute unless score @s obl.effect.buff.scorchfield.count matches 1.. run tag @s remove obl.effect.buff.scorchfield
 
 ###   Р А З Н О Е

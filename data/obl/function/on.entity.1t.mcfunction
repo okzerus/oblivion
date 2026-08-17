@@ -27,8 +27,8 @@ execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
 execute if entity @s[type=armor_stand,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
 
 
-scoreboard players add @s[type=block_display,tag=obl.crack_of_dawn.slash.vfx] obl 1
-execute as @s[type=block_display,tag=obl.crack_of_dawn.slash.vfx, scores={obl=10..}] run kill @s
+scoreboard players add @s[type=item_display,tag=obl.crack_of_dawn.slash.vfx] obl 1
+execute as @s[type=item_display,tag=obl.crack_of_dawn.slash.vfx, scores={obl=15..}] run kill @s
 
 
 

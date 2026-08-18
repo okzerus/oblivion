@@ -11,18 +11,18 @@
 
 
 ###   У С Т А Н О В И Т Ь   I D
-function obl:tech/player/set_id
+function obl:tech/player/first_join/set_id
 scoreboard players operation #id.temp obl.id = @s obl.id
 
 
 
 ###   У С Т А Н О В И Т Ь   С Ч Е Т А
-#function obl:tech/player/set_scores
+#function obl:tech/player/first_join/set_scores
 
 
 
 ###   У С Т А Н О В И Т Ь   А Ч И В К И
-#function obl:tech/player/set_advancements
+#function obl:tech/player/first_join/set_advancements
 
 
 

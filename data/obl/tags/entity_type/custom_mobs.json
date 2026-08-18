@@ -1,0 +1,20 @@
+{
+	"values": [
+		"minecraft:bat",
+		"minecraft:blaze",
+		"minecraft:creeper",
+		"minecraft:husk",
+		"minecraft:magma_cube",
+		"minecraft:piglin_brute",
+		"minecraft:spider",
+		"minecraft:skeleton",
+		"minecraft:stray",
+		"minecraft:vex",
+		"minecraft:wither_skeleton",
+		"minecraft:witch",
+		"minecraft:zombie",
+		"minecraft:zombified_piglin",
+		"minecraft:dolphin",
+		"minecraft:guardian"
+	]
+}

@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "obl:surface/ruins/flower_forest/diamond",
+        "obl:surface/ruins/flower_forest/farmland",
+        "obl:surface/ruins/flower_forest/fountain",
+        "obl:surface/ruins/flower_forest/golem",
+        "obl:surface/ruins/flower_forest/honey",
+        "obl:surface/ruins/flower_forest/pillager",
+        "obl:surface/ruins/flower_forest/pools"
+    ]
+}

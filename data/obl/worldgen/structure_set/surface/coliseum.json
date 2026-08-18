@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "obl:surface/coliseum",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 6294962,
+    "spacing": 42,
+    "separation": 28,
+    "type": "minecraft:random_spread"
+  }
+}

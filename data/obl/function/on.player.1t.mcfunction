@@ -26,7 +26,7 @@ scoreboard players operation #id.temp obl.id = @s obl.id
 
 ## КУЛДАУН ОРУЖИЯ
 # Анти-ЛКМ-спам КД
-execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
+#execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
 # Способности "Проблеск Зари"
 execute if score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run function obl:item/weapon/crack_of_dawn/ability/cd
 
@@ -80,6 +80,12 @@ execute if score @s obl.effect.scorchfield.count matches 1.. run function obl:ef
 ## ОЧИСТКА
 execute unless score @s obl.effect.scorchfield.count matches 100.. run tag @s remove obl.scorch_immune
 execute unless score @s obl.effect.scorchfield.count matches 1.. run tag @s remove obl.effect.scorchfield
+
+###   U N U S U A L
+## DEFAULT
+execute if entity @s[tag=obl.alive,predicate=obl:unusual,predicate=!obl:is.sneaking,tag=!obl.gamemode.spectator] run function obl:tech/unusual/main
+## CIRCLING
+execute if entity @s[tag=obl.alive,predicate=obl:circling_unusual,predicate=!obl:is.sneaking,tag=!obl.gamemode.spectator] run function obl:tech/unusual/check
 
 ###   Р А З Н О Е
 execute if entity @s[tag=obl.debug] run function obl:cmd/debug/restore_all_cd

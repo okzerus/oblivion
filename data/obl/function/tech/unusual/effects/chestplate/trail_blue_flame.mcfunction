@@ -1,0 +1,9 @@
+particle minecraft:soul_fire_flame ^ ^.1 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:soul_fire_flame ^ ^.3 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:soul_fire_flame ^ ^.5 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:soul_fire_flame ^ ^.7 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:soul_fire_flame ^ ^.9 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:soul_fire_flame ^ ^1.1 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:soul_fire_flame ^ ^1.3 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:soul_fire_flame ^ ^1.5 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:soul_fire_flame ^ ^1.7 ^-.3 0.05 0.05 0.05 0.003 1 normal @a

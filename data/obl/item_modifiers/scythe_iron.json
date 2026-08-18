@@ -1,0 +1,102 @@
+[
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+            "text": "Железная коса",
+            "italic": false
+       }
+    },
+    {
+		"function": "minecraft:set_lore",
+		"lore": [
+			{
+				"text": "",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "Когда в ведущей руке:",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": " Урон: 4",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": " Скорость атаки: 1.7",
+				"color": "dark_green",
+				"italic": false
+			},
+			[
+			{
+				"text": " Повреждение брони: Шанс 9% на 7 секунд, ",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "-5",
+				"color": "dark_aqua",
+				"italic": false
+			},
+			{
+				"text": " очков защиты",
+				"color": "dark_green",
+				"italic": false
+			}
+			],
+			[
+			{
+				"text": " Кровотечение: Сила II, Шанс 24%",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "(-4%/ЧБ) ",
+				"color": "red",
+				"italic": false
+			},
+			{
+				"text": "на 16",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "(-2/ЧБ) ",
+				"color": "red",
+				"italic": false
+			},
+			{
+				"text": "секунд",
+				"color": "dark_green",
+				"italic": false
+			}
+			]
+	    ]
+	},
+	{
+        "function": "minecraft:set_custom_data",
+        "tag": "{obl.scythe:1b,obl.scythe.iron:1b,HideFlags:2}"
+    },
+    {
+		"function": "minecraft:set_attributes",
+		"modifiers": [
+			{
+				"attribute": "minecraft:attack_damage",
+				"id": "minecraft:base_attack_damage",
+				"amount": 4,
+				"operation": "add_value",
+				"slot": "mainhand"
+			},
+			{
+				"attribute": "minecraft:attack_speed",
+				"id": "minecraft:base_attack_speed",
+				"amount": -2.3,
+				"operation": "add_value",
+				"slot": "mainhand"
+			}
+		]
+	}
+]

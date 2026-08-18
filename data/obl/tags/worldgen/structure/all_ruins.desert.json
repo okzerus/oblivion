@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "obl:surface/ruins/desert/allay",
+        "obl:surface/ruins/desert/camel",
+        "obl:surface/ruins/desert/dead",
+        "obl:surface/ruins/desert/oasis",
+        "obl:surface/ruins/desert/ribs",
+        "obl:surface/ruins/desert/skull",
+        "obl:surface/ruins/desert/symbol"
+    ]
+}

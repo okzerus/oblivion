@@ -1,0 +1,38 @@
+{
+  "structures": [
+    {
+      "structure": "obl:surface/ruins/flower_forest/diamond",
+      "weight": 1
+    },
+    {
+      "structure": "obl:surface/ruins/flower_forest/farmland",
+      "weight": 1
+    },
+    {
+      "structure": "obl:surface/ruins/flower_forest/fountain",
+      "weight": 1
+    },
+    {
+      "structure": "obl:surface/ruins/flower_forest/golem",
+      "weight": 1
+    },
+    {
+      "structure": "obl:surface/ruins/flower_forest/honey",
+      "weight": 1
+    },
+    {
+      "structure": "obl:surface/ruins/flower_forest/pillager",
+      "weight": 1
+    },
+    {
+      "structure": "obl:surface/ruins/flower_forest/pools",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 652462,
+    "spacing": 16,
+    "separation": 11,
+    "type": "minecraft:random_spread"
+  }
+}

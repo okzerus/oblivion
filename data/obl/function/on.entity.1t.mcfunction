@@ -30,6 +30,8 @@ execute if entity @s[type=armor_stand,tag=obl.announcement_marker] run function 
 scoreboard players add @s[type=item_display,tag=obl.crack_of_dawn.slash.vfx] obl 1
 execute as @s[type=item_display,tag=obl.crack_of_dawn.slash.vfx, scores={obl=15..}] run kill @s
 
+execute if entity @s[type=marker,tag=obl.circling_unusual] run function obl:tech/unusual/main.marker
+
 
 
 ###   О Ч И С Т К А

@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "obl:chests/fillers/biomes/jungle/chest/resources.junk",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "obl:chests/fillers/biomes/jungle/chest/resources.rare",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "obl:chests/fillers/biomes/jungle/chest/resources.treasure",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "obl:chests/fillers/biomes/jungle/main"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "obl:chests/fillers/biomes/jungle/unique"
+        }
+      ]
+    },
+    {
+      "rolls": 4,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "obl:chests/fillers/biomes/jungle/junk"
+        }
+      ]
+    }
+  ]
+}

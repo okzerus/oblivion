@@ -1,0 +1,78 @@
+[
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+            "text": "Часы Забвения",
+            "italic": false
+       }
+    },
+    {
+		"function": "minecraft:set_lore",
+		"lore": [
+			{
+				"text": "Находясь в инвентаре, оповестят игрока о",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "текущем дне недели во время рассвета.",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "Поместите часы в ведущую руку, чтобы",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "увидеть день недели/время немедленно.",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "Когда в слоте аксессуара:",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "+1 Скорость",
+				"color": "blue",
+				"italic": false
+			},
+			{
+				"text": "+0.5 Сопротивление",
+				"color": "blue",
+				"italic": false
+			},
+			{
+			  "text": "",
+			  "color": "gray",
+			  "italic": false
+			},
+			{
+			  "text": "Требуемый уровень: 0",
+			  "color": "gold",
+			  "italic": false
+			}
+	    ]
+	},
+    {
+		"function": "minecraft:set_custom_model_data",
+        "floats": {
+            "values": [
+                20000
+            ],
+            "mode": "replace_all"
+        }
+    },
+    {
+        "function": "minecraft:set_custom_data",
+		"tag": "{obl.clock:1b,HideFlags:2,obl.accs:1b}"
+	}
+]

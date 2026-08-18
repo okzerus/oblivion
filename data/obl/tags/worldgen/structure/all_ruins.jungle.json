@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "obl:surface/ruins/jungle/bamboo",
+        "obl:surface/ruins/jungle/broken",
+        "obl:surface/ruins/jungle/camp",
+        "obl:surface/ruins/jungle/lake",
+        "obl:surface/ruins/jungle/panda",
+        "obl:surface/ruins/jungle/pool",
+        "obl:surface/ruins/jungle/roof"
+    ]
+}

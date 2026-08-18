@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "AEA",
+        "CCC"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:comparator"
+        },
+        "A": {
+            "item": "minecraft:amethyst_shard"
+        },
+        "E": {
+            "item": "minecraft:ender_eye"
+        },
+        "C": {
+            "item": "minecraft:cracked_deepslate_tiles"
+        }
+    },
+    "result": {
+		"id": "minecraft:sculk_sensor",
+		"count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"equipment": {
+			"head": {
+				"predicates": {
+					"minecraft:custom_data": "{obl.viking_helmet:1b}"
+				}
+			},
+			"offhand": {
+				"predicates": {
+					"minecraft:custom_data": "{obl.viking_shield:1b}"
+				}
+			},
+			"mainhand": {
+				"predicates": {
+					"minecraft:custom_data": "{obl.viking_axe:1b}"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"minecraft:equipment": {
+				"offhand": {
+					"items": [
+						"minecraft:totem_of_undying"
+					],
+					"predicates": {
+						"minecraft:custom_data": "{obl.totem_of_dying:1b}"
+					}
+				}
+			}
+		}
+	}
+]

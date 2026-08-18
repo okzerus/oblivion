@@ -1,0 +1,34 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:iron_hoe"
+					]
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"minecraft:equipment": {
+					"mainhand": {
+						"items": [
+							"minecraft:iron_hoe"
+						],
+						"predicates": {
+							"minecraft:custom_data": "{obl.scythe:1b}"
+						}
+					}
+				}
+			}
+		}
+	}
+]

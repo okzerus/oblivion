@@ -1,0 +1,85 @@
+[
+  {
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:wooden_hoe"
+					]
+				}
+			}
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:stone_hoe"
+					]
+				}
+			}
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:golden_hoe"
+					]
+				}
+			}
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:iron_hoe"
+					]
+				}
+			}
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:diamond_hoe"
+					]
+				}
+			}
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:netherite_hoe"
+					]
+				}
+			}
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"minecraft:equipment": {
+				"head": {
+                    "count": {
+                        "min": 1
+					},
+                    "enchantments": [
+                        {
+                            "levels": {
+                                "min": 0
+                            }
+                        }
+                    ]
+				}
+			}
+		}
+	}
+]

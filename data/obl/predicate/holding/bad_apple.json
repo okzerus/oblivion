@@ -1,0 +1,18 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:apple"
+					],
+					"predicates": {
+						"minecraft:custom_data": "{obl.bad_apple:1b}"
+					}
+				}
+			}
+		}
+	}
+]

@@ -1,0 +1,18 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:iron_hoe"
+					],
+					"predicates": {
+						"minecraft:custom_data": "{obl.scythe.bee_sting:1b}"
+					}
+				}
+			}
+		}
+	}
+]

@@ -1,0 +1,18 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:golden_hoe"
+					],
+					"predicates": {
+						"minecraft:custom_data": "{obl.scythe.golden:1b}"
+					}
+				}
+			}
+		}
+	}
+]

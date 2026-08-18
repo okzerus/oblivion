@@ -1,0 +1,16 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:gold_nugget"
+					],
+					"nbt": "{CustomModelData:11303}"
+				}
+			}
+		}
+	}
+]

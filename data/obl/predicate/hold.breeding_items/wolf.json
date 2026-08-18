@@ -1,0 +1,51 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "minecraft:equipment": {
+          "offhand": {
+            "items": [
+		  "minecraft:beef",
+		  "minecraft:chicken",
+		  "minecraft:porkchop",
+		  "minecraft:mutton",
+		  "minecraft:rabbit",
+		  "minecraft:cooked_beef",
+		  "minecraft:cooked_chicken",
+		  "minecraft:cooked_porkchop",
+	   	  "minecraft:cooked_mutton",
+		  "minecraft:cooked_rabbit",
+		  "minecraft:rotten_flesh"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "minecraft:equipment": {
+          "mainhand": {
+            "items": [
+		  "minecraft:beef",
+		  "minecraft:chicken",
+		  "minecraft:porkchop",
+		  "minecraft:mutton",
+		  "minecraft:rabbit",
+		  "minecraft:cooked_beef",
+		  "minecraft:cooked_chicken",
+		  "minecraft:cooked_porkchop",
+	   	  "minecraft:cooked_mutton",
+		  "minecraft:cooked_rabbit",
+		  "minecraft:rotten_flesh"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

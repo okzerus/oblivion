@@ -1,0 +1,13 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:equipment": {
+      "chest": {
+        "predicates": {
+          "minecraft:custom_data": "{obl.unusual.id:38b}"
+        }
+      }
+    }
+  }
+}

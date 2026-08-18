@@ -1,0 +1,39 @@
+[
+	{
+		"condition": "minecraft:any_of",
+		"terms": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"minecraft:equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:apple"
+							],
+							"predicates": {
+								"minecraft:custom_data": "{obl.bad_apple:1b}"
+							}
+						}
+					}
+				}
+			},
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"minecraft:equipment": {
+						"offhand": {
+							"items": [
+								"minecraft:apple"
+							],
+							"predicates": {
+								"minecraft:custom_data": "{obl.bad_apple:1b}"
+							}
+						}
+					}
+				}
+			}
+		]
+	}
+]

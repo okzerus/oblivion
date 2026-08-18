@@ -1,0 +1,18 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"minecraft:equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:trident"
+					],
+					"predicates": {
+						"minecraft:custom_data": "{obl.atlantis:1b}"
+					}
+				}
+			}
+		}
+	}
+]

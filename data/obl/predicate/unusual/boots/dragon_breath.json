@@ -1,0 +1,11 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:equipment": {
+      "feet": {
+        "predicates": { "minecraft:custom_data": "{obl.unusual.id:80b}" }
+      }
+    }
+  }
+}

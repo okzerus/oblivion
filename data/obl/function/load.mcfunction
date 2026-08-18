@@ -6,6 +6,7 @@ scoreboard players set #zero obl.const 0
 scoreboard players set #two obl.const 2
 ## Разное
 scoreboard objectives add obl dummy
+scoreboard objectives add obl.id dummy
 scoreboard objectives add obl.health dummy
 scoreboard objectives add obl.health_old dummy
 scoreboard objectives add obl.damage_taken dummy

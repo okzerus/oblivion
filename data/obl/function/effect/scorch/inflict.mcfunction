@@ -1,7 +1,8 @@
 tag @s add obl.effect.scorch
 scoreboard players set @s obl.effect.scorch.strength 1
 
-execute anchored eyes positioned ^ ^ ^ run summon armor_stand ~ ~.5 ~ {Marker:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["obl.announce.scorch","obl.announcement_marker"],CustomName:[{"text":"Ожог!","color":"#eb5721"}],CustomNameVisible:1b}
+#execute anchored eyes positioned ^ ^ ^ run summon text_display ~ ~1 ~ {text:"Ожог",Invulnerable:1b,NoGravity:1b,Tags:["obl.announce.scorch","obl.announcement_marker"],CustomName:[{"text":"Ожог!","color":"#eb5721"}],CustomNameVisible:1b}
+execute anchored eyes positioned ^ ^ ^ run summon minecraft:text_display ~ ~.5 ~ {text:{text:"Ожог!",color:"#eb5721"},background:905969664,billboard:"center",Tags:["obl.announce.scorch","obl.announcement_marker"]}
 
 title @s times 0 30 10
 title @s title {"text":"ОЖОГ!","italic":true,"color":"#eb5721"}

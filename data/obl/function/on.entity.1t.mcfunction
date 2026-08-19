@@ -24,7 +24,8 @@ execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
 
 
 # Объявление
-execute if entity @s[type=armor_stand,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
+#execute if entity @s[type=armor_stand,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
+execute if entity @s[type=text_display,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
 
 
 scoreboard players add @s[type=item_display,tag=obl.crack_of_dawn.slash.vfx] obl 1

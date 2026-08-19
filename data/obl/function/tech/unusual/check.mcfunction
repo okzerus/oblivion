@@ -28,7 +28,7 @@ execute if predicate obl:unusual/helmet/zodiac/virgo unless entity @e[type=marke
 ## ZERO
 ###   L E G G I N G S
 execute if predicate obl:unusual/leggings/nebula unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.nebula] run function obl:tech/unusual/summon.circling
-execute if predicate obl:unusual/leggings/oblivion unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.obl] run function obl:tech/unusual/summon.circling
+execute if predicate obl:unusual/leggings/oblivion unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.oblivion] run function obl:tech/unusual/summon.circling
 execute if predicate obl:unusual/leggings/raging_flames unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.raging_flames] run function obl:tech/unusual/summon.circling
 execute if predicate obl:unusual/leggings/raging_blue_flames unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.raging_blue_flames] run function obl:tech/unusual/summon.circling
 execute if predicate obl:unusual/leggings/raging_souls unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.raging_souls] run function obl:tech/unusual/summon.circling

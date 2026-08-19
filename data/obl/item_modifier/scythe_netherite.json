@@ -2,13 +2,15 @@
     {
         "function": "minecraft:set_name",
         "entity": "this",
+		"target": "item_name",
         "name": {
-            "text": "Алмазная коса",
+            "text": "Незеритовая коса",
             "italic": false
        }
     },
     {
 		"function": "minecraft:set_lore",
+		"mode": "insert",
 		"lore": [
 			{
 				"text": "",
@@ -21,23 +23,23 @@
 				"italic": false
 			},
 			{
-				"text": " Урон: 5",
+				"text": " Урон: 6",
 				"color": "dark_green",
 				"italic": false
 			},
 			{
-				"text": " Скорость атаки: 1.75",
+				"text": " Скорость атаки: 1.8",
 				"color": "dark_green",
 				"italic": false
 			},
 			[
 			{
-				"text": " Повреждение брони: Шанс 13% на 9 секунд, ",
+				"text": " Повреждение брони: Шанс 19% на 12 секунд, ",
 				"color": "dark_green",
 				"italic": false
 			},
 			{
-				"text": "-7",
+				"text": "-8",
 				"color": "dark_aqua",
 				"italic": false
 			},
@@ -49,7 +51,7 @@
 			],
 			[
 			{
-				"text": " Кровотечение: Сила II, Шанс 30%",
+				"text": " Кровотечение: Сила III, Шанс 36%",
 				"color": "dark_green",
 				"italic": false
 			},
@@ -59,7 +61,7 @@
 				"italic": false
 			},
 			{
-				"text": "на 20",
+				"text": "на 25",
 				"color": "dark_green",
 				"italic": false
 			},
@@ -76,27 +78,27 @@
 			]
 	    ]
 	},
-    {
+	{
         "function": "minecraft:set_custom_data",
-        "tag": "{obl.scythe:1b,obl.scythe.diamond:1b,HideFlags:2}"
+        "tag": "{obl.scythe:1b,obl.scythe.netherite:1b,HideFlags:2}"
     },
     {
-        "function": "minecraft:set_attributes",
-        "modifiers": [
-            {
-                "attribute": "minecraft:attack_damage",
-                "id": "minecraft:base_attack_damage",
-                "amount": 5,
-                "operation": "add_value",
-                "slot": "mainhand"
-            },
-            {
-                "attribute": "minecraft:attack_speed",
-                "id": "minecraft:base_attack_speed",
-                "amount": -2.25,
-            	"operation": "add_value",
-            	"slot": "mainhand"
-        	}
-    	]
-    }
+		"function": "minecraft:set_attributes",
+		"modifiers": [
+			{
+				"attribute": "minecraft:attack_damage",
+				"id": "minecraft:base_attack_damage",
+				"amount": 6,
+				"operation": "add_value",
+				"slot": "mainhand"
+			},
+			{
+				"attribute": "minecraft:attack_speed",
+				"id": "minecraft:base_attack_speed",
+				"amount": -2.2,
+				"operation": "add_value",
+				"slot": "mainhand"
+			}
+		]
+	}
 ]

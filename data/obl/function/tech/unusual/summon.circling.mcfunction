@@ -31,7 +31,7 @@ execute if predicate obl:unusual/helmet/zodiac/virgo unless entity @e[type=marke
 ## ZERO
 ###   L E G G I N G S
 execute if predicate obl:unusual/leggings/nebula unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.nebula] run tag @e[type=marker,tag=obl.temp.awaiting_modify] add obl.unusual.leggings.nebula
-execute if predicate obl:unusual/leggings/oblivion unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.obl] run tag @e[type=marker,tag=obl.temp.awaiting_modify] add obl.unusual.leggings.obl
+execute if predicate obl:unusual/leggings/oblivion unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.oblivion] run tag @e[type=marker,tag=obl.temp.awaiting_modify] add obl.unusual.leggings.oblivion
 execute if predicate obl:unusual/leggings/raging_flames unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.raging_flames] run tag @e[type=marker,tag=obl.temp.awaiting_modify] add obl.unusual.leggings.raging_flames
 execute if predicate obl:unusual/leggings/raging_blue_flames unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.raging_blue_flames] run tag @e[type=marker,tag=obl.temp.awaiting_modify] add obl.unusual.leggings.raging_blue_flames
 execute if predicate obl:unusual/leggings/raging_souls unless entity @e[type=marker,tag=obl.temp.score_check,tag=obl.unusual.leggings.raging_souls] run tag @e[type=marker,tag=obl.temp.awaiting_modify] add obl.unusual.leggings.raging_souls

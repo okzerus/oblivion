@@ -87,6 +87,14 @@ execute if entity @s[tag=obl.alive,predicate=obl:unusual,predicate=!obl:is.sneak
 ## CIRCLING
 execute if entity @s[tag=obl.alive,predicate=obl:circling_unusual,predicate=!obl:is.sneaking,tag=!obl.gamemode.spectator] run function obl:tech/unusual/check
 
+###   I T E M   M O D I F Y
+execute if predicate obl:holding/wooden_hoe run item modify entity @s weapon.mainhand obl:scythe_wooden
+execute if predicate obl:holding/stone_hoe run item modify entity @s weapon.mainhand obl:scythe_stone
+execute if predicate obl:holding/iron_hoe run item modify entity @s weapon.mainhand obl:scythe_iron
+execute if predicate obl:holding/golden_hoe run item modify entity @s weapon.mainhand obl:scythe_golden
+execute if predicate obl:holding/diamond_hoe run item modify entity @s weapon.mainhand obl:scythe_diamond
+execute if predicate obl:holding/netherite_hoe run item modify entity @s weapon.mainhand obl:scythe_netherite
+
 ###   Р А З Н О Е
 execute if entity @s[tag=obl.debug] run function obl:cmd/debug/restore_all_cd
 

@@ -17,6 +17,7 @@ scoreboard objectives add obl.effect.scorch.tick dummy
 scoreboard objectives add obl.effect.scorch.strength dummy
 scoreboard objectives add obl.effect.scorch.interval dummy
 scoreboard objectives add obl.weapon.crack_of_dawn.ability.cd dummy
+scoreboard objectives add obl.hit_cooldown dummy
 
 scoreboard objectives add obl.weapon.was_using.crack_of_dawn dummy
 

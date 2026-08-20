@@ -1,0 +1,2 @@
+setblock ~ ~-1 ~ spawner{SpawnData:{entity:{id:marker,Tags:[obl.spawner.mob_marker,obl.spawner.temp.mob]}}} replace
+execute at @s align xyz run summon marker ~0.5 ~-0.5 ~0.5 {Tags:[obl.spawner, obl.spawner.temp_creation, obl.spawner.generic]}

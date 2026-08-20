@@ -23,16 +23,21 @@ execute store result score @s obl.health run data get entity @s Health
 execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
 
 
-# Объявление
+## Объявление
 #execute if entity @s[type=armor_stand,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
 execute if entity @s[type=text_display,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
 
 
-scoreboard players add @s[type=item_display,tag=obl.crack_of_dawn.slash.vfx] obl 1
-execute as @s[type=item_display,tag=obl.crack_of_dawn.slash.vfx, scores={obl=15..}] run kill @s
+###   В И З У А Л Ь Н Ы Е   Э Ф Ф Е К Т Ы
+execute as @e[tag=obl.vfx] run function obl:tech/vfx.1t
 
+
+###   Н Е О Б Ы Ч Н Ы Е   Э Ф Ф Е К Т Ы   ( U N U S U A L S )
 execute if entity @s[type=marker,tag=obl.circling_unusual] run function obl:tech/unusual/main.marker
 
+
+###   С П А В Н Е Р
+execute if entity @s[type=marker,tag=obl.spawner] run function obl:tech/spawner/main
 
 
 ###   О Ч И С Т К А

@@ -36,8 +36,9 @@ execute as @e[tag=obl.vfx] run function obl:tech/vfx.1t
 execute if entity @s[type=marker,tag=obl.circling_unusual] run function obl:tech/unusual/main.marker
 
 
-###   С П А В Н Е Р
-execute if entity @s[type=marker,tag=obl.spawner] run function obl:tech/spawner/main
+###   С П А В Н Е Р Ы
+execute unless score #frozen_spawners obl.frozen_spawners matches 1.. if entity @s[type=marker,tag=obl.spawner.init] run function obl:tech/spawner/init
+execute if entity @s[type=marker,tag=obl.spawner,tag=!obl.spawner.init] run function obl:tech/spawner/main
 
 
 ###   О Ч И С Т К А

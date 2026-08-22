@@ -22,7 +22,9 @@ scoreboard objectives add obl.effect.scorch.interval dummy
 scoreboard objectives add obl.weapon.crack_of_dawn.ability.cd dummy
 scoreboard objectives add obl.hit_cooldown dummy
 scoreboard objectives add obl.spawner.id dummy
-
+scoreboard objectives add obl.weapon.gluttony.combo dummy
+scoreboard objectives add obl.weapon.gluttony.decay dummy
+scoreboard objectives add obl.weapon.gluttony.fangs dummy
 
 scoreboard objectives add obl.weapon.was_using.crack_of_dawn dummy
 

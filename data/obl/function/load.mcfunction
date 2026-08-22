@@ -27,7 +27,12 @@ scoreboard objectives add obl.spawner.death_count dummy
 scoreboard objectives add obl.spawner.difficulty dummy
 scoreboard objectives add obl.time_of_day dummy
 execute store result score #time obl.time_of_day run time query day
-
+scoreboard objectives add obl.weapon.gluttony.combo dummy
+scoreboard objectives add obl.weapon.gluttony.decay dummy
+scoreboard objectives add obl.weapon.gluttony.fangs dummy
+scoreboard objectives add obl.double_sneak.time dummy
+scoreboard objectives add obl.sneaking dummy
+scoreboard objectives add obl.weapon.gluttony.insatiable_hunger.interval dummy
 
 scoreboard objectives add obl.weapon.was_using.crack_of_dawn dummy
 

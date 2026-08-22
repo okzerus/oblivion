@@ -29,17 +29,17 @@ tag @s remove obl.walking
 tag @s remove obl.sprinting
 tag @s remove obl.sneaking
 ## Если игрок стоит на не-твёрдых блоках, даёт тег "в воздухе"
-execute if predicate oblivion:stepping_on.non_solid run tag @s add obl.mid_air
+execute if predicate obl:stepping_on.non_solid run tag @s add obl.mid_air
 ## Если игрок не в воздухе и получает счёт ходьбы, выполняем функцию при хождении
 execute if score @s[tag=!obl.mid_air] obl.walking matches 1.. run function obl:tech/player/is.walking
 ## Если игрок не в воздухе и получает счёт ходьбы, выполняем функцию при беге
 execute if score @s[tag=!obl.mid_air] obl.sprinting matches 1.. run function obl:tech/player/is.sprinting
 ## Если игрок в воздухе, но не стоит на не-твёрдых блоках, выполняем функцию при падении
-execute if entity @s[tag=obl.mid_air] unless predicate oblivion:stepping_on.non_solid run function oblivion:tech/player/on_ground
+execute if entity @s[tag=obl.mid_air] unless predicate obl:stepping_on.non_solid run function obl:tech/player/on_ground
 ## Если игрок крадётся, выполняем функцию
-execute if predicate oblivion:is.sneaking run function oblivion:tech/on.player_sneaking
+execute if predicate obl:is.sneaking run function obl:tech/player/sneaking
 ## Если игрок крался и перестал, выполняем функцию
-#execute if score @s obl.player_sneaking matches 1.. unless predicate oblivion:is.sneaking run function oblivion:tech/player/on.player_sneaking.end
+#execute if score @s obl.player_sneaking matches 1.. unless predicate obl:is.sneaking run function obl:tech/player/on.player_sneaking.end
 #execute if score @s obl.double_sneak.time matches 1.. run scoreboard players remove @s obl.double_sneak.time 1
 
 

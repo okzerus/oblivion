@@ -21,4 +21,5 @@
 ###   Ф У Н К Ц И Я
 ## Сбрасывает таймер спадания
 scoreboard players add @s obl.weapon.gluttony.combo 1
+scoreboard players set @s obl.weapon.gluttony.decay 200
 execute if score @s obl.weapon.gluttony.combo matches 100.. at @e[sort=nearest,limit=1,type=#obl:all_mobs,tag=obl.temp.hit] run function obl:item/weapon/gluttony/spawn_fangs

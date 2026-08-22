@@ -43,3 +43,5 @@ execute if entity @s[type=marker,tag=obl.spawner,tag=!obl.spawner.init] run func
 
 ###   О Ч И С Т К А
 tag @s remove obl.temp.took_damage
+execute as @e[tag=obl.death_detector] store success score @s obl on vehicle run tag @s add obl.death_detector
+execute if score @s[tag=obl.death_detector] obl matches 1.. run kill @s

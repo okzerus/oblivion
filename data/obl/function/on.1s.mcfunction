@@ -15,6 +15,10 @@
 execute at @a[tag=obl.effect.scorchfield,scores={obl.effect.scorchfield.count=300}] run function obl:effect/scorch/spread
 
 
+## Если нужно детектить смерть моба
+execute as @e[type=marker,tag=obl.death_detector] on vehicle unless data entity @s {DeathTime:0s} run function obl:tech/spawner/death_detect
+
+
 
 
 

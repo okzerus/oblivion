@@ -1,1 +1,1 @@
-execute at @s as @e[type=marker,tag=obl.spawner,sort=nearest,limit=1] run kill @s
+kill @s

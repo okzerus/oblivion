@@ -10,6 +10,7 @@ scoreboard players set #frozen_spawners obl.frozen_spawners 0
 scoreboard objectives add obl.spawner.id dummy
 scoreboard objectives add obl dummy
 scoreboard objectives add obl.id dummy
+scoreboard objectives add obl.random dummy
 scoreboard objectives add obl.health dummy
 scoreboard objectives add obl.health_old dummy
 scoreboard objectives add obl.damage_taken dummy
@@ -22,12 +23,16 @@ scoreboard objectives add obl.effect.scorch.interval dummy
 scoreboard objectives add obl.weapon.crack_of_dawn.ability.cd dummy
 scoreboard objectives add obl.hit_cooldown dummy
 scoreboard objectives add obl.spawner.id dummy
+scoreboard objectives add obl.spawner.death_count dummy
+scoreboard objectives add obl.spawner.difficulty dummy
+scoreboard objectives add obl.time_of_day dummy
+execute store result score #time obl.time_of_day run time query day
 
 
 scoreboard objectives add obl.weapon.was_using.crack_of_dawn dummy
 
 ### Отладка
-scoreboard objectives setdisplay sidebar obl.holding_rmb
+scoreboard objectives setdisplay sidebar obl.spawner.death_count
 
 
 

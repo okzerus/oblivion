@@ -1,0 +1,1 @@
+particle minecraft:enchant ~ ~3.2 ~ 0.1 0.1 0.1 0.7 1

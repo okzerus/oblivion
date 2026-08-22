@@ -1,0 +1,13 @@
+{
+	"values": [
+		"#oblivion:minecarts",
+		"#oblivion:item_frames",
+		"minecraft:armor_stand",
+		"minecraft:marker",
+		"minecraft:painting",
+		"minecraft:interaction",
+		"minecraft:text_display",
+		"minecraft:block_display",
+		"minecraft:area_effect_cloud"
+	]
+}

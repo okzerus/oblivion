@@ -1,0 +1,17 @@
+{
+	"values": [
+		"minecraft:bat",
+		"minecraft:blaze",
+		"minecraft:creeper",
+		"minecraft:husk",
+		"minecraft:piglin_brute",
+		"minecraft:spider",
+		"minecraft:skeleton",
+		"minecraft:stray",
+		"minecraft:squid",
+		"minecraft:wither_skeleton",
+		"minecraft:zombie",
+		"minecraft:zombified_piglin",
+		"minecraft:dolphin"
+	]
+}

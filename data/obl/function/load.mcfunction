@@ -5,6 +5,9 @@ scoreboard objectives add obl.const dummy
 scoreboard players set #zero obl.const 0
 scoreboard players set #two obl.const 2
 ## Разное
+scoreboard objectives add obl.frozen_spawners dummy
+scoreboard players set #frozen_spawners obl.frozen_spawners 0
+scoreboard objectives add obl.spawner.id dummy
 scoreboard objectives add obl dummy
 scoreboard objectives add obl.id dummy
 scoreboard objectives add obl.health dummy
@@ -17,11 +20,11 @@ scoreboard objectives add obl.effect.scorch.tick dummy
 scoreboard objectives add obl.effect.scorch.strength dummy
 scoreboard objectives add obl.effect.scorch.interval dummy
 scoreboard objectives add obl.weapon.crack_of_dawn.ability.cd dummy
+scoreboard objectives add obl.hit_cooldown dummy
+scoreboard objectives add obl.spawner.id dummy
+
 
 scoreboard objectives add obl.weapon.was_using.crack_of_dawn dummy
-
-
-
 
 ### Отладка
 scoreboard objectives setdisplay sidebar obl.holding_rmb

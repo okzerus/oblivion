@@ -33,7 +33,7 @@ execute if predicate obl:holding/gluttony run function obl:item/weapon/gluttony/
 
 ## КУЛДАУН ОРУЖИЯ
 # Анти-ЛКМ-спам КД
-execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
+#execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
 # Способности "Проблеск Зари"
 execute if score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run function obl:item/weapon/crack_of_dawn/ability/cd
 
@@ -41,6 +41,9 @@ execute if score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run function
 # Удерживание ПКМ
 execute if entity @s[tag=!obl.holding_rmb,scores={obl.holding_rmb=1..}] run function obl:item/rmb_cancel
 tag @s remove obl.holding_rmb
+
+## Очистка
+execute as @e[tag=obl.temp.success_hit] run tag @s remove obl.temp.success_hit
 
 #################################################################################################################################################################
 
@@ -87,6 +90,20 @@ execute if score @s obl.effect.scorchfield.count matches 1.. run function obl:ef
 ## ОЧИСТКА
 execute unless score @s obl.effect.scorchfield.count matches 100.. run tag @s remove obl.scorch_immune
 execute unless score @s obl.effect.scorchfield.count matches 1.. run tag @s remove obl.effect.scorchfield
+
+###   U N U S U A L
+## DEFAULT
+execute if entity @s[tag=obl.alive,predicate=obl:unusual,predicate=!obl:is.sneaking,tag=!obl.gamemode.spectator] run function obl:tech/unusual/main
+## CIRCLING
+execute if entity @s[tag=obl.alive,predicate=obl:circling_unusual,predicate=!obl:is.sneaking,tag=!obl.gamemode.spectator] run function obl:tech/unusual/check
+
+###   I T E M   M O D I F Y
+execute if predicate obl:holding/wooden_hoe run item modify entity @s weapon.mainhand obl:scythe_wooden
+execute if predicate obl:holding/stone_hoe run item modify entity @s weapon.mainhand obl:scythe_stone
+execute if predicate obl:holding/iron_hoe run item modify entity @s weapon.mainhand obl:scythe_iron
+execute if predicate obl:holding/golden_hoe run item modify entity @s weapon.mainhand obl:scythe_golden
+execute if predicate obl:holding/diamond_hoe run item modify entity @s weapon.mainhand obl:scythe_diamond
+execute if predicate obl:holding/netherite_hoe run item modify entity @s weapon.mainhand obl:scythe_netherite
 
 ###   Р А З Н О Е
 execute if entity @s[tag=obl.debug] run function obl:cmd/debug/restore_all_cd

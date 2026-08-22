@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "obl:surface/ruins/taiga/allay",
+        "obl:surface/ruins/taiga/cages",
+        "obl:surface/ruins/taiga/fallen",
+        "obl:surface/ruins/taiga/farmland",
+        "obl:surface/ruins/taiga/foxes",
+        "obl:surface/ruins/taiga/highground",
+        "obl:surface/ruins/taiga/tower"
+    ]
+}

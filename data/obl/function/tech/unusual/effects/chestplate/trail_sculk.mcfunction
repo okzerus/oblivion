@@ -1,0 +1,9 @@
+particle minecraft:sculk_charge_pop ^ ^.1 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:sculk_charge_pop ^ ^.3 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:sculk_charge_pop ^ ^.5 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:sculk_charge_pop ^ ^.7 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:sculk_charge_pop ^ ^.9 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:sculk_charge_pop ^ ^1.1 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:sculk_charge_pop ^ ^1.3 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:sculk_charge_pop ^ ^1.5 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:sculk_charge_pop ^ ^1.7 ^-.3 0.05 0.05 0.05 0.003 1 normal @a

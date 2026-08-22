@@ -1,0 +1,9 @@
+particle minecraft:flame ^ ^.1 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:flame ^ ^.3 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:flame ^ ^.5 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:flame ^ ^.7 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:flame ^ ^.9 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:flame ^ ^1.1 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:flame ^ ^1.3 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:flame ^ ^1.5 ^-.3 0.05 0.05 0.05 0.003 1 normal @a
+particle minecraft:flame ^ ^1.7 ^-.3 0.05 0.05 0.05 0.003 1 normal @a

@@ -1,0 +1,21 @@
+{
+	"values": [
+		"minecraft:fireball",
+		"minecraft:blaze",
+		"minecraft:creeper",
+		"minecraft:husk",
+		"minecraft:magma_cube",
+		"minecraft:spider",
+		"minecraft:skeleton",
+		"minecraft:stray",
+		"minecraft:vex",
+		"minecraft:wither_skeleton",
+		"minecraft:zombie",
+		"minecraft:zombie_villager",
+		"minecraft:zombified_piglin",
+		"minecraft:bat",
+		"minecraft:armor_stand",
+		"minecraft:marker",
+		"minecraft:item"
+	]
+}

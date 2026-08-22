@@ -1,0 +1,15 @@
+{
+  "name": "black_death_memorial",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "obl:bosses/obl_black_death_memorial",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

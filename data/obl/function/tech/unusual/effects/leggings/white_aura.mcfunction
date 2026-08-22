@@ -1,0 +1,1 @@
+particle minecraft:instant_effect ~ ~ ~ ^ ^200000 ^ 0.000001 0

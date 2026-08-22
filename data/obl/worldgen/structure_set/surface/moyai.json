@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "obl:surface/jungle_moyai",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 969492,
+    "spacing": 7,
+    "separation": 6,
+    "type": "minecraft:random_spread"
+  }
+}

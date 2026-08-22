@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "obl:underground/black_death_memorial",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 73572578,
+    "spacing": 48,
+    "separation": 24,
+    "type": "minecraft:random_spread"
+  }
+}

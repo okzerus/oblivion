@@ -50,7 +50,7 @@ execute if predicate obl:is.sneaking run function obl:tech/player/sneaking
 # Чревоугодие 
 execute if score @s obl.weapon.gluttony.decay matches 1.. run scoreboard players remove @s obl.weapon.gluttony.decay 1
 execute if score @s obl.weapon.gluttony.decay matches 1 if score @s obl.weapon.gluttony.combo matches 1.. run scoreboard players set @s obl.weapon.gluttony.combo 0
-execute if predicate obl:holding/gluttony run function obl:item/weapon/gluttony/tick 
+execute if predicate obl:holding/gluttony run function obl:item/weapon/gluttony/tick
 
 
 ## КУЛДАУН ОРУЖИЯ

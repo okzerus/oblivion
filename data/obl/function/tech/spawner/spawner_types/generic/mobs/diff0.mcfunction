@@ -3,3 +3,5 @@ execute at @s if score #time obl.time_of_day matches 0..12000 run effect give @n
 execute at @s if block ~ ~-1 ~ #air run effect give @n slow_falling 200 0 false
 execute at @s run scoreboard players operation @n[tag=obl.spawner.mob] obl.spawner.id = @s obl.spawner.id
 tag @s add obl.spawner.mob_spawned
+
+summon text_display ~ ~ ~ {see_through:true}

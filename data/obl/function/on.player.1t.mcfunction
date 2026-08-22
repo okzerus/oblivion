@@ -24,6 +24,13 @@ scoreboard players operation #id.temp obl.id = @s obl.id
 
 ###   О Р У Ж Е Й Н А Я   З А Б В Е Н И Я
 
+## ТИК ОРУЖИЯ 
+# Чревоугодие 
+execute if score @s obl.weapon.gluttony.decay matches 1.. run scoreboard players remove @s obl.weapon.gluttony.decay 1
+execute if score @s obl.weapon.gluttony.decay matches 1 if score @s obl.weapon.gluttony.combo matches 1.. run scoreboard players set @s obl.weapon.gluttony.combo 0
+execute if predicate obl:holding/gluttony run function obl:item/weapon/gluttony/tick 
+
+
 ## КУЛДАУН ОРУЖИЯ
 # Анти-ЛКМ-спам КД
 execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1

@@ -9,5 +9,5 @@ execute if score @s obl.weapon.gluttony.combo matches 30.. run effect give @s mi
 #execute if score @s obl.weapon.gluttony.combo matches 30.. run effect give @s minecraft:speed 1 0 true
 scoreboard players add @s obl.weapon.gluttony.fangs 1 
 tag @s add obl.temp
-execute if score @s obl.weapon.gluttony.fangs matches 20.. at @e[type=#obl:all_mobs,distance=..5,limit=1,sort=random,tag=!obl.temp] run function obl:item/weapon/gluttony/spawn_fangs
+execute if entity @s[scores={obl.weapon.gluttony.fangs=20..,obl.weapon.gluttony.combo=150..}] at @e[type=#obl:all_mobs,distance=..5,limit=1,sort=random,tag=!obl.temp] run function obl:item/weapon/gluttony/spawn_fangs
 tag @s remove obl.temp 

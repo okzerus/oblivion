@@ -25,6 +25,8 @@ scoreboard objectives add obl.spawner.id dummy
 scoreboard objectives add obl.weapon.gluttony.combo dummy
 scoreboard objectives add obl.weapon.gluttony.decay dummy
 scoreboard objectives add obl.weapon.gluttony.fangs dummy
+scoreboard objectives add obl.double_sneak.time dummy
+scoreboard objectives add obl.sneaking dummy
 
 scoreboard objectives add obl.weapon.was_using.crack_of_dawn dummy
 

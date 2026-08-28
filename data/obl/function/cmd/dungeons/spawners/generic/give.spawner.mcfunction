@@ -1,0 +1,1 @@
+give @s allay_spawn_egg[custom_name=[{"text":"Создать - Спавнер подземелья (generic)","italic":false,"color":"#6699ff"}],entity_data={id:marker,Tags:["obl.admin_summoner","obl.admin_summoner.dungeon_spawner.generic"]}]

@@ -11,7 +11,8 @@
 # Из tick.mcfunction
 # Выполнение функций каждый тик, на каждую сущность.
 
-
+###   Я Й Ц А   А Д М И Н А
+execute if entity @s[type=marker,tag=obl.admin_summoner] run function obl:tech/admin_summoner
 
 ###   З Д О Р О В Ь Е
 # Обновить здоровье сущности из NBT
@@ -24,7 +25,6 @@ execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
 
 
 ## Объявление
-#execute if entity @s[type=armor_stand,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
 execute if entity @s[type=text_display,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
 
 
@@ -37,11 +37,18 @@ execute if entity @s[type=marker,tag=obl.circling_unusual] run function obl:tech
 
 
 ###   С П А В Н Е Р Ы
-execute unless score #frozen_spawners obl.frozen_spawners matches 1.. if entity @s[type=marker,tag=obl.spawner.init] run function obl:tech/spawner/init
+# Проверка на наличие моба в спавнере
+execute unless score #frozen_spawners obl.frozen_spawners matches 1.. as @s[type=marker,tag=obl.spawner.init] if entity @s[tag=obl.spawner.mob.unset] run function obl:tech/spawner/spawner.setmob
+# Инициализирует спавнер как только в него добавляется тег моба
+execute unless score #frozen_spawners obl.frozen_spawners matches 1.. as @s[type=marker,tag=obl.spawner.init] unless entity @s[tag=obl.spawner.mob.unset] run function obl:tech/spawner/init
+# Основная функция спавнера
 execute if entity @s[type=marker,tag=obl.spawner,tag=!obl.spawner.init] run function obl:tech/spawner/main
-
+execute as @s[type=marker,tag=obl.spawner] unless block ~ ~ ~ spawner run function obl:tech/spawner/destroy
+# Проверка смерти для моба-транспорт
+execute as @s[tag=obl.spawner.vehicle_mob] unless predicate obl:has_passenger run function obl:tech/add.death_marker
 
 ###   О Ч И С Т К А
 tag @s remove obl.temp.took_damage
-execute as @s[tag=obl.death_detector] store success score @s obl on vehicle run tag @s add obl.death_detector
-execute if score @s[tag=obl.death_detector] obl matches 1.. run kill @s
+
+#execute if entity @s[type=marker,tag=obl.spawner,tag=!obl.spawner.init] run scoreboard players set @s obl.spawner.difficulty 3
+#execute if entity @s[type=marker,tag=obl.spawner,tag=!obl.spawner.init] run scoreboard players set @s obl.spawner.death_count 19

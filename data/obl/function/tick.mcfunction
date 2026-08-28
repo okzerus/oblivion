@@ -35,6 +35,17 @@ execute if score #5t obl matches 5.. run function obl:on.5t
 
 
 
+###   Д Е С Я Т Ь   Т И К О В
+scoreboard players add #10t obl 1
+execute if score #10t obl matches 10.. run function obl:on.10t
+
+
+
+
+#################################################################################################################################################################
+
+
+
 ###   О Д Н А   С Е К У Н Д А
 scoreboard players add #1s obl 1
 execute if score #1s obl matches 20.. run function obl:on.1s

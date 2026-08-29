@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "obl:dungeons/ruins/desert/chest",
+  "pools": [
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:fillers/desert"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/desert/type/temple",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/desert/type/fossil",
+          "weight": 9
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/desert/type/caravan",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/desert/type/glassworks",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/desert/type/archaeology",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/desert/rare"
+        }
+      ]
+    }
+  ]
+}

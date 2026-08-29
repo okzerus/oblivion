@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "obl:dungeons/ruins/jungle/chest",
+  "pools": [
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:fillers/jungle"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/jungle/type/temple",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/jungle/type/canopy",
+          "weight": 9
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/jungle/type/melon",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/jungle/type/overrun",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/jungle/type/archaeology",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/jungle/rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "obl:dungeons/ruins/swamp/chest",
+  "pools": [
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:fillers/swamp"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/swamp/type/witch",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/swamp/type/mangrove",
+          "weight": 9
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/swamp/type/bog",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/swamp/type/fisher",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/swamp/type/archaeology",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/swamp/rare"
+        }
+      ]
+    }
+  ]
+}

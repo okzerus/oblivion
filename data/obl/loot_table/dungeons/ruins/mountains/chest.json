@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "obl:dungeons/ruins/mountains/chest",
+  "pools": [
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:fillers/mountains"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/mountains/type/mine",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/mountains/type/goat",
+          "weight": 9
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/mountains/type/peak",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/mountains/type/camp",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/mountains/type/archaeology",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/mountains/rare"
+        }
+      ]
+    }
+  ]
+}

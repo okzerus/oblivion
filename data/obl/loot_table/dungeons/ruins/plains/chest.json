@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "obl:dungeons/ruins/plains/chest",
+  "pools": [
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:fillers/plains"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/plains/type/grassland",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/plains/type/harvest",
+          "weight": 9
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/plains/type/livestock",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/plains/type/archaeology",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/plains/type/stable",
+          "weight": 7
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/plains/rare"
+        }
+      ]
+    }
+  ]
+}

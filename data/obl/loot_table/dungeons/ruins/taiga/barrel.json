@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "obl:dungeons/ruins/taiga/barrel",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:fillers/taiga"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.08
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/taiga/rare"
+        }
+      ]
+    }
+  ]
+}

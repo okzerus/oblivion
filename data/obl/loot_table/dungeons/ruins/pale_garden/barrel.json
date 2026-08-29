@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "obl:dungeons/ruins/pale_garden/barrel",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:fillers/pale_garden"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.08
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "obl:dungeons/ruins/pale_garden/rare"
+        }
+      ]
+    }
+  ]
+}

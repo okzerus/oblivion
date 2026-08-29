@@ -1,0 +1,159 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "obl:dungeons/ruins/bee_nest/type/beekeeper",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:torch",
+          "weight": 12,
+          "functions": [
+            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bread",
+          "weight": 12,
+          "functions": [
+            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:glass_bottle",
+          "weight": 10,
+          "functions": [
+            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "weight": 8,
+          "functions": [
+            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 4 } }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:string",
+          "weight": 8,
+          "functions": [
+            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wheat",
+          "weight": 8,
+          "functions": [
+            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:flint",
+          "weight": 6,
+          "functions": [
+            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        { "condition": "minecraft:random_chance", "chance": 0.6 }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_helmet",
+          "weight": 10,
+          "functions": [
+            { "function": "minecraft:set_damage", "damage": { "type": "minecraft:uniform", "min": 0.3, "max": 0.7 } },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:dyed_color": { "rgb": 15122250 },
+                "minecraft:custom_name": { "text": "Шляпа пасечника", "color": "yellow", "italic": false }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_chestplate",
+          "weight": 8,
+          "functions": [
+            { "function": "minecraft:set_damage", "damage": { "type": "minecraft:uniform", "min": 0.3, "max": 0.7 } },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:dyed_color": { "rgb": 15790312 },
+                "minecraft:custom_name": { "text": "Куртка пасечника", "color": "white", "italic": false }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shears",
+          "weight": 8,
+          "functions": [
+            { "function": "minecraft:set_damage", "damage": { "type": "minecraft:uniform", "min": 0.3, "max": 0.75 } }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:name_tag",
+          "weight": 6
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        { "condition": "minecraft:random_chance", "chance": 0.12 }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bee_nest",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": { "text": "Снятое гнездо", "color": "gold", "italic": false },
+                "minecraft:lore": [
+                  { "text": "Кто-то унёс его целиком", "color": "gray", "italic": true }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": { "text": "Дневник пасечника", "color": "yellow", "italic": false },
+                "minecraft:lore": [
+                  { "text": "Рой ушёл вглубь. Иду за ним.", "color": "gray", "italic": true },
+                  { "text": "Последняя запись оборвана", "color": "dark_gray", "italic": true }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

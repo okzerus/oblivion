@@ -18,6 +18,7 @@
 ###   О Д И Н   Т И К
 execute as @e at @s run function obl:on.entity.1t
 execute as @a at @s run function obl:on.player.1t
+execute as @e[type=#obl:parryable] at @s run function obl:on.parryable.1t
 
 
 

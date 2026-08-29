@@ -55,17 +55,26 @@ execute if predicate obl:holding/gluttony run function obl:item/weapon/gluttony/
 
 ## КУЛДАУН ОРУЖИЯ
 # Анти-ЛКМ-спам КД
-#execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
+execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
 # Способности "Проблеск Зари"
 execute if score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run function obl:item/weapon/crack_of_dawn/ability/cd
 
 ## ИСПОЛЬЗОВАНИЕ ОРУЖИЯ
-# Удерживание ПКМ
+# Удерживание ПКМ детектится через ачивку; функция по пути obl:tech/player/adv/on.rmb.mcfunction
+# Отмена ПКМ
 execute if entity @s[tag=!obl.holding_rmb,scores={obl.holding_rmb=1..}] run function obl:item/rmb_cancel
 tag @s remove obl.holding_rmb
 
+<<<<<<< Updated upstream
 ## Очистка
 execute as @e[tag=obl.temp.success_hit] run tag @s remove obl.temp.success_hit
+=======
+## ИСПОЛЬЗОВАНИЕ ЩИТА
+# Удерживание ПКМ детектится через ачивку; функция по пути obl:tech/player/adv/using_shield.mcfunction
+# Отмена ПКМ
+execute if entity @s[tag=!obl.using_shield,scores={obl.using_shield=1..}] run function obl:item/shield_cancel
+tag @s remove obl.using_shield
+>>>>>>> Stashed changes
 
 #################################################################################################################################################################
 
@@ -73,9 +82,6 @@ execute as @e[tag=obl.temp.success_hit] run tag @s remove obl.temp.success_hit
 ## КД
 #execute if score @s obl.parry.cd matches 1 run function oblivion:tech/parrying/ready
 #execute if score @s obl.parry.cd matches 1.. run scoreboard players remove @s obl.parry.cd 1
-## ОБНАРУЖЕНИЕ БЛОКИРОВАНИЯ ЩИТОМ
-#execute if score @s obl.shield_cleanup matches 1.. run function oblivion:tech/parrying/blocking.end
-#execute if score @s obl.shield_using matches 1.. run scoreboard players add @s obl.shield_cleanup 1
 ## ПРОВАЛ ПАРИРОВАНИЯ
 #execute if entity @s[tag=obl.parry_success] run scoreboard players add @s obl.parry.tick 1
 #execute if score @s[tag=obl.parry_success.direct] obl.parry.tick matches 7.. run function oblivion:tech/parrying/direct/fail

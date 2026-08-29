@@ -18,9 +18,12 @@
 		"minecraft:fishing_bobber",
 		"minecraft:experience_bottle",
 		"minecraft:magma_cube",
+		"minecraft:sulfur_cube",
 		"minecraft:zombie",
 		"minecraft:zombified_piglin",
 		"minecraft:item",
+		"minecraft:wind_charge",
+		"minecraft:breeze_wind_charge",
 		"minecraft:block_display",
 		"minecraft:armor_stand",
 		"minecraft:tnt"

@@ -1,0 +1,161 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "consume_seconds": 2147483647,
+                  "sound": "intentionally_empty",
+                  "has_consume_particles": false
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{obl.weapon.id:\"fanged_assassin\",obl.weapon:1,obl.rmb_ability:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "Клыкастый Убийца",
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "insert",
+              "lore": [
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": "ПКМ: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Tarantella di Volpe",
+                    "color": "gold",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": " Телепортирует за спину противника, наносит ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "6",
+                    "color": "red",
+                    "italic": false
+                  },
+                  {
+                    "text": " урона и оглушает врага на ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "1",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": " секунду.",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": " Перезарядка: 5 секунд",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": "Shift + ПКМ: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                  "text": "Un'Esplosione di Rosso Autunnale",
+                  "color": "red",
+                  "italic": false
+                  }
+                ],
+                {
+                  "text": " Накладывает на игрока Скорость II.",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Значительно повышает скорость атаки, постепенно снижая её до стандартного.",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": " Уменьшает длительность перезарядки ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Tarantella di Volpe ",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "text": "до 2 секунд.",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": " Перезарядка: 1 минута (с окончания действия навыка)",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": "Пассивная способность: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                  "text": "Accelerando",
+                  "color": "red",
+                  "italic": false
+                  }
+                ],
+                {
+                  "text": " Через 30 секунд непрерывного держания оружия, перезарядка всех навыков сокращается вдвое",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ]
+	          }
+          ]
+        }
+      ]
+    }
+  ]
+}

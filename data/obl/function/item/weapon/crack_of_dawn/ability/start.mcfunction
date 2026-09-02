@@ -1,5 +1,5 @@
 ###   Н А   В О С Х О Д Е   С О Л Н Ц А . . .
-title @s times 0 1000 0
+title @s times 0 40 0
 title @s title {"text":""}
 title @s subtitle {"text":"На восходе Солнца...","italic":true,"color":"#eb5721"}
 

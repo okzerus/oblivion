@@ -1,0 +1,1 @@
+execute at @e[distance=..8,tag=obl.temp.hit,sort=nearest,limit=1] run particle dust{color:[0.65,0.02,0.02],scale:1} ~ ~0.75 ~ 0.75 0.75 0.75 0 10

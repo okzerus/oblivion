@@ -11,6 +11,8 @@ scoreboard objectives add obl.spawner.id dummy
 scoreboard objectives add obl dummy
 scoreboard objectives add obl.id dummy
 scoreboard objectives add obl.random dummy
+scoreboard objectives add obl.p1 dummy
+scoreboard objectives add obl.p2 dummy
 scoreboard objectives add obl.health dummy
 scoreboard objectives add obl.health_old dummy
 scoreboard objectives add obl.damage_taken dummy
@@ -36,11 +38,17 @@ scoreboard objectives add obl.weapon.gluttony.fangs dummy
 scoreboard objectives add obl.double_sneak.time dummy
 scoreboard objectives add obl.sneaking dummy
 scoreboard objectives add obl.weapon.gluttony.insatiable_hunger.interval dummy
+scoreboard objectives add obl.weapon.fanged_assassin.autumn_red dummy
+scoreboard objectives add obl.weapon.fanged_assassin.autumn_red.cd dummy
+scoreboard objectives add obl.weapon.fanged_assassin.fox_dance.cd dummy
+scoreboard objectives add obl.weapon.fanged_assassin.fox_dance.ray dummy
+scoreboard objectives add obl.weapon.fanged_assassin.accelerando dummy
+
 
 scoreboard objectives add obl.weapon.was_using.crack_of_dawn dummy
 
 ### Отладка
-scoreboard objectives setdisplay sidebar obl.spawner.death_count
+scoreboard objectives setdisplay sidebar obl.weapon.fanged_assassin.autumn_red
 
 
 

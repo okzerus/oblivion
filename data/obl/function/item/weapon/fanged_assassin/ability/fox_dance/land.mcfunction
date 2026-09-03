@@ -1,0 +1,2 @@
+execute as @e[tag=obl.weapon.fanged_assassin.fox_dance.blinker,limit=1] run tp @s ~ ~ ~ facing entity @e[tag=obl.weapon.fanged_assassin.fox_dance.blink_target,limit=1]
+tag @e[tag=obl.weapon.fanged_assassin.fox_dance.blinker,limit=1] add obl.weapon.fanged_assassin.fox_dance.blink_done

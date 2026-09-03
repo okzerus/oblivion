@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Сильнее при тьме"
+        },
+        "description": {
+            "text": "Заполучите Оттенок ночи"
+        },
+        "icon": {
+            "item": "minecraft:netherite_sword",
+            "nbt": "{CustomModelData:4004}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.sword.nights_shade": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.nights_shade:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.sword.nights_shade"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/sword/collection"
+}

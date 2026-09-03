@@ -1,0 +1,2 @@
+summon minecraft:marker ~ ~ ~ {Tags:["obl.projectile","obl.structure_pointer","obl.pointer.black_death_memorial","obl.projectile.speed.1"]}
+execute as @e[type=marker,tag=obl.pointer.black_death_memorial,limit=1,sort=nearest] run tp @s ~ ~ ~ facing entity @e[type=marker,tag=obl.black_death.memorial.center,limit=1,sort=nearest] eyes

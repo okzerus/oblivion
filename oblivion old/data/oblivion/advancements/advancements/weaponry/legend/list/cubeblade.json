@@ -1,0 +1,40 @@
+{
+  "display": {
+    "title": {
+      "text": "Истинный герой Майнкрафта",
+      "color": "red"
+    },
+    "description": {
+      "text": "Заполучите легендарное Куболезвие. Достойны ли вы?"
+    },
+    "icon": {
+      "item": "minecraft:netherite_sword",
+      "nbt": "{CustomModelData:16000,Enchantments:[{}]}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "obtain.sword.cubelade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{obl.sword.cubelade:1b}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain.sword.cubelade"
+    ]
+  ],
+  "parent": "oblivion:advancements/weaponry/legend/root",
+  "rewards": {
+    "experience": 3000
+  }
+}

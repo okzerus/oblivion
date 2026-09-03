@@ -1,0 +1,7 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"Проклятый Дух","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"С-сука, просто умри!","color":"#d3fdd8"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"Проклятый Дух","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"Ты заплатишь своей ЖИЗНЬЮ!","color":"#d3fdd8"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"Проклятый Дух","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"Зачем тебе ЭТО!?","color":"#d3fdd8"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"Проклятый Дух","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"У меня ещё ТОННА сил в запасе! СДАВАЙСЯ!!!","color":"#d3fdd8"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"Проклятый Дух","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"Что за ЧЕРТОВЩИНА!?","color":"#d3fdd8"},{"text":"\n"}]
+playsound minecraft:entity.blaze.ambient hostile @s ~ ~ ~ 1 1.2

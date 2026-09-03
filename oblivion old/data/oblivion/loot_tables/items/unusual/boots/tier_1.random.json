@@ -1,0 +1,41 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_1.flame"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_1.smoke"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_1.spark"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_1.stroll_badlands"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_1.stroll_desert"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_1.stroll_ocean"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_1.stroll_plains"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_1.stroll_snow"
+        }
+      ]
+    }
+  ]
+}

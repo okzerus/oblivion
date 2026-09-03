@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Изысканность"
+        },
+        "description": {
+            "text": "Парируйте более одного раза через короткий интервал за один кадр парирования"
+        },
+        "icon": {
+            "item": "minecraft:shield"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.more_than_once": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.more_than_once"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/parrying_the_world"
+}

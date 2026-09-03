@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Ракетный залп"
+        },
+        "description": {
+            "text": "Парируйте летящий фейерверк, чтобы запустить его так, как если бы он был выстрелен из арбалета"
+        },
+        "icon": {
+            "item": "minecraft:firework_rocket"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.firework_rocket": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.firework_rocket"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/item"
+}

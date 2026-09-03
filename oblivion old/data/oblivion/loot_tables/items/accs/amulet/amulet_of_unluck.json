@@ -1,0 +1,128 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:rabbit_foot",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Амулет неудачи",
+                "color": "#c5a74e",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Ох, не повезло, не повезло.",
+                  "color": "#7e6e32",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				  [
+					{
+						"text": "Когда в слоте аксессуара:",
+						"color": "gray",
+						"italic": false
+					}
+				  ],
+                {
+                  "text": "- Когда носитель атакует, он может получить эффект Слабости X",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "   с 35% шансом на 1 секунду",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "- -2 к Удаче",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пустая оболочка]: Предмет может быть превращён на Алтаре Забвения",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 2",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:42107,HideFlags:3,obl.difficulty:2b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

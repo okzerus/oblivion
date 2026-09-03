@@ -1,0 +1,150 @@
+{
+  "display": {
+    "title": {
+      "text": "Охотник на демонов"
+    },
+    "description": {
+      "text": "Убейте всех мобов Крепости нижнего мира"
+    },
+    "icon": {
+      "item": "minecraft:golden_sword",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "witherbow": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"witherbow\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "witheraxe": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"witheraxe\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "witherhoe": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"witherhoe\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "wither": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "withersoul": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:vex",
+              "nbt": "{Tags:[\"withersoul\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "blaze": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:blaze"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "storm": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:blaze",
+              "nbt": "{Tags:[\"obl.storm\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "witherbow"
+    ],
+    [
+      "witheraxe"
+    ],
+    [
+      "wither"
+    ],
+    [
+      "withersoul"
+    ],
+    [
+      "blaze"
+    ],
+    [
+      "storm"
+    ],
+    [
+      "witherhoe"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/mobs/nether/nether"
+}

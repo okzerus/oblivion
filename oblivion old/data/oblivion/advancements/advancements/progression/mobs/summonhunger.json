@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Ланч-тайм!"
+        },
+        "description": {
+            "text": "Призовите Голод"
+        },
+        "icon": {
+            "item": "minecraft:rotten_flesh",
+            "nbt": "{CustomModelData:30000}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/bosses"
+}

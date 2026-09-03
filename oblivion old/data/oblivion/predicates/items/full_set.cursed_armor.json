@@ -1,0 +1,20 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "head": {
+        "nbt": "{obl.cursed_armor:1b}"
+      },
+      "chest": {
+        "nbt": "{obl.cursed_armor:1b}"
+      },
+      "legs": {
+        "nbt": "{obl.cursed_armor:1b}"
+      },
+      "feet": {
+        "nbt": "{obl.cursed_armor:1b}"
+      }
+    }
+  }
+}

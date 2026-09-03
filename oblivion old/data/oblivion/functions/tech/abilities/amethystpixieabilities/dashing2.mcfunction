@@ -1,0 +1,1 @@
+execute as @e[tag=amethystpixie,limit=1] at @s anchored eyes positioned ^ ^ ^.3 run function oblivion:tech/raycast/pixiedash

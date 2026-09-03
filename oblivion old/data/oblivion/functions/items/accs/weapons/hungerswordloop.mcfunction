@@ -1,0 +1,9 @@
+execute if score @s[nbt={SelectedItem:{tag:{CustomModelData:5995}}}] obl.hungercombo matches ..9 run title @s actionbar ["",{"text":"[0] \u041a\u043e\u043c\u0431\u043e - ","color":"#FFF2A7"},{"score":{"name":"@s","objective":"obl.hungercombo"},"color":"#FFF2A7"}]
+execute if score @s[nbt={SelectedItem:{tag:{CustomModelData:5995}}}] obl.hungercombo matches 10..19 run title @s actionbar ["",{"text":"[1] \u041a\u043e\u043c\u0431\u043e - ","color":"#F3EE7F"},{"score":{"name":"@s","objective":"obl.hungercombo"},"color":"#F3EE7F"}]
+execute if score @s[nbt={SelectedItem:{tag:{CustomModelData:5995}}}] obl.hungercombo matches 20..29 run title @s actionbar ["",{"text":"[2] \u041a\u043e\u043c\u0431\u043e - ","color":"#E0D75B"},{"score":{"name":"@s","objective":"obl.hungercombo"},"color":"#E0D75B"}]
+execute if score @s[nbt={SelectedItem:{tag:{CustomModelData:5995}}}] obl.hungercombo matches 30..39 run title @s actionbar ["",{"text":"[3] \u041a\u043e\u043c\u0431\u043e - ","color":"#C5B13B"},{"score":{"name":"@s","objective":"obl.hungercombo"},"color":"#C5B13B"}]
+execute if score @s[nbt={SelectedItem:{tag:{CustomModelData:5995}}}] obl.hungercombo matches 40..49 run title @s actionbar ["",{"text":"[4] \u041a\u043e\u043c\u0431\u043e - ","color":"#B18621"},{"score":{"name":"@s","objective":"obl.hungercombo"},"color":"#B18621"}]
+execute if score @s[nbt={SelectedItem:{tag:{CustomModelData:5995}}}] obl.hungercombo matches 50.. run title @s actionbar ["",{"text":"[5] \u041a\u043e\u043c\u0431\u043e - ","color":"#8C4E09"},{"score":{"name":"@s","objective":"obl.hungercombo"},"color":"#8C4E09"}]
+scoreboard players add @s obl.hungertimer 1
+execute if score @s obl.hungertimer matches 7.. run function oblivion:items/hungersword/comboend
+execute unless entity @s[nbt={SelectedItem:{tag:{CustomModelData:5995}}}] run function oblivion:items/hungersword/comboend

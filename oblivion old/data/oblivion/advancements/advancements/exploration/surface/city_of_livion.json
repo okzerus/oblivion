@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Упавшая столица"
+        },
+        "description": {
+            "text": "Разыщите руины города Ливиона, столицы некогда могущественной страны, павшей в войне с Забвением"
+        },
+        "icon": {
+            "item": "minecraft:light_blue_banner",
+			"nbt": "{BlockEntityTag:{Patterns:[{Pattern:\"cbo\",Color:9},{Pattern:\"gra\",Color:0},{Pattern:\"flo\",Color:4},{Pattern:\"sc\",Color:15},{Pattern:\"sc\",Color:4}]}}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.city_of_livion": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/city_of_livion"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.city_of_livion"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/exploration/surface/collection"
+}

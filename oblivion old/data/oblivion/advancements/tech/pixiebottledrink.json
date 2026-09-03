@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "player": [],
+        "item": {
+          "items": [
+            "minecraft:potion"
+          ],
+          "nbt": "{pixie:1b}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/pixiedrink"
+  }
+}

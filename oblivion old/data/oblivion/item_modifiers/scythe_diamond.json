@@ -1,0 +1,87 @@
+[
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+            "text": "Алмазная коса",
+            "italic": false
+       }
+    },
+    {
+		"function": "minecraft:set_lore",
+		"lore": [
+			{
+				"text": "",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "Когда в ведущей руке:",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": " Урон: 5",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": " Скорость атаки: 1.75",
+				"color": "dark_green",
+				"italic": false
+			},
+			[
+			{
+				"text": " Повреждение брони: Шанс 13% на 9 секунд, ",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "-7",
+				"color": "dark_aqua",
+				"italic": false
+			},
+			{
+				"text": " очков защиты",
+				"color": "dark_green",
+				"italic": false
+			}
+			],
+			[
+			{
+				"text": " Кровотечение: Сила II, Шанс 30%",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "(-5%/ЧБ) ",
+				"color": "red",
+				"italic": false
+			},
+			{
+				"text": "на 20",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "(-2.5/ЧБ) ",
+				"color": "red",
+				"italic": false
+			},
+			{
+				"text": "секунд",
+				"color": "dark_green",
+				"italic": false
+			}
+			]
+	    ]
+	},
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{obl.scythe:1b,obl.scythe.diamond:1b,HideFlags:2}"
+    },
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-121109,37197,221529,-74394]},{AttributeName:\"generic.attack_speed\",Amount:-2.25,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-121109,37297,221529,-74594]}]}"
+    }
+]

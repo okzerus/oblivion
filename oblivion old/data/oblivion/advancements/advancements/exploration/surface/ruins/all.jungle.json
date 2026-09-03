@@ -1,0 +1,116 @@
+{
+    "display": {
+        "title": {
+            "text": "Непроходимые заросли"
+        },
+        "description": {
+            "text": "Разыщите каждый тип руин в биоме Джунглей"
+        },
+        "icon": {
+            "item": "minecraft:jungle_log"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.ruins.jungle.bamboo": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/bamboo"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.broken": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/broken"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.camp": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/camp"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.lake": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/lake"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.panda": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/panda"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.pool": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/pool"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.roof": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/roof"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.ruins.jungle.bamboo"
+        ],
+        [
+            "locate.ruins.jungle.broken"
+        ],
+        [
+            "locate.ruins.jungle.camp"
+        ],
+        [
+            "locate.ruins.jungle.lake"
+        ],
+        [
+            "locate.ruins.jungle.panda"
+        ],
+        [
+            "locate.ruins.jungle.pool"
+        ],
+        [
+            "locate.ruins.jungle.roof"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/locate"
+}

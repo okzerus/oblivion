@@ -1,0 +1,182 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+			  {
+                "text": "Пекло",
+                "color": "#85cefa",
+                "italic": false
+              },
+                  [
+			        {
+                       "text": " [Пр",
+                       "color": "#FEA0EE",
+                       "italic": false
+				    },
+			        {
+                       "text": "обу",
+                       "color": "#FFB2FA",
+                       "italic": false
+				    },
+			        {
+                       "text": "жд",
+                       "color": "#FFC1FE",
+                       "italic": false
+				    },
+			        {
+                       "text": "ённ",
+                       "color": "#FFD9FF",
+                       "italic": false
+				    },
+			        {
+                       "text": "ый]",
+                       "color": "#FFE8FF",
+                       "italic": false
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "В извечном пламени, восстаньте вновь",
+                  "color": "#72b0d5",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "    Стрелы выпускаемые Пеклом горят по умолчанию.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Наличие зачарования Горящая стрела позволит стрелам",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    поджигать поверхность, если они были выпущены вприсяди.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Попадание в цель или поверхность вызовет адское извержение",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    из под земли, наносящее 9 урона огнём и воспламеняющее",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    все цели в радиусе 5 блоков.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Зарядите Пекло, удерживая тетиву лука дольше, чтобы выстрелить",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    усиленным адским извержением по прямой линии, наносящим",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    20 урона огнём всем целям в радиусе поражения.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:5b,obl.bow:1b,obl.bow.inferno:1b,CustomModelData:41407}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

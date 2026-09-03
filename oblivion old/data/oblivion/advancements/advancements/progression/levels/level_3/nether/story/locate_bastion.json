@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Руины войны миров"
+        },
+        "description": {
+            "text": "Разыщите остатки Бастионов, грандиозных крепостей, построенными жителями Незера, обречёнными на уничтожение под слепой яростью Падшего ангела"
+        },
+        "icon": {
+            "item": "minecraft:chiseled_polished_blackstone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.bastion_remnant": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "minecraft:bastion_remnant"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.bastion_remnant"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/levels/level_3/nether/root"
+}

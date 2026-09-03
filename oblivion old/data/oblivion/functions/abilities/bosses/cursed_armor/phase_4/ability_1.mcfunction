@@ -1,0 +1,1 @@
+function oblivion:tech/projectiles/shoot/cursed

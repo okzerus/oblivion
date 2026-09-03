@@ -1,0 +1,123 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:netherite_axe"
+    },
+    "title": "И кто теперь тут викинг?",
+    "description": "Убейте Викинга всеми видами топоров",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/mobs/overworld/viking",
+  "criteria": {
+    "wooden": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:wooden_axe"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "stone": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:stone_axe"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "iron": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:iron_axe"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "golden": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:golden_axe"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "diamond": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:diamond_axe"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "netherite": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:netherite_axe"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "wooden"
+    ],
+    [
+      "stone"
+    ],
+    [
+      "iron"
+    ],
+    [
+      "golden"
+    ],
+    [
+      "diamond"
+    ],
+    [
+      "netherite"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  }
+}

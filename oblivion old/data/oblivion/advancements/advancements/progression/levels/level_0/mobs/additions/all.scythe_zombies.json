@@ -1,0 +1,79 @@
+{
+  "display": {
+    "title": {
+      "text": "Разящее истребление"
+    },
+    "description": {
+      "text": "Убейте все виды разящих зомби"
+    },
+    "icon": {
+      "item": "minecraft:iron_hoe"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.scythe_zombie.iron": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:[\"obl.scythe_zombie.iron\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "kill.scythe_zombie.golden": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:[\"obl.scythe_zombie.golden\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "kill.scythe_zombie.diamond": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:[\"obl.scythe_zombie.diamond\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.scythe_zombie.iron"
+    ],
+    [
+      "kill.scythe_zombie.golden"
+    ],
+    [
+      "kill.scythe_zombie.diamond"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/progression/levels/level_0/mobs/collection"
+}

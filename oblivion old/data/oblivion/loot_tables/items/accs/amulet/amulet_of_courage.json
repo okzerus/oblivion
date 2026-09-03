@@ -1,0 +1,128 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:copper_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Амулет отваги",
+                "color": "#fc9982",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Якорь героизма - начало вашего праведного пути.",
+                  "color": "#e77c56",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				  [
+					{
+						"text": "Когда в слоте аксессуара:",
+						"color": "gray",
+						"italic": false
+					}
+				  ],
+                {
+                  "text": "+ Даёт +0.1 к Силе за каждого враждебного моба в",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   радиусе 15 блоков (макс. 10)",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ Дополнительно даёт +1 к Силе и +0.25 к Сопротивлению,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   если игрок участвует в битве с боссом",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 1",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:42102,HideFlags:3,obl.difficulty:1b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Хранитель жеоды",
+                "color": "#ee6eee",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Кромсай красиво и со вкусом",
+                  "color": "#c347c3",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 7",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 1.6",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 8% Шанс оглушить цель",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[ВНИЗ]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "   Воткните клинок в землю, чтобы",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   создать проклятую аметистовую волну.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   Эта волна оглушит все цели в радиусе действия.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   Требует наличия 1-го Зачарованного аметиста.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:5b,CustomModelData:9898,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:7,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-121109,128697,221529,-257394]},{AttributeName:\"generic.attack_speed\",Amount:-2.4,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-121109,128797,221529,-257594]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "display": {
+    "title": {
+      "text": "Магнат"
+    },
+    "description": {
+      "text": "Поторгуйтесь с каждым видом Мёртвого шахтёра"
+    },
+    "icon": {
+      "item": "minecraft:emerald_block"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "trade.undead_miner.stone": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "nbt": "{Tags:[\"obl.undead_miner.stone\"]}"
+        }
+      }
+    },
+    "trade.undead_miner.iron": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "nbt": "{Tags:[\"obl.undead_miner.iron\"]}"
+        }
+      }
+    },
+    "trade.undead_miner.gold": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "nbt": "{Tags:[\"obl.undead_miner.gold\"]}"
+        }
+      }
+    },
+    "trade.undead_miner.emerald": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "nbt": "{Tags:[\"obl.undead_miner.emerald\"]}"
+        }
+      }
+    },
+    "trade.undead_miner.diamond": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "nbt": "{Tags:[\"obl.undead_miner.diamond\"]}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "trade.undead_miner.stone"
+    ],
+    [
+      "trade.undead_miner.iron"
+    ],
+    [
+      "trade.undead_miner.gold"
+    ],
+    [
+      "trade.undead_miner.emerald"
+    ],
+    [
+      "trade.undead_miner.diamond"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/mobs/additions/undead_miner.cure"
+}

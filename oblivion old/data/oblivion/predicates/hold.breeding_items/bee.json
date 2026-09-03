@@ -1,0 +1,63 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "offhand": {
+            "items": [
+		"minecraft:dandelion",
+		"minecraft:azure_bluet",
+		"minecraft:poppy",
+		"minecraft:blue_orchid",
+		"minecraft:allium",
+		"minecraft:red_tulip",
+		"minecraft:orange_tulip",
+		"minecraft:white_tulip",
+		"minecraft:pink_tulip",
+		"minecraft:oxeye_daisy",
+		"minecraft:sunflower",
+		"minecraft:wither_rose",
+		"minecraft:cornflower",
+		"minecraft:lilac",
+		"minecraft:rose_bush",
+		"minecraft:peony",
+		"minecraft:lily_of_the_valley"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "items": [
+		"minecraft:dandelion",
+		"minecraft:azure_bluet",
+		"minecraft:poppy",
+		"minecraft:blue_orchid",
+		"minecraft:allium",
+		"minecraft:red_tulip",
+		"minecraft:orange_tulip",
+		"minecraft:white_tulip",
+		"minecraft:pink_tulip",
+		"minecraft:oxeye_daisy",
+		"minecraft:sunflower",
+		"minecraft:wither_rose",
+		"minecraft:cornflower",
+		"minecraft:lilac",
+		"minecraft:rose_bush",
+		"minecraft:peony",
+		"minecraft:lily_of_the_valley"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

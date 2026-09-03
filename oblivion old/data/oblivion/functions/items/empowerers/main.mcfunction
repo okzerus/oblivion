@@ -1,0 +1,1 @@
+execute if entity @s[tag=obl.empowered.instinct] run function oblivion:items/empowerers/instinct/tick

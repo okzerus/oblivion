@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Большое будущее"
+        },
+        "description": {
+            "text": "А вы знаете толк в стиле боя. Успешно парируйте 100 раз"
+        },
+        "icon": {
+            "item": "minecraft:shield",
+            "nbt": "{Enchantments:[{}],BlockEntityTag:{Patterns:[{Pattern:base,Color:3}],Base:3}}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.hundred_times": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.hundred_times"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/shield/parrying_the_world"
+}

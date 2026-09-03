@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Паризависимый",
+            "color": "red"
+        },
+        "description": {
+            "text": "Не осталось в мире ничего, что вы ещё не парировали. Даже... не знаю, можно ли этим гордиться. Успешно парируйте 10.000 раз"
+        },
+        "icon": {
+            "item": "minecraft:shield",
+            "nbt": "{Enchantments:[{}],BlockEntityTag:{Patterns:[{Pattern:base,Color:14}],Base:14}}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.ten_thousand_times": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.ten_thousand_times"
+        ]
+    ],
+    "rewards": {
+        "experience": 3000
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/parry.1000"
+}

@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Сильнее при свете"
+        },
+        "description": {
+            "text": "Заполучите Последний свет"
+        },
+        "icon": {
+            "item": "minecraft:netherite_sword",
+            "nbt": "{CustomModelData:4001}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.sword.last_light": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.last_light:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.sword.last_light"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/sword/collection"
+}

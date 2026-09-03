@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:wooden_sword",
+      "nbt": "{CustomModelData:4005,Enchantments:[{}]}"
+    },
+    "title": {
+      "text": "Рыцарь на розовом коне",
+      "color": "red"
+    },
+    "description": "Убейте \"Легендарного дракона\" сидя на \"Свирепом розовом коне\" с помощью \"Сильнейшего клинка\"",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/mobs/mothron",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "nbt": "{RootVehicle:{Entity:{id:\"minecraft:pig\"}}}",
+          "equipment": {
+            "mainhand": {
+              "nbt": "{CustomModelData:4005}"
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:phantom",
+          "nbt": "{Tags:[\"mothron\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 3000
+  }
+}

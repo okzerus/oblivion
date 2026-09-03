@@ -1,0 +1,38 @@
+{
+    "display": {
+        "title": {
+            "text": "Проявляя милосердие"
+        },
+        "description": {
+            "text": "Накопите целый стак Стрел помощи, станьте хиллером в своей команде, в коем-то веке!"
+        },
+        "icon": {
+            "item": "minecraft:tipped_arrow",
+            "nbt": "{CustomPotionColor:16711910,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.arrow_of_support.stack": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:tipped_arrow"
+                        ],
+                        "count": 64,
+                        "nbt": "{obl.arrow.arrow_of_support:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/bow/root"
+}

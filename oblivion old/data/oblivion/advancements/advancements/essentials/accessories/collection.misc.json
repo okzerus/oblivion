@@ -1,0 +1,182 @@
+{
+    "display": {
+        "title": {
+            "text": "Абсолютное превосходство"
+        },
+        "description": {
+            "text": "Заполучите другие аксессуары Забвения"
+        },
+        "icon": {
+            "item": "minecraft:heart_of_the_sea",
+            "nbt": "{CustomModelData:5011,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.bad_apple": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.bad_apple:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.barrier_stone": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.barrier_stone:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.cursed_spirit": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.cursed_spirit:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.eversmoldering_torch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.eversmoldering_torch:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.grisaia_fruit": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.grisaia_fruit:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.holy_quartz": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.holy_quartz:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.magic_cobweb": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.magic_cobweb:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.nuclear_glove": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.nuclear_glove:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.skates": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.skates:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.snow_globe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.snow_globe:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.steel_claw": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.steel_claw:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.withering_flower": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.withering_flower:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.bad_apple"
+        ],
+        [
+            "obtain.accessory.barrier_stone"
+        ],
+        [
+            "obtain.accessory.cursed_spirit"
+        ],
+        [
+            "obtain.accessory.eversmoldering_torch"
+        ],
+        [
+            "obtain.accessory.grisaia_fruit"
+        ],
+        [
+            "obtain.accessory.holy_quartz"
+        ],
+        [
+            "obtain.accessory.magic_cobweb"
+        ],
+        [
+            "obtain.accessory.nuclear_glove"
+        ],
+        [
+            "obtain.accessory.skates"
+        ],
+        [
+            "obtain.accessory.snow_globe"
+        ],
+        [
+            "obtain.accessory.steel_claw"
+        ],
+        [
+            "obtain.accessory.withering_flower"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/root"
+}

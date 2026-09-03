@@ -1,0 +1,29 @@
+{
+    "display": {
+        "title": {
+            "text": "События"
+        },
+        "description": {
+            "text": "Что же творится с этим миром?"
+        },
+        "icon": {
+            "item": "minecraft:red_dye",
+            "nbt": "{CustomModelData:666,Enchantments:[{}]}"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "parent": "oblivion:advancements/root"
+}

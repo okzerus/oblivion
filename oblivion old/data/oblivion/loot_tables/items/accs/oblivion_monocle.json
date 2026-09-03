@@ -1,0 +1,128 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Монокль Забвения",
+                "color": "#c9aed3",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "РАСКРОЙТЕ ТРЕТЬЕ ОКО",
+                  "color": "#664a72",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				  [
+					{
+						"text": "Когда в слоте аксессуара:",
+						"color": "gray",
+						"italic": false
+					}
+				  ],
+                {
+                  "text": "+ Позволяет манипулировать аурой Забвения, меняя",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   атрибуты некоторых сущностей",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   (Рамки, Картины, Стойки для брони, Вагонетки)",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ Позволяет видеть ауру Забвения в сыром виде",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 0",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5069,HideFlags:3,obl.difficulty:0b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:emerald",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": "ЗАБЕРИ ВСЕ МОИ ДЕНЬГИ",
+    "description": "Сделки с крестьянами в этот день кажутся поразительно выгодными!",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/events/greatday",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "player": {
+          "effects": {
+            "minecraft:hero_of_the_village": {
+              "amplifier": 9
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 300
+  }
+}

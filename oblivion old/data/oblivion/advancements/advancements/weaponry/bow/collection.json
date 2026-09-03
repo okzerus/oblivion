@@ -1,0 +1,79 @@
+{
+    "display": {
+        "title": {
+            "text": "Держать дистанцию",
+			"color": "dark_red"
+        },
+        "description": {
+            "text": "Заполучите каждый лук Забвения"
+        },
+        "icon": {
+            "item": "minecraft:bow",
+            "nbt": "{CustomModelData:41403}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.bow.inferno": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.bow.inferno:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.bow.cataclysm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.bow.cataclysm:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.bow.solstice": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.bow.solstice:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.bow.avalanche": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.bow.avalanche:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.bow.inferno"
+        ],
+        [
+            "obtain.bow.cataclysm"
+        ],
+        [
+            "obtain.bow.solstice"
+        ],
+        [
+            "obtain.bow.avalanche"
+        ]
+    ],
+    "rewards": {
+        "experience": 5000
+    },
+    "parent": "oblivion:advancements/weaponry/bow/root"
+}

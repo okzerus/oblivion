@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Реванш - Аметистовая пикси"
+    },
+    "description": {
+      "text": "В Соло режиме, победите Аметистовую пикси во второй раз, когда она сражается в свою полную силу"
+    },
+    "icon": {
+      "item": "minecraft:netherite_helmet"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat.boss.amethyst_pixie.second_encounter": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "defeat.boss.amethyst_pixie.second_encounter"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/progression/levels/level_5/boss/root"
+}

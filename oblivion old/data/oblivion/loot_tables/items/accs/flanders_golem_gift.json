@@ -1,0 +1,148 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:poppy",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Подарок голема Фландрии",
+                "color": "gold",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Было весело, Hex. Теперь, это просто мак. Память.",
+                  "color": "#fbcb4b",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "Когда в слоте аксессуара:",
+				  "color": "gray",
+				  "italic": false
+				},
+                {
+                  "text": "+ Сопротивление 0.5, если носитель не находится в воздухе",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   и не бежит",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+                {
+                  "text": "[ПРИСЕСТЬ] х2",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": " (2мин)",
+                  "color": "dark_aqua",
+                  "italic": false
+                }
+				],
+                {
+                  "text": "    Обращает сердце носителя в чистую сталь на 10 секунд,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    сильно замедляя его, но значительно увеличивая регенерацию",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    и добавляя +0.5 к Сопротивлению.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Эффект спадает досрочно, если носитель сдвинулся с",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    места, прыгнул, атаковал, парировал, или был атакован",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 1",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5005,HideFlags:3,obl.difficulty:1b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

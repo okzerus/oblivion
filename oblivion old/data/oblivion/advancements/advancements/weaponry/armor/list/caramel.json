@@ -1,0 +1,72 @@
+{
+    "display": {
+        "title": {
+            "text": "Сладкоежка"
+        },
+        "description": {
+            "text": "Заполучите одну из частей Карамельного доспеха"
+        },
+        "icon": {
+            "item": "minecraft:iron_boots",
+            "nbt": "{CustomModelData:5000}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.armor.caramel.helmet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.caramel.helmet:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.caramel.chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.caramel.chestplate:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.caramel.leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.caramel.leggings:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.caramel.boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.caramel.boots:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.armor.caramel.helmet",
+            "obtain.armor.caramel.chestplate",
+            "obtain.armor.caramel.leggings",
+            "obtain.armor.caramel.boots"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/armor/collection"
+}

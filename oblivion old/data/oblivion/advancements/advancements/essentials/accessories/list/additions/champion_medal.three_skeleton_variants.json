@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Словно некромант"
+        },
+        "description": {
+            "text": "Похвастайтесь своей Медалью Чемпиона перед Скелетом, Зимогором и Скелетом-иссушителем одновременно"
+        },
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "location.three_skeleton_variants": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "location.three_skeleton_variants"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/defender.champion_medal"
+}

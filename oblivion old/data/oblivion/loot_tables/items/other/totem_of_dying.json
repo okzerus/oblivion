@@ -1,0 +1,121 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:totem_of_undying",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Тотем смертия",
+                "color": "#d43335",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "NO-HIT RUN",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "При удерживании в руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Любое получение урона мгновенно убьёт носителя.",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Тотем выпадает при смерти с 80% шансом.",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Удерживание этого тотема в одной из рук",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "на протяжении всей битвы с любым боссом",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "активирует режим NO-HIT, позволяющий",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "выполнить сверх-испытания и получить",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "уникальные предметы и трофеи.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,CustomModelData:9498,obl.totem_of_dying:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Прямо по шарам"
+        },
+        "description": {
+            "text": "Парируйте любой из трёх файерболов, выпускаемыми Всполохом, Гастом и Эндер-драконом"
+        },
+        "icon": {
+            "item": "minecraft:fire_charge"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.dragon_fireball": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.fireball": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.small_fireball": {
+            "trigger": "minecraft:impossible"
+		}
+    },
+    "requirements": [
+        [
+            "parry.dragon_fireball",
+            "parry.fireball",
+            "parry.small_fireball"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/arrow"
+}

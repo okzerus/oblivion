@@ -1,0 +1,229 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Ямато",
+                "color": "#388cbf",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "I am the storm that is approaching",
+                  "color": "#1c638e",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 32",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 2.0",
+                  "color": "dark_green",
+                  "italic": false
+                },
+				[
+                {
+                  "text": " Удары в ближнем бою накапливают",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Стиль",
+                  "color": "#388cbf",
+                  "italic": false
+                }
+				],
+                {
+                  "text": " Работает как щит, позволяя парировать атаки",
+                  "color": "dark_green",
+                  "italic": false
+                },
+				[
+                {
+                  "text": " Парирование атак ведущей рукой добавляет",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 5 Стиля",
+                  "color": "#388cbf",
+                  "italic": false
+                }
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+                {
+                  "text": "[Л.РУКА], требуется",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": " 20 Стиля",
+                  "color": "#388cbf",
+                  "italic": false
+                }
+				],
+                {
+                  "text": "   Создаёт 6 Призывных мечей, а затем производит",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   прямой залп в сторону, куда смотрит игрок,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   вонзаясь в цель и ослабляя её.",
+                  "color": "yellow",
+                  "italic": false
+                },
+				[
+                {
+                  "text": "[ПРИСЕСТЬ]+[Л.РУКА], требуется",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": " 100 Стиля",
+                  "color": "#388cbf",
+                  "italic": false
+                }
+				],
+                {
+                  "text": "   Наносит Финальный Удар Правосудия,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   разрезая пространство вокруг носителя,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   нанося колоссальный урон.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[ПРИСЕСТЬ x2]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "   Производит насмешку над ближайшей целью,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   разъяряя её, временно увеличивая характеристики.",
+                  "color": "yellow",
+                  "italic": false
+                },
+				[
+                {
+                  "text": "   Это действие моментально добавляет",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " 10 Стиля",
+                  "color": "#388cbf",
+                  "italic": false
+                }
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "11",
+						"color": "gold",
+						"italic": false,
+						"obfuscated": true
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+               ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,HideFlags:2,obl.yamato:1b,obl.shield:1b,obl.difficulty:11b,CustomModelData:3556,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-2.0,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-122418,13816,145310,-27632]},{AttributeName:\"generic.attack_damage\",Amount:32,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-122418,13916,145310,-27832]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

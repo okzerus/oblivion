@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:chests/fillers/biomes/warm_ocean/chest/resources.junk",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:chests/fillers/biomes/warm_ocean/chest/resources.rare",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:chests/fillers/biomes/warm_ocean/chest/resources.treasure",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:chests/fillers/biomes/warm_ocean/main"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:chests/fillers/biomes/warm_ocean/unique"
+        }
+      ]
+    },
+    {
+      "rolls": 4,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:chests/fillers/biomes/warm_ocean/junk"
+        }
+      ]
+    }
+  ]
+}

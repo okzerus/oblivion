@@ -1,0 +1,158 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Щит викинга",
+                "color": "#8feacf",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "МИЛЛИОНОВ",
+                  "color": "#70bca6",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда во второстепенной руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Успешное парирование атаки усилит носителя",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " на +0.5 Сила, до следующего удара",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Комплект \"Берсерк\" 2/3",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Бонус полного комплекта:",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Каждая пустая половина сердца первой",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "строки будет усилять носителя:",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "+0.1 Сила, +0.05 Сопротиление",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: 2",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": false
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": false
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": false
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": false
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": false
+				    }
+                ],
+				{
+					"text": "Кадр парирования:",
+					"color": "gray",
+					"italic": false
+				},
+				{
+					"text": "0.10-0.60 сек.",
+					"color": "dark_gray",
+					"italic": false
+				}
+			  ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:32,obl.difficulty:2b,obl.shield:1b,obl.viking_shield:1b,BlockEntityTag:{Base:12,Patterns:[{Color:7,Pattern:\"dls\"},{Color:7,Pattern:\"drs\"},{Color:8,Pattern:\"cr\"},{Color:8,Pattern:\"mr\"},{Color:7,Pattern:\"mc\"},{Color:8,Pattern:\"flo\"}]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

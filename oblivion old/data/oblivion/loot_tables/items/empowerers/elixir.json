@@ -1,0 +1,123 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:glass_bottle",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Загадочный эликсир",
+                "color": "#d850d8",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "С ароматом клубнички..",
+                  "color": "#ba36ba",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "При усилении:",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "+ Моментально исцеляет всех зомби-жителей в",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "   радиусе 15 блоков от имени игрока",
+				  "color": "light_purple",
+				  "italic": false
+				},
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "Активация:",
+				  "color": "gray",
+				  "italic": false
+				},
+                {
+                  "text": "[ПРИСЕСТЬ]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "3",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:3b,obl.empowerer:1b,obl.empowerer.elixir:1b,CustomModelData:11308}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

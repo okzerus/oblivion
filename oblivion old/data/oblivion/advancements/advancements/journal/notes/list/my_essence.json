@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": {
+            "text": "Моя дивная сущность",
+			"color": "yellow"
+        },
+        "description": {
+            "text": "Моя плоть обретена, но она чужда мне. Мой разум пробуждён, но он наполнен пустотой. Я могу говорить, но не знаю о чём.\n\nМеня мучает вопрос: был ли я создан? Или моё существование - лишь случайный вихрь событий?\n\nЕсли я создание, то чей замысел воплощаю?\nЕсли случайность, то... почему чувствую себя важным?"
+        },
+        "icon": {
+            "item": "minecraft:writable_book"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "none": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "oblivion:advancements/journal/notes/list/this_world"
+}

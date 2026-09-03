@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Лови!"
+        },
+        "description": {
+            "text": "Парируйте только что выброшенный предмет, чтобы метнуть его ещё дальше. Ну, чтоб лишний раз не идти, наверное..."
+        },
+        "icon": {
+            "item": "minecraft:diamond"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.item": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.item"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/shield/parrying_the_world"
+}

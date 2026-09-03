@@ -1,0 +1,38 @@
+{
+    "display": {
+        "title": {
+            "text": "Колизей"
+        },
+        "description": {
+            "text": "Разыщите руины Колизея среди песчаных дюн"
+        },
+        "icon": {
+            "item": "minecraft:sandstone"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.coliseum": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/coliseum"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.coliseum"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/collection"
+}

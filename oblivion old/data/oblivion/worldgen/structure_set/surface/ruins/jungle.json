@@ -1,0 +1,38 @@
+{
+  "structures": [
+    {
+      "structure": "oblivion:surface/ruins/jungle/bamboo",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/jungle/broken",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/jungle/camp",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/jungle/lake",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/jungle/panda",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/jungle/pool",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/jungle/roof",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 652462,
+    "spacing": 16,
+    "separation": 11,
+    "type": "minecraft:random_spread"
+  }
+}

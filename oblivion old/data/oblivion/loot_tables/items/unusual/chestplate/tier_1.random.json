@@ -1,0 +1,53 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.body_aura_blue"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.body_aura_green"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.body_aura_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.body_aura_yellow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.shoulder_balance"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.shoulder_peace"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.shoulder_war"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.smelly"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.trail_blue_flame"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.trail_flame"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_1.trail_sculk_pop"
+        }
+      ]
+    }
+  ]
+}

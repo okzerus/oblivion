@@ -1,0 +1,46 @@
+{
+  "display": {
+    "title": {
+      "text": "Страж: Нет пути домой"
+    },
+    "description": {
+      "text": "Телепортируйте Блуждающего стража в Нижний мир и убейте его в нём"
+    },
+    "icon": {
+      "item": "minecraft:netherrack"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.wandering_guardian.the_nether": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:guardian",
+              "nbt": "{Tags:[\"obl.wandering_guardian\"]}",
+              "location": {
+                "dimension": "minecraft:the_nether"
+              }
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.wandering_guardian.the_nether"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/mobs/additions/wandering_guardian.desert"
+}

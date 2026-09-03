@@ -1,0 +1,7 @@
+summon minecraft:magma_cube ^-1 ^4 ^ {Size:0,CustomName:'[{"text":"Дьявольский куб","color":"dark_red"}]',Health:666,NoAI:1b,NoGravity:1b,PersistenceRequired:1b,Silent:1b,Tags:["obl.devilcube","obl.wrongdevilcube"],Attributes:[{Name:"generic.max_health",Base:666f}]}
+summon minecraft:magma_cube ^1 ^4 ^ {Size:0,CustomName:'[{"text":"Дьявольский куб","color":"dark_red"}]',Health:666,NoAI:1b,NoGravity:1b,PersistenceRequired:1b,Silent:1b,Tags:["obl.devilcube","obl.wrongdevilcube"],Attributes:[{Name:"generic.max_health",Base:666f}]}
+summon minecraft:magma_cube ^-1 ^3 ^ {Size:0,CustomName:'[{"text":"Дьявольский куб","color":"dark_red"}]',Health:666,NoAI:1b,NoGravity:1b,PersistenceRequired:1b,Silent:1b,Tags:["obl.devilcube","obl.wrongdevilcube"],Attributes:[{Name:"generic.max_health",Base:666f}]}
+summon minecraft:magma_cube ^1 ^3 ^ {Size:0,CustomName:'[{"text":"Дьявольский куб","color":"dark_red"}]',Health:666,NoAI:1b,NoGravity:1b,PersistenceRequired:1b,Silent:1b,Tags:["obl.devilcube","obl.wrongdevilcube"],Attributes:[{Name:"generic.max_health",Base:666f}]}
+particle minecraft:flash ~ ~3 ~ 0 0 0 0 1 force
+playsound minecraft:entity.wither.ambient master @a ~ ~ ~ 1 0.1
+playsound minecraft:entity.wither.death master @a ~ ~ ~ 1 0.7

@@ -1,0 +1,5 @@
+execute if predicate oblivion:chance/40 run tag @s add obl.temp.altar_instability
+execute if entity @s[tag=obl.temp.altar_instability] run effect give @a[distance=..20] blindness 1 0 true
+execute if entity @s[tag=obl.temp.altar_instability] run playsound minecraft:entity.elder_guardian.curse hostile @a[distance=..20] ~ ~ ~ 1 0.7
+execute if entity @s[tag=obl.temp.altar_instability] at @e[type=marker,tag=obl.altar.summoner,distance=..10,limit=1,sort=random] run summon minecraft:zombie ~ ~ ~ {DeathLootTable:"minecraft:empty",CustomName:'[{"text":"Дух Забвения"}]',Health:30,PersistenceRequired:1b,Silent:1b,Tags:["obl.1tickparticle","obl.mob","obl.dontreplace","obl.oblivionspirit"],ActiveEffects:[{Id:14,Duration:-1,ShowParticles:0b}],Attributes:[{Name:"generic.attack_damage",Base:8f},{Name:"generic.max_health",Base:30f}]}
+tag @s remove obl.temp.altar_instability

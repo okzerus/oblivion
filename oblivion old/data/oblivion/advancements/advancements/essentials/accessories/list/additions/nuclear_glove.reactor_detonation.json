@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Детонация реактора"
+        },
+        "description": {
+            "text": "Ударьте крипера Ядерной перчаткой, чтобы его усилить и заставить моментально взорваться!"
+        },
+        "icon": {
+            "item": "minecraft:tnt",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "hit.creeper.nuclear_glove_equipped": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "hit.creeper.nuclear_glove_equipped"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/misc.nuclear_glove"
+}

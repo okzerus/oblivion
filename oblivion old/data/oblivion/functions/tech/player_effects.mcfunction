@@ -1,0 +1,32 @@
+execute if predicate oblivion:effects/has.nausea run tag @s add obl.has_effect.nausea
+execute if predicate oblivion:effects/has.darkness run tag @s add obl.has_effect.darkness
+execute if predicate oblivion:effects/has.blindness run tag @s add obl.has_effect.blindness
+execute if predicate oblivion:effects/has.hunger run tag @s add obl.has_effect.hunger
+execute if predicate oblivion:effects/has.levitation run tag @s add obl.has_effect.levitation
+execute if predicate oblivion:effects/has.mining_fatigue run tag @s add obl.has_effect.mining_fatigue
+execute if predicate oblivion:effects/has.poison run tag @s add obl.has_effect.poison
+execute if predicate oblivion:effects/has.wither run tag @s add obl.has_effect.wither
+execute if predicate oblivion:effects/has.slowness run tag @s add obl.has_effect.slowness
+execute if predicate oblivion:effects/has.unluck run tag @s add obl.has_effect.unluck
+execute if predicate oblivion:effects/has.weakness run tag @s add obl.has_effect.weakness
+execute if entity @s[tag=obl.bleeding] run tag @s add obl.has_effect.bleeding
+execute if entity @s[tag=obl.brokenarmor] run tag @s add obl.has_effect.broken_armor
+execute if entity @s[tag=obl.stunned] run tag @s add obl.has_effect.stun
+execute if entity @s[tag=obl.cursed] run tag @s add obl.has_effect.curse
+
+
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.nausea] run tag @s remove obl.has_effect.nausea
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.darkness] run tag @s remove obl.has_effect.darkness
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.blindness] run tag @s remove obl.has_effect.blindness
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.hunger] run tag @s remove obl.has_effect.hunger
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.levitation] run tag @s remove obl.has_effect.levitation
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.mining_fatigue] run tag @s remove obl.has_effect.mining_fatigue
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.poison] run tag @s remove obl.has_effect.poison
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.wither] run tag @s remove obl.has_effect.wither
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.slowness] run tag @s remove obl.has_effect.slowness
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.unluck] run tag @s remove obl.has_effect.unluck
+execute if entity @s[tag=!obl.cursed,predicate=!oblivion:effects/has.weakness] run tag @s remove obl.has_effect.weakness
+execute unless entity @s[tag=obl.bleeding] run tag @s remove obl.has_effect.bleeding
+execute unless entity @s[tag=obl.brokenarmor] run tag @s remove obl.has_effect.broken_armor
+execute unless entity @s[tag=obl.stunned] run tag @s remove obl.has_effect.stun
+execute unless entity @s[tag=obl.cursed] run tag @s remove obl.has_effect.curse

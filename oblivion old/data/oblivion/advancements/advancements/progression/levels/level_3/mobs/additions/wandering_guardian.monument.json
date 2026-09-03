@@ -1,0 +1,46 @@
+{
+  "display": {
+    "title": {
+      "text": "Страж: Возвращение домой"
+    },
+    "description": {
+      "text": "Приведите Блуждающего стража в Океанический монумент и убейте его в нём"
+    },
+    "icon": {
+      "item": "minecraft:prismarine_bricks"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.wandering_guardian.monument": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:guardian",
+              "nbt": "{Tags:[\"obl.wandering_guardian\"]}",
+              "location": {
+                "structure": "minecraft:monument"
+              }
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.wandering_guardian.monument"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/mobs/list/wandering_guardian"
+}

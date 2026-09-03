@@ -1,0 +1,3 @@
+scoreboard players operation #id.temp obl.id = @s obl.id
+execute if entity @e[type=marker,tag=obl.ocean_ruin.shield,predicate=oblivion:matching_score,distance=..50] run function oblivion:abilities/mobs/ruin_guardian/shield
+execute unless entity @e[type=marker,tag=obl.ocean_ruin.shield,predicate=oblivion:matching_score,distance=..50] if data entity @s {Invulnerable:1b} run function oblivion:abilities/mobs/ruin_guardian/shield.disable

@@ -1,0 +1,195 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:netherite_sword",
+      "nbt": "{CustomModelData:4006}"
+    },
+    "title": {
+      "text": "Главный злодей",
+      "color": "red"
+    },
+    "description": "Убейте абсолютно всех мобов во время Кровавой луны",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "devil": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"devil\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob1": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob1\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob2": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob2\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob3": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob3\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob4": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob4\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob5": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob5\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob6": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob6\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob7": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob7\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob8": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob8\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob9": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob9\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "devil"
+    ],
+    [
+      "bloodmob1"
+    ],
+    [
+      "bloodmob2"
+    ],
+    [
+      "bloodmob3"
+    ],
+    [
+      "bloodmob4"
+    ],
+    [
+      "bloodmob5"
+    ],
+    [
+      "bloodmob6"
+    ],
+    [
+      "bloodmob7"
+    ],
+    [
+      "bloodmob8"
+    ],
+    [
+      "bloodmob9"
+    ]
+  ],
+  "rewards": {
+    "experience": 3000
+  },
+  "parent": "oblivion:advancements/events/survivebloodmoon"
+}

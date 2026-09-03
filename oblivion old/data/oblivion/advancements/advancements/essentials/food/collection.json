@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Обжора",
+			"color": "dark_red"
+        },
+        "description": {
+            "text": "Съешьте каждый вид еды из Забвения по 10 раз"
+        },
+        "icon": {
+            "item": "minecraft:cooked_porkchop",
+            "nbt": "{CustomModelData:49102,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.template": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.template:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.template"
+        ]
+    ],
+    "rewards": {
+        "experience": 7000
+    },
+    "parent": "oblivion:advancements/essentials/food/root"
+}

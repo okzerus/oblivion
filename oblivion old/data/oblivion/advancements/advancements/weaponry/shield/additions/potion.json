@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Химический бомбардир"
+        },
+        "description": {
+            "text": "Парируйте брошенное зелье, чтобы метнуть его ещё дальше"
+        },
+        "icon": {
+            "item": "minecraft:splash_potion"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.potion": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.potion"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/item"
+}

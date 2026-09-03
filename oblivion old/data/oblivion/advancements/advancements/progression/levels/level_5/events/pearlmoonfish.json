@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:fishing_rod",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": "Ловись рыбка только большая!",
+    "description": "Жемчужный свет луны - самая лучшая наживка для рыбы!",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/events/pearlmoon",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "player": {
+          "effects": {
+            "minecraft:luck": {
+              "amplifier": 6
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 300
+  }
+}

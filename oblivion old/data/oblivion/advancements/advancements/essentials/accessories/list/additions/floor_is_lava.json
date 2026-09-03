@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Пол это лава"
+        },
+        "description": {
+            "text": "Подожгите 666 блоков в Незере, используя \"Солнечный фрагмент\""
+        },
+        "icon": {
+            "item": "minecraft:magma_block",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "ignite_blocks": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "ignite_blocks"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/event.solar_fragment"
+}

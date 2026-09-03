@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Точка невозврата"
+        },
+        "description": {
+            "text": "Парируйте летящую на вас Чёрную Смерть, направив её в небо..."
+        },
+        "icon": {
+            "item": "minecraft:eye_of_ender"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.charging_black_death.space": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.charging_black_death.space"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/progression/bosses/black_death.parry"
+}

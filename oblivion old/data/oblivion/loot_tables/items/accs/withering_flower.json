@@ -1,0 +1,133 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wither_rose",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Иссушающий цветок",
+                "color": "#3b3b3b",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Не ждите пощады",
+                  "color": "#202020",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				  [
+					{
+						"text": "Когда в слоте аксессуара:",
+						"color": "gray",
+						"italic": false
+					}
+				  ],
+                {
+                  "text": "+ Ваши атаки имеют 15% шанс наложить эффект",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   иссушения 1 уровня на 5 секунд",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ Последующие атаки по цели с таким же шансом",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   будут усилять её эффект иссушения вплоть",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   до 3 уровня, также обновляя время действия",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 3",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5012,HideFlags:3,obl.difficulty:3b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

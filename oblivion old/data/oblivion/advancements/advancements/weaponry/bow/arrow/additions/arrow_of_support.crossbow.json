@@ -1,0 +1,96 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:crossbow",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": "Арбалет Крестоносца",
+    "description": [
+      {
+        "text": "Выстрелите Стрелой помощи в игрока, используя арбалет"
+      },
+      {
+        "text": "\nИли в своего питомца, если это одиночный режим",
+        "color": "dark_gray"
+      }
+    ],
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/weaponry/bow/arrow/arrow_of_support",
+  "criteria": {
+    "hit.singleplayer": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "obl.multiplayer": 0
+            }
+          }
+        ],
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ],
+            "direct_entity": {
+              "type": "#minecraft:arrows",
+              "nbt": "{Tags:[\"obl.arrow.arrow_of_support\"]}"
+            }
+          }
+        },
+        "entity": {
+          "type": "#oblivion:tameable",
+          "nbt": "{Tags:[\"obl.tamed\"]}"
+        }
+      }
+    },
+    "hit.multiplayer": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "obl.multiplayer": 1
+            }
+          }
+        ],
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ],
+            "source_entity": {
+              "nbt": "{Tags:[\"obl.arrow.arrow_of_support\"]}"
+            },
+            "direct_entity": {
+              "type": "minecraft:player"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hit.singleplayer",
+      "hit.multiplayer"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  }
+}

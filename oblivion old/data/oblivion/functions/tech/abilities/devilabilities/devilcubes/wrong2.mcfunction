@@ -1,0 +1,10 @@
+summon area_effect_cloud ~ ~ ~ {Particle:flame,Radius:10f,RadiusPerTick:-0.05f,Duration:500,Effects:[{Id:2,Amplifier:4,Duration:200},{Id:17,Amplifier:9,Duration:200},{Id:18,Amplifier:4,Duration:200},{Id:20,Amplifier:4,Duration:200}]}
+summon lightning_bolt ~ ~5 ~
+particle minecraft:flame ~ ~ ~ 0 0 0 0.1 250
+
+summon minecraft:magma_cube ~ ~20 ~ {DeathLootTable:"minecraft:empty",Size:4,CustomName:'[{"text":"Дьявольский куб","color":"dark_red"}]',Health:180,PersistenceRequired:1b,Tags:["obl.mobdevilcube","bloodmob","spread"],ActiveEffects:[{Id:10,Duration:999999,Amplifier:0,Ambient:1b,ShowParticles:1b},{Id:5,Duration:999999,Amplifier:1,Ambient:1b,ShowParticles:1b}],Attributes:[{Name:"generic.max_health",Base:80f}]}
+summon minecraft:magma_cube ~ ~20 ~ {DeathLootTable:"minecraft:empty",Size:4,CustomName:'[{"text":"Дьявольский куб","color":"dark_red"}]',Health:180,PersistenceRequired:1b,Tags:["obl.mobdevilcube","bloodmob","spread"],ActiveEffects:[{Id:10,Duration:999999,Amplifier:0,Ambient:1b,ShowParticles:1b},{Id:5,Duration:999999,Amplifier:1,Ambient:1b,ShowParticles:1b}],Attributes:[{Name:"generic.max_health",Base:80f}]}
+summon minecraft:magma_cube ~ ~20 ~ {DeathLootTable:"minecraft:empty",Size:4,CustomName:'[{"text":"Дьявольский куб","color":"dark_red"}]',Health:180,PersistenceRequired:1b,Tags:["obl.mobdevilcube","bloodmob","spread"],ActiveEffects:[{Id:10,Duration:999999,Amplifier:0,Ambient:1b,ShowParticles:1b},{Id:5,Duration:999999,Amplifier:1,Ambient:1b,ShowParticles:1b}],Attributes:[{Name:"generic.max_health",Base:80f}]}
+summon minecraft:magma_cube ~ ~20 ~ {DeathLootTable:"minecraft:empty",Size:4,CustomName:'[{"text":"Дьявольский куб","color":"dark_red"}]',Health:180,PersistenceRequired:1b,Tags:["obl.mobdevilcube","bloodmob","spread"],ActiveEffects:[{Id:10,Duration:999999,Amplifier:0,Ambient:1b,ShowParticles:1b},{Id:5,Duration:999999,Amplifier:1,Ambient:1b,ShowParticles:1b}],Attributes:[{Name:"generic.max_health",Base:80f}]}
+
+function oblivion:tech/abilities/devilabilities/nethermothronspawn

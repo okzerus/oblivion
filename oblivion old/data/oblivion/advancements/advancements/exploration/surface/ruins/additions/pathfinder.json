@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Путеводитель"
+        },
+        "description": {
+            "text": "Проведите Заблудшую душу по её пути, чтобы освободить её"
+        },
+        "icon": {
+            "item": "minecraft:soul_lantern"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "guide.wandering_soul": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "guide.wandering_soul"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/locate"
+}

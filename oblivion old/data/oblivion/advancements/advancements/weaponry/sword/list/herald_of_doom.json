@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Рагнарёк"
+        },
+        "description": {
+            "text": "Заполучите Вестник Рока"
+        },
+        "icon": {
+            "item": "minecraft:netherite_sword",
+            "nbt": "{CustomModelData:4006}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.sword.herald_of_doom": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.herald_of_doom:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.sword.herald_of_doom"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/sword/collection"
+}

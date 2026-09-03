@@ -1,0 +1,138 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Древний символ, Омега",
+                "color": "#f7c940",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Повелитель",
+                  "color": "#caa41f",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "При усилении:",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "+1.5 Сила [1:30]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "Комплект \"Древний коллекционер\" 4/4",
+				  "color": "dark_aqua",
+				  "italic": false
+				},
+				{
+				  "text": "Бонус полного комплекта:",
+				  "color": "dark_aqua",
+				  "italic": false
+				},
+                {
+                  "text": "+1.75 Скорость, +1.25 Сопротивление, +1 Спешка, +1.5 Сила",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "Активация:",
+				  "color": "gray",
+				  "italic": false
+				},
+                {
+                  "text": "[ПРИСЕСТЬ]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "7",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:7b,obl.empowerer:1b,obl.empowerer.omega:1b,CustomModelData:11303}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

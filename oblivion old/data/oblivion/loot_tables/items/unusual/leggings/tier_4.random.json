@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_4.oblivion"
+        }
+      ]
+    }
+  ]
+}

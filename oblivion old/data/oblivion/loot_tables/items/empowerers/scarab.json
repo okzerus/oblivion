@@ -1,0 +1,173 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Золотой скарабей",
+                "color": "#f7c940",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Разгадайте тайну этой пустыни",
+                  "color": "#caa41f",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "При усилении:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+ [ПУСТЫНЯ]",
+                  "color": "#f9f78c",
+                  "italic": false
+                },
+				{
+				  "text": "   +0.25 Сопротивление [3:00]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "   +0.5 Спешка [3:00]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "   +1 Скорость [3:00]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+                {
+                  "text": "+ [ПУСТОШЬ]",
+                  "color": "#e08e5e",
+                  "italic": false
+                },
+				{
+				  "text": "   +0.5 Сопротивление [3:00]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "   +0.75 Сила [3:00]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "   +2 Прилив здоровья [3:00]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+                {
+                  "text": "+ [ДОЛИНА ДУШ]",
+                  "color": "#5fefde",
+                  "italic": false
+                },
+				{
+				  "text": "   +0.75 Сопротивление [3:00]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "   +1.25 Сила [3:00]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "   +1 Огнестойкость [3:00]",
+				  "color": "light_purple",
+				  "italic": false
+				},
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "Активация:",
+				  "color": "gray",
+				  "italic": false
+				},
+                {
+                  "text": "[ПРИСЕСТЬ], требуется пустынный биом",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "1",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:1b,obl.empowerer:1b,obl.empowerer.scarab:1b,CustomModelData:11305}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

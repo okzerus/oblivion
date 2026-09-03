@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "text": "Экстра++"
+        },
+        "description": {
+            "text": "Выбейте какие-нибудь ценные ресурсы из сущности, ударив её с помощью Люси"
+        },
+        "icon": {
+            "item": "minecraft:gold_nugget"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/scythe/list/lucy"
+}

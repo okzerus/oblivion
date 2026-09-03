@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"obl.hungerhead4\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/abilities/hungerabilities/hungerheads/hurt4"
+  }
+}

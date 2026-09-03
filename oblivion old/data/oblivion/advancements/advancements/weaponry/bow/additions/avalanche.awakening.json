@@ -1,0 +1,27 @@
+{
+    "display": {
+        "title": {
+            "text": "Пробуждение: Лавина"
+        },
+        "description": {
+            "text": "Раскройте скрытый потенциал этого предмета, пробудив его на Алтаре Забвения"
+        },
+        "icon": {
+            "item": "minecraft:bow",
+            "nbt": "{CustomModelData:41405}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+      },
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible"
+      }
+    },
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/bow/list/avalanche"
+}

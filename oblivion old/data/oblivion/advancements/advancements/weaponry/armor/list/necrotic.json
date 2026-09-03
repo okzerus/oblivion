@@ -1,0 +1,61 @@
+{
+    "display": {
+        "title": {
+            "text": "Я твоя погибель"
+        },
+        "description": {
+            "text": "Заполучите одну из частей Некротического доспеха"
+        },
+        "icon": {
+            "item": "minecraft:netherite_boots",
+            "nbt": "{CustomModelData:2001}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.armor.necrotic.chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.necrotic.chestplate:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.necrotic.leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.necrotic.leggings:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.necrotic.boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.necrotic.boots:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.armor.necrotic.chestplate",
+            "obtain.armor.necrotic.leggings",
+            "obtain.armor.necrotic.boots"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/armor/collection"
+}

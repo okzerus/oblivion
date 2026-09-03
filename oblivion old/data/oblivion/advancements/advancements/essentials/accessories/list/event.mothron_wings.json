@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Дотронься к небу"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Крылья Мотрона\""
+        },
+        "icon": {
+            "item": "minecraft:feather",
+            "nbt": "{CustomModelData:5013}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.mothron_wings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.mothron_wings:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.mothron_wings"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.event"
+}

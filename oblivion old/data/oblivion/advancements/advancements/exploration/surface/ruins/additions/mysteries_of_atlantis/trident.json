@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Дар Нептуна: Трезубец"
+        },
+        "description": {
+            "text": "Вы прошли испытание Нептуна, и были вознаграждены трезубцем"
+        },
+        "icon": {
+            "item": "minecraft:trident"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "finish.neptune_trial.trident": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "finish.neptune_trial.trident"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/additions/mysteries_of_atlantis/blessing"
+}

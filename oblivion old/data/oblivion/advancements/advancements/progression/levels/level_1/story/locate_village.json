@@ -1,0 +1,109 @@
+{
+    "display": {
+        "title": {
+            "text": "Отголоски жизни"
+        },
+        "description": {
+            "text": "Разыщите деревеньку бедных людей, переживших войну с Забвением. Кажется, сюда вас и звал таинственный голос..."
+        },
+        "icon": {
+            "item": "minecraft:dirt_path"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.village.desert": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": [
+                    {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "structure": "minecraft:village_desert"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "locate.village.plains": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": [
+                    {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "structure": "minecraft:village_plains"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "locate.village.savanna": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": [
+                    {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "structure": "minecraft:village_savanna"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "locate.village.snowy": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": [
+                    {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "structure": "minecraft:village_snowy"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "locate.village.taiga": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": [
+                    {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "structure": "minecraft:village_taiga"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.village.desert",
+            "locate.village.plains",
+            "locate.village.savanna",
+            "locate.village.snowy",
+            "locate.village.taiga"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/levels/level_0/root"
+}

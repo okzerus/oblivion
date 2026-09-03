@@ -1,0 +1,165 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_axe",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Топор викинга",
+                "color": "#8feacf",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "МОЩИ",
+                  "color": "#70bca6",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 9",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 0.9",
+                  "color": "dark_green",
+                  "italic": false
+                },
+				[
+					{
+						"text": " 30% Шанс получить бафф ",
+						"color": "dark_green",
+						"italic": false
+					},
+					{
+						"text": "\"В ярости!\"",
+						"color": "#c30d0f",
+						"italic": false
+					}
+				],
+				{
+				  "text": " при убийстве любого моба",
+			      "color": "dark_green",
+				  "italic": false
+				},
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Комплект \"Берсерк\" 3/3",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Бонус полного комплекта:",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Каждая пустая половина сердца первой",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "строки будет усилять носителя:",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "+0.1 Сила, +0.05 Сопротиление",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: 2",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+               ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:2b,obl.viking_axe:1b,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.3,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-122418,13816,145310,-27632]},{AttributeName:\"generic.attack_damage\",Amount:9,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-122418,13916,145310,-27832]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

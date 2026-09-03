@@ -1,0 +1,138 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cobweb",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Магическая сеть",
+                "color": "#c829d9",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Steve you gotta help me i\'m stuck",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				  [
+					{
+						"text": "Когда в",
+						"color": "gray",
+						"italic": false
+					},
+					{
+						"text": " верхнем ",
+						"color": "yellow",
+						"italic": false
+					},
+					{
+						"text": "слоте аксессуара:",
+						"color": "gray",
+						"italic": false
+					}
+				  ],
+                {
+                  "text": "+ Ваши атаки накладывают эффект замедления на 10 секунд",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ С маленьким шансом при атаке может создать паутину под целью",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[ВВЕРХ]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Создаёт большую паутинную ловушку под",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    всеми игроками в радиусе 30 блоков.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 4",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Enchantments:[{id:channeling,lvl:1}],CustomModelData:5060,HideFlags:3,obl.difficulty:4b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

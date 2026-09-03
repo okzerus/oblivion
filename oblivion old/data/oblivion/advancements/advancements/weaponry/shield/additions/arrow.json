@@ -1,0 +1,47 @@
+{
+    "display": {
+        "title": {
+            "text": "Оставь себе"
+        },
+        "description": {
+            "text": "Парируйте стрелу и успешно попадите ею в цель"
+        },
+        "icon": {
+            "item": "minecraft:arrow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.arrow.hit": {
+            "trigger": "minecraft:player_hurt_entity",
+                "conditions": {
+                    "damage": {
+                        "type": {
+                            "tags": [
+                                {
+                                "id": "minecraft:is_projectile",
+                                "expected": true
+                                }
+                            ],
+                            "direct_entity": {
+                                   "type": "#minecraft:arrows",
+                                   "nbt": "{Tags:[obl.projectile.reflected]}"
+                                   }
+                               }
+                           }
+                       }
+                  }
+    },
+    "requirements": [
+        [
+            "parry.arrow.hit"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/shield/parrying_the_world"
+}

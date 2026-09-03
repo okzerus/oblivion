@@ -1,0 +1,226 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:iron_helmet",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5000,display:{Name:'[{\"text\":\"Caramel Helmet\",\"italic\":false,\"color\":\"white\"}]',Lore:['[{\"text\":\"\",\"italic\":false}]','[{\"text\":\"Когда надето на голову:\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"+3.5 Броня\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"+3 Твёрдость брони\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"+0.1 Сопротивление к отбрасыванию\",\"italic\":false,\"color\":\"blue\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Бонус полного комплекта:\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Ваши атаки будут восстанавливать вам по\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"половине очка сытости или насыщения\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Бесконечный голод III уровня\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Бесконечная слабость I уровня\",\"italic\":false,\"color\":\"blue\"}]']},AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:3.5,Slot:head,Name:\"generic.armor\",UUID:[I;-1211125,16413,103032,-32826]},{AttributeName:\"generic.armor_toughness\",Amount:3,Slot:head,Name:\"generic.armor_toughness\",UUID:[I;-1211125,16513,103032,-33026]},{AttributeName:\"generic.knockback_resistance\",Amount:0.1,Slot:head,Name:\"generic.knockback_resistance\",UUID:[I;-1211125,16613,103032,-33226]}],Enchantments:[{id:unbreaking,lvl:5}],HideFlags:2}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.3
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:iron_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5000,display:{Name:'[{\"text\":\"Caramel Chestplate\",\"italic\":false,\"color\":\"red\"}]',Lore:['[{\"text\":\"\",\"italic\":false}]','[{\"text\":\"Когда надето:\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"+8.5 Броня\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"+3 Твёрдость брони\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"+0.1 Сопротивление к отбрасыванию\",\"italic\":false,\"color\":\"blue\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Бонус полного комплекта:\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Ваши атаки будут восстанавливать вам по\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"половине очка сытости или насыщения\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Бесконечный голод III уровня\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Бесконечная слабость I уровня\",\"italic\":false,\"color\":\"blue\"}]']},AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:8.5,Slot:chest,Name:\"generic.armor\",UUID:[I;-1211125,11013,103032,-22026]},{AttributeName:\"generic.armor_toughness\",Amount:3,Slot:chest,Name:\"generic.armor_toughness\",UUID:[I;-1211125,11113,103032,-22226]},{AttributeName:\"generic.knockback_resistance\",Amount:0.1,Slot:chest,Name:\"generic.knockback_resistance\",UUID:[I;-1211125,11213,103032,-22426]}],Enchantments:[{id:unbreaking,lvl:5}],HideFlags:2}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.3
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:iron_leggings",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5000,display:{Name:'[{\"text\":\"Caramel Leggings\",\"italic\":false,\"color\":\"white\"}]',Lore:['[{\"text\":\"\",\"italic\":false}]','[{\"text\":\"Когда надето на ноги:\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"+6.5 Броня\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"+3 Твёрдость брони\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"+0.1 Сопротивление к отбрасыванию\",\"italic\":false,\"color\":\"blue\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Бонус полного комплекта:\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Ваши атаки будут восстанавливать вам по\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"половине очка сытости или насыщения\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Бесконечный голод III уровня\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Бесконечная слабость I уровня\",\"italic\":false,\"color\":\"blue\"}]']},AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:6.5,Slot:legs,Name:\"generic.armor\",UUID:[I;-1211125,20913,103032,-41826]},{AttributeName:\"generic.armor_toughness\",Amount:3,Slot:legs,Name:\"generic.armor_toughness\",UUID:[I;-1211125,21013,103032,-42026]},{AttributeName:\"generic.knockback_resistance\",Amount:0.1,Slot:legs,Name:\"generic.knockback_resistance\",UUID:[I;-1211125,21113,103032,-42226]}],Enchantments:[{id:unbreaking,lvl:5}],HideFlags:2}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.3
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:iron_boots",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5000,display:{Name:'[{\"text\":\"Caramel Boots\",\"italic\":false,\"color\":\"red\"}]',Lore:['[{\"text\":\"\",\"italic\":false}]','[{\"text\":\"Когда обуто:\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"+3.5 Броня\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"+3 Твёрдость брони\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"+0.1 Сопротивление к отбрасыванию\",\"italic\":false,\"color\":\"blue\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Бонус полного комплекта:\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Ваши атаки будут восстанавливать вам по\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"половине очка сытости или насыщения\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Бесконечный голод III уровня\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Бесконечная слабость I уровня\",\"italic\":false,\"color\":\"blue\"}]']},AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:3.5,Slot:legs,Name:\"generic.armor\",UUID:[I;-1211125,24513,103032,-49026]},{AttributeName:\"generic.armor_toughness\",Amount:3,Slot:legs,Name:\"generic.armor_toughness\",UUID:[I;-1211125,24613,103032,-49226]},{AttributeName:\"generic.knockback_resistance\",Amount:0.1,Slot:legs,Name:\"generic.knockback_resistance\",UUID:[I;-1211125,24713,103032,-49426]}],Enchantments:[{id:unbreaking,lvl:5}],HideFlags:2}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.3
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:golden_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:4007,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:6.5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-1211125,10996,102,-21992]},{AttributeName:\"generic.attack_speed\",Amount:-2.4,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-1211125,11096,102,-22192]}],display:{Name:'[{\"text\":\"Карамельный меч\",\"italic\":false,\"color\":\"light_purple\"}]',Lore:['[{\"text\":\"Сладкий удар\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Когда в ведущей руке:\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\" 6.5 Урон\",\"italic\":false,\"color\":\"dark_green\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\" 1.6 Скорость атаки\",\"italic\":false,\"color\":\"dark_green\"}]','[{\"text\":\" При ударе по цели, она восстанавливает 2\",\"italic\":false,\"color\":\"dark_green\"}]','[{\"text\":\"ножки сытости или насыщения\",\"italic\":false,\"color\":\"dark_green\"}]']},Enchantments:[{id:looting,lvl:1},{id:unbreaking,lvl:2}],HideFlags:2}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 0,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_carrot",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:12500,display:{Name:'[{\"text\":\"Рождественский леденец\",\"italic\":false,\"color\":\"red\"}]',Lore:['[{\"text\":\"\",\"italic\":false}]','[{\"text\":\"При применении:\",\"italic\":false}]','[{\"text\":\"Мгновенное лечение\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Сопротивление (0:03)\",\"italic\":false,\"color\":\"blue\"}]']}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:raw_iron",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1000,display:{Name:'[{\"text\":\"Игрушечный танк\",\"italic\":false,\"color\":\"red\"}]',Lore:['[{\"text\":\"Надеюсь, что это правда игрушечный танк,\",\"italic\":false,\"color\":\"gray\"}]','[{\"text\":\"а не уменьшенный настоящий с помощью частиц Пима\",\"italic\":false,\"color\":\"gray\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Редкий трофей с \",\"italic\":false,\"color\":\"gold\"},{\"text\":\"Рождественской ночи\",\"color\":\"aqua\"}]']}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 80
+        }
+      ]
+    },
+    {
+      "rolls": 4,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:diamond_block"
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "rolls": 4,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:iron_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:iron_block",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 7
+        }
+      ]
+    },
+    {
+      "rolls": 4,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:netherite_scrap"
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:totem_of_undying",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:9499,display:{Name:'[{\"text\":\"Пряник бессмертия\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"text\":\"\",\"italic\":false}]','[{\"text\":\"При применении тотема:\",\"italic\":false,\"color\":\"dark_purple\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Насыщение XX\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Сопротивление II (0:15)\",\"italic\":false,\"color\":\"blue\"}]','[{\"text\":\"Регенерация III (0:08)\",\"italic\":false,\"color\":\"blue\"}]']}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

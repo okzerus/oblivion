@@ -1,0 +1,79 @@
+{
+  "display": {
+    "title": {
+      "text": "Мини-истребление"
+    },
+    "description": {
+      "text": "Убейте всех мини-боссов Oblivion"
+    },
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "gargantua": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:[\"gargantua\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "mother": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:spider",
+              "nbt": "{Tags:[\"mother\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "necromancer": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"necromancer\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gargantua"
+    ],
+    [
+      "mother"
+    ],
+    [
+      "necromancer"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/mobs/miniboss"
+}

@@ -1,0 +1,308 @@
+{
+  "display": {
+    "title": {
+      "text": "Истребитель Нижнего мира"
+    },
+    "description": {
+      "text": "Убейте всех мобов Нижнего мира, включая тех, которые добавлены датапаком Oblivion"
+    },
+    "icon": {
+      "item": "minecraft:netherite_axe",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "witherbow": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"witherbow\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "witheraxe": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"witheraxe\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "witherhoe": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"witherhoe\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "wither": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "withersoul": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:vex",
+              "nbt": "{Tags:[\"withersoul\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "blaze": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:blaze"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "storm": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:blaze",
+              "nbt": "{Tags:[\"obl.storm\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "hoglin": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:hoglin"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "piglin": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:piglin"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "brute": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:piglin_brute"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bastionsoul": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:vex",
+              "nbt": "{Tags:[\"bastionsoul\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "magma": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:magma_cube"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "lastsoul": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:vex",
+              "nbt": "{Tags:[\"lastsoul\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "ghast": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:ghast"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "zpiglin": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombified_piglin"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "skeleton": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:skeleton",
+              "location": {
+                "dimension": "minecraft:the_nether"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "witherbow"
+    ],
+    [
+      "witheraxe"
+    ],
+    [
+      "wither"
+    ],
+    [
+      "withersoul"
+    ],
+    [
+      "blaze"
+    ],
+    [
+      "storm"
+    ],
+    [
+      "hoglin"
+    ],
+    [
+      "piglin"
+    ],
+    [
+      "brute"
+    ],
+    [
+      "bastionsoul"
+    ],
+    [
+      "magma"
+    ],
+    [
+      "lastsoul"
+    ],
+    [
+      "ghast"
+    ],
+    [
+      "zpiglin"
+    ],
+    [
+      "witherhoe"
+    ],
+    [
+      "skeleton"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/mobs/nether/allbastion"
+}

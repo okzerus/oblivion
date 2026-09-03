@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Пора принять душ"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Смердящая плоть\""
+        },
+        "icon": {
+            "item": "minecraft:rotten_flesh",
+            "nbt": "{CustomModelData:1441}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.stinking_flesh": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.stinking_flesh:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.stinking_flesh"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.defender"
+}

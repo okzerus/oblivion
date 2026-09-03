@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Ты просто гений"
+        },
+        "description": {
+            "text": "Почините золотой предмет у Инструментальщика"
+        },
+        "icon": {
+            "item": "minecraft:gold_nugget"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/overworld/villagers/toolsmith"
+}

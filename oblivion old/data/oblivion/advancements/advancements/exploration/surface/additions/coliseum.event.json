@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Во имя Солнца"
+        },
+        "description": {
+            "text": "Сразитесь с воинами светила и заберите то, что посеет хаос"
+        },
+        "icon": {
+            "item": "minecraft:magma_cream",
+            "nbt": "{CustomModelData:6501}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "fight.coliseum": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "fight.coliseum"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/exploration/surface/coliseum"
+}

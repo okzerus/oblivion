@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_carrot",
+      "nbt": "{CustomModelData:12500}"
+    },
+    "title": "Вкуси же сладость!",
+    "description": "Накормите своего товарища или компаньона карамелью, ударив его Карамелдансеном",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/weaponry/sword/list/caramelldansen",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

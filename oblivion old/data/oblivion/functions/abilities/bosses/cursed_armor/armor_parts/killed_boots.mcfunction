@@ -1,0 +1,5 @@
+execute at @e[tag=obl.boss.cursed_armor,tag=!obl.cursed_armor.spirit,tag=!obl.phase.3,limit=1] run playsound minecraft:block.anvil.use master @a ~ ~ ~ 1 1.5
+item replace entity @e[tag=obl.boss.cursed_armor,tag=!obl.cursed_armor.spirit,tag=!obl.phase.3,limit=1] armor.feet with netherite_boots{CustomModelData:7172,AttributeModifiers:[{AttributeName:"generic.armor",Amount:3,Slot:feet,Name:"generic.armor",UUID:[I;-122416,18040,123949,-36080]},{AttributeName:"generic.armor_toughness",Amount:2,Slot:feet,Name:"generic.armor_toughness",UUID:[I;-122416,18140,123949,-36280]},{AttributeName:"generic.knockback_resistance",Amount:0.1,Slot:feet,Name:"generic.knockback_resistance",UUID:[I;-122416,18240,123949,-36480]}]}
+advancement revoke @s only oblivion:mobs/cursedarmorbootskill
+scoreboard players remove @e[type=wither_skeleton,tag=obl.boss.cursed_armor] obl.fake_health 20
+execute store result bossbar oblivion:boss_health value run scoreboard players get @e[type=wither_skeleton,tag=obl.boss.cursed_armor,limit=1] obl.fake_health

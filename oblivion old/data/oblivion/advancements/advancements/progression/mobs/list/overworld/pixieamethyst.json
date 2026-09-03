@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Что может пойти не так?"
+        },
+        "description": {
+            "text": "Выпустите Пикси стоя на аметистовом блоке, где-нибудь под землёй в аметистовых жеодах"
+        },
+        "icon": {
+            "item": "minecraft:amethyst_block"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/mobs/overworld/pixiebottleout"
+}

@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Холодное сердце"
+        },
+        "description": {
+            "text": "Заполучите Метель"
+        },
+        "icon": {
+            "item": "minecraft:iron_sword",
+            "nbt": "{CustomModelData:3001}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.sword.blizzard": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.blizzard:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.sword.blizzard"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/sword/collection"
+}

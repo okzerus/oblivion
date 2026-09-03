@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Из недр Земли"
+        },
+        "description": {
+            "text": "Заполучите Пекло"
+        },
+        "icon": {
+            "item": "minecraft:bow",
+            "nbt": "{CustomModelData:41406}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.bow.inferno": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.bow.inferno:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.bow.inferno"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/bow/collection"
+}

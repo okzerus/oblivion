@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Жонглирование"
+        },
+        "description": {
+            "text": "Парируйте одну и ту же наковальню 50 раз за один заход. Вот только, захочет ли она этого?"
+        },
+        "icon": {
+            "item": "minecraft:anvil",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.falling_block.anvil.fifty": {
+            "trigger": "minecraft:impossible"
+		}
+    },
+    "requirements": [
+        [
+            "parry.falling_block.anvil.fifty"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/falling_anvil"
+}

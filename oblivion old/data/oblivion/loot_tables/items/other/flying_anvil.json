@@ -1,0 +1,96 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:anvil",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Летающая наковальня",
+                "color": "#aaf3e8",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": " Поздравляем, вы парировали наковальню целых 50 раз, ",
+                  "color": "#d1e9e5",
+                  "italic": false
+                },
+                {
+                  "text": " на протяжении пары минут.",
+                  "color": "#d1e9e5",
+                  "italic": false
+                },
+                {
+                  "text": " Этот трофей ваш, и вы можете использовать его, ",
+                  "color": "#d1e9e5",
+                  "italic": false
+                },
+                {
+                  "text": " чтобы похвастаться перед друзьями, чтобы все знали ",
+                  "color": "#d1e9e5",
+                  "italic": false
+                },
+                {
+                  "text": " наверняка, кому воистину нехер делать.",
+                  "color": "#d1e9e5",
+                  "italic": false
+                },
+                {
+                  "text": " Хотя, гордиться тут, нечем...",
+                  "color": "#acb5b3",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:1,obl.flying_anvil:1b,Enchantments:[{lvl:1,id:channeling}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

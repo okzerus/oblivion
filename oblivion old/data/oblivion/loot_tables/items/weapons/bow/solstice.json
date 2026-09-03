@@ -1,0 +1,143 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Солнцестояние",
+                "color": "#ffc617",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Узри же Солнце, обратись в пепел",
+                  "color": "#e9af00",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Стрелы выпускаемые Солнцестоянием горят по умолчанию.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Наличие зачарования Горящая стрела позволит стрелам",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    поджигать поверхность, если они были выпущены вприсяди.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    При продолжительном натягивании тетивы испускает усиливающийся",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    солнечный свет, ослепляющий, ослабляющий и замедляющий все цели",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    в радиусе действия.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Скрытый потенциал]: Предмет может быть пробуждён на Алтаре Забвения",
+                  "color": "red",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:5b,obl.bow:1b,obl.bow.solstice:1b,CustomModelData:41402}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

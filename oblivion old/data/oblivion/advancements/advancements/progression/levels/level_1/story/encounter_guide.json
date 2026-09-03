@@ -1,0 +1,28 @@
+{
+    "display": {
+        "title": {
+            "text": "Старость не в радость"
+        },
+        "description": {
+            "text": "Познакомьтесь с Гидом, старым библиотекарем и уважаемым историком, который был знаком с самыми легендарными героями"
+        },
+        "icon": {
+            "item": "minecraft:lectern"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "encounter.the_guide": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "encounter.the_guide"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/levels/level_1/story/locate_village"
+}

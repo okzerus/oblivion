@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Начало эпидемии"
+        },
+        "description": {
+            "text": "Заразитесь смертельным вирусом от Инфицированного зомби"
+        },
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/overworld/ragezombie"
+}

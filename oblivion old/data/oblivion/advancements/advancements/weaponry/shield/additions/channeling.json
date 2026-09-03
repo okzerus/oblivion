@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Молниеносец"
+        },
+        "description": {
+            "text": "Во время грозы, парируйте чужой трезубец, зачарованный на Громовержец, в цель. Это призовёт усиленную молнию, способную разрушать блоки!"
+        },
+        "icon": {
+            "item": "minecraft:trident"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.trident_channeling.hit": {
+            "trigger": "minecraft:impossible"
+                  }
+    },
+    "requirements": [
+        [
+            "parry.trident_channeling.hit"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/tnt"
+}

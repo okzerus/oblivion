@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:chest",
+      "nbt": "{CustomModelData:6503}"
+    },
+    "title": "Я не люблю снег",
+    "description": "Переживите Рождественскую ночь от начала до конца, убив минимум 25 мобов и ни разу не умерев",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/events/survivexmasmoon",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1000
+  }
+}

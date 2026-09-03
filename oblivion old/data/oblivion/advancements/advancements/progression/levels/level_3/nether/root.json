@@ -1,0 +1,36 @@
+{
+    "display": {
+        "title": {
+            "text": "Нижний мир",
+            "color": "red"
+        },
+        "description": {
+            "text": ""
+        },
+        "icon": {
+            "item": "minecraft:netherrack"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "enter.the_nether": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "dimension": "minecraft:the_nether"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "enter.the_nether"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/separator/fourth.5"
+}

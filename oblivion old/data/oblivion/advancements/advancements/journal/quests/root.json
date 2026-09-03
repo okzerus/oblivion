@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": {
+            "text": "Задания",
+			"color": "aqua"
+        },
+        "description": {
+            "text": ""
+        },
+        "icon": {
+            "item": "minecraft:spyglass"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "none": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "oblivion:advancements/journal/root"
+}

@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Далекий заброс"
+        },
+        "description": {
+            "text": "Забросьте удочку и парируйте летящий поплавок, чтобы закинуть его ещё дальше. Это, каким-то образом, даст вам +1 к Удаче до следующего поклёва"
+        },
+        "icon": {
+            "item": "minecraft:fishing_rod"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.fishing_bobber": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.fishing_bobber"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/item"
+}

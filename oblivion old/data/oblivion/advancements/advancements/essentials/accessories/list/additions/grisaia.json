@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Что такое голод?"
+        },
+        "description": {
+            "text": "Откусите от Фрукта Грисайи суммарно 1000 раз"
+        },
+        "icon": {
+            "item": "minecraft:apple",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "consume.grisaia_fruit.thousand_times": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "consume.grisaia_fruit.thousand_times"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/misc.grisaia_fruit"
+}

@@ -1,0 +1,207 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_hoe",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Кровопролитие",
+                "color": "#cf0b3b",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Пусть льётся кровь",
+                  "color": "#ab0f35",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 4",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 1.75",
+                  "color": "dark_green",
+                  "italic": false
+                },
+				[
+			    {
+				  "text": " Повреждение брони: ",
+				  "color": "dark_green",
+				  "italic": false
+			    },
+			    {
+				  "text": "Отсутствует",
+				  "color": "red",
+				  "italic": false
+			    }
+				],
+			    [
+			    {
+				  "text": " Кровотечение: Сила I, Шанс 45%",
+				  "color": "dark_green",
+				  "italic": false
+			    },
+			    {
+				  "text": "(-7%/ЧБ) ",
+				  "color": "red",
+				  "italic": false
+			    },
+			    {
+				  "text": "на 7",
+				  "color": "dark_green",
+				  "italic": false
+			    },
+			    {
+				  "text": "(-0.5/ЧБ) ",
+				  "color": "red",
+				  "italic": false
+			    },
+			    {
+				  "text": "секунд",
+				  "color": "dark_green",
+				  "italic": false
+			    }
+			    ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Каждая атака по уже кровоточащей сущности будет",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    устанавливать время действия дебаффа на 4 секунды (если",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    оно не было больше) а также с 5% шансом усилять эффект",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Кровотечения, вплоть до IV уровня.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Атаки этим оружием по цели с минимум",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    III уровнем Кровотечения будут регенерировать",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    носителя, если тот атакует в пределах",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    2 блоков от цели.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.scythe:1b,obl.scythe.bloodshed:1b,obl.difficulty:5b,CustomModelData:41104,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:4,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-121109,128697,221529,-257394]},{AttributeName:\"generic.attack_speed\",Amount:-2.25,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-121109,128797,221529,-257594]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

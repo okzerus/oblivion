@@ -1,0 +1,32 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:shield"
+					]
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"equipment": {
+					"mainhand": {
+						"items": [
+							"minecraft:shield"
+						],
+						"nbt": "{obl.shield:1b}"
+					}
+				}
+			}
+		}
+	}
+]

@@ -1,0 +1,116 @@
+{
+    "display": {
+        "title": {
+            "text": "Дикий край"
+        },
+        "description": {
+            "text": "Разыщите каждый тип руин в биоме Тайги"
+        },
+        "icon": {
+            "item": "minecraft:spruce_log"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.ruins.taiga.allay": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/allay"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.cages": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/cages"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.fallen": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/fallen"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.farmland": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/farmland"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.foxes": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/foxes"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.highground": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/highground"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.tower": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/tower"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.ruins.taiga.allay"
+        ],
+        [
+            "locate.ruins.taiga.cages"
+        ],
+        [
+            "locate.ruins.taiga.fallen"
+        ],
+        [
+            "locate.ruins.taiga.farmland"
+        ],
+        [
+            "locate.ruins.taiga.foxes"
+        ],
+        [
+            "locate.ruins.taiga.highground"
+        ],
+        [
+            "locate.ruins.taiga.tower"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/locate"
+}

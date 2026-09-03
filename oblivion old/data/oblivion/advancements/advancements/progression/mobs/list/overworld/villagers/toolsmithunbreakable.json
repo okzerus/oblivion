@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Здесь началась вечность"
+        },
+        "description": {
+            "text": "Дайте Инструментальщику 64 изумрудных блока и Вечную Стеллу вместе с предметом, который вы хотите сделать неразрушаемым."
+        },
+        "icon": {
+            "item": "minecraft:firework_star",
+            "nbt": "{CustomModelData:9897,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/mobs/overworld/villagers/toolsmith"
+}

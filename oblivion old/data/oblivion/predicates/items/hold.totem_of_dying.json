@@ -1,0 +1,16 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:totem_of_undying"
+					],
+					"nbt": "{obl.totem_of_dying:1b}"
+				}
+			}
+		}
+	}
+]

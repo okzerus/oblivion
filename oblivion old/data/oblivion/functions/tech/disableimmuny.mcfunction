@@ -1,0 +1,3 @@
+title @s actionbar {"text":"\u0418\u043c\u043c\u0443\u043d\u0438\u0442\u0435\u0442 \u043a \u0432\u0438\u0440\u0443\u0441\u0443 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0441\u043f\u0430\u0434\u0430\u0435\u0442..","color":"red"}
+tag @s remove obl.virusimmuny
+scoreboard players set @s immuny 0

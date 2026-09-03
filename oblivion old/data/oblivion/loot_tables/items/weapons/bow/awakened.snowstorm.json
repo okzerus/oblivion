@@ -1,0 +1,197 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+			  {
+                "text": "Буран",
+                "color": "#9ef5f4",
+                "italic": false
+              },
+                  [
+			        {
+                       "text": " [Пр",
+                       "color": "#FEA0EE",
+                       "italic": false
+				    },
+			        {
+                       "text": "обу",
+                       "color": "#FFB2FA",
+                       "italic": false
+				    },
+			        {
+                       "text": "жд",
+                       "color": "#FFC1FE",
+                       "italic": false
+				    },
+			        {
+                       "text": "ённ",
+                       "color": "#FFD9FF",
+                       "italic": false
+				    },
+			        {
+                       "text": "ый]",
+                       "color": "#FFE8FF",
+                       "italic": false
+				    }
+                  ]
+			  ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Вершина айсберга",
+                  "color": "#bedfdf",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Стреляет короткими ледяными шипами, длина которых зависит ",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    от силы натяжения тетивы.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Шипы пронзают врагов насквозь, а вода замораживаеся при выстреле вприсяди.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Зачарование Горящая стрела значительно ослабит все способности лука.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Продолжительное натягивание тетивы испускает усиливающийся",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    снежный шторм, наносящий урон обморожением (0.5/3с, макс 3)",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    и замедляющий цели в радиусе 12 блоков от носителя.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Достигая пика своей мощности, шторм обнуляется, при этом",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    нанося 12 урона обморожением всем целям в радиусе действия,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    а также оставляя ледяной ожог на 5 секунд, который позволяет",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    нанести дополнительно 12 урона обморожением при попадании",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    полностью заряженным шипом, при этом снимая ожог.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:5b,obl.bow:1b,obl.bow.awakened.avalanche:1b,CustomModelData:41405}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

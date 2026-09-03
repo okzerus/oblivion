@@ -1,0 +1,105 @@
+{
+    "display": {
+        "title": {
+            "text": "Первозданный Жнец",
+			"color": "dark_red"
+        },
+        "description": {
+            "text": "Заполучите каждую косу Забвения"
+        },
+        "icon": {
+            "item": "minecraft:netherite_hoe",
+            "nbt": "{CustomModelData:4053}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.scythe.bloodshed": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.scythe.bloodshed:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.scythe.soul_devourer": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.scythe.soul_devourer:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.scythe.lucy": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.scythe.lucy:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.scythe.scythe_of_harvest": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.scythe.scythe_of_harvest:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.scythe.excythebur": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.scythe.excythebur:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.scythe.bee_sting": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.scythe.bee_sting:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.scythe.bloodshed"
+        ],
+        [
+            "obtain.scythe.soul_devourer"
+        ],
+        [
+            "obtain.scythe.lucy"
+        ],
+        [
+            "obtain.scythe.scythe_of_harvest"
+        ],
+        [
+            "obtain.scythe.excythebur"
+        ],
+        [
+            "obtain.scythe.bee_sting"
+        ]
+    ],
+    "rewards": {
+        "experience": 5000
+    },
+    "parent": "oblivion:advancements/weaponry/scythe/root"
+}

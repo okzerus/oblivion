@@ -1,0 +1,43 @@
+{
+  "display": {
+    "title": {
+      "text": "Кто выключил свет?"
+    },
+    "description": {
+      "text": "Убейте Спектрального огонька - меньшего духа забвения, блуждающего под ночным небом"
+    },
+    "icon": {
+      "item": "minecraft:soul_lantern"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.spectral_wisp": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:vex",
+              "nbt": "{Tags:[\"obl.spectral_wisp\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.spectral_wisp"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "oblivion:advancements/progression/levels/level_2/mobs/root"
+}

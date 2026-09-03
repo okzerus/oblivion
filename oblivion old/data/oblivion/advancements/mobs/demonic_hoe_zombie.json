@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:zombie",
+            "nbt": "{Tags:[\"demonicmob\"]}",
+            "equipment": {
+              "mainhand": {
+                "items": [
+                  "minecraft:netherite_hoe"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/mobbrokearmordemonic"
+  }
+}

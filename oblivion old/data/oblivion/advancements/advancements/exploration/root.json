@@ -1,0 +1,47 @@
+{
+    "display": {
+        "title": [
+		{
+            "text": "З",
+            "color": "#FEA0EE"
+		},
+		{
+            "text": "аб",
+            "color": "#FFB2FA"
+		},
+		{
+            "text": "ве",
+            "color": "#FFC1FE"
+		},
+		{
+            "text": "ни",
+            "color": "#FFD9FF"
+		},
+		{
+            "text": "е: ",
+            "color": "#FFE8FF"
+		},
+		{
+            "text": "Исследование",
+            "color": "white"
+		}
+        ],
+        "description": {
+            "text": "Знания - сила, так станьте сильнейшим. Исследуйте, изучайте, решайте"
+        },
+        "icon": {
+            "item": "minecraft:leather",
+            "nbt": "{CustomModelData:5069}"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/deepslate_tiles.png"
+    },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

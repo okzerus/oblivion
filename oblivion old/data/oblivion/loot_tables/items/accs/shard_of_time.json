@@ -1,0 +1,158 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:prismarine_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Осколок времени",
+                "color": "#88ccd6",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Думаете, что ваше время пришло? Обратите его вспять!",
+                  "color": "#56a6bd",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				  [
+					{
+						"text": "Когда в слоте аксессуара:",
+						"color": "gray",
+						"italic": false
+					}
+				  ],
+                {
+                  "text": "+ Каждые 5 секунд создаёт до пяти фантомных копий,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   остающихся позади, если носитель находится на земле,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   и в радиусе 5 блоков нет уже существующих копий.",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   Каждая копия развеивается спустя 25 секунд, или",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   если носитель отойдёт дальше чем на 50 блоков",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ Копии с 15% шансом могут отвлечь некоторых мобов и боссов,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   \"перенимая\" их определённые способности и снаряды на себя",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[ПРИСЕСТЬ] х2",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    При активации, перемещает носителя назад во времени, проходя",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    через каждую фантомную копию до последней, а также накладывая",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    секундную невосприимчивость к любому типу урона",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 3",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:42901,HideFlags:3,obl.difficulty:3b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:torch",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Факел вечного пламени",
+                "color": "#fec326",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Ни один огонь не сожжёт меня,",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "потому что я и есть огонь!",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в слоте аксессуара:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+ Автоматически устанавливает блоки света в",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   тёмных местах.",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ Выжигает всю паутину в радиусе 5 блоков от",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   носителя, заменяя её на огонь.",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "- Горящий носитель будет поджигать блоки под собой,",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "   продолжая возгорание до тех пор, пока не зайдёт в воду.",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 3",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5063,HideFlags:3,obl.difficulty:3b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

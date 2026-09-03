@@ -1,0 +1,7 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"???","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"Слишком МЕДЛЕННЫЙ!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"???","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"ТЩЕТНО!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"???","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"Я ОТПРАВЛЮ ТВОЮ ДУШУ К АНГЕЛУ!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"???","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"Считай свои последние секунды, с-сука!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"???","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"ДАВАЙ, ЩЕНОК!","color":"#e6ffe9"},{"text":"\n"}]
+playsound minecraft:entity.blaze.ambient hostile @s ~ ~ ~ 1 1.2

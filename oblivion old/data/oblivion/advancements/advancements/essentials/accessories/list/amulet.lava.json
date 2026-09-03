@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Кругоадское путешествие"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Амулет лавоплавателя\""
+        },
+        "icon": {
+            "item": "minecraft:fire_charge",
+            "nbt": "{CustomModelData:5005}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.lava_amulet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.lava_amulet:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.lava_amulet"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.amulet"
+}

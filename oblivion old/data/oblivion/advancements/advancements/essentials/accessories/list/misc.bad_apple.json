@@ -1,0 +1,41 @@
+{
+    "display": {
+        "title": {
+            "text": "Темнее чёрного"
+        },
+		"description": [
+			{
+				"text": "Заполучите аксессуар \"Плохое яблоко!!\""
+			}
+		],
+        "icon": {
+            "item": "minecraft:apple",
+            "nbt": "{CustomModelData:5055}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.bad_apple": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.bad_apple:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.bad_apple"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.misc"
+}

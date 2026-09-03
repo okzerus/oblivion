@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Взгляд смерти"
+        },
+        "description": {
+            "text": "Уничтожьте укрепление в середине мемориала, чтобы высвободить Чёрную смерть из заточения"
+        },
+        "icon": {
+            "item": "minecraft:black_concrete"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "break.black_death_memorial": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "break.black_death_memorial"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/progression/levels/level_3/story/locate_memorial"
+}

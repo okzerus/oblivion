@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Словно депутат"
+        },
+        "description": {
+            "text": "Заплатите Библиотекарю море изумрудов, чтобы стать Героем Деревни 4 уровня"
+        },
+        "icon": {
+            "item": "minecraft:emerald_block"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/mobs/overworld/villagers/librarian"
+}

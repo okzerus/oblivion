@@ -1,0 +1,40 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "head": {
+        "items": [
+          "minecraft:diamond_helmet"
+        ],
+        "count": {
+          "min": 1
+        }
+      },
+      "chest": {
+        "items": [
+          "minecraft:diamond_chestplate"
+        ],
+        "count": {
+          "min": 1
+        }
+      },
+      "legs": {
+        "items": [
+          "minecraft:diamond_leggings"
+        ],
+        "count": {
+          "min": 1
+        }
+      },
+      "feet": {
+        "items": [
+          "minecraft:diamond_boots"
+        ],
+        "count": {
+          "min": 1
+        }
+      }
+    }
+  }
+}

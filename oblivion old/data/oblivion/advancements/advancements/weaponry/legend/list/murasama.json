@@ -1,0 +1,40 @@
+{
+  "display": {
+    "title": {
+      "text": "Let's Dance!",
+      "color": "red"
+    },
+    "description": {
+      "text": "Подберите легендарную катану Мурасаму, сокрытую под землёй"
+    },
+    "icon": {
+      "item": "minecraft:netherite_sword",
+      "nbt": "{CustomModelData:3555,Enchantments:[{}]}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "obtain.sword.murasama": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{obl.sword.murasama:1b}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain.sword.murasama"
+    ]
+  ],
+  "parent": "oblivion:advancements/weaponry/legend/root",
+  "rewards": {
+    "experience": 3000
+  }
+}

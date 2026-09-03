@@ -1,0 +1,159 @@
+{
+    "display": {
+        "title": {
+            "text": "ПАРИРУЯ МИР",
+			"color": "red"
+        },
+        "description": {
+            "text": "Парируйте всё. Вот, типа, вообще всё..."
+        },
+        "icon": {
+            "item": "minecraft:shield",
+            "nbt": "{CustomModelData:4053}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.arrow": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.dragon_fireball": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.egg": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.ender_pearl": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.experience_bottle": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.falling_block": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.fireball": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.firework_rocket": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.fishing_bobber": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.item": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.llama_spit": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.magma_cube": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.potion": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.shulker_bullet": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.small_fireball": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.snowball": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.tnt": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.trident": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.wither_skull": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.lightning_bolt": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.charging_black_death": {
+            "trigger": "minecraft:impossible"
+        },
+        "parry.fallen_angel_true_strike": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.arrow"
+        ],
+        [
+            "parry.dragon_fireball"
+        ],
+        [
+            "parry.egg"
+        ],
+        [
+            "parry.ender_pearl"
+        ],
+        [
+            "parry.experience_bottle"
+        ],
+        [
+            "parry.falling_block"
+        ],
+        [
+            "parry.fireball"
+        ],
+        [
+            "parry.firework_rocket"
+        ],
+        [
+            "parry.fishing_bobber"
+        ],
+        [
+            "parry.item"
+        ],
+        [
+            "parry.llama_spit"
+        ],
+        [
+            "parry.magma_cube"
+        ],
+        [
+            "parry.potion"
+        ],
+        [
+            "parry.shulker_bullet"
+        ],
+        [
+            "parry.small_fireball"
+        ],
+        [
+            "parry.snowball"
+        ],
+        [
+            "parry.tnt"
+        ],
+        [
+            "parry.trident"
+        ],
+        [
+            "parry.wither_skull"
+        ],
+        [
+            "parry.lightning_bolt"
+        ],
+        [
+            "parry.charging_black_death"
+        ],
+        [
+            "parry.fallen_angel_true_strike"
+        ]
+    ],
+    "rewards": {
+        "experience": 5000
+    },
+    "parent": "oblivion:advancements/weaponry/shield/parry"
+}

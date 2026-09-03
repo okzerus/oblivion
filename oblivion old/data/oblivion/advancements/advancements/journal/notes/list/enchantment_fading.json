@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": {
+            "text": "Мои чары увядают?",
+			"color": "yellow"
+        },
+        "description": {
+            "text": "Похоже, что предметы, которые я использую или ношу на себе, имеют шанс потерять свои чары.\n\nВсё говорит о том, что моей силы недостаточно, чтобы содержать эти чары внутри предмета.\n\nВозможно, стоит повременить с улучшением снаряжения, и продолжить мой путь, вооружившись лишь верой в себя."
+        },
+        "icon": {
+            "item": "minecraft:writable_book"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "none": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "oblivion:advancements/journal/notes/root"
+}

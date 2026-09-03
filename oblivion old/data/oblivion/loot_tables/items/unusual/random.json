@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/random"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/random"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/random"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/random"
+        }
+      ]
+    }
+  ]
+}

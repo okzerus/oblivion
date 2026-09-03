@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "Доспехи"
+        },
+        "description": {
+            "text": ""
+        },
+        "icon": {
+            "item": "minecraft:iron_chestplate"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible"
+      }
+    },
+    "parent": "oblivion:advancements/weaponry/collection"
+}

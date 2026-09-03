@@ -1,0 +1,91 @@
+{
+    "display": {
+        "title": {
+            "text": "Один из них"
+        },
+        "description": {
+            "text": "Заполучите каждый аксессуар, защищающий от мобов"
+        },
+        "icon": {
+            "item": "minecraft:zombie_head",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.cat_ears": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.cat_ears:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.champion_medal": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.champion_medal:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.demon_horn": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.demon_horn:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.mothers_eye": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.mothers_eye:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.stinking_flesh": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.stinking_flesh:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.cat_ears"
+        ],
+        [
+            "obtain.accessory.champion_medal"
+        ],
+        [
+            "obtain.accessory.demon_horn"
+        ],
+        [
+            "obtain.accessory.mothers_eye"
+        ],
+        [
+            "obtain.accessory.stinking_flesh"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/root"
+}

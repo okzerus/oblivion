@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Герой щита"
+        },
+        "description": {
+            "text": "Я вкачал все свои перки в мой щит! Успешно парируйте 1.000 раз"
+        },
+        "icon": {
+            "item": "minecraft:shield",
+            "nbt": "{Enchantments:[{}],BlockEntityTag:{Patterns:[{Pattern:base,Color:5}],Base:5}}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.thousand_times": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.thousand_times"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/parry.100"
+}

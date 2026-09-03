@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:lantern"
+    },
+    "title": "Сияю словно солнце!",
+    "description": "Убейте Одержимого огонька днём",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/mobs/overworld/wisp",
+  "criteria": {
+    "wooden": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:vex",
+          "nbt": "{Tags:[\"wisp\",\"wispday\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 300
+  }
+}

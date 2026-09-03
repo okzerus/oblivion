@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Конец мучениям"
+        },
+        "description": {
+            "text": "Победите Чёрную смерть - воплощение самой чумы, обладающей огромной силой, даже будучи лишь осколком своего прошлого могущества"
+        },
+        "icon": {
+            "item": "minecraft:charcoal",
+            "nbt": "{CustomModelData:43001}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "defeat.boss.black_death": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "defeat.boss.black_death"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/progression/levels/level_3/story/break_memorial"
+}

@@ -1,0 +1,47 @@
+{
+    "display": {
+        "title": {
+            "text": "УНО РЕВЕРС"
+        },
+        "description": {
+            "text": "Парируйте снаряд Шалкера, чтобы он сменил свою цель на своего же отправителя и нанёс ему урон"
+        },
+        "icon": {
+            "item": "minecraft:shulker_shell"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.shulker_bullet": {
+            "trigger": "minecraft:player_hurt_entity",
+                "conditions": {
+                    "damage": {
+                        "type": {
+                            "tags": [
+                                {
+                                "id": "minecraft:is_projectile",
+                                "expected": true
+                                }
+                            ],
+                            "direct_entity": {
+                                   "type": "minecraft:shulker_bullet",
+                                   "nbt": "{Tags:[obl.projectile.reflected]}"
+                                   }
+                               }
+                           }
+                       }
+                  }
+    },
+    "requirements": [
+        [
+            "parry.shulker_bullet"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/arrow"
+}

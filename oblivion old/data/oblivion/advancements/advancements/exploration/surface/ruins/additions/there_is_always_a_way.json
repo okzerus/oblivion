@@ -1,0 +1,67 @@
+{
+    "display": {
+        "title": {
+            "text": "Путь есть всегда"
+        },
+        "description": {
+            "text": "Успешно проведите правильный маршрут для всех горных вагонеток"
+        },
+        "icon": {
+            "item": "minecraft:detector_rail"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "finish.mountain_minecart_route.allay": {
+            "trigger": "minecraft:impossible"
+        },
+        "finish.mountain_minecart_route.coal": {
+            "trigger": "minecraft:impossible"
+        },
+        "finish.mountain_minecart_route.floor": {
+            "trigger": "minecraft:impossible"
+        },
+        "finish.mountain_minecart_route.highway": {
+            "trigger": "minecraft:impossible"
+        },
+        "finish.mountain_minecart_route.pillar": {
+            "trigger": "minecraft:impossible"
+        },
+        "finish.mountain_minecart_route.stream": {
+            "trigger": "minecraft:impossible"
+        },
+        "finish.mountain_minecart_route.survivor": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "finish.mountain_minecart_route.allay"
+        ],
+        [
+            "finish.mountain_minecart_route.coal"
+        ],
+        [
+            "finish.mountain_minecart_route.floor"
+        ],
+        [
+            "finish.mountain_minecart_route.highway"
+        ],
+        [
+            "finish.mountain_minecart_route.pillar"
+        ],
+        [
+            "finish.mountain_minecart_route.stream"
+        ],
+        [
+            "finish.mountain_minecart_route.survivor"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/additions/minecart_problem"
+}

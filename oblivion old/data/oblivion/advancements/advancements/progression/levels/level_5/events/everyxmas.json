@@ -1,0 +1,124 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword",
+      "nbt": "{CustomModelData:3001}"
+    },
+    "title": "Превращая в лёд",
+    "description": "Убейте абсолютно всех мобов во время Рождественской ночи",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "grinch": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"grinch\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "xmasmob1": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"xmasmob1\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "xmasmob2": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"xmasmob2\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "xmasmob3": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"xmasmob3\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "xmasmob4": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"xmasmob4\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "xmasmob5": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"xmasmob5\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "grinch"
+    ],
+    [
+      "xmasmob1"
+    ],
+    [
+      "xmasmob2"
+    ],
+    [
+      "xmasmob3"
+    ],
+    [
+      "xmasmob4"
+    ],
+    [
+      "xmasmob5"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/events/survivexmasmoon"
+}

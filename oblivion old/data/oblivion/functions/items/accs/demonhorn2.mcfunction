@@ -1,0 +1,1 @@
+execute unless score @s demon.used matches 1 if entity @s[x_rotation=-90] at @s run function oblivion:items/accs/effects/demonhornnether

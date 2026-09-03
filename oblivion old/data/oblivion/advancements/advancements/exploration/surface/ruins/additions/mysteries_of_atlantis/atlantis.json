@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Дар Нептуна: Атлантида"
+        },
+        "description": {
+            "text": "Вы прошли испытание Нептуна, и с 10% шансом были вознаграждены одним из его редчайших, легендарных трезубцев"
+        },
+        "icon": {
+            "item": "minecraft:trident",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "finish.neptune_trial.atlantis": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "finish.neptune_trial.atlantis"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/additions/mysteries_of_atlantis/trident"
+}

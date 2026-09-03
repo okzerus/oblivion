@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Пчелиная кара"
+        },
+        "description": {
+            "text": "Заполучите Пчелиное жало"
+        },
+        "icon": {
+            "item": "minecraft:iron_hoe",
+            "nbt": "{CustomModelData:41105}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.scythe.bee_sting": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.scythe.bee_sting:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.scythe.bee_sting"
+        ]
+    ],
+    "parent": "oblivion:advancements/weaponry/scythe/collection",
+    "rewards": {
+    "experience": 300
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Супер инстинкт",
+                "color": "#428cd4",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "КАК ОН ЭТО ДЕЛАЕТ!?",
+                  "color": "#3571ac",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "При усилении:",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "+ Создаёт небольшое поле на 5 минут,",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "   отбивающее летящие, обычные стрелы",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "+ Увеличивает Скорость игрока на 0.1 за каждую",
+				  "color": "light_purple",
+				  "italic": false
+				},
+				{
+				  "text": "   отбитую стрелу (Макс. 30)",
+				  "color": "light_purple",
+				  "italic": false
+				},
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "Активация:",
+				  "color": "gray",
+				  "italic": false
+				},
+                {
+                  "text": "[ПРИСЕСТЬ]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "3",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:3b,obl.empowerer:1b,obl.empowerer.instinct:1b,CustomModelData:11307}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

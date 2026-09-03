@@ -1,0 +1,43 @@
+{
+    "display": {
+        "title": {
+            "text": "Это не мираж"
+        },
+        "description": {
+            "text": "Убейте Пустынную аномалию"
+        },
+        "icon": {
+            "item": "minecraft:dead_bush"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "stone": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "predicate": {
+                            "type": "minecraft:husk",
+                            "nbt": "{Tags:[\"desertmob\"]}"
+                        },
+                        "entity": "this"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "stone"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/mobs/overworld/overworld"
+}

@@ -1,0 +1,9 @@
+execute if predicate oblivion:dnl/dnl.deep_oasis run function oblivion:tech/difficulty/debuffsdungeon3
+execute if predicate oblivion:dnl/dnl.castle run function oblivion:tech/difficulty/debuffsdungeon3
+execute if predicate oblivion:dnl/dnl.cleric_hideout run function oblivion:tech/difficulty/debuffsdungeon3
+execute if predicate oblivion:dnl/dnl.railway_outpost run function oblivion:tech/difficulty/debuffsdungeon3
+execute if predicate oblivion:dnl/dnl.watcher_camp run function oblivion:tech/difficulty/debuffsdungeon3
+execute if predicate oblivion:dnl/dnl.gallery_of_illusion run function oblivion:tech/difficulty/debuffsdungeon5
+execute if predicate oblivion:dnl/dnl.forgotten_field run function oblivion:tech/difficulty/debuffsdungeon5
+execute if predicate oblivion:dnl/dnl.temple_of_tears run function oblivion:tech/difficulty/debuffsdungeon9
+execute if predicate oblivion:dnl/dnl.olympus run function oblivion:tech/difficulty/debuffsdungeon7

@@ -1,0 +1,41 @@
+{
+  "display": {
+    "title": {
+      "text": "Не содержит Минотавров"
+    },
+    "description": {
+      "text": "Найдите Могучую свиную отбивную в бастионах Незера и съешьте, чтобы получить возможность подойти ещё ближе к Падшему ангелу"
+    },
+    "icon": {
+      "item": "minecraft:cooked_porkchop",
+      "nbt": "{CustomModelData:49102,Enchantments:[{}]}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/essentials/collection",
+    "criteria": {
+        "consume.mighty_porkchop": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+        "item": {
+          "items": [
+            "minecraft:golden_carrot"
+          ],
+          "nbt": "{obl.mighty_porkchop:1b}"
+        }
+      }
+        }
+    },
+    "requirements": [
+        [
+            "consume.mighty_porkchop"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/food/collection"
+}

@@ -1,0 +1,116 @@
+{
+    "display": {
+        "title": {
+            "text": "Высокогорная добыча"
+        },
+        "description": {
+            "text": "Разыщите каждый тип руин в биоме Горных лугов"
+        },
+        "icon": {
+            "item": "minecraft:stone"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.ruins.mountains.allay": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/allay"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.coal": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/coal"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.floor": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/floor"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.highway": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/highway"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.pillar": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/pillar"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.stream": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/stream"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.survivor": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/survivor"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.ruins.mountains.allay"
+        ],
+        [
+            "locate.ruins.mountains.coal"
+        ],
+        [
+            "locate.ruins.mountains.floor"
+        ],
+        [
+            "locate.ruins.mountains.highway"
+        ],
+        [
+            "locate.ruins.mountains.pillar"
+        ],
+        [
+            "locate.ruins.mountains.stream"
+        ],
+        [
+            "locate.ruins.mountains.survivor"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/locate"
+}

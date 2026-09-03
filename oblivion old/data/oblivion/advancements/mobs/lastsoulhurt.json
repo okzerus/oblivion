@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "wooden": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:vex",
+            "nbt": "{Tags:[\"lastsoul\"]}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/lastsoulhurt"
+  }
+}

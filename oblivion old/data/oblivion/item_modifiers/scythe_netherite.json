@@ -1,0 +1,87 @@
+[
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+            "text": "Незеритовая коса",
+            "italic": false
+       }
+    },
+    {
+		"function": "minecraft:set_lore",
+		"lore": [
+			{
+				"text": "",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "Когда в ведущей руке:",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": " Урон: 6",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": " Скорость атаки: 1.8",
+				"color": "dark_green",
+				"italic": false
+			},
+			[
+			{
+				"text": " Повреждение брони: Шанс 19% на 12 секунд, ",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "-8",
+				"color": "dark_aqua",
+				"italic": false
+			},
+			{
+				"text": " очков защиты",
+				"color": "dark_green",
+				"italic": false
+			}
+			],
+			[
+			{
+				"text": " Кровотечение: Сила III, Шанс 36%",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "(-5%/ЧБ) ",
+				"color": "red",
+				"italic": false
+			},
+			{
+				"text": "на 25",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "(-2.5/ЧБ) ",
+				"color": "red",
+				"italic": false
+			},
+			{
+				"text": "секунд",
+				"color": "dark_green",
+				"italic": false
+			}
+			]
+	    ]
+	},
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{obl.scythe:1b,obl.scythe.netherite:1b,HideFlags:2}"
+    },
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:6,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-121109,37197,221529,-74394]},{AttributeName:\"generic.attack_speed\",Amount:-2.2,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-121109,37297,221529,-74594]}]}"
+    }
+]

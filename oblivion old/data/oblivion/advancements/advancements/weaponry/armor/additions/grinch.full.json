@@ -1,0 +1,65 @@
+{
+    "display": {
+        "title": {
+            "text": "Украсть Рождество"
+        },
+        "description": {
+            "text": "Заполучите полный комплект одеяния Гринча"
+        },
+        "icon": {
+            "item": "minecraft:netherite_chestplate",
+            "nbt": "{CustomModelData:2002,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.armor.grinch.chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.grinch.chestplate:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.grinch.leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.grinch.leggings:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.grinch.boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.grinch.boots:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+		[
+            "obtain.armor.grinch.chestplate"
+        ],
+        [		
+		    "obtain.armor.grinch.leggings"
+		],
+		[
+            "obtain.armor.grinch.boots"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/armor/list/grinch"
+}

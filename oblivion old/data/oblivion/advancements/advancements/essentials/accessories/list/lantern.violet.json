@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Один лишь взгляд"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Фонарь фиолетовой жестокости\""
+        },
+        "icon": {
+            "item": "minecraft:lantern",
+            "nbt": "{CustomModelData:9899}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.lantern_of_violet_violence": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.lantern_of_violet_violence:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.lantern_of_violet_violence"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.lantern"
+}

@@ -1,0 +1,138 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Оттенок ночи",
+                "color": "#581d6f",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Also try Terraria!",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 7.5",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 1.6",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[ВНИЗ]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "   Высвободите накопленную энергию тьмы,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   чтобы нанести негативные эффекты и урон по площади.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   Время отката идёт только в ночное время суток.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "4",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,nightblade:1b,obl.difficulty:4b,CustomModelData:4004,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-2.4,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-122418,13816,145310,-27632]},{AttributeName:\"generic.attack_damage\",Amount:7.5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-122418,13916,145310,-27832]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+clear @s rotten_flesh{CustomModelData:30000}
+give @s rotten_flesh{CustomModelData:30000,display:{Name:'[{"text":"Кусочек проклятой плоти","italic":false,"color":"red"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Бросьте, чтобы пробудить ","italic":false,"color":"gray"},{"text":"Голод","color":"red"}]']},replacedflesh:1b}

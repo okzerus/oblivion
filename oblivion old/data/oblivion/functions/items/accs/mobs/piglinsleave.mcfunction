@@ -1,0 +1,1 @@
+execute unless entity @a[nbt={Inventory:[{Slot:9b,tag:{CustomModelData:5056}}]},distance=..50] run team leave @s

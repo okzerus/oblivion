@@ -1,0 +1,41 @@
+{
+    "display": {
+        "title": {
+            "text": "Смертельное парирование"
+        },
+        "description": {
+            "text": "Убейте цель контактным уроном от парирования"
+        },
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "kill.from_parry_damage": {
+            "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "killing_blow": {
+          "tags": [
+            {
+              "id": "oblivion:parrying",
+              "expected": true
+            }
+          ]
+        }
+      }
+        }
+    },
+    "requirements": [
+        [
+            "kill.from_parry_damage"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/multiple_parry"
+}

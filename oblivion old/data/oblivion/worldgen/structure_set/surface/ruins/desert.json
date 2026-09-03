@@ -1,0 +1,38 @@
+{
+  "structures": [
+    {
+      "structure": "oblivion:surface/ruins/desert/allay",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/desert/camel",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/desert/dead",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/desert/oasis",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/desert/ribs",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/desert/skull",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/desert/symbol",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 652462,
+    "spacing": 16,
+    "separation": 11,
+    "type": "minecraft:random_spread"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:totem_of_undying",
+      "nbt": "{CustomModelData:9499}"
+    },
+    "title": {
+      "text": "Убить Санту",
+      "color": "red"
+    },
+    "description": "Переживите Рождественскую ночь от начала до конца, убив минимум 25 мобов, ни разу не умерев и не потратив ни одного тотема бессмертия",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/events/survivexmasmoonnodeath",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 3000
+  }
+}

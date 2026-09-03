@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "oblivion:surface/ruins/jungle/bamboo",
+        "oblivion:surface/ruins/jungle/broken",
+        "oblivion:surface/ruins/jungle/camp",
+        "oblivion:surface/ruins/jungle/lake",
+        "oblivion:surface/ruins/jungle/panda",
+        "oblivion:surface/ruins/jungle/pool",
+        "oblivion:surface/ruins/jungle/roof"
+    ]
+}

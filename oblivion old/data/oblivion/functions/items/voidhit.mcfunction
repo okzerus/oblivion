@@ -1,0 +1,2 @@
+execute as @e[sort=nearest,limit=1,nbt={HurtTime:10s},distance=..5,tag=!dnl.mob,tag=!grinch,tag=!devil,tag=!mothron,tag=!necromancer,tag=!amethystpixie,tag=!devilcube,tag=!gargantua,tag=!mother,tag=!hunger,type=!ender_dragon,type=!wither] at @s run function oblivion:items/voiddamage
+advancement revoke @s only oblivion:items/voidhit

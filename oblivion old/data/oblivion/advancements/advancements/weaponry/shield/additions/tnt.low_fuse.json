@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Играя со смертью"
+        },
+        "description": {
+            "text": "Парируйте активированный динамит, когда до его взрыва остаётся менее 5-ти тиков"
+        },
+        "icon": {
+            "item": "minecraft:flint_and_steel"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.tnt.five_tick_fuse": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.tnt.five_tick_fuse"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/tnt"
+}

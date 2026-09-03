@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Вызов на скилл - Гид"
+    },
+    "description": {
+      "text": "В Соло режиме, победите Гида менее чем за 3 минуты, и не позволяя своему здоровью опуститься ниже 75% на протяжении всей битвы"
+    },
+    "icon": {
+      "item": "minecraft:golden_apple"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat.boss.the_guide.skill_challenge": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "defeat.boss.the_guide.skill_challenge"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_1/boss/additions/challenge.time"
+}

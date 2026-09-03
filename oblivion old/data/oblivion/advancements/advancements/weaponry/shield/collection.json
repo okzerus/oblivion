@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Многорукий",
+			"color": "dark_red"
+        },
+        "description": {
+            "text": "Заполучите каждый щит Забвения"
+        },
+        "icon": {
+            "item": "minecraft:shield",
+            "nbt": "{CustomModelData:4053}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.shield.template": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.shield.template:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.shield.template"
+        ]
+    ],
+    "rewards": {
+        "experience": 5000
+    },
+    "parent": "oblivion:advancements/weaponry/shield/obtain"
+}

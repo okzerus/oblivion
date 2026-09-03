@@ -1,0 +1,46 @@
+{
+  "display": {
+    "title": {
+      "text": "Я открою тебе тайну"
+    },
+    "description": {
+      "text": "Приведите Мёртвого шахтёра в Крепость Энда и убейте его в ней"
+    },
+    "icon": {
+      "item": "minecraft:mossy_stone_brick_wall"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.undead_miner.stronghold": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie_villager",
+              "nbt": "{Tags:[\"obl.undead_miner\"]}",
+              "location": {
+                "structure": "minecraft:stronghold"
+              }
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.undead_miner.stronghold"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_2/mobs/additions/undead_miner.mineshaft"
+}

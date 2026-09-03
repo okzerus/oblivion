@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Где тлеют кости"
+        },
+        "description": {
+            "text": "Разыщите убежище Падшего ангела, зарытое под Базальтовыми дельтами"
+        },
+        "icon": {
+            "item": "minecraft:basalt"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.fallen_angel_hideout": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:the_nether/fallen_angel_hideout"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.fallen_angel_hideout"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/levels/level_3/nether/story/eat_mighty_porkchop"
+}

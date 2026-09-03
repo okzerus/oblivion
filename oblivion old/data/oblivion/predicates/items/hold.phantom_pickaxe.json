@@ -1,0 +1,16 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"equipment": {
+				"mainhand": {
+					"items": [
+						"minecraft:golden_pickaxe"
+					],
+					"nbt": "{obl.phantom_pickaxe:1b}"
+				}
+			}
+		}
+	}
+]

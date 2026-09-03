@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Росомаха"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Стальной коготь\""
+        },
+        "icon": {
+            "item": "minecraft:iron_nugget",
+            "nbt": "{CustomModelData:5051}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.steel_claw": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.steel_claw:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.steel_claw"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.misc"
+}

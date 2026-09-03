@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Ваша душа была очищена"
+        },
+        "description": {
+            "text": "Успешно исцелитесь у Священника, дав ему 8 изумрудов"
+        },
+        "icon": {
+            "item": "minecraft:golden_apple"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/overworld/villagers/villagers"
+}

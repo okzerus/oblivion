@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Адская святость"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Обломок святого кварца\""
+        },
+        "icon": {
+            "item": "minecraft:quartz",
+            "nbt": "{CustomModelData:5050}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.holy_quartz": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.holy_quartz:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.holy_quartz"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.misc"
+}

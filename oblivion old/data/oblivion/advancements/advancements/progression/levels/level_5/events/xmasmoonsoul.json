@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_carrot",
+      "nbt": "{CustomModelData:12500}"
+    },
+    "title": {
+      "text": "Вы заслуживаете большего",
+      "color": "red"
+    },
+    "description": "Успешно освободите Рождественского духа и получите его благословние",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/events/survivexmasmoon",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 3000
+  }
+}

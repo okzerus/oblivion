@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Не дай им взять контроль"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Рог демона\""
+        },
+        "icon": {
+            "item": "minecraft:bone",
+            "nbt": "{CustomModelData:5056}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.demon_horn": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.demon_horn:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.demon_horn"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.defender"
+}

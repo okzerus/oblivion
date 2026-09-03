@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:spectral_arrow",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": "Цель захвачена",
+    "description": "Скормите светящиеся ягоды любому мобу, чтобы пометить их",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/essentials/food/glow_berries",
+  "criteria": {
+    "obl.glow_berries.mark_mob": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "obl.glow_berries.mark_mob"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

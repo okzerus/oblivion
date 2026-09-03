@@ -1,0 +1,86 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Взрывное зелье вируса",
+                "color": "#d50300",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Решили сделать из своей базы - кладбище?",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "При применении:",
+                  "color": "dark_purple",
+                  "italic": false
+                },
+                {
+                  "text": "Вирус (1:00)",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{obl.virus:1b,HideFlags:32,CustomPotionColor:7551032,CustomPotionEffects:[{Id:15,Duration:40,Amplifier:0},{Id:17,Duration:1200,Amplifier:1},{Id:7,Duration:1,Amplifier:1},{Id:4,Duration:1200,Amplifier:1},{Id:9,Duration:200,Amplifier:9},{Id:2,Duration:1200,Amplifier:1},{Id:18,Duration:1200,Amplifier:0},{Id:20,Duration:1200,Amplifier:0}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

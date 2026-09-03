@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Сияние суперзвезды"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Фонарь звёздного света\""
+        },
+        "icon": {
+            "item": "minecraft:lantern",
+            "nbt": "{CustomModelData:5002}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.lantern_of_starlight": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.lantern_of_starlight:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.lantern_of_starlight"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.lantern"
+}

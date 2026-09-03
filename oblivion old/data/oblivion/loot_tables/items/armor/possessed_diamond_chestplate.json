@@ -1,0 +1,150 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Алмазный одержимый нагрудник",
+                "color": "#7d688f",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда надето:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+8 Броня",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+2 Стойкость брони",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+1 Сопротивление к отбрасыванию",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Комплект \"Алмазная одержимость\" 2/4",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Бонус полного комплекта:",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Каждое 25-ое получение урона от моба будет",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "накладывать на носителя эффект Регенерации",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "2 уровня на 6 секунд",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 2",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{obl:{id:101},HideFlags:2,obl.diamondarmor:1b,obl.difficulty:2b}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:8,Slot:chest,Name:\"generic.armor\",UUID:[I;-12378,31110,6598,-62220]},{AttributeName:\"generic.armor_toughness\",Amount:2,Slot:chest,Name:\"generic.armor_toughness\",UUID:[I;-12378,31210,6598,-62420]},{AttributeName:\"generic.knockback_resistance\",Amount:0.1,Slot:chest,Name:\"generic.knockback_resistance\",UUID:[I;-12378,31310,6598,-62620]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

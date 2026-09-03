@@ -1,0 +1,1 @@
+scoreboard players set @e[type=minecraft:marker,tag=obl.spawner] obl.spawner.time 0

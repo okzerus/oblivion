@@ -1,0 +1,65 @@
+{
+    "display": {
+        "title": {
+            "text": "Неизведанные артефакты"
+        },
+        "description": {
+            "text": "Заполучите каждый аксессуар, выпадаемый с событий Забвения"
+        },
+        "icon": {
+            "item": "minecraft:magma_cream",
+            "nbt": "{CustomModelData:6501}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.meteor_shard": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.meteor_shard:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.mothron_wings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.mothron_wings:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.solar_fragment": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.solar_fragment:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.meteor_shard"
+        ],
+        [
+            "obtain.accessory.mothron_wings"
+        ],
+        [
+            "obtain.accessory.solar_fragment"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/root"
+}

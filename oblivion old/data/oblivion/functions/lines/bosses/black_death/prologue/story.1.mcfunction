@@ -1,0 +1,1 @@
+tellraw @s [{"text":"\n"},{"text":"<","color":"#272727"},{"text":"???","color":"#6F6F6F","obfuscated":"true"},{"text":"> ","color":"#272727"},{"text":". . .","color":"#6F6F6F"},{"text":"\n "}]

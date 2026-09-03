@@ -1,0 +1,1 @@
+give @s glow_squid_spawn_egg{EntityTag:{id:marker,Tags:["obl.admin_summoner","obl.admin_summoner.dungeon_center"]},display:{Name:'[{"text":"Создать - Центр подземелья","italic":false,"color":"#669999"}]'}} 1

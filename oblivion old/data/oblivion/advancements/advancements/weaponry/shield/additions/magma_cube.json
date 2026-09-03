@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "ballin'"
+        },
+        "description": {
+            "text": "Парируйте маленький Магмовый куб в полёте, чтобы начать жёсткий баскетбол!"
+        },
+        "icon": {
+            "item": "minecraft:magma_cream"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.magma_cube": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.magma_cube"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/tnt"
+}

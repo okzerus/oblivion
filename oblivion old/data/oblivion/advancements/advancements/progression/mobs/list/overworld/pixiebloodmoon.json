@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Это работает!"
+        },
+        "description": {
+            "text": "Получите эффект регенерации от Пикси в Кровавую луну"
+        },
+        "icon": {
+            "item": "minecraft:redstone_block"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/overworld/pixiebottleout"
+}

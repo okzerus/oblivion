@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Взрывная вечеринка"
+        },
+        "description": {
+            "text": "Наденьте Кошачьи ушки и ворвитесь на криперную вечеринку с 30+ криперами"
+        },
+        "icon": {
+            "item": "minecraft:tnt"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "location.thirty_creepers": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "location.thirty_creepers"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/defender.cat_ears"
+}

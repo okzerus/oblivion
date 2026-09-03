@@ -1,0 +1,47 @@
+{
+  "display": {
+    "title": {
+      "text": "Брат по майнингу"
+    },
+    "description": {
+      "text": "Исцелите Мёртвого шахтёра и поторгуйтесь с ним"
+    },
+    "icon": {
+      "item": "minecraft:emerald"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cure.undead_miner": {
+      "trigger": "minecraft:cured_zombie_villager",
+      "conditions": {
+        "zombie": {
+          "nbt": "{Tags:[\"obl.undead_miner\"]}"
+        }
+      }
+    },
+    "trade.undead_miner": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "nbt": "{Tags:[\"obl.undead_miner\"]}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cure.undead_miner"
+    ],
+    [
+      "trade.undead_miner"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/mobs/list/undead_miner"
+}

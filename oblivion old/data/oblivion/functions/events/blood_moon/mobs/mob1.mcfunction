@@ -1,0 +1,4 @@
+summon minecraft:vex ~ ~ ~ {Team:"eventmob",DeathLootTable:"oblivion:mobs/events/bloodmoon_orb",CustomName:'[{"text":"Сгусток кровавой энергии","color":"red"}]',Health:4,Silent:1b,Tags:["obl.eventparticle","obl.mob","bloodmob1","obl.blood_mob","bloodenergy","spread"],ActiveEffects:[{Id:14,Duration:99999,Amplifier:0,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:4F}]}
+tellraw @a[scores={obl.chatnot=1},distance=..50,nbt={Inventory:[{tag:{CustomModelData:45001}}]}] {"text":"Сгусток кровавой энергии обнаружен поблизости!","color":"green"}
+execute as @a[distance=..50,nbt={Inventory:[{tag:{CustomModelData:45001}}]}] if score @s obl.soundnot matches 1 at @s run playsound minecraft:block.bell.use master @s ~ ~ ~ 1 0.5
+execute as @a[distance=..50,nbt={Inventory:[{tag:{CustomModelData:45001}}]}] if score @s obl.soundnot matches 1 at @s run playsound minecraft:entity.evoker_fangs.attack master @s ~ ~ ~ 1 1.6

@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Пандемия",
+            "color": "red"
+        },
+        "description": {
+            "text": "Бросьте зелье вируса в какое-нибудь многолюдное место, чтобы он смог заразить минимум 50 жителей"
+        },
+        "icon": {
+            "item": "minecraft:zombie_villager_spawn_egg"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "infected.fifty_villagers": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "infected.fifty_villagers"
+        ]
+    ],
+    "rewards": {
+        "experience": 3000
+    },
+    "parent": "oblivion:advancements/essentials/tools/additions/virus.infected"
+}

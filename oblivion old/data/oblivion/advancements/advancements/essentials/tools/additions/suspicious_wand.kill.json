@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sunflower",
+      "nbt": "{CustomModelData:5057,Enchantments:[{}]}"
+    },
+    "title": "Премия Дарвина",
+    "description": [
+			{
+				"text": "Убейте игрока \"Подозрительной палочкой\""
+			},
+			{
+				"text": "\nИли жителя, если это одиночный режим",
+				"color": "dark_gray"
+			}
+		],
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+    "criteria": {
+        "kill.using.suscipicious_wand": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "kill.using.suscipicious_wand"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/tools/additions/suspicious_wand.hit"
+}

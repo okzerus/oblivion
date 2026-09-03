@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "nbt": "{Tags:[\"inbattlewithdevil\"]}"
+        },
+        "entity": {
+          "type": "minecraft:magma_cube",
+          "nbt": "{Tags:[\"obl.devilcube\",\"obl.wrongdevilcube\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/abilities/devilabilities/devilcubes/wronghurt"
+  }
+}

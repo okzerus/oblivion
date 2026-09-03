@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Ваш путь заканчивается здесь"
+        },
+        "description": {
+            "text": "Вы успешно подписали проклятый контракт с Дьяволом"
+        },
+        "icon": {
+            "item": "minecraft:book",
+            "nbt": "{CustomModelData:30001}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/bosses"
+}

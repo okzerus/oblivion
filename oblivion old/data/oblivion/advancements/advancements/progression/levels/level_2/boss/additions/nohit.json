@@ -1,0 +1,33 @@
+{
+  "display": {
+    "title": {
+      "text": "Без получения урона - Проклятые доспехи",
+      "color": "red"
+    },
+    "description": {
+      "text": "В Соло режиме, победите Проклятые доспехи, держа в руке Тотем смертия на протяжении всего боя"
+    },
+    "icon": {
+      "item": "minecraft:totem_of_undying",
+      "nbt": "{CustomModelData:9498}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat.boss.cursed_armor.nohit": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "defeat.boss.cursed_armor.nohit"
+    ]
+  ],
+  "rewards": {
+    "experience": 3000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_2/boss/additions/challenge.skill"
+}

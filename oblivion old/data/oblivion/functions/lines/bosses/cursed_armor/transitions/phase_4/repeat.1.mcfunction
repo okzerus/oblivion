@@ -1,0 +1,5 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..33 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"Проклятый Дух","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"СУКА! СНОВА! Я УБЬЮ ТЕБЯ!!!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 34..66 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"Проклятый Дух","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"КОНЧЕНАЯ, СУКА, МРАЗЬ, Я РАЗОРВУ ТЕБЯ!!!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 67..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"Проклятый Дух","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"О-о-ох, ты будешь МОЛИТЬ меня убить тебя, ТВАРЬ!","color":"#e6ffe9"},{"text":"\n"}]
+playsound minecraft:entity.wither.ambient hostile @s ~ ~ ~ 1 1

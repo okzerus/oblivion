@@ -1,0 +1,116 @@
+{
+    "display": {
+        "title": {
+            "text": "Цветение Фландрии"
+        },
+        "description": {
+            "text": "Разыщите каждый тип руин в биоме Цветочного леса"
+        },
+        "icon": {
+            "item": "minecraft:diorite"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.ruins.flower_forest.diamond": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/diamond"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.farmland": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/farmland"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.fountain": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/fountain"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.golem": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/golem"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.honey": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/honey"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.pillager": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/pillager"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.pools": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/pools"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.ruins.flower_forest.diamond"
+        ],
+        [
+            "locate.ruins.flower_forest.farmland"
+        ],
+        [
+            "locate.ruins.flower_forest.fountain"
+        ],
+        [
+            "locate.ruins.flower_forest.golem"
+        ],
+        [
+            "locate.ruins.flower_forest.honey"
+        ],
+        [
+            "locate.ruins.flower_forest.pillager"
+        ],
+        [
+            "locate.ruins.flower_forest.pools"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/locate"
+}

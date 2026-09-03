@@ -1,0 +1,13 @@
+{
+  "values": [
+    "minecraft:arrow",
+	"minecraft:trident",
+	"minecraft:on_fire",
+	"oblivion:parry",
+	"oblivion:projectile",
+	"oblivion:death_spear",
+	"oblivion:bleeding",
+	"oblivion:parried_projectile",
+	"oblivion:parried_lightning"
+  ]
+}

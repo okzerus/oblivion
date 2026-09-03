@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": {
+            "text": "Контакт с призраком",
+			"color": "yellow"
+        },
+        "description": {
+            "text": "Странные звуки, что я слышал, оказались попыткой связаться со мной. Кем являлся этот \"Призрак\", и чего именно он хотел, я не в силах понять.\n\nСлова его было трудно разобрать, но, кажется, он хочет быть найденным, а этот загадочный \n\"Дере_н_\", возможно, сможет помочь. Чем бы это ни было..."
+        },
+        "icon": {
+            "item": "minecraft:writable_book"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "none": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "oblivion:advancements/journal/notes/list/my_essence"
+}

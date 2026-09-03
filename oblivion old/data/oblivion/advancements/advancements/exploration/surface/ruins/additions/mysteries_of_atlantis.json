@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Тайны Атлантиды"
+        },
+        "description": {
+            "text": "Раскройте секреты руин в глубинах тёплого моря, используя скрытую силу трезубца в скрытом месте"
+        },
+        "icon": {
+            "item": "minecraft:sea_lantern"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "encounter.neptune_trial": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "encounter.neptune_trial"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/all.lukewarm_ocean"
+}

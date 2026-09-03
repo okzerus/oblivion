@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{cursedfood:1b}"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/abilities/hungerabilities/pickupcursedfood"
+  }
+}

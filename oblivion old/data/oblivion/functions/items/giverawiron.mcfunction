@@ -1,0 +1,2 @@
+clear @s raw_iron{CustomModelData:30002} 1
+give @s raw_iron{replacedarmor:1b,CustomModelData:30002,display:{Name:'[{"text":"Обломок проклятых доспехов","italic":false,"color":"dark_gray"}]',Lore:['[{"text":"Бросьте, чтобы пробудить ","italic":false,"color":"gray"},{"text":"Проклятые доспехи","color":"dark_gray"}]']}}

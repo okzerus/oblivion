@@ -1,0 +1,38 @@
+{
+    "display": {
+        "title": {
+            "text": "За гранью понимания"
+        },
+        "description": {
+            "text": "Разыщите Алтарь Забвения глубоко под землёй"
+        },
+        "icon": {
+            "item": "minecraft:reinforced_deepslate"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.altar": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:underground/altar"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.altar"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/underground/root"
+}

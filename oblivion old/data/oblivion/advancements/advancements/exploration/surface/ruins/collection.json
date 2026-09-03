@@ -1,0 +1,492 @@
+{
+    "display": {
+        "title": {
+            "text": "Погружение в прошлое",
+			"color": "red"
+        },
+        "description": {
+            "text": "Разыщите все виды руин на поверхности всех биомов, чтобы артефакт из прошлого наконец заметил вас"
+        },
+        "icon": {
+            "item": "minecraft:chiseled_stone_bricks",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.ruins.desert.allay": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/allay"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.camel": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/camel"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.dead": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/dead"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.oasis": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/oasis"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.ribs": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/ribs"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.skull": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/skull"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.symbol": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/symbol"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.symbol": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/symbol"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.diamond": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/diamond"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.farmland": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/farmland"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.fountain": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/fountain"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.golem": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/golem"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.honey": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/honey"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.pillager": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/pillager"
+                    }
+				}
+            }
+        },
+        "locate.ruins.flower_forest.pools": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/flower_forest/pools"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.allay": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/allay"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.cages": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/cages"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.fallen": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/fallen"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.farmland": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/farmland"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.foxes": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/foxes"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.highground": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/highground"
+                    }
+				}
+            }
+        },
+        "locate.ruins.taiga.tower": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/taiga/tower"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.bamboo": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/bamboo"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.broken": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/broken"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.camp": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/camp"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.lake": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/lake"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.panda": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/panda"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.pool": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/pool"
+                    }
+				}
+            }
+        },
+        "locate.ruins.jungle.roof": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/jungle/roof"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.allay": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/allay"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.coal": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/coal"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.floor": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/floor"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.highway": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/highway"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.pillar": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/pillar"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.stream": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/stream"
+                    }
+				}
+            }
+        },
+        "locate.ruins.mountains.survivor": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/mountains/survivor"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.ruins.desert.allay"
+        ],
+        [
+            "locate.ruins.desert.camel"
+        ],
+        [
+            "locate.ruins.desert.dead"
+        ],
+        [
+            "locate.ruins.desert.oasis"
+        ],
+        [
+            "locate.ruins.desert.ribs"
+        ],
+        [
+            "locate.ruins.desert.skull"
+        ],
+        [
+            "locate.ruins.desert.symbol"
+        ],
+        [
+            "locate.ruins.flower_forest.diamond"
+        ],
+        [
+            "locate.ruins.flower_forest.farmland"
+        ],
+        [
+            "locate.ruins.flower_forest.fountain"
+        ],
+        [
+            "locate.ruins.flower_forest.golem"
+        ],
+        [
+            "locate.ruins.flower_forest.honey"
+        ],
+        [
+            "locate.ruins.flower_forest.pillager"
+        ],
+        [
+            "locate.ruins.flower_forest.pools"
+        ],
+        [
+            "locate.ruins.taiga.allay"
+        ],
+        [
+            "locate.ruins.taiga.cages"
+        ],
+        [
+            "locate.ruins.taiga.fallen"
+        ],
+        [
+            "locate.ruins.taiga.farmland"
+        ],
+        [
+            "locate.ruins.taiga.foxes"
+        ],
+        [
+            "locate.ruins.taiga.highground"
+        ],
+        [
+            "locate.ruins.taiga.tower"
+        ],
+        [
+            "locate.ruins.jungle.bamboo"
+        ],
+        [
+            "locate.ruins.jungle.broken"
+        ],
+        [
+            "locate.ruins.jungle.camp"
+        ],
+        [
+            "locate.ruins.jungle.lake"
+        ],
+        [
+            "locate.ruins.jungle.panda"
+        ],
+        [
+            "locate.ruins.jungle.pool"
+        ],
+        [
+            "locate.ruins.jungle.roof"
+        ],
+        [
+            "locate.ruins.mountains.allay"
+        ],
+        [
+            "locate.ruins.mountains.coal"
+        ],
+        [
+            "locate.ruins.mountains.floor"
+        ],
+        [
+            "locate.ruins.mountains.highway"
+        ],
+        [
+            "locate.ruins.mountains.pillar"
+        ],
+        [
+            "locate.ruins.mountains.stream"
+        ],
+        [
+            "locate.ruins.mountains.survivor"
+        ]
+    ],
+    "rewards": {
+        "experience": 3000
+    },
+    "parent": "oblivion:advancements/exploration/surface/root"
+}

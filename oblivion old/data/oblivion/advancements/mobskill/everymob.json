@@ -1,0 +1,551 @@
+{
+  "criteria": {
+    "blind": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"blind\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "weak": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"weak\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "amethystpixie": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"weak\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "hunger": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"hunger\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "devil": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"devil\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "gargantua": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"gargantua\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "miner": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"miner\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "viking": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"viking\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "stone": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"stone\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "iron": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"iron\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "diamond": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"diamond\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "hoeiron": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"hoeiron\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "hoegold": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"hoegold\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "hoediamond": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"hoediamond\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "ragezombie": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"ragezombie\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "nuclear": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"nuclear\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "snowmob": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"snowmob\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "desertmob": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"desertmob\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "hungry": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"hungry\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "guardian": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"guardian\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "mother": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"mother\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "wisp": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"wisp\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "pixie": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"pixie\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "mothron": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"mothron\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "grinch": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"grinch\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bastionsoul": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bastionsoul\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "lastsoul": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"lastsoul\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "withersoul": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"withersoul\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "witheraxe": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"witheraxe\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "witherhoe": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"witherhoe\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "witherbow": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"witherbow\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "xmasmob": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"xmasmob\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "bloodmob": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"bloodmob\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "solarmob": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"solarmob\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "poison": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"poison\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "storm": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"storm\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "amethystpixie",
+      "hunger",
+      "weak",
+      "blind",
+      "bastionsoul",
+      "poison",
+      "bloodmob",
+      "solarmob",
+      "xmasmob",
+      "desertmob",
+      "devil",
+      "diamond",
+      "iron",
+      "stone",
+      "hoegold",
+      "hoeiron",
+      "hoediamond",
+      "gargantua",
+      "grinch",
+      "guardian",
+      "hungry",
+      "lastsoul",
+      "miner",
+      "mother",
+      "mothron",
+      "nuclear",
+      "pixie",
+      "ragezombie",
+      "snowmob",
+      "viking",
+      "storm",
+      "wisp",
+      "witheraxe",
+      "witherbow",
+      "witherhoe",
+      "withersoul"
+    ]
+  ],
+  "rewards": {
+    "function": "oblivion:tech/mobskill/everymob"
+  }
+}

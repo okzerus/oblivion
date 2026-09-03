@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": {
+            "text": "Этот бескрайний мир",
+			"color": "yellow"
+        },
+        "description": {
+            "text": "Пейзаж вокруг... не просто существует. Он дышит, он наблюдает. Ощущение, будто я не одинок, хотя никого не вижу. Что скрывают его горизонты?\n\nДумаю, прежде чем исследовать, я должен собрать ресурсы - то, что даст мне опору и защиту в этом странном мире."
+        },
+        "icon": {
+            "item": "minecraft:writable_book"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "none": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "oblivion:advancements/journal/notes/root"
+}

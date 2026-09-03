@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword",
+      "nbt": "{CustomModelData:3000}"
+    },
+    "title": "Предатель среди нас",
+    "description": "Убейте Крестьянина с помощью Ножа Психа находясь в полной невидимости",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/weaponry/sword/list/psycho_knife",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "nbt": "{Tags:[obl.psycho_knife.invisible]}",
+          "equipment": {
+            "mainhand": {
+              "nbt": "{obl.sword.psycho_knife:1b}"
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:villager"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 300
+  }
+}

@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Dance to the beat"
+        },
+        "description": {
+            "text": "Заполучите Карамелдансен"
+        },
+        "icon": {
+            "item": "minecraft:golden_sword",
+            "nbt": "{CustomModelData:4007}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.sword.caramelldansen": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.caramelldansen:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.sword.caramelldansen"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/sword/collection"
+}

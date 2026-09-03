@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Конфетка!"
+        },
+        "description": {
+            "text": "Съешьте Рождественский леденец"
+        },
+        "icon": {
+            "item": "minecraft:golden_carrot",
+            "nbt": "{CustomModelData:49100}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "consume.candy_cane": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+        "item": {
+          "items": [
+            "minecraft:golden_carrot"
+          ],
+          "nbt": "{obl.candy_cane:1b}"
+        }
+      }
+        }
+    },
+    "requirements": [
+        [
+            "consume.candy_cane"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/essentials/food/collection"
+}

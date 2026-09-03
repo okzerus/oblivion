@@ -1,0 +1,1 @@
+execute if score #pause_spawners oblivion matches 1 run particle minecraft:glow ~ ~ ~ 0.05 0.05 0.05 0 1 normal

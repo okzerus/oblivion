@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Смертельные гляделки"
+        },
+        "description": {
+            "text": "Ослабьте более 10.000 враждебных мобов с помощью Фонаря фиолетовой жестокости"
+        },
+        "icon": {
+            "item": "minecraft:eye_of_ender",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "weaken_ten_thousand_mobs": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "weaken_ten_thousand_mobs"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/lantern.violet"
+}

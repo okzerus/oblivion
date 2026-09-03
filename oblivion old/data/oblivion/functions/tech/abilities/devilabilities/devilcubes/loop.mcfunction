@@ -1,0 +1,1 @@
+execute as @e[tag=obl.wrongdevilcube,limit=1,sort=random] run function oblivion:tech/abilities/devilabilities/devilcubes/select

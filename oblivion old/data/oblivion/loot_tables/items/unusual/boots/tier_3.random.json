@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_3.eldorado"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_3.electric"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_3.gradient"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_3.radiance"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_3.spore_blossom"
+        }
+      ]
+    }
+  ]
+}

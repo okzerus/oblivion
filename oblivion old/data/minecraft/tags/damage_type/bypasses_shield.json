@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#minecraft:bypasses_armor",
+    "minecraft:falling_anvil",
+    "minecraft:falling_stalactite",
+    "oblivion:parry",
+    "oblivion:parried_projectile",
+    "oblivion:projectile",
+    "oblivion:bleeding",
+    "oblivion:death_spear"
+  ]
+}

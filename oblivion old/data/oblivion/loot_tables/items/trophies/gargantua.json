@@ -1,0 +1,144 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_helmet",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "text": "Сл",
+                  "color": "#9acf9b",
+                  "italic": false
+                },
+                {
+                  "text": "ом",
+                  "color": "#83be85",
+                  "italic": false
+                },
+                {
+                  "text": "ан",
+                  "color": "#69ac6e",
+                  "italic": false
+                },
+                {
+                  "text": "ны",
+                  "color": "#5aa15f",
+                  "italic": false
+                },
+                {
+                  "text": "й ш",
+                  "color": "#4c9854",
+                  "italic": false
+                },
+                {
+                  "text": "ле",
+                  "color": "#3a853b",
+                  "italic": false
+                },
+                {
+                  "text": "м Г",
+                  "color": "#317a32",
+                  "italic": false
+                },
+                {
+                  "text": "ар",
+                  "color": "#2d753b",
+                  "italic": false
+                },
+                {
+                  "text": "га",
+                  "color": "#2e712e",
+                  "italic": false
+                },
+                {
+                  "text": "нт",
+                  "color": "#326e2c",
+                  "italic": false
+                },
+                {
+                  "text": "юа",
+                  "color": "#296524",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "И стоило оно того?",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+					"text": "Трофей за победу:",
+					"color": "gold",
+					"italic": false
+					},
+					{
+					"text": " Гаргантюа",
+					"color": "#326e2c",
+					"italic": false
+					}
+				],
+                {
+                  "text": "5%",
+                  "color": "red",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:555,RepairCost:200,Unbreakable:1b,HideFlags:102,obl.trophy:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

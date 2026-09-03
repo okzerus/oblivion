@@ -1,0 +1,7 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"Проклятый Дух","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Я ТЕБЯ УНИЧТОЖУ.","color":"#C1F0C7"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"Проклятый Дух","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Надоел!","color":"#C1F0C7"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"Проклятый Дух","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Почему ты ещё живёшь???","color":"#C1F0C7"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"Проклятый Дух","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Умри! Умри! Умри!","color":"#C1F0C7"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"Проклятый Дух","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Ненавижу!","color":"#C1F0C7"},{"text":"\n"}]
+playsound minecraft:entity.wither.ambient hostile @s ~ ~ ~ 1 1.3

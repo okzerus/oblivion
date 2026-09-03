@@ -1,0 +1,35 @@
+{
+  "display": {
+    "title": {
+      "text": "ОШИБКА!"
+    },
+    "description": {
+      "text": "Вы выбрали неверный Дьявольский куб!"
+    },
+    "icon": {
+      "item": "minecraft:magma_block"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "nbt": "{Tags:[\"inbattlewithdevil\"]}"
+        },
+        "entity": {
+          "type": "minecraft:magma_cube",
+          "nbt": "{Tags:[\"obl.devilcube\",\"obl.wrongdevilcube\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/mobs/summondevil"
+}

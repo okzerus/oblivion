@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "legs": {
+        "nbt": "{obl.unusual:1b}",
+		"count": {
+		  "min": 1
+		}
+      }
+    }
+  }
+}

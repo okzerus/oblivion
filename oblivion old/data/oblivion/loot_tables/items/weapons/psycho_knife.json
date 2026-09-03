@@ -1,0 +1,153 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Нож психа",
+                "color": "#913233",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Хочешь знать, откуда эти шрамы?",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 4",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 2.0",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Эффект Силы III, когда активен эффект Невидимости",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в первом слоте:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Даёт эффект истинной Невидимости, если игрок",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " ничего не имеет в обеих руках (кроме ножа)",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " а также в слотах брони.",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,bloodknife:1b,obl.difficulty:5b,CustomModelData:3000,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-2.0,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-122418,13816,145310,-27632]},{AttributeName:\"generic.attack_damage\",Amount:4,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-122418,13916,145310,-27832]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

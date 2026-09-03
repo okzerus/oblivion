@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Заснеженные сокровища"
+        },
+        "description": {
+            "text": "Проберитесь в иглу и поройтесь в её лаборатории"
+        },
+        "icon": {
+            "item": "minecraft:snowball",
+            "nbt": "{CustomModelData:5053}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "generate.loot_table.igloo_chest": {
+            "trigger": "minecraft:player_generates_container_loot",
+            "conditions": {
+				"loot_table": "minecraft:chests/igloo_chest"
+			}
+        }
+    },
+    "requirements": [
+        [
+            "generate.loot_table.igloo_chest"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/vanilla/locate"
+}

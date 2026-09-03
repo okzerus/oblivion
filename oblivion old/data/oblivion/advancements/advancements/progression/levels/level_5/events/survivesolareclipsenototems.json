@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:glowstone",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": {
+      "text": "Меня затмить нельзя",
+      "color": "red"
+    },
+    "description": "Переживите Солнечное затмение от начала до конца, убив минимум 25 мобов, ни разу не умерев и не потратив ни одного тотема бессмертия",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/events/survivesolareclipsenodeath",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 3000
+  }
+}

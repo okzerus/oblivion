@@ -1,0 +1,170 @@
+{
+    "display": {
+        "title": {
+            "text": "Вооружён и опасен",
+            "color": "dark_red"
+        },
+        "description": {
+            "text": "Заполучите всевозможные клинки Забвения"
+        },
+        "icon": {
+            "item": "minecraft:netherite_sword",
+            "nbt": "{CustomModelData:4545}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.sword.nights_shade": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.nights_shade:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.last_light": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.last_light:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.blizzard": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.blizzard:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.blade_of_the_cursed_tide": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.blade_of_the_cursed_tide:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.guardian_of_the_geode": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.guardian_of_the_geode:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.herald_of_doom": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.herald_of_doom:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.greatsword_of_exhaustion": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.greatsword_of_exhaustion:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.caramelldansen": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.caramelldansen:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.yabai": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.yabai:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.primordial_void": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.primordial_void:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.sword.psycho_knife": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.sword.psycho_knife:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.sword.nights_shade"
+        ],
+        [
+            "obtain.sword.last_light"
+        ],
+        [
+            "obtain.sword.blizzard"
+        ],
+        [
+            "obtain.sword.blade_of_the_cursed_tide"
+        ],
+        [
+            "obtain.sword.guardian_of_the_geode"
+        ],
+        [
+            "obtain.sword.herald_of_doom"
+        ],
+        [
+            "obtain.sword.greatsword_of_exhaustion"
+        ],
+        [
+            "obtain.sword.caramelldansen"
+        ],
+        [
+            "obtain.sword.yabai"
+        ],
+        [
+            "obtain.sword.primordial_void"
+        ],
+        [
+            "obtain.sword.psycho_knife"
+        ]
+    ],
+    "rewards": {
+        "experience": 5000
+    },
+    "parent": "oblivion:advancements/weaponry/sword/root"
+}

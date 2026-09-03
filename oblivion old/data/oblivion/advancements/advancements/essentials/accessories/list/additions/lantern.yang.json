@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Ян"
+        },
+        "description": {
+            "text": "Одновременно экипируйте Фонарь сияния суперзвезды и Фонарь последней искры"
+        },
+        "icon": {
+            "item": "minecraft:white_stained_glass_pane"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "equip.two_lanterns": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "equip.two_lanterns"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/lantern.yellow"
+}

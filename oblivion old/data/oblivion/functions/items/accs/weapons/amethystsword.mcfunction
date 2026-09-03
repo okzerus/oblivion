@@ -1,0 +1,1 @@
+execute unless score @s amethyst.used1 matches 1 if entity @s[nbt={Inventory:[{id:"minecraft:amethyst_cluster",tag:{obl.enchantedamethyst:1b}}]},x_rotation=90] run function oblivion:items/accs/effects/amethystsword1

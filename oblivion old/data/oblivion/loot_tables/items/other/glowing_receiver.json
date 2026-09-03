@@ -1,0 +1,121 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Приёмник света",
+                "color": "#f7c940",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Mine? Mine? Mine?",
+                  "color": "#caa41f",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Редстоун-компонент:",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "+ Позволяет притягивать предметы, помеченные",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "   светящимися ягодами, в радиусе 300 блоков",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+ Должен быть вставлен в рамку, размещённой на",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "   любой из сторон Редстоунового фонаря",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+ Активируется сразу после подачи сигнала",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "   в фонарь",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Скрытый потенциал]: Предмет может быть пробуждён на Алтаре Забвения",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.redstone:1b,obl.redstone.glowing_receiver:1b,CustomModelData:11201}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

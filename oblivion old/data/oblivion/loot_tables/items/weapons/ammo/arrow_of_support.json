@@ -1,0 +1,96 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Стрела помощи",
+                "color": "#ef7eed",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Только бы не попасть во врага..",
+                  "color": "#c475be",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "При применении:",
+                  "color": "dark_purple",
+                  "italic": false
+                },
+                {
+                  "text": "Сопротивление IV (0:15)",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "Сила (0:15)",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "Исцеление III",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{obl.arrow.arrow_of_support:1b,obl.arrow:1b,CustomPotionColor:15695597,HideFlags:32,CustomPotionEffects:[{Id:6,Duration:1,Amplifier:1},{Id:11,Duration:250,Amplifier:3},{Id:5,Duration:250,Amplifier:0}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

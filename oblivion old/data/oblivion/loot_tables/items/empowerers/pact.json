@@ -1,0 +1,150 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Проклятый пакт",
+                "color": "#74cb71",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Торговля жизнью и смертью",
+                  "color": "#6aa052",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "При усилении:",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "+ Накладывает дебафф ",
+						"color": "light_purple",
+						"italic": false
+					},
+					{
+						"text": "\"Проклят!\"",
+						"color": "#74cb71",
+						"italic": false
+					},
+					{
+						"text": " на 5 минут",
+						"color": "light_purple",
+						"italic": false
+					}
+				],
+                {
+                  "text": "   По истечению дебаффа, накладывает:",
+                  "color": "light_purple",
+                  "italic": false
+                },
+                {
+                  "text": "   +1.25 Спешка [3:00], +1.25 Сила [3:00],",
+                  "color": "light_purple",
+                  "italic": false
+                },
+                {
+                  "text": "   +1.25 Скорость [3:00], +0.75 Сопротивление [3:00]",
+                  "color": "light_purple",
+                  "italic": false
+                },
+                {
+                  "text": "- Накладывает случайный дебафф при использовании",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				{
+				  "text": "Активация:",
+				  "color": "gray",
+				  "italic": false
+				},
+                {
+                  "text": "[ПРИСЕСТЬ]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "2",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:2b,obl.empowerer:1b,obl.empowerer.pact:1b,CustomModelData:11309}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

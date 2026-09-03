@@ -1,0 +1,197 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_hoe",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Коса жатвы",
+                "color": "#2b2b2b",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Смерть? Всего лишь одна из моих любовниц",
+                  "color": "#4b4b4b",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 6",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 1.5",
+                  "color": "dark_green",
+                  "italic": false
+                },
+			    [
+			    {
+			    	"text": " Повреждение брони: Шанс 11% на 8 секунд, ",
+			    	"color": "dark_green",
+			    	"italic": false
+			    },
+			    {
+			    	"text": "-6",
+			    	"color": "dark_aqua",
+			    	"italic": false
+			    },
+			    {
+			    	"text": " очков защиты",
+			    	"color": "dark_green",
+			    	"italic": false
+			    }
+			    ],
+			    [
+			    {
+				  "text": " Кровотечение: Сила I, Шанс 27%",
+				  "color": "dark_green",
+				  "italic": false
+			    },
+			    {
+				  "text": "(-4%/ЧБ) ",
+				  "color": "red",
+				  "italic": false
+			    },
+			    {
+				  "text": "на 18",
+				  "color": "dark_green",
+				  "italic": false
+			    },
+			    {
+				  "text": "(-2.5/ЧБ) ",
+				  "color": "red",
+				  "italic": false
+			    },
+			    {
+				  "text": "секунд",
+				  "color": "dark_green",
+				  "italic": false
+			    }
+			    ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Одновременно атакует до 4 других ближайших",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    агрессивных сущностей при ударе, в радиусе",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    5 блоков от основной цели.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Успешное наложение Кровотечения или",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Повреждённой брони на основную цель",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    также накладывает их и на другие задетые цели.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.scythe:1b,obl.scythe.scythe_of_harvest:1b,obl.difficulty:5b,CustomModelData:41101,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:6,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-121109,128697,221529,-257394]},{AttributeName:\"generic.attack_speed\",Amount:-2.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-121109,128797,221529,-257594]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

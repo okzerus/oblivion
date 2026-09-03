@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_3.yin_yang"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_3.raging_black_souls"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_3.magika"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_3.ice_and_fire"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_3.avatar"
+        }
+      ]
+    }
+  ]
+}

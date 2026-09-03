@@ -1,0 +1,26 @@
+{
+  "structures": [
+    {
+      "structure": "oblivion:surface/flower_forest_pillar",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/taiga_pillar",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/jungle_pillar",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/desert_pillar",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 167274629,
+    "spacing": 7,
+    "separation": 5,
+    "type": "minecraft:random_spread"
+  }
+}

@@ -1,0 +1,7 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"???","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"Тыы... заплатишь..","color":"#d3fdd8"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"???","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"Что за?..","color":"#d3fdd8"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"???","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"Какого.. чёрта?..","color":"#d3fdd8"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"???","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"Что это?.. я.. слаб?..","color":"#d3fdd8"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#72ef65"},{"text":"???","color":"#bbff99"},{"text":"> ","color":"#72ef65"},{"text":"Я должен.. победить..","color":"#d3fdd8"},{"text":"\n"}]
+playsound minecraft:entity.blaze.ambient hostile @s ~ ~ ~ 1 1.2

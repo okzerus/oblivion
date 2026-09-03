@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Антидот"
+        },
+        "description": {
+            "text": "Исцелите себя от вируса и наделите себя защитой от заражения на несколько дней, выпив Пикси во время болезни"
+        },
+        "icon": {
+            "item": "minecraft:brewing_stand"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/overworld/pixiebottledrink"
+}

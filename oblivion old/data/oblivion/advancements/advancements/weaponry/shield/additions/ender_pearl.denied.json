@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "ОТМЕНЁН"
+        },
+        "description": {
+            "text": "Парируйте чужой эндер-жемчуг в сторону, чтоб не лезли всякие..."
+        },
+        "icon": {
+            "item": "minecraft:ender_pearl",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.enemy_ender_pearl": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.enemy_ender_pearl"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/ender_pearl"
+}

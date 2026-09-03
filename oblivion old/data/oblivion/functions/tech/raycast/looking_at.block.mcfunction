@@ -1,0 +1,3 @@
+execute positioned ^ ^ ^.1 unless block ~ ~ ~ #oblivion:non_solid run summon area_effect_cloud ~ ~ ~ {Silent:1b,Tags:[obl.temp.looking_raycast_end]}
+execute positioned ^ ^ ^.1 if block ~ ~ ~ #oblivion:non_solid unless entity @s[distance=..5.3] run summon area_effect_cloud ^ ^ ^-.1 {Silent:1b,Tags:[obl.temp.looking_raycast_end]}
+execute if entity @s[distance=..5.3] positioned ^ ^ ^.1 if block ~ ~ ~ #oblivion:non_solid run function oblivion:tech/raycast/looking_at.block

@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_1.bunny"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_1.glow_aura"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_1.white_aura"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_1.witch_aura"
+        }
+      ]
+    }
+  ]
+}

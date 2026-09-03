@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "О Алые Слёзы"
+        },
+        "description": {
+            "text": "Заполучите Катаклизм"
+        },
+        "icon": {
+            "item": "minecraft:bow",
+            "nbt": "{CustomModelData:41400}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.bow.cataclysm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.bow.cataclysm:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.bow.cataclysm"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/bow/collection"
+}

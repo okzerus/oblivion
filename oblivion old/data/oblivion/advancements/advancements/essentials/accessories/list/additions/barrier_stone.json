@@ -1,0 +1,38 @@
+{
+    "display": {
+        "title": {
+            "text": "Командный саппорт"
+        },
+        "description": [
+			{
+				"text": "Усиляйте трёх игроков одновременно с помощью Барьерного камня"
+			},
+			{
+				"text": "\nИли трёх своих питомцев, если это одиночный режим",
+				"color": "dark_gray"
+			}
+		],
+        "icon": {
+            "item": "minecraft:emerald",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "location.around_three_allies": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "location.around_three_allies"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/misc.barrier_stone"
+}

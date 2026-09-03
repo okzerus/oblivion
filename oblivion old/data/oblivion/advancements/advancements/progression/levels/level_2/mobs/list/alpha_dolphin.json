@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Неуловимый"
+    },
+    "description": {
+      "text": "Познакомьтесь с Альфа дельфином - лучшим из всех плавцов в мире"
+    },
+    "icon": {
+      "item": "minecraft:cod"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "encounter.alpha_dolphin": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "encounter.alpha_dolphin"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "oblivion:advancements/progression/levels/level_2/mobs/root"
+}

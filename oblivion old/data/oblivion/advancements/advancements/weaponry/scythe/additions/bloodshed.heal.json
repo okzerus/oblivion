@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "text": "Кровь это топливо"
+        },
+        "description": {
+            "text": "Атакуйте цель с помощью Кровопролития, имеющуюю как минимум III уровень кровотечения, чтобы регенерировать от хлещущей крови"
+        },
+        "icon": {
+            "item": "minecraft:redstone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/scythe/list/bloodshed"
+}

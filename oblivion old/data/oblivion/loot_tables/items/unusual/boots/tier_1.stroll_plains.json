@@ -1,0 +1,120 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:nether_brick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Руна необыкновенности",
+                "color": "#46ca42",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+			    [
+					{
+						"text": "Необычный эффект «Прогулка по Равнинам»",
+						"color": "gray",
+						"italic": true
+					},
+					{
+						"text": "",
+						"color": "gray",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Применяется к:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Ботинкам",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "Редкость:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Обычный",
+                  "color": "#46ca42",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+				    {
+                       "text": "Соедините со снаряжением на ",
+                       "color": "gray",
+                       "italic": false
+				    },
+			        {
+                       "text": "Алтаре Забвения",
+                       "color": "#DE9BE1",
+                       "italic": false
+				    }
+                ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1851,obl.unusualifier:1b,obl.boots:1b,obl.unusual.id:68b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

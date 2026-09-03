@@ -1,0 +1,4 @@
+tellraw @s ["",{"text":"Я ","italic":true,"color":"#1CC6BB"},{"text":"м ","italic":true,"color":"#31C8AF"},{"text":"а ","italic":true,"color":"#43CABB"},{"text":"т ","italic":true,"color":"#4FCEC2"},{"text":"о   ","italic":true,"color":"#60D3CB"},{"text":"г ","italic":true,"color":"#79DFD9"},{"text":"о ","italic":true,"color":"#8EE9E0"},{"text":"т ","italic":true,"color":"#92E8E2"},{"text":"о ","italic":true,"color":"#A1EDE1"},{"text":"в ","italic":true,"color":"#AFF2EA"},{"text":"!","italic":true,"color":"#C6F8F3"}]
+playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 1
+scoreboard players set @s obl.yamato.used.ability 0
+scoreboard players set @s obl.yamato.cd.ability 0

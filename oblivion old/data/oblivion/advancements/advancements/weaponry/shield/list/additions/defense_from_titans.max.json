@@ -1,0 +1,43 @@
+{
+  "display": {
+    "title": {
+      "text": "Непробиваемый"
+    },
+    "description": {
+      "text": "Доведите \"Защиту Титанов\" до полной мощности, зачаровав этот щит на Прочность 10"
+    },
+    "icon": {
+      "item": "minecraft:shield",
+      "nbt": "{CustomModelData:20000,Enchantments:[{id:unbreaking,lvl:10}]}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain.shield.defense_from_titans.unbreaking_10": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:shield"
+            ],
+            "nbt": "{obl.shield.defense_from_titans:1b}",
+            "enchantments": [
+              {
+                "enchantment": "minecraft:unbreaking",
+                "levels": 10
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1000
+  },
+    "parent": "oblivion:advancements/weaponry/shield/list/defense_from_titans"
+}

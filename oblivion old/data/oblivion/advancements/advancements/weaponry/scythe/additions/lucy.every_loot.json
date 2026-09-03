@@ -1,0 +1,27 @@
+{
+    "display": {
+        "title": {
+            "text": "Богатей"
+        },
+        "description": {
+            "text": "Используя Люси, заполучите каждый возможный предмет выпадаемый с сущностей, используя разные нагрудники"
+        },
+        "icon": {
+            "item": "minecraft:diamond",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/scythe/additions/lucy.get_loot"
+}

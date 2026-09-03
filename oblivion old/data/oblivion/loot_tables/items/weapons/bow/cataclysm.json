@@ -1,0 +1,140 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+			    {
+                  "text": "Катаклизм",
+                  "color": "#cf0b3b",
+                  "italic": false
+				}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Катастрофический ливень",
+                  "color": "#ab0f35",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Точное попадание в цель, имеющую активный эффект Кровотечения,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    добавит +3 секунды к длительности (макс 12)",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Наличие зачарования Откидывание с 7% шансом наложит",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    на цель Кровотечение на 5 секунд.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Сила эффекта зависит от уровня зачарования (макс 2)",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Скрытый потенциал]: Предмет может быть пробуждён на Алтаре Забвения",
+                  "color": "red",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:5b,obl.bow:1b,obl.bow.cataclysm:1b,CustomModelData:41400}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

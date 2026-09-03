@@ -1,0 +1,138 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_nugget",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Стальной коготь",
+                "color": "#e5e5e5",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "РЕЖЬ И КРОМСАЙ",
+                  "color": "#c3c3c3",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				  [
+					{
+						"text": "Когда в слоте аксессуара:",
+						"color": "gray",
+						"italic": false
+					}
+				  ],
+                {
+                  "text": "+ Атаки без оружия в руках могут повредить броню цели,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   шанс 12% на 4 секунды, -3 очка защиты",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ Атаки с косой дополнительно усиливают накладываемые эффекты,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   повышая шанс Кровотечения и Повреждения брони на 4%,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   увеличивая их длительность на 3с,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   а повреждение брони дополнительно снимает -2 очка защиты",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 2",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5051,HideFlags:3,obl.difficulty:2b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+    "display": {
+        "title": {
+            "text": "Благословление Нептуна"
+        },
+        "description": {
+            "text": "Пройдите все испытания Нептуна, и получите его благословление"
+        },
+        "icon": {
+            "item": "minecraft:conduit",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "finish.neptune_trial.heart_of_the_sea": {
+            "trigger": "minecraft:impossible"
+        },
+        "finish.neptune_trial.blue_axolotl": {
+            "trigger": "minecraft:impossible"
+        },
+        "finish.neptune_trial.trident": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "finish.neptune_trial.heart_of_the_sea"
+        ],
+        [
+            "finish.neptune_trial.blue_axolotl"
+        ],
+        [
+            "finish.neptune_trial.trident"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/additions/mysteries_of_atlantis"
+}

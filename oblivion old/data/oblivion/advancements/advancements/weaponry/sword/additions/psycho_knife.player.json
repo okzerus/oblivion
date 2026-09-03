@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword",
+      "nbt": "{CustomModelData:3000,Enchantments:[{}]}"
+    },
+    "title": "Убийца только один",
+    "description": [
+      {
+        "text": "Находясь в невидимости, убейте другого невидимого игрока с таким же ножом"
+      },
+      {
+        "text": "\nИли Психа с Солнечного затмения, также находящегося в невидимости, если это одиночный режим",
+        "color": "dark_gray"
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/weaponry/sword/additions/psycho_knife.imposter",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player",
+          "nbt": "{Tags:[obl.psycho_knife.invisible]}",
+          "equipment": {
+            "mainhand": {
+              "nbt": "{obl.sword.psycho_knife:1b}"
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{Tags:[obl.psycho_knife.invisible]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1000
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "EXPLOSION!!!",
+            "color": "red"
+        },
+        "description": {
+            "text": "Ударьте Ядерной перчаткой что-нибудь, что и без неё рванёт нехило... Бегите!"
+        },
+        "icon": {
+            "item": "minecraft:nether_star",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "hit.a_bigger_creeper.nuclear_glove_equipped": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "hit.a_bigger_creeper.nuclear_glove_equipped"
+        ]
+    ],
+    "rewards": {
+        "experience": 3000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/additions/nuclear_glove.reactor_detonation"
+}

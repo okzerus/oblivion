@@ -1,0 +1,43 @@
+{
+  "display": {
+    "title": {
+      "text": "Конец эпохи викингов"
+    },
+    "description": {
+      "text": "Убейте Викинга - ожившего скелета одного из самых грозных бойцов прошлого"
+    },
+    "icon": {
+      "item": "minecraft:iron_axe"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.viking": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:skeleton",
+              "nbt": "{Tags:[\"obl.viking\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.viking"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/mobs/root"
+}

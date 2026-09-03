@@ -1,0 +1,101 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:amethyst_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Кулон Памяти",
+                "color": "#cfa0f3",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Сохраните свои прошлые жизни",
+                  "color": "#8d6acc",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда находится в инвентаре:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+ Вещи, выпадаемые при смерти, никогда не пропадут,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   а также будут иметь полную неуязвимость к взрывам,",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   лаве, молнии, и другим типам урона",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ Этот предмет сохраняется при смерти",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.item:1b,obl.item.pendant_of_memory:1b,CustomModelData:49201}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

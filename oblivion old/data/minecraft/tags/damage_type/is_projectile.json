@@ -1,0 +1,14 @@
+{
+  "values": [
+    "minecraft:arrow",
+    "minecraft:trident",
+    "minecraft:mob_projectile",
+    "minecraft:unattributed_fireball",
+    "minecraft:fireball",
+    "minecraft:wither_skull",
+    "minecraft:thrown",
+    "oblivion:parried_projectile",
+    "oblivion:death_spear",
+    "oblivion:projectile"
+  ]
+}

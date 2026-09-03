@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Космический гнев"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Осколок метеорита\""
+        },
+        "icon": {
+            "item": "minecraft:fire_charge",
+            "nbt": "{CustomModelData:5010}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.meteor_shard": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.meteor_shard:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.meteor_shard"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.event"
+}

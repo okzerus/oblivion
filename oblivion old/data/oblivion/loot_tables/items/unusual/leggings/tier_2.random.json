@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.raging_blue_flames"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.raging_souls"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.raging_flames"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.totem"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.fox"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.elemental"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.demon"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.cat_black"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.cat_orange"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/leggings/tier_2.white_wave"
+        }
+      ]
+    }
+  ]
+}

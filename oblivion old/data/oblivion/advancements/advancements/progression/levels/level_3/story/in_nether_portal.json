@@ -1,0 +1,45 @@
+{
+    "display": {
+        "title": {
+            "text": "В самое пекло"
+        },
+        "description": {
+            "text": "После победы над Чёрной смертью, вы стали достаточно сильны, чтобы отправиться в саму Преисподнюю"
+        },
+        "icon": {
+            "item": "minecraft:flint_and_steel"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "enter.nether_portal": {
+            "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "minecraft:nether_portal"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+        }
+    },
+    "requirements": [
+        [
+            "enter.nether_portal"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/levels/level_3/root"
+}

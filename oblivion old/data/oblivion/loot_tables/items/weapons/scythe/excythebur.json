@@ -1,0 +1,177 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_hoe",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Экскособур",
+                "color": "#c8fbf2",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Я ЖЕ КОРОЛЬ КАМЕЛОТА",
+                  "color": "#a9ded5",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 6",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 1.7",
+                  "color": "dark_green",
+                  "italic": false
+                },
+			    [
+			    {
+			    	"text": " Повреждение брони: Шанс 15% на 10 секунд, ",
+			    	"color": "dark_green",
+			    	"italic": false
+			    },
+			    {
+			    	"text": "-9",
+			    	"color": "dark_aqua",
+			    	"italic": false
+			    },
+			    {
+			    	"text": " очков защиты",
+			    	"color": "dark_green",
+			    	"italic": false
+			    }
+			    ],
+				[
+			    {
+			    	"text": " Кровотечение: ",
+			    	"color": "dark_green",
+			    	"italic": false
+			    },
+			    {
+			    	"text": "Отсутствует",
+			    	"color": "red",
+			    	"italic": false
+			    }
+				],
+		        {
+			        "text": "",
+				    "color": "gray",
+				    "italic": false
+			    },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    При ударе по нежити, Экскособур",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    призывает разряд молнии, наносящий",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    дополнительный урон, также задевая",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    другую нежить поблизости.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Этот предмет испускает странные частицы...",
+                  "color": "#652e78",
+                  "italic": true
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.scythe:1b,obl.scythe.excythebur:1b,obl.difficulty:5b,CustomModelData:41103,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:6,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-121109,128697,221529,-257394]},{AttributeName:\"generic.attack_speed\",Amount:-2.3,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-121109,128797,221529,-257594]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

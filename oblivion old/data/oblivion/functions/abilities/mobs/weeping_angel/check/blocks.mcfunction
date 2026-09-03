@@ -1,0 +1,2 @@
+execute if entity @e[type=marker,tag=obl.temp.end,distance=...3] run tag @s add obl.temp.found_player
+execute if entity @s[tag=!obl.temp.found_player,distance=..15] positioned ^ ^ ^.1 if block ~ ~ ~ #oblivion:non_solid run function oblivion:abilities/mobs/weeping_angel/check/blocks

@@ -1,0 +1,78 @@
+{
+    "display": {
+        "title": {
+            "text": "Проклятый рыцарь"
+        },
+        "description": {
+            "text": "Заполучите полный комплект Проклятого доспеха"
+        },
+        "icon": {
+            "item": "minecraft:netherite_chestplate",
+            "nbt": "{CustomModelData:7172,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.armor.cursed.helmet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.cursed.helmet:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.cursed.chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.cursed.chestplate:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.cursed.leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.cursed.leggings:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.cursed.boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.cursed.boots:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.armor.cursed.helmet"
+		],
+		[
+            "obtain.armor.cursed.chestplate"
+        ],
+        [		
+		    "obtain.armor.cursed.leggings"
+		],
+		[
+            "obtain.armor.cursed.boots"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/armor/list/cursed"
+}

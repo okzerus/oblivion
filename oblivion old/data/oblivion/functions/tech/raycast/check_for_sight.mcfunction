@@ -1,0 +1,2 @@
+execute if entity @e[type=marker,tag=obl.sight.end_point,distance=...2] run tag @s add obl.temp.clear_sight
+execute if entity @e[type=marker,tag=obl.sight.end_point] unless entity @e[type=marker,tag=obl.sight.end_point,distance=...2] positioned ^ ^ ^.1 if block ~ ~ ~ #oblivion:non_solid run function oblivion:tech/raycast/check_for_sight

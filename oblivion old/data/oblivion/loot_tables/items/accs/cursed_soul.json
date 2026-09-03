@@ -1,0 +1,141 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:scute",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Проклятая душа",
+                "color": "#4b6e46",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Связанные душой",
+                  "color": "#519148",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в слоте аксессуара:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+ Призывает миньона Проклятого духа, парящего над",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   головой носителя.",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ Дух выбирает ближайшую цель в радиусе 20 блоков",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   и атакует её сгустком проклятой энергии.",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+ Приоритеты Духа - Атакующие игроки, Летающие",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   враждебные мобы, Наземные враждебные мобы.",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "- Не видит ближайших мобов в радиусе 5 блоков",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[-]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 2",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:7170,HideFlags:3,obl.difficulty:2b,obl.accs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

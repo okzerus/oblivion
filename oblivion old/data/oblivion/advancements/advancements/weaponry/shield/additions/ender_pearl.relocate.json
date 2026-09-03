@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Передислокация"
+        },
+        "description": {
+            "text": "Парируйте чужой эндер-жемчуг, отжав щит во время приседания, чтобы сделать его своим, и телепортироваться вместо прежнего владельца"
+        },
+        "icon": {
+            "item": "minecraft:ender_eye",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.enemy_ender_pearl.sneaking": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.enemy_ender_pearl.sneaking"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/ender_pearl"
+}

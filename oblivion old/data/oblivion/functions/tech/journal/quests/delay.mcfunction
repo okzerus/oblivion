@@ -1,0 +1,1 @@
+scoreboard players remove @s obl.journal_delay 1

@@ -1,0 +1,45 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.dragon_breath"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.enchantment"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.flash"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.music"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.mycelium"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.stroll_dark"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.stroll_end"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.stroll_light"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.stroll_nether"
+        }
+      ]
+    }
+  ]
+}

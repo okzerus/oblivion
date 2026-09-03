@@ -1,0 +1,43 @@
+{
+  "display": {
+    "title": {
+      "text": "Отправлен в карантин"
+    },
+    "description": {
+      "text": "Убейте Инфицированного зомби - зверя, заражённого самой чумой"
+    },
+    "icon": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.infected_zombie": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:[\"obl.infected_zombie\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.infected_zombie"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/mobs/root"
+}

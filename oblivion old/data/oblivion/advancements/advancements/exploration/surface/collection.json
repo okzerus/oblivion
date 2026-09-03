@@ -1,0 +1,66 @@
+{
+    "display": {
+        "title": {
+            "text": "Чудеса света",
+			"color": "red"
+        },
+        "description": {
+            "text": "Разыщите все уникальные структуры на поверхности всех биомов"
+        },
+        "icon": {
+            "item": "minecraft:end_stone_bricks",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.coliseum": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/coliseum"
+                    }
+				}
+            }
+        },
+        "locate.jungle_temple": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/jungle_temple"
+                    }
+				}
+            }
+        },
+        "locate.railway_outpost": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/railway_outpost"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.coliseum"
+        ],
+        [
+            "locate.jungle_temple"
+        ],
+        [
+            "locate.railway_outpost"
+        ]
+    ],
+    "rewards": {
+        "experience": 3000
+    },
+    "parent": "oblivion:advancements/exploration/surface/root"
+}

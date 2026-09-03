@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wither_skeleton",
+          "nbt": "{Tags:[\"obl.boss.cursed_armor\",\"obl.armorshield\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:abilities/bosses/cursed_armor/shield_hurt"
+  }
+}

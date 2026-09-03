@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"obl.cursed_boots\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:abilities/bosses/cursed_armor/armor_parts/killed_boots"
+  }
+}

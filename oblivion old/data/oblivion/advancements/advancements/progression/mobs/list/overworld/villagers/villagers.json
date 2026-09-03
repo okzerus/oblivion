@@ -1,0 +1,28 @@
+{
+    "display": {
+        "title": {
+            "text": "Апгрейд жителей"
+        },
+        "description": {
+            "text": "Используйте жителей по-новому!"
+        },
+        "icon": {
+            "item": "minecraft:emerald_block"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "parent": "oblivion:advancements/mobs/mobs"
+}

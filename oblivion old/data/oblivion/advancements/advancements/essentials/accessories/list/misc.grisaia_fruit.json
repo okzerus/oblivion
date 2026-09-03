@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Ботаника"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Фрукт Грисайи\""
+        },
+        "icon": {
+            "item": "minecraft:golden_apple",
+            "nbt": "{CustomModelData:5008}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.grisaia_fruit": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.grisaia_fruit:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.grisaia_fruit"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.misc"
+}

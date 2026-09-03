@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "oblivion:surface/city_of_livion",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 10387319,
+    "separation": 80,
+    "spacing": 120,
+    "spread_type": "triangular"
+  }
+}

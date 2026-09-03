@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:book",
+      "nbt": "{CustomModelData:55}"
+    },
+    "title": {
+      "text": "Легенды",
+      "color": "gold"
+    },
+    "description": "Как странно... с первого взгляда, этот раздел совершенно пуст?",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/weaponry/collection",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+summon minecraft:zombie ^ ^1 ^2 {IsBaby:1,CustomName:'[{"text":"Зомби-малыш"}]',Health:15,Tags:[gargantuababy],HandItems:[{id:stone_axe,Count:1}],ArmorItems:[{id:iron_nugget,Count:1},{id:gold_nugget,Count:1},{id:emerald,Count:1},{id:leather_helmet,Count:1}],ArmorDropChances:[0.40f,0.40f,0.05f,0f],Attributes:[{Name:"generic.attack_damage",Base:14f},{Name:"generic.max_health",Base:15f}],HandDropChances:[0f]}
+playsound minecraft:entity.zombie.ambient hostile @a ~ ~ ~ 1 0.1
+playsound minecraft:entity.zombie.infect hostile @a ~ ~ ~ 2 0.6
+playsound minecraft:entity.snowball.throw hostile @a ~ ~ ~ 2 0.1

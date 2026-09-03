@@ -1,0 +1,131 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Защита титанов",
+                "color": "#3d8e1d",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "STANDING HERE, I REALIZE",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда во второстепенной руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+ Если зачарован на Прочность III:",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   Сопротивление I, Медлительность I",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+ Если зачарован на Прочность V:",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   Сопротивление II, Медлительность III",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "   Утомление I",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+ Если зачарован на Прочность X:",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "   Сопротивление III, Медлительность IV",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "   Утомление II, Слабость I",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Требуемый уровень: 3",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,CustomModelData:20000,obl.difficulty:3b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

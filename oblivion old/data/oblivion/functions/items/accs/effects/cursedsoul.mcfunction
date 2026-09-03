@@ -1,0 +1,5 @@
+summon vex ~ ~ ~ {LifeTicks:300,CustomName:'[{"text":"Проклятый дух (Миньон)","color":"green"}]',Health:1,Silent:1b,Tags:["obl.difficultychanged",obl.cursedsoul_minion,obl.1tickparticle],ActiveEffects:[{Id:14,Duration:-1,Amplifier:0,ShowParticles:0b},{Id:11,Duration:20,Amplifier:4,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1F},{Name:"generic.attack_damage",Base:12F}]}
+execute at @e[tag=cursedsoul,limit=10,sort=nearest,distance=..20] run summon snowball ~ ~1.7 ~ {Motion:[0.0,-1.0,0.0], Tags:["attack"]}
+data modify entity @e[tag=attack,limit=1,sort=nearest] Owner set from entity @e[tag=!cursedsoul,distance=..10,limit=1,sort=nearest,type=#oblivion:aoe] UUID
+playsound minecraft:entity.vex.death master @a ~ ~ ~ 0.3 1
+playsound minecraft:entity.evoker.cast_spell master @a ~ ~ ~ 0.3 2

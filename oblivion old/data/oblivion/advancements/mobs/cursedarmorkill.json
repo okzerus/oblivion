@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:vex",
+          "nbt": "{Tags:[\"cursedarmor\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/abilities/armorabilities/death"
+  }
+}

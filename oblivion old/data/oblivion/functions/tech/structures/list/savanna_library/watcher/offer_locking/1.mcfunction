@@ -1,0 +1,2 @@
+data modify entity @s Offers.Recipes[0].uses set value 0
+data modify entity @s Offers.Recipes[0].buy merge value {id:"minecraft:barrier",tag:{display:{Name:'[{"text":"Одноразовая покупка","italic":false,"color":"red"}]'}},Count:1b}

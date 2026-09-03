@@ -1,0 +1,7 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"???","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Давай! Покажи на что способен!","color":"#C1F0C7"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"???","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Вперёд!","color":"#C1F0C7"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"???","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Убейте его!","color":"#C1F0C7"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"???","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Тебе конец!","color":"#C1F0C7"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"???","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"Добавки? Ха-ха-ха!","color":"#C1F0C7"},{"text":"\n"}]
+playsound minecraft:entity.wither.ambient hostile @s ~ ~ ~ 1 1.3

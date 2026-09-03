@@ -1,0 +1,26 @@
+[
+    {
+		"function": "minecraft:set_lore",
+		"lore": [
+			{
+				"text": "Кадр парирования:",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": " Снаряд: 0.00-0.25 сек. (5 тиков)",
+				"color": "dark_gray",
+				"italic": false
+			},
+			{
+				"text": " Контакт: 0.25-0.75 сек. (10 тиков)",
+				"color": "dark_gray",
+				"italic": false
+			}
+	    ]
+	},
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{obl.shield:1b}"
+    }
+]

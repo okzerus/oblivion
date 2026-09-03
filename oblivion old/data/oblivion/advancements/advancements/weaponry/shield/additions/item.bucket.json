@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Подмостки до 2019"
+        },
+        "description": {
+            "text": "Парируйте брошенное ведро с водой. Там, где оно ударится или приземлится, разольётся вода. Также работает с лавой"
+        },
+        "icon": {
+            "item": "minecraft:water_bucket"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.item.water_bucket": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.item.water_bucket"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/item"
+}

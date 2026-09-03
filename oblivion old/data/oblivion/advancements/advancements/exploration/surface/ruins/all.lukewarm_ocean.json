@@ -1,0 +1,38 @@
+{
+    "display": {
+        "title": {
+            "text": "Подводные пейзажи"
+        },
+        "description": {
+            "text": "Разыщите каждый тип руин в биоме Тепловатого океана"
+        },
+        "icon": {
+            "item": "minecraft:bubble_coral_block"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.ruins.lukewarm_ocean.template": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/lukewarm_ocean/template"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.ruins.lukewarm_ocean.template"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/locate"
+}

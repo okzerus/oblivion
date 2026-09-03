@@ -1,0 +1,4 @@
+summon minecraft:evoker ~ ~-6 ~ {Team:"eventmob",DeathLootTable:"oblivion:mobs/events/bloodmoon_evoker",CustomName:'[{"text":"Призыватель Кровавой бури","color":"red"}]',Health:150,Tags:["obl.mob","bloodmob5",obl.blood_mob,bloodmage],Attributes:[{Name:"generic.max_health",Base:150F}]}
+tellraw @a[scores={obl.chatnot=1},distance=..50,nbt={Inventory:[{tag:{CustomModelData:45001}}]}] {"text":"Призыватель Кровавой бури обнаружен поблизости!","color":"dark_green"}
+execute as @a[distance=..50,nbt={Inventory:[{tag:{CustomModelData:45001}}]}] if score @s obl.soundnot matches 1 at @s run playsound minecraft:block.bell.use master @s ~ ~ ~ 1 0.5
+execute as @a[distance=..50,nbt={Inventory:[{tag:{CustomModelData:45001}}]}] if score @s obl.soundnot matches 1 at @s run playsound minecraft:entity.evoker_fangs.attack master @s ~ ~ ~ 1 1.6

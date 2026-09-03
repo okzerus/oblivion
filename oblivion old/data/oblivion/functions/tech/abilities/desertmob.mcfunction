@@ -1,0 +1,1 @@
+tp @e[tag=stormdetail,limit=4,sort=nearest] @s

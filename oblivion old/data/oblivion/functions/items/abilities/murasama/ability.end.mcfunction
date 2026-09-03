@@ -1,0 +1,1 @@
+tag @a remove obl.temp.murasama.executing_ability

@@ -1,0 +1,27 @@
+{
+    "display": {
+        "title": {
+            "text": "Полное поглощение"
+        },
+        "description": {
+            "text": "Добейтесь комбо 5-го уровня, нанеся 50+ ударов Великим клинком Истощения"
+        },
+        "icon": {
+            "item": "minecraft:netherite_sword",
+            "nbt": "{CustomModelData:5995,Enchantments:[{}]}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/sword/list/greatsword_of_exhaustion"
+}

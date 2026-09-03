@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Восхождение Героя Щита"
+        },
+        "description": {
+            "text": "Заполучите \"Защиту Титанов\""
+        },
+        "icon": {
+            "item": "minecraft:shield",
+            "nbt": "{CustomModelData:20000}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.shield.defense_from_titans": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:shield",
+                        "nbt": "{obl.shield.defense_from_titans:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.shield.defense_from_titans"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/collection"
+}

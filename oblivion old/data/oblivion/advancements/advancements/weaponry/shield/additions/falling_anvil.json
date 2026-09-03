@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Не сегодня!"
+        },
+        "description": {
+            "text": "Спасите себя от неминуемой гибели, успешно парировав падающую на вас наковальню..."
+        },
+        "icon": {
+            "item": "minecraft:anvil"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.falling_block.anvil": {
+            "trigger": "minecraft:impossible"
+		}
+    },
+    "requirements": [
+        [
+            "parry.falling_block.anvil"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/tnt"
+}

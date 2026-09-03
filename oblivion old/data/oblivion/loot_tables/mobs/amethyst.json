@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:amethyst_cluster",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{obl.enchantedamethyst:1b,display:{Name:'[{\"text\":\"Зачарованный аметистовый кластер\",\"italic\":false,\"color\":\"dark_purple\"}]'},Enchantments:[{id:channeling,lvl:1}],HideFlags:1}"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_looting",
+          "chance": 0.3,
+          "looting_multiplier": 0.1
+        }
+      ]
+    }
+  ]
+}

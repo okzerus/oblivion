@@ -1,0 +1,7 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"Проклятый Дух","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"Я ВЗЫВАЮ К СИЛАМ ЗАБВЕНИЯ!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"Проклятый Дух","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"НЕТ! НЕТ!!!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"Проклятый Дух","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"Сколько же можно!?","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"Проклятый Дух","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"Я ВЫПОТРОШУ ТВОИ ВНУТРЕННОСТИ НАРУЖУ!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"Проклятый Дух","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"ЧТО ЗА!?","color":"#e6ffe9"},{"text":"\n"}]
+playsound minecraft:entity.blaze.ambient hostile @s ~ ~ ~ 1 1.2

@@ -1,0 +1,91 @@
+{
+    "display": {
+        "title": {
+            "text": "Осветите ночь"
+        },
+        "description": {
+            "text": "Заполучите каждый фонарь Забвения"
+        },
+        "icon": {
+            "item": "minecraft:beacon",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.lantern_of_starlight": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.lantern_of_starlight:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.lantern_of_green_shine": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.lantern_of_green_shine:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.lantern_of_healing_heat": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.lantern_of_healing_heat:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.lantern_of_violet_violence": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.lantern_of_violet_violence:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.lantern_of_last_spark": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.lantern_of_last_spark:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.lantern_of_starlight"
+        ],
+        [
+            "obtain.accessory.lantern_of_green_shine"
+        ],
+        [
+            "obtain.accessory.lantern_of_healing_heat"
+        ],
+        [
+            "obtain.accessory.lantern_of_violet_violence"
+        ],
+        [
+            "obtain.accessory.lantern_of_last_spark"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/root"
+}

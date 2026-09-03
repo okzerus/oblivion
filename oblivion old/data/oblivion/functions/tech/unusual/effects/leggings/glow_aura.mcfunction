@@ -1,0 +1,1 @@
+particle minecraft:glow ~ ~ ~ ^ ^200000 ^ 0.000001 0

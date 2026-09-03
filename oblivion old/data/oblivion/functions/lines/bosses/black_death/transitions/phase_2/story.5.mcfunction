@@ -1,0 +1,2 @@
+tellraw @s [{"text":"\n"},{"text":"<","color":"#272727"},{"text":"Чёрная смерть","color":"#6F6F6F"},{"text":"> ","color":"#272727"},{"text":"СГИНЬ!","color":"#6F6F6F"},{"text":"\n "}]
+playsound minecraft:entity.wither.ambient hostile @a ~ ~ ~ 0.6 0.75

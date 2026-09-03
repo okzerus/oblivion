@@ -1,0 +1,1 @@
+execute as @a[tag=obl.preload_music] run stopsound @s voice

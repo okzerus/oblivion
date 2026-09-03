@@ -1,0 +1,2 @@
+execute as @e[type=vex,distance=..10,tag=!replaced,tag=!bloodenergy,tag=!wisp,tag=!pixie] run summon vex ~ ~ ~ {CustomName:'[{"text":"Кровавая фея","color":"red"}]',Health:12,Silent:1b,Tags:["obl.eventparticle","obl.difficultychanged",bloodmob,bloodfairy,replaced,spread],ActiveEffects:[{Id:14,Duration:99999,Amplifier:0,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:12F}]}
+execute as @e[type=vex,distance=..10,tag=!replaced,tag=!bloodenergy,tag=!wisp,tag=!pixie] run tp @s ~ -256 ~

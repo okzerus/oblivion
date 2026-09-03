@@ -1,0 +1,51 @@
+{
+    "display": {
+        "title": {
+            "text": "Прицельное парирование"
+        },
+        "description": {
+            "text": "Убейте цель с расстояния не ближе 30 метров с помощью парирования любого снаряда"
+        },
+        "icon": {
+            "item": "minecraft:target"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.precise": {
+            "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "distance": {
+                "horizontal": {
+                  "min": 30
+                }
+              }
+            }
+          }
+        ],
+        "killing_blow": {
+          "direct_entity": {
+            "nbt": "{Tags:[obl.projectile.reflected]}"
+          }
+        }
+      }
+                  }
+    },
+    "requirements": [
+        [
+            "parry.precise"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/half_a_heart"
+}

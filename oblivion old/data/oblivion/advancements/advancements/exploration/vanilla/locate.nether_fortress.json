@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Крепость крови"
+        },
+        "description": {
+            "text": "Проберитесь в адскую крепость и поройтесь в её сундуках"
+        },
+        "icon": {
+            "item": "minecraft:beetroot",
+            "nbt": "{CustomModelData:6502}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "generate.loot_table.nether_bridge": {
+            "trigger": "minecraft:player_generates_container_loot",
+            "conditions": {
+				"loot_table": "minecraft:chests/nether_bridge"
+			}
+        }
+    },
+    "requirements": [
+        [
+            "generate.loot_table.nether_bridge"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/vanilla/locate"
+}

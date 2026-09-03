@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Не повторите его участь",
+            "color": "red"
+        },
+        "description": {
+            "text": "Экипируйте полный комплект проклятой брони, меч \"Клинок проклятых выбросов\" и акессуар \"Проклятый дух\" одновременно"
+        },
+        "icon": {
+            "item": "minecraft:netherite_sword",
+            "nbt": "{CustomModelData:7171,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 3000
+    },
+    "parent": "oblivion:advancements/mobs/cursedarmor"
+}

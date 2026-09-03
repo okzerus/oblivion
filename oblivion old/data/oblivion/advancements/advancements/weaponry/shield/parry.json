@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "+ PARRY"
+        },
+        "description": {
+            "text": "Парируйте что-нибудь, вовремя выставив свой щит. Это работает на снаряды, контактные атаки и на многие другие сущности"
+        },
+        "icon": {
+            "item": "minecraft:shield"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/shield/root"
+}

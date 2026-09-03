@@ -1,0 +1,1 @@
+give @s allay_spawn_egg{EntityTag:{id:marker,Tags:["obl.admin_summoner","obl.admin_summoner.dungeon_spawner"]},display:{Name:'[{"text":"Создать - Спавнер подземелья","italic":false,"color":"#6699ff"}]'}} 1

@@ -1,0 +1,6 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"НА ЭТОТ РАЗ ТЫ СДОХНЕШЬ!","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"СМЕРТЬ. Я. ТВОЯ. СМЕРТЬ.","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"Я ТЕБЯ  У Н И Ч Т О Ж У...","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"ЭТО НЕВОЗМОЖНО!!!","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"ЭТО, БЛЯТЬ, МОЙ МИР!","color":"#a3d6aa"},{"text":"\n"}]

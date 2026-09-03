@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Дар Нептуна: Сердце моря"
+        },
+        "description": {
+            "text": "Вы прошли испытание Нептуна, и были вознаграждены сердцем моря"
+        },
+        "icon": {
+            "item": "minecraft:heart_of_the_sea"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "finish.neptune_trial.heart_of_the_sea": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "finish.neptune_trial.heart_of_the_sea"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/additions/mysteries_of_atlantis/blessing"
+}

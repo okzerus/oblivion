@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "На уровне Полубога"
+        },
+        "description": {
+            "text": "Встаньте в позицию, не опасаясь последствий. Взгляните вверх, в глаза самой смерти. Парируйте.\nНо запомните это - предела силе нет, но он есть у вас. Рано или поздно, настанет момент, когда ваша же жажда силы сломит вас самих."
+        },
+        "icon": {
+            "item": "minecraft:lightning_rod"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.lightning_rod": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.lightning_rod"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/channeling"
+}

@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "oblivion:surface/ruins/taiga/allay",
+        "oblivion:surface/ruins/taiga/cages",
+        "oblivion:surface/ruins/taiga/fallen",
+        "oblivion:surface/ruins/taiga/farmland",
+        "oblivion:surface/ruins/taiga/foxes",
+        "oblivion:surface/ruins/taiga/highground",
+        "oblivion:surface/ruins/taiga/tower"
+    ]
+}

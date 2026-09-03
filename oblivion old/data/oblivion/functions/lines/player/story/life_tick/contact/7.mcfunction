@@ -1,0 +1,2 @@
+tellraw @s [{"text":"\n"},{"text":"<","color":"#61B44C"},{"text":"???","color":"#9FE791"},{"text":"> ","color":"#61B44C"},{"text":"@... б&ду... #д@ть.","color":"#CBFEC4"},{"text":"\n"}]
+function oblivion:lines/player/story/life_tick/noise

@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "С приветом по планетам"
+        },
+        "description": {
+            "text": "Преодолейте максимальную высоту мира с помощью Крыльев Мотрона"
+        },
+        "icon": {
+            "item": "minecraft:feather",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "breach_sky_limit.mothron_wings_equipped": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "breach_sky_limit.mothron_wings_equipped"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/event.mothron_wings"
+}

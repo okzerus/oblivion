@@ -1,0 +1,44 @@
+{
+    "display": {
+        "title": {
+            "text": "Откуда он взялся?"
+        },
+        "description": {
+            "text": "Убейте Душу Визера"
+        },
+        "icon": {
+            "item": "minecraft:charcoal",
+            "nbt": "{CustomModelData:5012}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "withersoul": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "predicate": {
+                            "type": "minecraft:vex",
+                            "nbt": "{Tags:[\"withersoul\"]}"
+                        },
+                        "entity": "this"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "withersoul"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/mobs/nether/wither"
+}

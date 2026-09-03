@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Адаптация"
+        },
+        "description": {
+            "text": "Одновременно получите буст от нахождения в воде и лаве, нося \"Амулет мореплавателя\" и \"Амулет лавоплавателя\""
+        },
+        "icon": {
+            "item": "minecraft:bucket"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "location.lava_and_water": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "location.lava_and_water"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/amulet.lava"
+}

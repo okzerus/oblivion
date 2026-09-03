@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Спасибо, замечательно"
+        },
+        "description": {
+            "text": "Класс, вы парировали пузырёк опыта"
+        },
+        "icon": {
+            "item": "minecraft:experience_bottle"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "parry.experience_bottle": {
+            "trigger": "minecraft:impossible"
+		}
+    },
+    "requirements": [
+        [
+            "parry.experience_bottle"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/potion"
+}

@@ -1,0 +1,3 @@
+execute if entity @s[tag=obl.equipped.accs.oblivion_monocle] run title @s actionbar [{"text":"[ ","color":"#a877aa"},{"text":"Удерживайте ","color":"#de9be1"},{"text":"[","color":"#a877aa"},{"keybind":"key.sneak","color":"#de9be1"},{"text":"]","color":"#a877aa"},{"text":" для смены режима ","color":"#de9be1"},{"text":"|","color":"#a877aa"},{"text":" Двойной ","color":"#de9be1"},{"text":"[","color":"#a877aa"},{"keybind":"key.sneak","color":"#de9be1"},{"text":"]","color":"#a877aa"},{"text":" для выбора","color":"#de9be1"},{"text":" ]","color":"#a877aa"}]
+execute if entity @s[tag=obl.equipped.accs.oblivion_monocle] run tag @s add obl.temp.reset_actionbar
+tag @s add obl.temp.found_entity

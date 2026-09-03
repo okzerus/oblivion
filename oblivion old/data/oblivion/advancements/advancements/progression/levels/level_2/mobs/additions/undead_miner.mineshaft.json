@@ -1,0 +1,46 @@
+{
+  "display": {
+    "title": {
+      "text": "Здесь ресуров больше"
+    },
+    "description": {
+      "text": "Приведите Мёртвого шахтёра в Заброшенную шахту и убейте его в ней"
+    },
+    "icon": {
+      "item": "minecraft:oak_fence"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.undead_miner.mineshaft": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie_villager",
+              "nbt": "{Tags:[\"obl.undead_miner\"]}",
+              "location": {
+                "structure": "minecraft:mineshaft"
+              }
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.undead_miner.mineshaft"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/progression/levels/level_2/mobs/list/undead_miner"
+}

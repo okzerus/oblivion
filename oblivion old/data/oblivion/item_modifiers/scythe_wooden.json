@@ -1,0 +1,87 @@
+[
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+            "text": "Деревянная коса",
+            "italic": false
+       }
+    },
+    {
+		"function": "minecraft:set_lore",
+		"lore": [
+			{
+				"text": "",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": "Когда в ведущей руке:",
+				"color": "gray",
+				"italic": false
+			},
+			{
+				"text": " Урон: 2",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": " Скорость атаки: 1.5",
+				"color": "dark_green",
+				"italic": false
+			},
+			[
+			{
+				"text": " Повреждение брони: Шанс 5% на 5 секунд, ",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "-3",
+				"color": "dark_aqua",
+				"italic": false
+			},
+			{
+				"text": " очка защиты",
+				"color": "dark_green",
+				"italic": false
+			}
+			],
+			[
+			{
+				"text": " Кровотечение: Сила I, Шанс 15%",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "(-3%/ЧБ) ",
+				"color": "red",
+				"italic": false
+			},
+			{
+				"text": "на 10",
+				"color": "dark_green",
+				"italic": false
+			},
+			{
+				"text": "(-1.5/ЧБ) ",
+				"color": "red",
+				"italic": false
+			},
+			{
+				"text": "секунд",
+				"color": "dark_green",
+				"italic": false
+			}
+			]
+	    ]
+	},
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{obl.scythe:1b,obl.scythe.wooden:1b,HideFlags:2}"
+    },
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:2,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-121109,37197,221529,-74394]},{AttributeName:\"generic.attack_speed\",Amount:-2.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-121109,37297,221529,-74594]}]}"
+    }
+]

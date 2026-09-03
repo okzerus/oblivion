@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Вечное пламя"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Вечнотлеющий факел\""
+        },
+        "icon": {
+            "item": "minecraft:torch",
+            "nbt": "{CustomModelData:5063}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.eversmoldering_torch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.eversmoldering_torch:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.eversmoldering_torch"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.misc"
+}

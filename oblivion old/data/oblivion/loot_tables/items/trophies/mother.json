@@ -1,0 +1,139 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:turtle_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "text": "П",
+                  "color": "#e4b1dd",
+                  "italic": false
+                },
+                {
+                  "text": "а",
+                  "color": "#e09dd6",
+                  "italic": false
+                },
+                {
+                  "text": "у",
+                  "color": "#db8fce",
+                  "italic": false
+                },
+                {
+                  "text": "ч",
+                  "color": "#d47fc3",
+                  "italic": false
+                },
+                {
+                  "text": "ь",
+                  "color": "#cd6eb5",
+                  "italic": false
+                },
+                {
+                  "text": "е",
+                  "color": "#c561a7",
+                  "italic": false
+                },
+                {
+                  "text": " я",
+                  "color": "#c45a9f",
+                  "italic": false
+                },
+                {
+                  "text": "й",
+                  "color": "#bd4a92",
+                  "italic": false
+                },
+                {
+                  "text": "ц",
+                  "color": "#b43a80",
+                  "italic": false
+                },
+                {
+                  "text": "о",
+                  "color": "#ad2f6e",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Из поколения в поколение..",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+					"text": "Трофей за победу:",
+					"color": "gold",
+					"italic": false
+					},
+					{
+					"text": " Паучиха",
+					"color": "#ad2f6e",
+					"italic": false
+					}
+				],
+                {
+                  "text": "5%",
+                  "color": "red",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{obl.trophy:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

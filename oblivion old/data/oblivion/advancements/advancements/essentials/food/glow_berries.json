@@ -1,0 +1,38 @@
+{
+  "display": {
+    "title": {
+      "text": "Вот это меня ушатало"
+    },
+    "description": {
+      "text": "Съешьте светящиеся ягоды, они получили новую способность!"
+    },
+    "icon": {
+      "item": "minecraft:glow_berries"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+    "criteria": {
+        "consume.glow_berries": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+        "item": {
+          "items": [
+            "minecraft:glow_berries"
+          ]
+        }
+      }
+        }
+    },
+    "requirements": [
+        [
+            "consume.glow_berries"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/essentials/food/collection"
+}

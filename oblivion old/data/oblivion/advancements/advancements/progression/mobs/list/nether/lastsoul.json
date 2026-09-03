@@ -1,0 +1,43 @@
+{
+    "display": {
+        "title": {
+            "text": "Точно последний?"
+        },
+        "description": {
+            "text": "Убейте Последнего огонька"
+        },
+        "icon": {
+            "item": "minecraft:lantern"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "stone": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "predicate": {
+                            "type": "minecraft:vex",
+                            "nbt": "{Tags:[\"lastsoul\"]}"
+                        },
+                        "entity": "this"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "stone"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/mobs/nether/nether"
+}

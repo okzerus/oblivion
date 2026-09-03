@@ -1,0 +1,44 @@
+{
+  "display": {
+    "title": {
+      "text": "Сияю словно солнце!"
+    },
+    "description": {
+      "text": "Убейте Спектрального огонька под дневным светом"
+    },
+    "icon": {
+      "item": "minecraft:lantern",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.spectral_wisp.daylight": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:vex",
+              "nbt": "{Tags:[\"obl.spectral_wisp\",\"obl.spectral_wisp.daylight\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.spectral_wisp.daylight"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/mobs/list/spectral_wisp"
+}

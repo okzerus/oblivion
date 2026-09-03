@@ -1,0 +1,124 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:netherite_sword",
+      "nbt": "{CustomModelData:4001}"
+    },
+    "title": "Воин Света",
+    "description": "Убейте абсолютно всех мобов во время Солнечного затмения",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mothron": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"mothron\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "solarmob1": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"solarmob1\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "solarmob2": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"solarmob2\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "solarmob3": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"solarmob3\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "solarmob4": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"solarmob4\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "solarmob5": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "nbt": "{Tags:[\"solarmob5\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mothron"
+    ],
+    [
+      "solarmob1"
+    ],
+    [
+      "solarmob2"
+    ],
+    [
+      "solarmob3"
+    ],
+    [
+      "solarmob4"
+    ],
+    [
+      "solarmob5"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/events/survivesolareclipse"
+}

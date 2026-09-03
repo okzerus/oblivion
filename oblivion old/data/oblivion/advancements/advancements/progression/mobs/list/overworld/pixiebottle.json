@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Помогите!"
+        },
+        "description": {
+            "text": "Поймате Пикси в бутылку"
+        },
+        "icon": {
+            "item": "minecraft:potion",
+            "nbt": "{CustomPotionColor:16711680}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/overworld/pixie"
+}

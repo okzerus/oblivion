@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "text": "Уровень 0",
+            "color": "gold"
+        },
+        "description": {
+            "text": ""
+        },
+        "icon": {
+            "item": "minecraft:nether_star",
+            "nbt": "{CustomModelData:10000}"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "join_the_world_duh": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "join_the_world_duh"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/root"
+}

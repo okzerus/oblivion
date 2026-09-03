@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Тяжёлая работа",
+			"color": "dark_red"
+        },
+        "description": {
+            "text": "Заполучите каждый инструмент Забвения"
+        },
+        "icon": {
+            "item": "minecraft:golden_pickaxe",
+            "nbt": "{CustomModelData:1800}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.tool.template": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.tool.template:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.tool.template"
+        ]
+    ],
+    "rewards": {
+        "experience": 5000
+    },
+    "parent": "oblivion:advancements/essentials/tools/root"
+}

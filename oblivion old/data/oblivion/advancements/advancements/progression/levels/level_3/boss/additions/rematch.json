@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Реванш - Чёрная смерть"
+    },
+    "description": {
+      "text": "В Соло режиме, победите Чёрную смерть во второй раз, когда он сражается в свою полную силу"
+    },
+    "icon": {
+      "item": "minecraft:netherite_helmet"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat.boss.black_death.second_encounter": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "defeat.boss.black_death.second_encounter"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/boss/root"
+}

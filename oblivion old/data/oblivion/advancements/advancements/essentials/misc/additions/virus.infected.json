@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Лучше оставайся дома"
+        },
+        "description": {
+            "text": "Успешно заразитесь смертельным вирусом :)"
+        },
+        "icon": {
+            "item": "minecraft:oak_door"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "infected": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "infected"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/misc/virus"
+}

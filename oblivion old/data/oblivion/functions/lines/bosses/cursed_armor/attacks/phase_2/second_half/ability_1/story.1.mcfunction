@@ -1,0 +1,7 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"???","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"Уж ЭТО тебя погубит!","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"???","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"Ты заплатишь!","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"???","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"БОЛЬШЕ страдания!","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"???","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"Держишься? ДА!?","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"???","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"Я хочу видеть твою БОЛЬ!","color":"#a3d6aa"},{"text":"\n"}]
+playsound minecraft:entity.wither.ambient hostile @s ~ ~ ~ 1 1

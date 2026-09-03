@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "oblivion:surface/ruins/desert/allay",
+        "oblivion:surface/ruins/desert/camel",
+        "oblivion:surface/ruins/desert/dead",
+        "oblivion:surface/ruins/desert/oasis",
+        "oblivion:surface/ruins/desert/ribs",
+        "oblivion:surface/ruins/desert/skull",
+        "oblivion:surface/ruins/desert/symbol"
+    ]
+}

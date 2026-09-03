@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:bow"
+          ],
+          "nbt": "{CustomModelData:1002}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:items/bows/hell"
+  }
+}

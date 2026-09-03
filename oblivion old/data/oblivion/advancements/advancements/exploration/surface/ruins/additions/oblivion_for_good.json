@@ -1,0 +1,103 @@
+{
+    "display": {
+        "title": {
+            "text": "Забвение во благо"
+        },
+        "description": {
+            "text": "Освободите каждую Заблудшую душу, чтобы забрать заслуженную награду"
+        },
+        "icon": {
+            "item": "minecraft:beacon"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "guide.wandering_soul.desert": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.flower_forest": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.jungle": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.taiga": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.warm_ocean": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.ocean": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.tundra": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.dark_forest": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.swamp": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.mountains": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.savanna": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.plains": {
+            "trigger": "minecraft:impossible"
+        },
+        "guide.wandering_soul.forest": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "guide.wandering_soul.desert"
+        ],
+        [
+            "guide.wandering_soul.flower_forest"
+        ],
+        [
+            "guide.wandering_soul.jungle"
+        ],
+        [
+            "guide.wandering_soul.taiga"
+        ],
+        [
+            "guide.wandering_soul.warm_ocean"
+        ],
+        [
+            "guide.wandering_soul.ocean"
+        ],
+        [
+            "guide.wandering_soul.tundra"
+        ],
+        [
+            "guide.wandering_soul.dark_forest"
+        ],
+        [
+            "guide.wandering_soul.swamp"
+        ],
+        [
+            "guide.wandering_soul.mountains"
+        ],
+        [
+            "guide.wandering_soul.savanna"
+        ],
+        [
+            "guide.wandering_soul.plains"
+        ],
+        [
+            "guide.wandering_soul.forest"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/additions/pathfinder"
+}

@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Вызов на время - Проклятые доспехи"
+    },
+    "description": {
+      "text": "В Соло режиме, победите Проклятые доспехи менее чем за 4 минуты"
+    },
+    "icon": {
+      "item": "minecraft:clock"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat.boss.cursed_armor.time_challenge": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "defeat.boss.cursed_armor.time_challenge"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/progression/levels/level_2/boss/root"
+}

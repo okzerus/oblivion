@@ -1,0 +1,8 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#458149"},{"text":"Проклятые Доспехи","color":"#52B36F"},{"text":"> ","color":"#458149"},{"text":"*кхх..* Мой щит.. не трогай его..","color":"#9CDE9D"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#458149"},{"text":"Проклятые Доспехи","color":"#52B36F"},{"text":"> ","color":"#458149"},{"text":"Не дотрагивайся до моего щита.. *кх-кх*","color":"#9CDE9D"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#458149"},{"text":"Проклятые Доспехи","color":"#52B36F"},{"text":"> ","color":"#458149"},{"text":"Подожди, *кх* пока мой щит исчезнет.. *кх-кхх..*","color":"#9CDE9D"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#458149"},{"text":"Проклятые Доспехи","color":"#52B36F"},{"text":"> ","color":"#458149"},{"text":"Это мой щит, *кх* не трогай его..","color":"#9CDE9D"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#458149"},{"text":"Проклятые Доспехи","color":"#52B36F"},{"text":"> ","color":"#458149"},{"text":"Стой.. *кхх..* Не трогай мой щит.. Будет хуже.. *кх-кх*","color":"#9CDE9D"},{"text":"\n"}]
+execute as @e[type=wither_skeleton,tag=obl.fake.cursed_armor] at @s anchored eyes run particle block redstone_block ^ ^-.2 ^.45 0.05 0.05 0.05 0 10 force
+playsound minecraft:entity.blaze.ambient hostile @s ~ ~ ~ 1 1.2

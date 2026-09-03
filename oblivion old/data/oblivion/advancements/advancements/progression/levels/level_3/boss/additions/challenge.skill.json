@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Вызов на скилл - Чёрная смерть"
+    },
+    "description": {
+      "text": "В Соло режиме, победите Чёрную смерть менее чем за 3 минуты, и не позволяя своему здоровью опуститься ниже 75% на протяжении всей битвы"
+    },
+    "icon": {
+      "item": "minecraft:golden_apple"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat.boss.black_death.skill_challenge": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "defeat.boss.black_death.skill_challenge"
+    ]
+  ],
+  "rewards": {
+    "experience": 3000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/boss/additions/challenge.time"
+}

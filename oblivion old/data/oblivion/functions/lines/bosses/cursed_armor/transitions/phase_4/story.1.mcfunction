@@ -1,0 +1,5 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..33 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"???","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"Т-ты.. ОТРОДИЕ! Мне НЕ НУЖНЫ доспехи чтобы победить тебя!","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 34..66 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"???","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"МРАЗЬ! Знаешь сколько уйдёт времени чтобы их ВОССТАНОВИТЬ!?","color":"#e6ffe9"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 67..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#91fc86"},{"text":"???","color":"#cdffb4"},{"text":"> ","color":"#91fc86"},{"text":"ХОРОШО! Я прикончу тебя САМОЛИЧНО, своими, блять, СИЛАМИ!","color":"#e6ffe9"},{"text":"\n"}]
+playsound minecraft:entity.wither.ambient hostile @s ~ ~ ~ 1 1

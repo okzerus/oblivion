@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "nbt": "{obl.ironarmor:1b}"
+            },
+            "chest": {
+              "nbt": "{obl.ironarmor:1b}"
+            },
+            "legs": {
+              "nbt": "{obl.ironarmor:1b}"
+            },
+            "feet": {
+              "nbt": "{obl.ironarmor:1b}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:items/accs/armor/ironarmor"
+  }
+}

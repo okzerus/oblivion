@@ -1,0 +1,7 @@
+function oblivion:rng
+execute if score randomizer obl.rng matches 1..20 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"СКОЛЬКО РАЗ МЫ ПРОХОДИЛИ ЧЕРЕЗ ЭТО?","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 21..40 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"Я УБЬЮ ТЕБЯ! РАНО ИЛИ ПОЗДНО!","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 41..60 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"ПОРА ЗАКОНЧИТЬ С ТОБОЙ!","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 61..80 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"УМРИ! ЗДЕСЬ, И СЕЙЧАС!","color":"#a3d6aa"},{"text":"\n"}]
+execute if score randomizer obl.rng matches 81..100 run tellraw @s [{"text":"\n"},{"text":"<","color":"#41aa37"},{"text":"Проклятый Дух","color":"#85ce61"},{"text":"> ","color":"#41aa37"},{"text":"ВСЁ ДОЛЖНО ИДТИ ТАК, КАК Я ЗАДУМАЛ!","color":"#a3d6aa"},{"text":"\n"}]
+playsound minecraft:entity.wither.ambient hostile @s ~ ~ ~ 1 1

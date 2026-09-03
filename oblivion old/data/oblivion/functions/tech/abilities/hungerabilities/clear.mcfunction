@@ -1,0 +1,8 @@
+kill @e[tag=obl.hungerstand]
+kill @e[tag=obl.hungerstandline]
+kill @e[tag=obl.hungerplayerstand]
+kill @e[tag=obl.gianthungerdecor]
+kill @e[tag=obl.hungerstandcenter]
+kill @e[tag=obl.hungerhead]
+kill @e[tag=obl.goodfood]
+kill @e[tag=obl.cursedfood]

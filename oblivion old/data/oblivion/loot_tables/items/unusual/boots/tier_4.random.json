@@ -1,0 +1,21 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_4.constellation"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_4.shockwave"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_4.shogun"
+        }
+      ]
+    }
+  ]
+}

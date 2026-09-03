@@ -1,0 +1,4 @@
+summon minecraft:skeleton ~ ~-10 ~ {Team:"eventmob",DeathLootTable:"oblivion:mobs/events/bloodmoon_psycho",Silent:1b,CustomName:'[{"text":"Псих","color":"dark_red"}]',Health:40,Tags:["obl.mob","bloodmob7","obl.psycho",obl.blood_mob],Attributes:[{Name:"generic.attack_damage",Base:17f},{Name:"generic.follow_range",Base:120f},{Name:"generic.max_health",Base:70f},{Name:"generic.armor",Base:16f}]}
+tellraw @a[scores={obl.chatnot=1},distance=..50,nbt={Inventory:[{tag:{CustomModelData:45001}}]}] {"text":"Псих обнаружен поблизости!","color":"dark_green"}
+execute as @a[distance=..50,nbt={Inventory:[{tag:{CustomModelData:45001}}]}] if score @s obl.soundnot matches 1 at @s run playsound minecraft:block.bell.use master @s ~ ~ ~ 1 0.5
+execute as @a[distance=..50,nbt={Inventory:[{tag:{CustomModelData:45001}}]}] if score @s obl.soundnot matches 1 at @s run playsound minecraft:entity.evoker_fangs.attack master @s ~ ~ ~ 1 1.6

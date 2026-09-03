@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Это так не работает"
+    },
+    "description": {
+      "text": "Враждебные мобы не будут к вам относиться дружелюбно если вы их ударите, даже если вы носите аксессуар, защищающий от них"
+    },
+    "icon": {
+      "item": "minecraft:diamond_sword"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+    "criteria": {
+        "hit.any_mob_with_accessory_equipped": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "hit.any_mob_with_accessory_equipped"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.defender"
+}

@@ -1,0 +1,38 @@
+{
+  "structures": [
+    {
+      "structure": "oblivion:surface/ruins/taiga/allay",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/taiga/cages",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/taiga/fallen",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/taiga/farmland",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/taiga/foxes",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/taiga/highground",
+      "weight": 1
+    },
+    {
+      "structure": "oblivion:surface/ruins/taiga/tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 652462,
+    "spacing": 16,
+    "separation": 11,
+    "type": "minecraft:random_spread"
+  }
+}

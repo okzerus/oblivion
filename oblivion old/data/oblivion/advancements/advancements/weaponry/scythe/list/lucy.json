@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Любовь до старости"
+        },
+        "description": {
+            "text": "Заполучите Люси"
+        },
+        "icon": {
+            "item": "minecraft:iron_hoe",
+            "nbt": "{CustomModelData:41100}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.scythe.lucy": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.scythe.lucy:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.scythe.lucy"
+        ]
+    ],
+    "parent": "oblivion:advancements/weaponry/scythe/collection",
+    "rewards": {
+    "experience": 300
+  }
+}

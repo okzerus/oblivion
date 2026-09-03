@@ -1,0 +1,1 @@
+tellraw @s [{"text":"\n"},{"text":"<","color":"#272727"},{"text":"???","color":"#6F6F6F","obfuscated":"true"},{"text":"> ","color":"#272727"},{"text":"<< Узнай всю суть, и страшную.. *кх-кхх*.. жуть..","color":"#6d494a","italic":"true"},{"text":"\n "}]

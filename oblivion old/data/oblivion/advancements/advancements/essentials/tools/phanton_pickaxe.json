@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Как она копает?"
+        },
+        "description": {
+            "text": "Заполучите \"Призрачную Кирку\""
+        },
+        "icon": {
+            "item": "minecraft:stone_pickaxe",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.tool.phantom_pickaxe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:stone_pickaxe",
+                        "nbt": "{obl.tool.phantom_pickaxe:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.tool.phantom_pickaxe"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/tools/collection"
+}

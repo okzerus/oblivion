@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Словно Солнце"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Фрагмент Солнца\""
+        },
+        "icon": {
+            "item": "minecraft:raw_gold",
+            "nbt": "{CustomModelData:5009}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.solar_fragment": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.solar_fragment:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.solar_fragment"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.event"
+}

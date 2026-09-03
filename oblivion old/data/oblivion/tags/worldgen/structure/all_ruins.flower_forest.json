@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "oblivion:surface/ruins/flower_forest/diamond",
+        "oblivion:surface/ruins/flower_forest/farmland",
+        "oblivion:surface/ruins/flower_forest/fountain",
+        "oblivion:surface/ruins/flower_forest/golem",
+        "oblivion:surface/ruins/flower_forest/honey",
+        "oblivion:surface/ruins/flower_forest/pillager",
+        "oblivion:surface/ruins/flower_forest/pools"
+    ]
+}

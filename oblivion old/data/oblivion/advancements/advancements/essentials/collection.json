@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Неудержимая сила",
+			"color": "dark_red"
+        },
+        "description": {
+            "text": "Заполучите каждый аксессуар и усилитель Забвения"
+        },
+        "icon": {
+            "item": "minecraft:gold_nugget",
+            "nbt": "{CustomModelData:11303,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.template": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.template:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.template"
+        ]
+    ],
+    "rewards": {
+        "experience": 25000
+    },
+    "parent": "oblivion:advancements/essentials/separator/root.5"
+}

@@ -1,0 +1,229 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Мурасама",
+                "color": "#d11212",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "There will be bloodshed",
+                  "color": "#9c1111",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 20",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 2.5",
+                  "color": "dark_green",
+                  "italic": false
+                },
+				[
+                {
+                  "text": " Удары в ближнем бою накапливают",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Кровь",
+                  "color": "#d11212",
+                  "italic": false
+                }
+				],
+                {
+                  "text": " Работает как щит, позволяя парировать атаки",
+                  "color": "dark_green",
+                  "italic": false
+                },
+				[
+                {
+                  "text": " Парирование атак ведущей рукой добавляет",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 5 Крови",
+                  "color": "#d11212",
+                  "italic": false
+                }
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+                {
+                  "text": "[Л.РУКА], требуется",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": " 30 Крови",
+                  "color": "#d11212",
+                  "italic": false
+                }
+				],
+                {
+                  "text": "   Переместите катану в ножну, а затем",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   выстрелите ею, чтобы нанести колоссальный",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   разрез по площади.",
+                  "color": "yellow",
+                  "italic": false
+                },
+				[
+                {
+                  "text": "[ПРИСЕСТЬ], требуется",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": " 75 Крови",
+                  "color": "#d11212",
+                  "italic": false
+                }
+				],
+                {
+                  "text": "   Активирует Режим потрошителя на 15 секунд,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   значительно увеличивая скорость и силу игрока,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   а также позволяя регенерировать при ударе",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[ПРИСЕСТЬ x2]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "   Производит насмешку над ближайшей целью,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "   разъяряя её, временно увеличивая характеристики.",
+                  "color": "yellow",
+                  "italic": false
+                },
+				[
+                {
+                  "text": "   Разъярённые враги приносят вдвое больше",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " Крови",
+                  "color": "#d11212",
+                  "italic": false
+                }
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "11",
+						"color": "gold",
+						"italic": false,
+						"obfuscated": true
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,HideFlags:2,obl.murasama:1b,obl.shield:1b,obl.difficulty:11b,CustomModelData:3555,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-1.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-122418,13816,145310,-27632]},{AttributeName:\"generic.attack_damage\",Amount:20,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-122418,13916,145310,-27832]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

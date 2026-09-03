@@ -1,0 +1,40 @@
+{
+  "display": {
+    "title": {
+      "text": "Show Me a Good Time",
+      "color": "red"
+    },
+    "description": {
+      "text": "Подберите легендарную катану Ямато, охраняемую высшим драконом"
+    },
+    "icon": {
+      "item": "minecraft:netherite_sword",
+      "nbt": "{CustomModelData:3556,Enchantments:[{}]}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "obtain.sword.yamato": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{CustomModelData:3556}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain.sword.yamato"
+    ]
+  ],
+  "parent": "oblivion:advancements/weaponry/legend/root",
+  "rewards": {
+    "experience": 3000
+  }
+}

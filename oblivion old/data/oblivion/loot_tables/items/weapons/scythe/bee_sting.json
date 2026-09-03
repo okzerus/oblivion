@@ -1,0 +1,197 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_hoe",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Пчелиное жало",
+                "color": "#f7c940",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Порхай как бабочка, жаль как пчела",
+                  "color": "#caa41f",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 5",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 1.5",
+                  "color": "dark_green",
+                  "italic": false
+                },
+			    [
+			    {
+			    	"text": " Повреждение брони: Шанс 11% на 8 секунд, ",
+			    	"color": "dark_green",
+			    	"italic": false
+			    },
+			    {
+			    	"text": "-5",
+			    	"color": "dark_aqua",
+			    	"italic": false
+			    },
+			    {
+			    	"text": " очков защиты",
+			    	"color": "dark_green",
+			    	"italic": false
+			    }
+			    ],
+			    [
+			    {
+				  "text": " Кровотечение: Сила I, Шанс 35%",
+				  "color": "dark_green",
+				  "italic": false
+			    },
+			    {
+				  "text": "(-5%/ЧБ) ",
+				  "color": "red",
+				  "italic": false
+			    },
+			    {
+				  "text": "на 7",
+				  "color": "dark_green",
+				  "italic": false
+			    },
+			    {
+				  "text": "(-1/ЧБ) ",
+				  "color": "red",
+				  "italic": false
+			    },
+			    {
+				  "text": "секунд",
+				  "color": "dark_green",
+				  "italic": false
+			    }
+			    ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    При успешном накладывании Кровотечения на цель,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    вместо крови, она истекает... мёдом?",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Урон от кровотечения снижается вдвое, но",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    при его получении, восстанавливает пол ножки",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    сытости/насыщения всем игрокам в радиусе 3 блоков",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    от цели.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "1",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.scythe:1b,obl.scythe.bee_sting:1b,obl.difficulty:1b,CustomModelData:41105,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-121109,128697,221529,-257394]},{AttributeName:\"generic.attack_speed\",Amount:-2.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-121109,128797,221529,-257594]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bone",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": "Один против армии",
+    "description": "Призовите сразу 64 проклятых скелета, выбросив на землю стак проклятых костей",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/events/survivebloodmoon",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1000
+  }
+}

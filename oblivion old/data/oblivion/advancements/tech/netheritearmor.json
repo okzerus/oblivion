@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "nbt": "{obl.netheritearmor:1b}"
+            },
+            "chest": {
+              "nbt": "{obl.netheritearmor:1b}"
+            },
+            "legs": {
+              "nbt": "{obl.netheritearmor:1b}"
+            },
+            "feet": {
+              "nbt": "{obl.netheritearmor:1b}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:items/accs/armor/netheritearmor"
+  }
+}

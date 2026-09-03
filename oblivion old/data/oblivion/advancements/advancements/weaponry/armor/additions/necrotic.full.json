@@ -1,0 +1,65 @@
+{
+    "display": {
+        "title": {
+            "text": "Тёмный властелин"
+        },
+        "description": {
+            "text": "Заполучите полный комплект Некротического доспеха"
+        },
+        "icon": {
+            "item": "minecraft:netherite_chestplate",
+            "nbt": "{CustomModelData:2001,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.armor.necrotic.chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.necrotic.chestplate:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.necrotic.leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.necrotic.leggings:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.armor.necrotic.boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.armor.necrotic.boots:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+		[
+            "obtain.armor.necrotic.chestplate"
+        ],
+        [		
+		    "obtain.armor.necrotic.leggings"
+		],
+		[
+            "obtain.armor.necrotic.boots"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/armor/list/necrotic"
+}

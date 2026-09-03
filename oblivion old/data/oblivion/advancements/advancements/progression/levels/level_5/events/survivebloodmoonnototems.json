@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:red_dye",
+      "nbt": "{CustomModelData:666}"
+    },
+    "title": {
+      "text": "Наши руки запачканы в крови",
+      "color": "red"
+    },
+    "description": "Переживите Кровавую луну от начала до конца, убив минимум 25 мобов, ни разу не умерев и не потратив ни одного тотема бессмертия",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/events/survivebloodmoonnodeath",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 3000
+  }
+}

@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Душа за душу"
+        },
+        "description": {
+            "text": "Заполучите Пожиратель душ"
+        },
+        "icon": {
+            "item": "minecraft:netherite_hoe",
+            "nbt": "{CustomModelData:41102}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.scythe.soul_devourer": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.scythe.soul_devourer:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.scythe.soul_devourer"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/scythe/collection"
+}

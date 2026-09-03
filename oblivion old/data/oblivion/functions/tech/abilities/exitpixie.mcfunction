@@ -1,0 +1,13 @@
+item replace entity @s weapon.offhand with air
+
+execute if block ~ ~-1 ~ amethyst_block run execute if score @s obl.difficulty matches 4.. unless score bloodmoon oblivion matches 1 unless score solareclipse oblivion matches 1 unless score pearlmoon oblivion matches 1 unless score xmasmoon oblivion matches 1 unless score greatday oblivion matches 1 unless score gravitymoon oblivion matches 1 unless entity @e[tag=amethystpixie] unless entity @e[tag=pixietransform] run scoreboard players set ampixiecanspawn oblivion 1
+execute if score ampixiecanspawn oblivion matches 1 run advancement grant @s only oblivion:advancements/mobs/overworld/pixieamethyst
+execute if score ampixiecanspawn oblivion matches 1 run playsound minecraft:entity.zombie_villager.cure master @a ~ ~ ~ 1 0.1
+execute if score ampixiecanspawn oblivion matches 1 run summon minecraft:bat ~ ~ ~ {Invulnerable:1b,Silent:1b,CustomName:'[{"text":"Пикси"}]',Health:20,Tags:["obl.invulnerable","pixietransform","pixie","check","checkpixie","obl.1tickparticle"],PersistenceRequired:1b,ActiveEffects:[{Id:10,Duration:999999,Amplifier:1,ShowParticles:1b},{Id:14,Duration:999999,Amplifier:1,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:20F}]}
+execute if block ~ ~-1 ~ amethyst_block unless score ampixiecanspawn oblivion matches 1 run tellraw @s {"text":"Не удалось призвать Аметистовую пикси, поскольку вы не достигли нужного уровня сложности (4) / активно одно из событий / босс уже призван в другом месте / вы пытаетесь призвать ещё одного босса!","italic":true,"color":"red"}
+execute if block ~ ~-1 ~ amethyst_block unless score ampixiecanspawn oblivion matches 1 run summon minecraft:bat ~ ~ ~ {Silent:1b,CustomName:'[{"text":"Пикси"}]',Health:20,Tags:["pixie","check","checkpixie","obl.1tickparticle"],PersistenceRequired:1b,ActiveEffects:[{Id:14,Duration:999999,Amplifier:1,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:20F}]}
+execute if block ~ ~-1 ~ amethyst_block unless score ampixiecanspawn oblivion matches 1 run playsound minecraft:entity.rabbit.hurt master @a ~ ~ ~ 1 0.1
+execute unless block ~ ~-1 ~ amethyst_block run summon minecraft:bat ~ ~ ~ {Silent:1b,CustomName:'[{"text":"Пикси"}]',Health:20,Tags:["pixie","check","checkpixie","obl.1tickparticle"],PersistenceRequired:1b,ActiveEffects:[{Id:14,Duration:999999,Amplifier:1,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:20F}]}
+execute unless block ~ ~-1 ~ amethyst_block run playsound minecraft:entity.rabbit.hurt master @a ~ ~ ~ 1 0.1
+advancement grant @s only oblivion:advancements/mobs/overworld/pixiebottleout
+scoreboard players set ampixiecanspawn oblivion 0

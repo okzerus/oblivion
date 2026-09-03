@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "hurt": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:vex",
+          "nbt": "{Tags:[\"obl.surface\"]}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hurt"
+    ]
+  ],
+  "rewards": {
+    "function": "oblivion:tech/ampixiehurt"
+  }
+}

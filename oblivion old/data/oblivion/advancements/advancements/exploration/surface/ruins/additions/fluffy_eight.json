@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Пушистая восьмёрка"
+        },
+        "description": {
+            "text": "Разыщите логово восьми лисиц-хранительниц"
+        },
+        "icon": {
+            "item": "minecraft:emerald",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "encounter.fluffy_eight": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "encounter.fluffy_eight"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/all.taiga"
+}

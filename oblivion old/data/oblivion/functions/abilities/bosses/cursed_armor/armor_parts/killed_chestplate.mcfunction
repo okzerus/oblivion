@@ -1,0 +1,5 @@
+execute at @e[tag=obl.boss.cursed_armor,tag=!obl.cursed_armor.spirit,tag=!obl.phase.3,limit=1] run playsound minecraft:block.anvil.use master @a ~ ~ ~ 1 1.5
+item replace entity @e[tag=obl.boss.cursed_armor,tag=!obl.cursed_armor.spirit,tag=!obl.phase.3,limit=1] armor.chest with netherite_chestplate{CustomModelData:7172,AttributeModifiers:[{AttributeName:"generic.armor",Amount:8,Slot:chest,Name:"generic.armor",UUID:[I;-122416,8740,123949,-17480]},{AttributeName:"generic.armor_toughness",Amount:2,Slot:chest,Name:"generic.armor_toughness",UUID:[I;-122416,8840,123949,-17680]},{AttributeName:"generic.knockback_resistance",Amount:0.1,Slot:chest,Name:"generic.knockback_resistance",UUID:[I;-122416,8940,123949,-17880]}]}
+advancement revoke @s only oblivion:mobs/cursedarmorchestplatekill
+scoreboard players remove @e[type=wither_skeleton,tag=obl.boss.cursed_armor] obl.fake_health 20
+execute store result bossbar oblivion:boss_health value run scoreboard players get @e[type=wither_skeleton,tag=obl.boss.cursed_armor,limit=1] obl.fake_health

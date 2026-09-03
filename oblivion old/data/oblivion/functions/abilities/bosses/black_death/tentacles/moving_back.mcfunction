@@ -1,0 +1,2 @@
+execute facing entity @e[type=magma_cube,tag=obl.boss.black_death,limit=1,sort=nearest] eyes run tp @s ^ ^ ^1
+execute if entity @e[type=magma_cube,tag=obl.boss.black_death,limit=1,sort=nearest,distance=..3] run kill @s

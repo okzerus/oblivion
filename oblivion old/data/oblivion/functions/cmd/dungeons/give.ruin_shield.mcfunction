@@ -1,0 +1,1 @@
+give @s guardian_spawn_egg{EntityTag:{id:marker,Tags:["obl.admin_summoner","obl.admin_summoner.ruin_shield"]},display:{Name:'[{"text":"Создать - Щит руин","italic":false,"color":"#5fd0ab"}]'}} 1

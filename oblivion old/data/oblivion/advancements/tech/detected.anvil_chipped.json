@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:chipped_anvil"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/difficulty/disable/anvil_chipped.inventory"
+  }
+}

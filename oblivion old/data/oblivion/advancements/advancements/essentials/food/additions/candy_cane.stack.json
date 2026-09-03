@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_carrot",
+      "nbt": "{CustomModelData:49100,Enchantments:[{}]}"
+    },
+    "title": {
+      "text": "В честь Рождества"
+    },
+    "description": "Съешьте в общей сумме 64 рождественских леденца",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/essentials/food/candy_cane",
+  "criteria": {
+    "consume.candy_cane.stack": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "consume.candy_cane.stack"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  }
+}

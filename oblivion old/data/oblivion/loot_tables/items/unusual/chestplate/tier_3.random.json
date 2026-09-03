@@ -1,0 +1,17 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_3.torii"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_3.sakura"
+        }
+      ]
+    }
+  ]
+}

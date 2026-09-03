@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Вызов на время - Падший ангел"
+    },
+    "description": {
+      "text": "В Соло режиме, победите Падшего ангела менее чем за 4 минуты"
+    },
+    "icon": {
+      "item": "minecraft:clock"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat.boss.fallen_angel.time_challenge": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "defeat.boss.fallen_angel.time_challenge"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "oblivion:advancements/progression/levels/level_4/boss/root"
+}

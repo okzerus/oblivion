@@ -1,0 +1,52 @@
+{
+    "display": {
+        "title": {
+            "text": "Береги мой оберег"
+        },
+        "description": {
+            "text": "Заполучите каждый амулет Забвения"
+        },
+        "icon": {
+            "item": "minecraft:fire_charge",
+            "nbt": "{CustomModelData:5005,Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.sea_amulet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.sea_amulet:1b}"
+                    }
+                ]
+            }
+        },
+        "obtain.accessory.lava_amulet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.lava_amulet:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.sea_amulet"
+        ],
+        [
+            "obtain.accessory.lava_amulet"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/root"
+}

@@ -1,0 +1,2 @@
+execute unless entity @s[tag=obl.black_death.tentacle.end] unless block ^ ^ ^0.75 #oblivion:non_solid run function oblivion:abilities/bosses/black_death/tentacles/wall_impact
+execute if block ^ ^ ^0.75 #oblivion:non_solid run tp @s ^ ^ ^0.75

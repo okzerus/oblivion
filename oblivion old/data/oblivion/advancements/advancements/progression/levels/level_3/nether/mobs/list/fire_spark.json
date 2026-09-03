@@ -1,0 +1,43 @@
+{
+  "display": {
+    "title": {
+      "text": "Это не мираж"
+    },
+    "description": {
+      "text": "Убейте Пустынную аномалию - нестабильного духа Забвения, бушующего на просторах дюн"
+    },
+    "icon": {
+      "item": "minecraft:dead_bush"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.anomaly.desert": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:husk",
+              "nbt": "{Tags:[\"obl.anomaly.desert\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.anomaly.desert"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/nether/mobs/root"
+}

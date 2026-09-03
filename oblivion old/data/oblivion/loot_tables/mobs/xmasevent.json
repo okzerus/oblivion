@@ -1,0 +1,70 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chest",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{BlockEntityTag:{LootTable:\"oblivion:xmas/resources\"},display:{Name:'[{\"text\":\"Красный подарок\",\"italic\":false,\"color\":\"red\"}]',Lore:['[{\"text\":\"О, это что, мне?\",\"italic\":false,\"color\":\"gray\"}]']}}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:killed_by_player"
+            },
+            {
+              "condition": "minecraft:random_chance_with_looting",
+              "chance": 0.1,
+              "looting_multiplier": 0.1
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chest",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{BlockEntityTag:{LootTable:\"oblivion:xmas/blocksnfood\"},display:{Name:'[{\"text\":\"Зелёный подарок\",\"italic\":false,\"color\":\"green\"}]',Lore:['[{\"text\":\"О, это что, мне?\",\"italic\":false,\"color\":\"gray\"}]']}}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:killed_by_player"
+            },
+            {
+              "condition": "minecraft:random_chance_with_looting",
+              "chance": 0.1,
+              "looting_multiplier": 0.1
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chest",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{BlockEntityTag:{LootTable:\"oblivion:xmas/gift_heads\"},display:{Name:'[{\"text\":\"Синий подарок\",\"italic\":false,\"color\":\"aqua\"}]',Lore:['[{\"text\":\"О, это что, мне?\",\"italic\":false,\"color\":\"gray\"}]']}}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:killed_by_player"
+            },
+            {
+              "condition": "minecraft:random_chance_with_looting",
+              "chance": 0.1,
+              "looting_multiplier": 0.1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

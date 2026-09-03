@@ -1,0 +1,101 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cooked_mutton",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Медовый слиток",
+                "color": "#f7c940",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Пальчики оближешь!",
+                  "color": "#caa41f",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "При применении:",
+                  "color": "dark_purple",
+                  "italic": false
+                },
+                {
+                  "text": "Поглощение (00:20)",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "Регенерация (00:07)",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "Каждый активный дебафф имеет 25% шанс",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "быть излеченным, если игрок не проклят",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.food:1b,obl.material:1b,obl.honeycomb_ingot:1b,CustomModelData:49101}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

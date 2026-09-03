@@ -1,0 +1,47 @@
+{
+    "display": {
+        "title": [
+		{
+            "text": "З",
+            "color": "#FEA0EE"
+		},
+		{
+            "text": "аб",
+            "color": "#FFB2FA"
+		},
+		{
+            "text": "ве",
+            "color": "#FFC1FE"
+		},
+		{
+            "text": "ни",
+            "color": "#FFD9FF"
+		},
+		{
+            "text": "е: ",
+            "color": "#FFE8FF"
+		},
+		{
+            "text": "Предметы",
+            "color": "white"
+		}
+        ],
+        "description": {
+            "text": "Возвышай, изобретай, пробуждай, ибо нет запретов, нет пределов, лишь непревзойдённая сила чистейшего, нефильтрованного Забвения"
+        },
+        "icon": {
+            "item": "minecraft:clock",
+            "nbt": "{CustomModelData:20000}"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/muddy_mangrove_roots_side.png"
+    },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

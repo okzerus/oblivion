@@ -1,0 +1,1 @@
+give @s minecraft:slime_spawn_egg{display: {Name: '[{"text":"Создать - Инстаспавнер","italic":false,"color":"#7ffa5b"}]'}, EntityTag: {id: "marker", Tags: ["obl.admin_summoner", "obl.admin_summoner.instant_spawner"]}}

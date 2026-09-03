@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 35,
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_1.random"
+        },
+        {
+          "weight": 20,
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_2.random"
+        },
+        {
+          "weight": 10,
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_3.random"
+        },
+        {
+          "weight": 3,
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/boots/tier_4.random"
+        }
+      ]
+    }
+  ]
+}

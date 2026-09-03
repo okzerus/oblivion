@@ -1,0 +1,1 @@
+tellraw @s [{"text":"\n"},{"text":"<","color":"#458149"},{"text":"Проклятые Доспехи","color":"#52B36F"},{"text":"> ","color":"#458149"},{"text":". . .","color":"#9CDE9D"},{"text":"\n"}]

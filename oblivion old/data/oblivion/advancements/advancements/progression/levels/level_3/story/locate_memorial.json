@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Память падшим"
+        },
+        "description": {
+            "text": "Разыщите мемориал Чёрной смерти, зарытый глубоко под землёй"
+        },
+        "icon": {
+            "item": "minecraft:reinforced_deepslate"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.black_death_memorial": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:underground/black_death_memorial"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.black_death_memorial"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/levels/level_2/root"
+}

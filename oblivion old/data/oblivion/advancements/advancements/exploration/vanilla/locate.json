@@ -1,0 +1,60 @@
+{
+    "display": {
+        "title": {
+            "text": "Чего Забвение коснулось..."
+        },
+        "description": {
+            "text": "Мир не стоял на месте, а с ним и религия с культурой. Проведайте старые структуры, в поисках отпечатков Забвения..."
+        },
+        "icon": {
+            "item": "minecraft:clock"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.vanilla.desert_temple": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "minecraft:desert_temple"
+                    }
+				}
+            }
+        },
+        "locate.vanilla.igloo": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "minecraft:desert_temple"
+                    }
+				}
+            }
+        },
+        "locate.vanilla.nether_fortress": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "minecraft:desert_temple"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.vanilla.desert_temple",
+            "locate.vanilla.igloo",
+            "locate.vanilla.nether_fortress"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/root"
+}

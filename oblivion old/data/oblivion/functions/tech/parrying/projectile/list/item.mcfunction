@@ -1,0 +1,13 @@
+execute unless entity @s[tag=obl.on_ground] if predicate oblivion:on.ground run tag @s add obl.on_ground
+execute if entity @s[tag=obl.on_ground] unless predicate oblivion:on.ground run tag @s remove obl.on_ground
+execute if entity @s[tag=obl.on_ground] run tag @s remove obl.projectile.reflected
+
+execute if entity @s[tag=obl.item.water_bucket,tag=obl.projectile.reflected] run function oblivion:tech/parrying/projectile/list/bucket/check
+execute if entity @s[tag=obl.item.lava_bucket,tag=obl.projectile.reflected] run function oblivion:tech/parrying/projectile/list/bucket/check
+
+tag @s add obl.temp.projectile_hit_check
+scoreboard players operation #id.temp obl.id = @s obl.id
+execute if entity @s[tag=!obl.dont_move,tag=!obl.projectile.unparryable,tag=!obl.on_ground] as @e[type=#oblivion:all_mobs,limit=1,sort=nearest,tag=obl.can_parry.projectile,predicate=!oblivion:matching_score] at @s anchored eyes positioned ^ ^ ^2.5 if entity @e[type=#oblivion:parryable,tag=obl.temp.projectile_hit_check,limit=1,distance=..2.3] run tag @s add obl.temp.parrying
+execute if entity @s[tag=!obl.dont_move,tag=!obl.projectile.unparryable,tag=!obl.on_ground,tag=!obl.projectile.reflected] as @e[type=#oblivion:all_mobs,limit=1,sort=nearest,tag=obl.can_parry.projectile,predicate=oblivion:matching_score] at @s anchored eyes positioned ^ ^ ^3.5 if entity @e[type=#oblivion:parryable,tag=obl.temp.projectile_hit_check,limit=1,distance=..3.3] run tag @s add obl.temp.parrying
+execute if entity @e[type=#oblivion:all_mobs,tag=obl.temp.parrying,limit=1,sort=nearest] at @s run function oblivion:tech/parrying/projectile/parry
+tag @s remove obl.temp.projectile_hit_check

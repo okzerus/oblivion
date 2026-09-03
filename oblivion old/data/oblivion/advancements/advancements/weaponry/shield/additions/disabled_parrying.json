@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Неизлечимый"
+        },
+        "description": {
+            "text": "Лишитесь возможности парирования на целый день, из-за своей упрямости..."
+        },
+        "icon": {
+            "item": "minecraft:ghast_tear"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.disabled_parrying": {
+            "trigger": "minecraft:impossible"
+		}
+    },
+    "requirements": [
+        [
+            "parry.disabled_parrying"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/multiple_parry"
+}

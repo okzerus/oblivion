@@ -1,0 +1,9 @@
+execute at @e[nbt={HurtTime:10s}] run summon vex ~ ~ ~ {LifeTicks:2,CustomName:'[{"text":"Кровавая фея","color":"red"}]',Health:12,Silent:1b,Tags:["obl.difficultychanged",bloodfairy,replaced,spread,bloodminion],ActiveEffects:[{Id:14,Duration:99999,Amplifier:0,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:12F}]}
+execute at @e[nbt={HurtTime:10s}] run summon vex ~ ~ ~ {LifeTicks:2,CustomName:'[{"text":"Кровавая фея","color":"red"}]',Health:12,Silent:1b,Tags:["obl.difficultychanged",bloodfairy,replaced,spread,bloodminion],ActiveEffects:[{Id:14,Duration:99999,Amplifier:0,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:12F}]}
+execute at @e[nbt={HurtTime:10s}] run summon vex ~ ~ ~ {LifeTicks:2,CustomName:'[{"text":"Кровавая фея","color":"red"}]',Health:12,Silent:1b,Tags:["obl.difficultychanged",bloodfairy,replaced,spread,bloodminion],ActiveEffects:[{Id:14,Duration:99999,Amplifier:0,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:12F}]}
+execute at @e[nbt={HurtTime:10s}] run execute at @e[tag=bloodminion,limit=10,sort=nearest,distance=..20] run summon snowball ~ ~1.7 ~ {Motion:[0.0,-1.0,0.0], Tags:["attack"]}
+execute at @e[nbt={HurtTime:10s}] run data modify entity @e[tag=attack,limit=1,sort=nearest] Owner set from entity @e[tag=!bloodminion,distance=..10,limit=1,sort=nearest,type=!item,type=!snowball,type=!experience_orb] UUID
+execute at @e[nbt={HurtTime:10s}] run playsound minecraft:entity.vex.hurt master @a ~ ~ ~ 1 0.1
+execute at @e[nbt={HurtTime:10s}] run playsound minecraft:entity.vex.ambient master @a ~ ~ ~ 1 0.1
+execute at @e[nbt={HurtTime:10s}] run playsound minecraft:entity.evoker.cast_spell master @a ~ ~ ~ 1 0.1
+advancement revoke @s only oblivion:items/bloodbowhit

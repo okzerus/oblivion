@@ -1,0 +1,33 @@
+{
+  "display": {
+    "title": {
+      "text": "Без получения урона - Аметистовая пикси",
+      "color": "red"
+    },
+    "description": {
+      "text": "В Соло режиме, победите Аметистовую пикси, держа в руке Тотем смертия на протяжении всего боя"
+    },
+    "icon": {
+      "item": "minecraft:totem_of_undying",
+      "nbt": "{CustomModelData:9498}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat.boss.amethyst_pixie.nohit": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "defeat.boss.amethyst_pixie.nohit"
+    ]
+  ],
+  "rewards": {
+    "experience": 3000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_5/boss/additions/challenge.skill"
+}

@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "wooden": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:vex",
+            "nbt": "{Tags:[\"obl.withering_sphere\"]}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:abilities/mobs/withering_sphere/hurt_player"
+  }
+}

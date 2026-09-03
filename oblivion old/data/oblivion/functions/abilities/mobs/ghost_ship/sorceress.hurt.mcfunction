@@ -1,0 +1,2 @@
+scoreboard players set @s obl.ghost_ship.sorceress.teleport_cd 200
+execute unless entity @s[tag=obl.ghost_ship.sorceress.on_ground] run function oblivion:abilities/mobs/ghost_ship/sorceress.teleport.ground

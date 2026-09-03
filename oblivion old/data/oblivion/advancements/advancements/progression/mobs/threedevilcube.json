@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Игра в смерть"
+        },
+        "description": {
+            "text": "Вы выбрали неверный Дьявольсикй куб 3 раза подряд..."
+        },
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/mobs/wrongdevilcube"
+}

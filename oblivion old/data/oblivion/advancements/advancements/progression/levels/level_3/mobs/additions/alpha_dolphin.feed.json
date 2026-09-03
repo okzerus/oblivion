@@ -1,0 +1,32 @@
+{
+  "display": {
+    "title": {
+      "text": "Награда океана"
+    },
+    "description": {
+      "text": "Накормите Альфа дельфина достаточным количеством рыбы, чтобы он вознаградил вас своей жемчужиной"
+    },
+    "icon": {
+      "item": "minecraft:cod",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "feed.alpha_dolphin": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "feed.alpha_dolphin"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_3/mobs/list/alpha_dolphin"
+}

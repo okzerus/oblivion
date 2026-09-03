@@ -1,0 +1,38 @@
+{
+    "display": {
+        "title": {
+            "text": "Корни Майя"
+        },
+        "description": {
+            "text": "Разыщите заросшую пирамиду джунглей"
+        },
+        "icon": {
+            "item": "minecraft:mossy_cobblestone"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.jungle_pyramid": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/jungle_pyramid"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.jungle_pyramid"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/collection"
+}

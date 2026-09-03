@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Ангельское касание"
+        },
+        "description": {
+            "text": "Заполучите \"Подозрительную палочку\""
+        },
+        "icon": {
+            "item": "minecraft:stick",
+            "nbt": "{CustomModelData:4012}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.tool.suspicious_wand": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:stick",
+                        "nbt": "{obl.tool.suspicious_wand:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.tool.suspicious_wand"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/tools/collection"
+}

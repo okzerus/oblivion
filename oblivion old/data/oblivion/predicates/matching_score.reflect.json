@@ -1,0 +1,24 @@
+{
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+        "obl.id.reflect": {
+            "min": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "#id.temp.reflect"
+                },
+                "score": "obl.id.reflect"
+            },
+            "max": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "#id.temp.reflect"
+                },
+                "score": "obl.id.reflect"
+            }
+        }
+    }
+}

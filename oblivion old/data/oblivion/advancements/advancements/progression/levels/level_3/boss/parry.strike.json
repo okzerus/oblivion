@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "СТРАЙК!"
+        },
+        "description": {
+            "text": "Парируйте летящую на вас Чёрную Смерть в толпу из минимум 5 мобов"
+        },
+        "icon": {
+            "item": "minecraft:tnt"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.charging_black_death.strike": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.charging_black_death.strike"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/progression/bosses/black_death.parry"
+}

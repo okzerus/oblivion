@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "text": "Уровень 3",
+            "color": "gold"
+        },
+        "description": {
+            "text": ""
+        },
+        "icon": {
+            "item": "minecraft:nether_star",
+            "nbt": "{CustomModelData:10003}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "reach.difficulty_level.3": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "reach.difficulty_level.3"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/separator/third.5"
+}

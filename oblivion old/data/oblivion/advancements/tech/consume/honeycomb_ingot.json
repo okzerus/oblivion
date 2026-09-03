@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_mutton"
+          ],
+          "nbt": "{CustomModelData:49101}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:items/food/adv.honeycomb_ingot"
+  }
+}

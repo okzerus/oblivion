@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Аннигиляция",
+			"color": "dark_red"
+        },
+        "description": {
+            "text": "Заполучите каждый топор Забвения"
+        },
+        "icon": {
+            "item": "minecraft:netherite_axe",
+            "nbt": "{CustomModelData:1}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.axe.future": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.axe.future:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.axe.future"
+        ]
+    ],
+    "rewards": {
+        "experience": 5000
+    },
+    "parent": "oblivion:advancements/weaponry/axe/root"
+}

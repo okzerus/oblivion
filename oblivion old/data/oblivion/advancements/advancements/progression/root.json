@@ -1,0 +1,47 @@
+{
+    "display": {
+        "title": [
+		{
+            "text": "З",
+            "color": "#FEA0EE"
+		},
+		{
+            "text": "аб",
+            "color": "#FFB2FA"
+		},
+		{
+            "text": "ве",
+            "color": "#FFC1FE"
+		},
+		{
+            "text": "ни",
+            "color": "#FFD9FF"
+		},
+		{
+            "text": "е: ",
+            "color": "#FFE8FF"
+		},
+		{
+            "text": "Прогрессия",
+            "color": "white"
+		}
+        ],
+        "description": {
+            "text": "Целый мир играет в гонку развития, так займите же первое место"
+        },
+        "icon": {
+            "item": "minecraft:scute",
+            "nbt": "{CustomModelData:7170}"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/cherry_log.png"
+    },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

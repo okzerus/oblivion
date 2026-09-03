@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "nbt": "{Tags:[\"obl.savanna_watcher.saved\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/structures/savanna_library/watcher/trade"
+  }
+}

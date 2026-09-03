@@ -1,0 +1,65 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.volcano"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.geyser"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_aquarius"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_aries"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_cancer"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_capricorn"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_gemini"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_leo"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_libra"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_pisces"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_sagittarius"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_scorpio"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_taurus"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_1.zodiac_virgo"
+        }
+      ]
+    }
+  ]
+}

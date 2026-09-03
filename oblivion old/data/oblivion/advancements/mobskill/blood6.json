@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"bloodmob6\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/mobskill/blood6"
+  }
+}

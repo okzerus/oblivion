@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Я вижу тебя насквозь"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Глаз паучихи\""
+        },
+        "icon": {
+            "item": "minecraft:fermented_spider_eye",
+            "nbt": "{CustomModelData:5061}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.mothers_eye": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.mothers_eye:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.mothers_eye"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.defender"
+}

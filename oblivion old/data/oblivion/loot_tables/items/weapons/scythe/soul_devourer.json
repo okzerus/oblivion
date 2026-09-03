@@ -1,0 +1,217 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_hoe",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Пожиратель душ",
+                "color": "#3f5248",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Fetch Me Their Souls",
+                  "color": "#4a695a",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 5",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 1.65",
+                  "color": "dark_green",
+                  "italic": false
+                },
+			    [
+			    {
+			    	"text": " Повреждение брони: Шанс 9% на 7 секунд, ",
+			    	"color": "dark_green",
+			    	"italic": false
+			    },
+			    {
+			    	"text": "-5",
+			    	"color": "dark_aqua",
+			    	"italic": false
+			    },
+			    {
+			    	"text": " очков защиты",
+			    	"color": "dark_green",
+			    	"italic": false
+			    }
+			    ],
+			    [
+			    {
+				  "text": " Кровотечение: Сила II, Шанс 24%",
+				  "color": "dark_green",
+				  "italic": false
+			    },
+			    {
+				  "text": "(-4%/ЧБ) ",
+				  "color": "red",
+				  "italic": false
+			    },
+			    {
+				  "text": "на 16",
+				  "color": "dark_green",
+				  "italic": false
+			    },
+			    {
+				  "text": "(-2/ЧБ) ",
+				  "color": "red",
+				  "italic": false
+			    },
+			    {
+				  "text": "секунд",
+				  "color": "dark_green",
+				  "italic": false
+			    }
+			    ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Собирайте души живых существ после",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    их смерти, чтобы усиливать Пожиратель душ.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Каждая поглощённая душа будет усилять носителя:",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    +0.02 Скорость, +0.02 Сила, +0.02 Спешка",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[ПРИСЕСТЬ] х2",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Высвободите все накопленные души в гремящем взрыве,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    нанося 1 единицу взрывного урона за каждую душу",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    всем сущностям в радиусе 10 блоков,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    а также усиляя носителя на 1 минуту:",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    +1.25 Скорость, +1.25 Сила, +1.25 Спешка",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.scythe:1b,obl.scythe.soul_devourer:1b,obl.difficulty:5b,CustomModelData:41102,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-121109,128697,221529,-257394]},{AttributeName:\"generic.attack_speed\",Amount:-2.35,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-121109,128797,221529,-257594]}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

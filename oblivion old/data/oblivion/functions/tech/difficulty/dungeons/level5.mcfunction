@@ -1,0 +1,2 @@
+execute if predicate oblivion:dnl/dnl.temple_of_tears run function oblivion:tech/difficulty/debuffsdungeon9
+execute if predicate oblivion:dnl/dnl.olympus run function oblivion:tech/difficulty/debuffsdungeon7

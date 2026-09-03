@@ -1,0 +1,15 @@
+execute if entity @s[tag=obl.spawner.badlands] run loot spawn ~ ~ ~ loot oblivion:spawner/badlands
+execute if entity @s[tag=obl.spawner.dark_forest] run loot spawn ~ ~ ~ loot oblivion:spawner/dark_forest
+execute if entity @s[tag=obl.spawner.desert] run loot spawn ~ ~ ~ loot oblivion:spawner/desert
+execute if entity @s[tag=obl.spawner.flower_forest] run loot spawn ~ ~ ~ loot oblivion:spawner/flower_forest
+execute if entity @s[tag=obl.spawner.forest] run loot spawn ~ ~ ~ loot oblivion:spawner/forest
+execute if entity @s[tag=obl.spawner.frozen_ocean] run loot spawn ~ ~ ~ loot oblivion:spawner/frozen_ocean
+execute if entity @s[tag=obl.spawner.jungle] run loot spawn ~ ~ ~ loot oblivion:spawner/jungle
+execute if entity @s[tag=obl.spawner.mountains] run loot spawn ~ ~ ~ loot oblivion:spawner/mountains
+execute if entity @s[tag=obl.spawner.ocean] run loot spawn ~ ~ ~ loot oblivion:spawner/ocean
+execute if entity @s[tag=obl.spawner.plains] run loot spawn ~ ~ ~ loot oblivion:spawner/plains
+execute if entity @s[tag=obl.spawner.savanna] run loot spawn ~ ~ ~ loot oblivion:spawner/savanna
+execute if entity @s[tag=obl.spawner.swamp] run loot spawn ~ ~ ~ loot oblivion:spawner/swamp
+execute if entity @s[tag=obl.spawner.taiga] run loot spawn ~ ~ ~ loot oblivion:spawner/taiga
+execute if entity @s[tag=obl.spawner.tundra] run loot spawn ~ ~ ~ loot oblivion:spawner/tundra
+execute if entity @s[tag=obl.spawner.warm_ocean] run loot spawn ~ ~ ~ loot oblivion:spawner/warm_ocean

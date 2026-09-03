@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Вы праздны!"
+        },
+        "description": {
+            "text": "Заплатите Броннику 15 изумрудов за то, чтобы он починил и усилил всех големов в радиусе 50 блоков"
+        },
+        "icon": {
+            "item": "minecraft:iron_block"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/overworld/villagers/villagers"
+}

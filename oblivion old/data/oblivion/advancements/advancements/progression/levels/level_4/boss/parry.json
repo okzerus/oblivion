@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "RULES OF NATURE"
+        },
+        "description": {
+            "text": "Парируйте невозможное"
+        },
+        "icon": {
+            "item": "minecraft:wither_skeleton_skull"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "parry.serious_attack": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.serious_attack"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/progression/bosses/fallen_angel"
+}

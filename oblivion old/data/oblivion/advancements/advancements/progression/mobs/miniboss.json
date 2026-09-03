@@ -1,0 +1,152 @@
+{
+  "display": {
+    "title": {
+      "text": "Моей силе нет предела"
+    },
+    "description": {
+      "text": "Убейте любого моба из датапака Oblivion, который считается боссом или мини-боссом"
+    },
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "gargantua": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:[\"gargantua\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "mother": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:spider",
+              "nbt": "{Tags:[\"mother\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "mothron": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:phantom",
+              "nbt": "{Tags:[\"mothron\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "devil": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"devil\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "hunger": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:husk",
+              "nbt": "{Tags:[\"hunger\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "grinch": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"grinch\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "amethystpixie": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:vex",
+              "nbt": "{Tags:[\"amethystpixie\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "necromancer": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "nbt": "{Tags:[\"necromancer\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gargantua",
+      "mother",
+      "mothron",
+      "devil",
+      "hunger",
+      "grinch",
+      "amethystpixie",
+      "necromancer"
+    ]
+  ],
+  "parent": "oblivion:advancements/mobs/mobs"
+}

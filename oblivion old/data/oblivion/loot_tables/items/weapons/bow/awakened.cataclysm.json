@@ -1,0 +1,187 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+			  {
+                "text": "Катаклизм",
+                "color": "#cf0b3b",
+                "italic": false
+		      },
+                  [
+			        {
+                       "text": " [Пр",
+                       "color": "#FEA0EE",
+                       "italic": false
+				    },
+			        {
+                       "text": "обу",
+                       "color": "#FFB2FA",
+                       "italic": false
+				    },
+			        {
+                       "text": "жд",
+                       "color": "#FFC1FE",
+                       "italic": false
+				    },
+			        {
+                       "text": "ённ",
+                       "color": "#FFD9FF",
+                       "italic": false
+				    },
+			        {
+                       "text": "ый]",
+                       "color": "#FFE8FF",
+                       "italic": false
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Катастрофический ливень",
+                  "color": "#ab0f35",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Точное попадание в цель, имеющую активный эффект Кровотечения,",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    добавит +5 секунд к длительности (не больше 20),",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    а также с 5% шансом увеличит уровень силы Кровотечения на 1.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    Наличие зачарования Откидывание с 12% шансом наложит",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    на цель Кровотечение на 5 секунд.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    Сила эффекта зависит от уровня зачарования (макс 4)",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "[Пассивная]",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "    При попадании в цель или поверхность, призывает дождь из",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    кровавых слёз, которые пронзают цели на земле, нанося",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "    2 урона каждая, игнорируя броню.",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: ",
+						"color": "gold",
+						"italic": false
+					},
+					{
+						"text": "5",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:2,obl.difficulty:5b,obl.bow:1b,obl.bow.awakened.cataclysm:1b,CustomModelData:41401}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

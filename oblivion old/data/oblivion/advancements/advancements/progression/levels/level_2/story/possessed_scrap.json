@@ -1,0 +1,29 @@
+{
+    "display": {
+        "title": {
+            "text": "Часть одного организма"
+        },
+        "description": {
+            "text": "Заполучите Одержимый обломок - отломленную часть Проклятых доспехов, за которой они обязательно заглянут..."
+        },
+        "icon": {
+            "item": "minecraft:raw_iron",
+            "nbt": "{CustomModelData:30002}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.possessed_scrap": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "obtain.possessed_scrap"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/levels/level_1/root"
+}

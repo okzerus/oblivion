@@ -1,0 +1,6 @@
+execute if score @s[tag=obl.ghost_ship.cannoneer.upper] obl.mob.ability_cd matches 10 as @e[type=skeleton,tag=obl.ghost_ship.cannoneer.upper,limit=1,sort=nearest,distance=..7,tag=!obl.ghost_ship.cannoneer.switched] at @s run function oblivion:abilities/mobs/ghost_ship/cannoneer.switch
+execute if score @s[tag=obl.ghost_ship.cannoneer.lower] obl.mob.ability_cd matches 10 as @e[type=skeleton,tag=obl.ghost_ship.cannoneer.lower,limit=1,sort=nearest,distance=..7,tag=!obl.ghost_ship.cannoneer.switched] at @s run function oblivion:abilities/mobs/ghost_ship/cannoneer.switch
+
+execute at @e[type=marker,tag=obl.ghost_ship.center] unless entity @a[distance=..30] if entity @s[tag=obl.ghost_ship.cannoneer.switched] if entity @e[type=marker,tag=obl.ghost_ship.cannon,tag=!obl.ghost_ship.cannon.occupied,distance=..50] run function oblivion:abilities/mobs/ghost_ship/cannoneer.return
+
+execute if entity @s[tag=!obl.ghost_ship.cannoneer.switched] positioned ~-2 ~-1 ~-2 if entity @a[dy=2,dx=4,dz=4] at @s unless entity @e[type=skeleton,tag=obl.ghost_ship.cannoneer,scores={obl.mob.ability_cd=1..}] run function oblivion:abilities/mobs/ghost_ship/cannoneer.trigger

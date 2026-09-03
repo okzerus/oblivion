@@ -1,0 +1,16 @@
+execute if score #white_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/white_wool
+execute if score #orange_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/orange_wool
+execute if score #magenta_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/magenta_wool
+execute if score #light_blue_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/light_blue_wool
+execute if score #yellow_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/yellow_wool
+execute if score #lime_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/lime_wool
+execute if score #pink_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/pink_wool
+execute if score #gray_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/gray_wool
+execute if score #light_gray_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/light_gray_wool
+execute if score #cyan_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/cyan_wool
+execute if score #purple_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/purple_wool
+execute if score #blue_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/blue_wool
+execute if score #brown_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/brown_wool
+execute if score #green_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/green_wool
+execute if score #red_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/red_wool
+execute if score #black_wool_count oblivion matches 1.. run function oblivion:qol/villagers/shepherd/black_wool

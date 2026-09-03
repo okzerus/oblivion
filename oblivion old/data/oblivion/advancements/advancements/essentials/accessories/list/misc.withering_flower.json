@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Убить любимого"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Иссушающий цветок\""
+        },
+        "icon": {
+            "item": "minecraft:wither_rose",
+            "nbt": "{CustomModelData:5012}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.withering_flower": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.withering_flower:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.withering_flower"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.misc"
+}

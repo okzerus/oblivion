@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Вестник смерти"
+        },
+        "description": {
+            "text": "Лично передайте вирус 30-ти другим мобам за одно заражение"
+        },
+        "icon": {
+            "item": "minecraft:wither_skeleton_skull"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "infected.thirty_mobs": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "infected.thirty_mobs"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/tools/additions/virus.infected"
+}

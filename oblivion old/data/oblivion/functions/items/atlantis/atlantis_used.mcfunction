@@ -1,0 +1,1 @@
+execute if score @s obl.difficulty matches 5.. run execute as @e[type=trident,limit=1,sort=nearest,nbt={Trident:{tag:{obl.atlantis:1b}}},tag=!obl.atlantis.launched] at @s if predicate oblivion:items/atlantis.in_water run function oblivion:items/atlantis/launch_function

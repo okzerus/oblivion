@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "text": "Уровень 1",
+            "color": "gold"
+        },
+        "description": {
+            "text": ""
+        },
+        "icon": {
+            "item": "minecraft:nether_star",
+            "nbt": "{CustomModelData:10001}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "reach.difficulty_level.1": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "reach.difficulty_level.1"
+        ]
+    ],
+    "parent": "oblivion:advancements/progression/separator/first.5"
+}

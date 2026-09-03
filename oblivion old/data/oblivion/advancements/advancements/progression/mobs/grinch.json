@@ -1,0 +1,44 @@
+{
+    "display": {
+        "title": {
+            "text": "Не порти Рождество"
+        },
+        "description": {
+            "text": "Убейте Гринча, вечно довольного зелёного чудака."
+        },
+        "icon": {
+            "item": "minecraft:golden_sword",
+            "nbt": "{CustomModelData:4007}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "kill": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "predicate": {
+                            "type": "minecraft:wither_skeleton",
+                            "nbt": "{Tags:[\"grinch\"]}"
+                        },
+                        "entity": "this"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "kill"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/mobs/bosses"
+}

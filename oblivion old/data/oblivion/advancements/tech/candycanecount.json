@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{CustomModelData:12500}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "oblivion:tech/adv/candycanecount"
+  }
+}

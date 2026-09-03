@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:emerald"
+    },
+    "title": "Брат по майнингу",
+    "description": "Исцелите Мёртвого шахтёра",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/mobs/overworld/miner",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:cured_zombie_villager",
+      "conditions": {
+        "zombie": {
+          "nbt": "{Tags:[\"miner\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 300
+  }
+}

@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Я должна служить тебе?"
+        },
+        "description": {
+            "text": "Выпустите Пикси из бутылки в другом месте"
+        },
+        "icon": {
+            "item": "minecraft:golden_apple"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "step": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "step"
+        ]
+    ],
+    "rewards": {
+        "experience": 100
+    },
+    "parent": "oblivion:advancements/mobs/overworld/pixiebottle"
+}

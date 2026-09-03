@@ -1,0 +1,32 @@
+{
+  "display": {
+    "title": {
+      "text": "Манипуляция аурой"
+    },
+    "description": {
+      "text": "Заманите Одержимые доспехи на Алтарь Забвения, чтобы начать особый ритуал. По окончанию, вся броня получит высокоуровневые зачарования, и будет иметь утроенный шанс на выпадение"
+    },
+    "icon": {
+      "item": "minecraft:enchanted_book",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ritual.aura_manipulation": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "ritual.aura_manipulation"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_1/mobs/list/possessed_armor"
+}

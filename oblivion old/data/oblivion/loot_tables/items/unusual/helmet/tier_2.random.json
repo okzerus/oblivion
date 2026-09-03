@@ -1,0 +1,113 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.666"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.black_cat_ears"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.blue_archive_halo.ayane"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.blue_archive_halo.hoshino"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.blue_archive_halo.nonomi"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.blue_archive_halo.serika"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.blue_archive_halo.shiroko"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.bunny_ears"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.cloud"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.demon"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.enchanted"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.flame_shield"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.fox_ears"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.hatred"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.ice_and_fire"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.love"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.nimbus_black"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.nimbus_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.nimbus_white"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.nimbus_yellow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.orange_cat_ears"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.pink_orbit"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.silver_crown"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.snow_cloud"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.unicorn_horn"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/helmet/tier_2.viking"
+        }
+      ]
+    }
+  ]
+}

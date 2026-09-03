@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Вызов на скилл - Аметистовая пикси"
+    },
+    "description": {
+      "text": "В Соло режиме, победите Аметистовую пикси менее чем за 3 минуты, и не позволяя своему здоровью опуститься ниже 75% на протяжении всей битвы"
+    },
+    "icon": {
+      "item": "minecraft:golden_apple"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat.boss.amethyst_pixie.skill_challenge": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "defeat.boss.amethyst_pixie.skill_challenge"
+    ]
+  ],
+  "rewards": {
+    "experience": 3000
+  },
+  "parent": "oblivion:advancements/progression/levels/level_5/boss/additions/challenge.time"
+}

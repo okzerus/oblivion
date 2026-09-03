@@ -1,0 +1,2 @@
+execute if entity @s[tag=!obl.can_teleport,tag=!obl.glowing_receiver.announced] run function oblivion:tech/item_frame/glowing_receiver/teleport.player.fail
+execute if entity @s[tag=obl.can_teleport] run function oblivion:tech/item_frame/glowing_receiver/teleport.player

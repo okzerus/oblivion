@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Ты в моих сетях"
+        },
+        "description": {
+            "text": "Заполучите аксессуар \"Магическая паутина\""
+        },
+        "icon": {
+            "item": "minecraft:cobweb",
+            "nbt": "{CustomModelData:5060}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "obtain.accessory.magic_cobweb": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{obl.accs.magic_cobweb:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "obtain.accessory.magic_cobweb"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/essentials/accessories/collection.misc"
+}

@@ -1,0 +1,2 @@
+execute as @e[sort=nearest,limit=1,nbt={HurtTime:10s},distance=..5,tag=!mothron,tag=!amethystpixie,tag=!devilcube,type=!ender_dragon,type=!wither] at @s unless entity @e[tag=obl.wasdamaged] run function oblivion:items/amethystdamage
+advancement revoke @s only oblivion:items/amethysthit

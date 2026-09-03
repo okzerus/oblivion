@@ -1,0 +1,2 @@
+tellraw @s [{"text":"\n"},{"text":"<","color":"#57DD49"},{"text":"???","color":"#9BF36F"},{"text":"> ","color":"#57DD49"},{"text":"ОТРОДИЕ!","color":"#C1F0C7"},{"text":"\n"}]
+playsound minecraft:entity.wither.ambient hostile @s ~ ~ ~ 1 1

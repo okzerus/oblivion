@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Призрачный гонщик"
+        },
+        "description": {
+            "text": "Оседлайте лошадь с экипированным Рогом Демона"
+        },
+        "icon": {
+            "item": "minecraft:saddle",
+            "nbt": "{Enchantments:[{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "ride.horse": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "ride.horse"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/essentials/accessories/list/defender.demon_horn"
+}

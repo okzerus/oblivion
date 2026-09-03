@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Боулинг"
+        },
+        "description": {
+            "text": "Парируйте летящую на вас Чёрную Смерть"
+        },
+        "icon": {
+            "item": "minecraft:wither_skeleton_skull"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.charging_black_death": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "parry.charging_black_death"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/progression/bosses/black_death""
+}

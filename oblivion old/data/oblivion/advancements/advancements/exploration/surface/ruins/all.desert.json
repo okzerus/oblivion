@@ -1,0 +1,126 @@
+{
+    "display": {
+        "title": {
+            "text": "Безлюдная пустошь"
+        },
+        "description": {
+            "text": "Разыщите каждый тип руин в биоме Пустыни"
+        },
+        "icon": {
+            "item": "minecraft:sand"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "locate.ruins.desert.allay": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/allay"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.camel": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/camel"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.dead": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/dead"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.oasis": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/oasis"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.ribs": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/ribs"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.skull": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/skull"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.symbol": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/symbol"
+                    }
+				}
+            }
+        },
+        "locate.ruins.desert.symbol": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "structure": "oblivion:surface/ruins/desert/symbol"
+                    }
+				}
+            }
+        }
+    },
+    "requirements": [
+        [
+            "locate.ruins.desert.allay"
+        ],
+        [
+            "locate.ruins.desert.camel"
+        ],
+        [
+            "locate.ruins.desert.dead"
+        ],
+        [
+            "locate.ruins.desert.oasis"
+        ],
+        [
+            "locate.ruins.desert.ribs"
+        ],
+        [
+            "locate.ruins.desert.skull"
+        ],
+        [
+            "locate.ruins.desert.symbol"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/exploration/surface/ruins/locate"
+}

@@ -1,0 +1,2 @@
+tag @s add obl.dealt_damage
+execute if data entity @s Trident.tag.Enchantments[{id:"minecraft:channeling"}] at @e[type=lightning_bolt,distance=..4,limit=1,sort=nearest] run function oblivion:tech/parrying/projectile/list/trident.empowered_channeling

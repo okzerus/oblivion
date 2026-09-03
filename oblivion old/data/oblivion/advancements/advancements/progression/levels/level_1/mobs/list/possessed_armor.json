@@ -1,0 +1,75 @@
+{
+  "display": {
+    "title": {
+      "text": "Не живая, но идёт"
+    },
+    "description": {
+      "text": "Убейте одержимую броню - ходячие доспехи, одержимые меньшим духом забвения"
+    },
+    "icon": {
+      "item": "minecraft:iron_boots"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill.possessed_armor.iron": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:[\"obl.possessed_armor.iron\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "kill.possessed_armor.diamond": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:[\"obl.possessed_armor.diamond\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    "kill.possessed_armor.netherite": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{Tags:[\"obl.possessed_armor.netherite\"]}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill.possessed_armor.iron",
+      "kill.possessed_armor.diamond",
+      "kill.possessed_armor.netherite"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "oblivion:advancements/progression/levels/level_1/mobs/root"
+}

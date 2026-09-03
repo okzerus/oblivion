@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Не содержит пиглинов"
+        },
+        "description": {
+            "text": "Разыщите Могучую свиную отбивную среди развалин Бастионов и съешьте её, чтобы закалить себя перед жаром Падшего ангела"
+        },
+        "icon": {
+            "item": "minecraft:cooked_porkchop",
+			"nbt": "{CustomModelData:12501}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "consume.mighty_porkchop": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_porkchop"
+          ],
+          "nbt": "{obl.mighty_porkchop:1b}"
+        }
+      }
+        }
+    },
+    "requirements": [
+        [
+            "consume.mighty_porkchop"
+        ]
+    ],
+    "rewards": {
+        "experience": 300
+    },
+    "parent": "oblivion:advancements/progression/levels/level_3/nether/story/locate_bastion"
+}

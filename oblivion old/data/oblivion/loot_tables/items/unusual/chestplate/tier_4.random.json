@@ -1,0 +1,37 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_4.butterfly"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_4.deity"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_4.ice_and_fire"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_4.nebula"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_4.flandre_scarlet"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_4.remilia_scarlet"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "oblivion:items/unusual/chestplate/tier_4.v1"
+        }
+      ]
+    }
+  ]
+}

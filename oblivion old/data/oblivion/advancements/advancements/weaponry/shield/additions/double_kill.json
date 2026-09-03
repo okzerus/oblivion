@@ -1,0 +1,67 @@
+{
+    "display": {
+        "title": {
+            "text": "Удвойте и дайте следующему"
+        },
+        "description": {
+            "text": "Парирование любых стрел позволяет им пронзать свою первую цель. Убейте сразу двоих мобов одной парированой стрелой"
+        },
+        "icon": {
+            "item": "minecraft:crossbow"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "parry.arrow.double_kill": {
+            "trigger": "minecraft:killed_by_crossbow",
+                "conditions": {
+                    "damage": {
+                        "type": {
+                            "tags": [
+                                {
+                                "id": "minecraft:is_projectile",
+                                "expected": true
+                                }
+                            ],
+                            "direct_entity": {
+                                   "type": "#minecraft:arrows",
+                                   "nbt": "{Tags:[obl.projectile.reflected]}"
+                                   }
+                               }
+                           },
+        "victims": [
+          [
+            {
+              "condition": "minecraft:entity_properties",
+              "predicate": {
+                "type": "#oblivion:all_mobs"
+              },
+              "entity": "this"
+            }
+          ],
+          [
+            {
+              "condition": "minecraft:entity_properties",
+              "predicate": {
+                "type": "#oblivion:all_mobs"
+              },
+              "entity": "this"
+            }
+          ]
+        ]
+                       }
+                  }
+    },
+    "requirements": [
+        [
+            "parry.arrow.double_kill"
+        ]
+    ],
+    "rewards": {
+        "experience": 1000
+    },
+    "parent": "oblivion:advancements/weaponry/shield/additions/half_a_heart"
+}

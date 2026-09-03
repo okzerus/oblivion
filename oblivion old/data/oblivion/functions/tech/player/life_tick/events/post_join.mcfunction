@@ -1,0 +1,2 @@
+execute if score @s obl.player_life_tick matches 250 run function oblivion:lines/player/story/life_tick/post_join/1
+execute if score @s obl.player_life_tick matches 300 run function oblivion:lines/player/story/life_tick/post_join/2

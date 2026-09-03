@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:glowstone_dust",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": "Яркая метка",
+    "description": "Пометьте лежащий предмет, рассыпав на него светящиеся ягоды",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oblivion:advancements/essentials/food/glow_berries",
+  "criteria": {
+    "obl.glow_berries.mark_item": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "obl.glow_berries.mark_item"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

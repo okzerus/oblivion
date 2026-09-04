@@ -52,17 +52,18 @@ execute if score @s obl.weapon.gluttony.decay matches 1.. run scoreboard players
 execute if score @s obl.weapon.gluttony.decay matches 1 if score @s obl.weapon.gluttony.combo matches 1.. run scoreboard players set @s obl.weapon.gluttony.combo 0
 execute if predicate obl:holding/gluttony run function obl:item/weapon/gluttony/tick
 
-# Клыкастый Убийца
+# Оскал Убийцы
 execute if score @s obl.weapon.fanged_assassin.autumn_red matches 1.. run function obl:item/weapon/fanged_assassin/ability/autumn_red/tick
 execute if predicate obl:holding/fanged_assassin run function obl:item/weapon/fanged_assassin/ability/accelerando/tick
 execute unless score @s obl.weapon.fanged_assassin.accelerando matches 0 unless predicate obl:holding/fanged_assassin run scoreboard players set @s obl.weapon.fanged_assassin.accelerando 0
+execute if predicate obl:holding/fanged_assassin if score @s obl.weapon.fanged_assassin.autumn_red matches 0 if entity @s[tag=obl.weapon.fanged_assassin.fox_dance.autumn_red] run function obl:item/weapon/fanged_assassin/ability/autumn_red/revert
 
 ## КУЛДАУН ОРУЖИЯ
 # Анти-ЛКМ-спам КД
 execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
 # Способности "Проблеск Зари"
 execute if score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run function obl:item/weapon/crack_of_dawn/ability/cd
-# Способности "Клыкастый Убийца"
+# Способности "Оскал Убийцы"
 execute if score @s obl.weapon.fanged_assassin.fox_dance.cd matches 1.. run function obl:item/weapon/fanged_assassin/ability/fox_dance/cd
 execute if score @s obl.weapon.fanged_assassin.autumn_red.cd matches 1.. run function obl:item/weapon/fanged_assassin/ability/autumn_red/cd
 

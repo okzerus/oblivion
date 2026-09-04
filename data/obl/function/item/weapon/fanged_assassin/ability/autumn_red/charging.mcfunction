@@ -1,2 +1,2 @@
 execute if score @s obl.holding_rmb matches 1 run function obl:item/weapon/fanged_assassin/ability/autumn_red/start
-execute if score @s obl.holding_rmb matches 40 run function obl:item/weapon/fanged_assassin/ability/autumn_red/activate
+execute if score @s obl.holding_rmb matches 50 run function obl:item/weapon/fanged_assassin/ability/autumn_red/activate

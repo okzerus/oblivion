@@ -4,7 +4,9 @@
       "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
-          "items": "minecraft:shield"
+          "items": [
+            "minecraft:shield"
+          ]
         }
       }
     }

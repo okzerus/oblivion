@@ -25,6 +25,6 @@ execute if score @s obl.parry.spam_cd matches 270.. run tag @s add obl.parry_spa
 
 ###   D A M A G E   S H I E L D
 playsound minecraft:item.shield.break player @s ~ ~ ~ 1 1.2
-execute if entity @s[gamemode=!creative,predicate=obl:items/hold.shield] run function obl:tech/parrying/shield_damage.mainhand
-execute if entity @s[tag=!obl.temp.mainhand_detected,gamemode=!creative,predicate=obl:items/hold.shield.off] run function obl:tech/parrying/shield_damage.offhand
+execute if entity @s[gamemode=!creative,predicate=obl:holding/shield] run function obl:tech/parrying/shield_damage.mainhand
+execute if entity @s[tag=!obl.temp.mainhand_detected,gamemode=!creative,predicate=obl:holding/shield_off] run function obl:tech/parrying/shield_damage.offhand
 tag @s remove obl.temp.mainhand_detected

@@ -34,8 +34,8 @@ execute if entity @s[tag=obl.temp.no_reflected] anchored eyes run playsound mine
 scoreboard players set @s obl.parry.cd 15
 execute if entity @e[type=#obl:parryable,tag=obl.projectile.player_owner] run scoreboard players set @s obl.parry.cd 20
 ## DAMAGE SHIELD
-execute if entity @s[gamemode=!creative,predicate=obl:items/hold.shield] run function obl:tech/parrying/shield_damage.mainhand
-execute if entity @s[tag=!obl.temp.mainhand_detected,gamemode=!creative,predicate=obl:items/hold.shield.off] run function obl:tech/parrying/shield_damage.offhand
+execute if entity @s[gamemode=!creative,predicate=obl:holding/shield] run function obl:tech/parrying/shield_damage.mainhand
+execute if entity @s[tag=!obl.temp.mainhand_detected,gamemode=!creative,predicate=obl:holding/shield_off] run function obl:tech/parrying/shield_damage.offhand
 tag @s remove obl.temp.mainhand_detected
 ## EFFECTS
 execute at @e[type=#obl:parryable,tag=obl.temp.reflected,tag=!obl.temp.same_owner,type=!magma_cube] unless score @s obl.parry.projectile_count matches 4.. run function obl:tech/parrying/projectile/buff
@@ -46,7 +46,7 @@ playsound minecraft:entity.generic.explode hostile @a ~ ~.5 ~ 0.6 2
 playsound minecraft:item.shield.block hostile @a ~ ~.5 ~ 0.6 1.3
 ## MISC
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=item] run function obl:tech/parrying/projectile/list/item.modify
-execute if predicate obl:items/hold.viking_shield.off unless entity @s[tag=obl.empowered.viking_shield] run function obl:items/shield/viking.parry_success
+execute if predicate obl:holding/viking_shield_off unless entity @s[tag=obl.empowered.viking_shield] run function obl:items/shield/viking.parry_success
 advancement grant @s[tag=obl.just_parried_fucking_lightning] only obl:advancements/weaponry/shield/parrying_the_world parry.lightning_bolt
 advancement grant @s[tag=obl.just_parried_fucking_lightning] only obl:advancements/weaponry/shield/additions/lightning_bolt
 execute if entity @s[tag=obl.just_parried_fucking_lightning] anchored eyes run function obl:tech/raycast/parrying_lightning

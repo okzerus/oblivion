@@ -64,7 +64,7 @@ scoreboard players set @s obl.parry.tick 0
 ###   A D V A N C E M E N T S
 advancement grant @s only obl:advancements/weaponry/shield/parry
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] unless entity @s[tag=obl.temp.same_owner] run advancement grant @p[tag=obl.temp.reflecting,scores={obl.player_health=..1}] only obl:advancements/weaponry/shield/additions/half_a_heart
-execute as @e[type=#obl:parryable,tag=obl.temp.reflected,type=ender_pearl] on origin run tag @s add obl.temp.origin
+execute as @e[tag=obl.temp.reflected,type=ender_pearl] on origin run tag @s add obl.temp.origin
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] run function obl:tech/parrying/projectile/advancements
 tag @e[type=#obl:all_mobs] remove obl.temp.origin
 
@@ -79,7 +79,8 @@ execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=smal
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=wither_skull] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ^ ^ ^3
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=ender_pearl] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.1 ~
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=tnt] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.25 ~
-execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=potion] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.1 ~
+execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=splash_potion] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.1 ~
+execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=lingering_potion] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.1 ~
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=experience_bottle] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.1 ~
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=firework_rocket] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~-.02 ~
 ## SPEED

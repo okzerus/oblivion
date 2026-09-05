@@ -15,7 +15,7 @@ tag @s remove obl.parry_success
 tag @s remove obl.parry_success.projectile
 execute if entity @s[tag=obl.just_parried_fucking_lightning] run function obl:tech/parrying/projectile/list/lightning_bolt.fail
 scoreboard players set @s obl.parry.tick 0
-particle minecraft:dust 0.6 0 0 0.8 ~ ~.5 ~ 0.3 0.6 0.3 0 50
+particle minecraft:dust{color:[0.6,0.0,0.0],scale:0.8} ~ ~.5 ~ 0.3 0.6 0.3 0 50
 playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 1 1.2
 playsound minecraft:item.shield.break hostile @a ~ ~ ~ 1 0.8
 

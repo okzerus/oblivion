@@ -15,7 +15,7 @@ effect clear @s blindness
 effect clear @s slowness
 effect give @s blindness 1 0 true
 ## PARTICLES & SOUND
-particle minecraft:dust 0.6 0 0 0.8 ~ ~.5 ~ 0.3 0.6 0.3 0 50
+particle minecraft:dust{color:[0.6,0.0,0.0],scale:0.8} ~ ~.5 ~ 0.3 0.6 0.3 0 50
 playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 1 1.2
 playsound minecraft:item.shield.break hostile @a ~ ~ ~ 1 0.8
 ## CLEANUP

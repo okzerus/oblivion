@@ -4,8 +4,8 @@ tag @e[type=#obl:all_mobs,sort=nearest,limit=1,predicate=obl:matching_score.refl
 
 ###   O N   O W N E R
 ## DAMAGE SHIELD
-execute if entity @s[gamemode=!creative,predicate=obl:items/hold.shield] run function obl:tech/parrying/shield_damage.fail.mainhand
-execute if entity @s[tag=!obl.temp.mainhand_detected,gamemode=!creative,predicate=obl:items/hold.shield.off] run function obl:tech/parrying/shield_damage.fail.offhand
+execute if entity @s[gamemode=!creative,predicate=obl:holding/shield] run function obl:tech/parrying/shield_damage.fail.mainhand
+execute if entity @s[tag=!obl.temp.mainhand_detected,gamemode=!creative,predicate=obl:holding/shield_off] run function obl:tech/parrying/shield_damage.fail.offhand
 tag @s remove obl.temp.mainhand_detected
 ## PARRY CD
 scoreboard players set @s obl.parry.cd 80

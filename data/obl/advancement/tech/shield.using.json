@@ -10,6 +10,6 @@
     }
   },
   "rewards": {
-    "function": "obl:tech/player/adv/using_shield"
+    "function": "obl:tech/player/adv/shield.using"
   }
 }

@@ -136,10 +136,6 @@ execute if predicate obl:holding/golden_hoe run item modify entity @s weapon.mai
 execute if predicate obl:holding/diamond_hoe run item modify entity @s weapon.mainhand obl:scythe_diamond
 execute if predicate obl:holding/netherite_hoe run item modify entity @s weapon.mainhand obl:scythe_netherite
 
-## Заменяет обычные щиты на щиты с описанием кадров парирования
-execute if predicate obl:holding/vanilla_shield run item modify entity @s weapon.mainhand obl:shield
-execute if predicate obl:holding/vanilla_shield_off run item modify entity @s weapon.offhand obl:shield
-
 ###   Р А З Н О Е
 execute if entity @s[tag=obl.debug] run function obl:cmd/debug/restore_all_cd
 

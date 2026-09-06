@@ -17,34 +17,9 @@ scoreboard objectives add obl.health dummy
 scoreboard objectives add obl.health_old dummy
 scoreboard objectives add obl.damage_taken dummy
 scoreboard objectives add obl.holding_rmb dummy
-scoreboard objectives add obl.using_shield dummy
-scoreboard objectives add obl.shield_preparing dummy
-scoreboard objectives add obl.projectle_progress dummy
-scoreboard objectives add obl.projectile_progress dummy
-## Парирование
-scoreboard objectives add obl.parry.spam_cd dummy
-scoreboard objectives add obl.parry.cd dummy
-scoreboard objectives add obl.parry.projectile_count dummy
-scoreboard objectives add obl.parry.direct_count dummy
-scoreboard objectives add obl.parry.count dummy
-scoreboard objectives add obl.parry.overall_count dummy
-scoreboard objectives add obl.parry.tick dummy
-scoreboard objectives add obl.parry.target_tick dummy
-scoreboard objectives add obl.parry.empower_tick dummy
-scoreboard objectives add obl.parry.after_tick dummy
-scoreboard objectives add obl.id.target dummy
-scoreboard objectives add obl.id.reflect dummy
-scoreboard objectives add obl.parried_anvil.count dummy
-scoreboard objectives add obl.parried_tnt.fuse dummy
-scoreboard objectives add obl.rng dummy
-scoreboard objectives add obl.rng.range dummy
-scoreboard players set randomizer obl.rng.range 100
-scoreboard objectives add obl.stackable.strength dummy
-scoreboard objectives add obl.stackable.speed dummy
-scoreboard objectives add obl.stackable.haste dummy
-scoreboard objectives add obl.stackable.jump_boost dummy
-scoreboard objectives add obl.item.damage dummy
-scoreboard objectives add obl.item.enchantment_level dummy
+scoreboard objectives add obl.shield.using dummy
+scoreboard objectives add obl.shield.cleanup dummy
+scoreboard objectives add obl.shield.preparing dummy
 scoreboard objectives add obl.effect.scorchfield.count dummy
 scoreboard objectives add obl.effect.scorchfield.decay dummy
 scoreboard objectives add obl.effect.scorch.tick dummy

@@ -6,11 +6,8 @@ tag @s add obl.using_shield
 scoreboard players add @s obl.using_shield 1
 
 ###   К А Д Р Ы   П А Р И Р О В А Н И Я
-## Увеличивает счётчик кадров парирования:
-scoreboard players add @s obl.shield_preparing 1
-## Пропускает кадры парирования если парирование или щит на откате:
-execute if score @s obl.parry.cd matches 1.. run scoreboard players set @s obl.shield_preparing 16
-execute if score @s obl.parry.spam_cd matches 1.. run scoreboard players set @s obl.shield_preparing 16
+## Пропускает кадры парирования если парирование на откате:
+execute if score @s obl.parry.cd matches 1.. run scoreboard players set @s obl.using_shield 16
 ## Убирает теги выдаваемые ниже:
 tag @s remove obl.can_parry.projectile
 tag @s remove obl.can_parry.direct

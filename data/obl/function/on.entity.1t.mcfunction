@@ -47,9 +47,6 @@ execute as @s[type=marker,tag=obl.spawner] unless block ~ ~ ~ spawner run functi
 # Проверка смерти для моба-транспорт
 execute as @s[tag=obl.spawner.vehicle_mob] unless predicate obl:has_passenger run function obl:tech/add.death_marker
 
-###   П А Р И Р О В А Н И Е
-execute if entity @s[tag=obl.parrying.target] run function obl:tech/parrying/direct/target
-
 ###   О Ч И С Т К А
 tag @s remove obl.temp.took_damage
 

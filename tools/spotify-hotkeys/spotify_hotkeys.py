@@ -528,6 +528,18 @@ def main():
         # appear doesn't delay installing the mouse hook below.
         threading.Thread(target=launch_spotify_hidden, daemon=True).start()
 
+    # Installing the hook before the interactive shell has fully finished
+    # starting up (right after logon, especially when this script itself
+    # was launched very early in that sequence) can attach it to a
+    # transient desktop that gets swapped out moments later as explorer.exe
+    # finishes initializing - the hook then silently stops seeing real
+    # input with no error at all. Shell_TrayWnd (the taskbar) existing is a
+    # reliable sign the desktop has actually settled.
+    if not wait_for_condition(
+        lambda: bool(user32.FindWindowW("Shell_TrayWnd", None)), timeout=60.0, interval=0.5
+    ):
+        logging.warning("Shell_TrayWnd not found within 60s, installing the hook anyway")
+
     hook_proc = HOOKPROC(low_level_mouse_proc)
     module_handle = kernel32.GetModuleHandleW(None)
     hook_handle = user32.SetWindowsHookExW(WH_MOUSE_LL, hook_proc, module_handle, 0)

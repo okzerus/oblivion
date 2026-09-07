@@ -45,23 +45,6 @@ public partial class App : Application
             return;
         }
 
-        if (buildNumber < 20348)
-        {
-            // ActivateAudioInterfaceAsync itself has existed since build 19041, but
-            // Microsoft only documents the process-scoping parameters (what actually keeps
-            // this to Spotify) as supported from build 20348 - which no released consumer
-            // Windows 10 build reaches (10 tops out at 19045; 20348 first shipped as part of
-            // the Windows 11/Server 2022 branch). Below that, activation can still succeed
-            // but silently ignore the process filter and hand back the full system mix
-            // instead - it'll look "on" while actually capturing everything, not Spotify.
-            MessageBox.Show(
-                "Your Windows build doesn't reliably support per-process audio capture - it may " +
-                "silently fall back to capturing all system audio instead of just Spotify. " +
-                "This needs Windows 11 (or Windows Server 2022) to isolate Spotify's audio properly; " +
-                "Windows 10 isn't supported for that, even fully updated.",
-                "Limited Windows version", MessageBoxButton.OK, MessageBoxImage.Warning);
-        }
-
         _settings = SettingsStore.Load();
         _controller = new OverlayController(_settings);
 

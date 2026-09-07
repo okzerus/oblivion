@@ -64,9 +64,9 @@ audio, always on top (including full-screen games), click-through, and toggled w
   no released consumer Windows 10 build reaches (10 tops out at 19045). Below that, the app
   still runs and activation still "succeeds," but the OS can silently ignore the process
   filter and hand back the entire system audio mix instead - it'll look like it's working
-  while actually reacting to everything, not just Spotify. The app warns about this on
-  startup if it detects an unsupported build; if you've hit exactly that ("it reacts to
-  audio even when Spotify is paused"), this is almost certainly why.
+  while actually reacting to everything, not just Spotify. On Windows 10 the
+  Spotify-play/pause gate described above (System Media Transport Controls) is what keeps
+  this usable in the meantime.
 - **.NET 8 SDK** to build.
 - Spotify desktop app (not required to be running at launch - the overlay waits for it and
   attaches automatically once it starts, and re-attaches if you restart Spotify).

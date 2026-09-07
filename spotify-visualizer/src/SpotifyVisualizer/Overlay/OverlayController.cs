@@ -24,6 +24,7 @@ public sealed class OverlayController : IDisposable
 
     private VisualizerSettings _settings;
     private ProcessLoopbackCapture? _capture;
+    private SpotifyPlaybackMonitor? _playbackMonitor;
     private bool _visible;
     private DateTime _lastFrame = DateTime.MinValue;
 
@@ -115,6 +116,10 @@ public sealed class OverlayController : IDisposable
         _capture = new ProcessLoopbackCapture(settings.TargetProcessName, settings.IncludeChildProcesses);
         _capture.SamplesAvailable += OnSamplesAvailable;
         _capture.Start();
+
+        _playbackMonitor?.Dispose();
+        _playbackMonitor = new SpotifyPlaybackMonitor(settings.TargetProcessName);
+        _playbackMonitor.Start();
 
         _lastProcessName = settings.TargetProcessName;
         _lastIncludeChildren = settings.IncludeChildProcesses;
@@ -280,7 +285,8 @@ public sealed class OverlayController : IDisposable
 
     private void UpdateSilenceState(bool hasCapture, float activity, double dt)
     {
-        var isQuiet = !hasCapture || activity < _settings.SilenceThreshold;
+        var spotifyPaused = _settings.GateOnSpotifyPlaybackState && _playbackMonitor?.IsPlaying == false;
+        var isQuiet = !hasCapture || spotifyPaused || activity < _settings.SilenceThreshold;
         _silenceTimer = isQuiet ? _silenceTimer + dt : 0;
         _isQuietHeld = _silenceTimer >= Math.Max(_settings.SilenceHoldSeconds, 0);
 
@@ -490,6 +496,7 @@ public sealed class OverlayController : IDisposable
         CompositionTarget.Rendering -= OnRendering;
         _colorSampler.Dispose();
         _capture?.Dispose();
+        _playbackMonitor?.Dispose();
         foreach (var window in _windows.Values)
         {
             window.Close();

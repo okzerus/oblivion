@@ -14,9 +14,16 @@ audio, always on top (including full-screen games), click-through, and toggled w
   [Fullscreen games](#fullscreen-games-caveat) below for the one real limitation).
 - **Click-through**: the overlay never intercepts mouse clicks (`WS_EX_TRANSPARENT`), so it
   never gets in the way of whatever's underneath.
-- **Spotify-only audio**: uses Windows' per-process WASAPI loopback capture
-  (`ActivateAudioInterfaceAsync` + `AUDIOCLIENT_ACTIVATION_PARAMS`) to capture *only* audio
-  rendered by the Spotify process tree - no other app's sound is ever picked up.
+- **Spotify-only audio** (on Windows 11 / Server 2022+): uses Windows' per-process WASAPI
+  loopback capture (`ActivateAudioInterfaceAsync` + `AUDIOCLIENT_ACTIVATION_PARAMS`) to
+  capture *only* audio rendered by the Spotify process tree - no other app's sound is
+  picked up. On Windows 10, the OS doesn't reliably honor that process filter (see
+  [Requirements](#requirements)), so as a second, independent line of defense the overlay
+  also reads Spotify's actual play/pause state from Windows' System Media Transport
+  Controls (the same mechanism behind the volume flyout's "Now Playing" widget) and goes
+  quiet the instant Spotify itself is paused, regardless of what else is making noise -
+  toggle via Settings -> "When it's quiet..." -> "Also go quiet when Spotify itself is
+  paused".
 - **Any/all screen edges**: bottom, top, left, right, or any combination at once.
 - **Toggle hotkey**: default Ctrl+Shift+Mouse4 (the mouse "back" button), fully remappable
   (any combo of Ctrl/Shift/Alt + Mouse4/Mouse5/Middle) in Settings.
@@ -136,7 +143,17 @@ processes). `ProcessLoopbackCapture` watches for every process matching the conf
 (`PROCESS_LOOPBACK_MODE_INCLUDE_TARGET_PROCESS_TREE`, so any child process's audio is
 captured too), and feeds all of their samples into the same spectrum analyzer. It re-scans
 every 2 seconds, so quitting and relaunching Spotify is picked up automatically without
-restarting the visualizer.
+restarting the visualizer. Right before activating a stream it also re-verifies the target
+PID still belongs to a process actually named `Spotify`, since a PID can in principle be
+reused by an unrelated process in the moment between being found and being activated.
+
+`SpotifyPlaybackMonitor` is the separate, OS-version-independent line of defense described
+above: it polls `Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager`
+once a second for a session whose `SourceAppUserModelId` matches the configured process
+name, and reads that session's `PlaybackStatus`. If Spotify never shows up as a media
+session at all, it defaults to *not* gating (so a system where SMTC integration doesn't
+work for some reason doesn't regress to a permanently-silent overlay) rather than defaulting
+to silence.
 
 ## Project layout
 

@@ -92,6 +92,7 @@ public partial class SettingsWindow : Window
         AddComboEnum("Mouse button", () => _working.HotkeyMouseButton, v => _working.HotkeyMouseButton = v);
 
         AddHeader("When it's quiet / Spotify isn't running");
+        AddCheckBox("Also go quiet when Spotify itself is paused", () => _working.GateOnSpotifyPlaybackState, v => _working.GateOnSpotifyPlaybackState = v);
         AddComboEnum("Behavior", () => _working.SilenceBehavior, v => _working.SilenceBehavior = v);
         AddSlider("Silence threshold", 0.0, 0.2, () => _working.SilenceThreshold, v => _working.SilenceThreshold = v);
         AddSlider("Hold before reacting (s)", 0.0, 10.0, () => _working.SilenceHoldSeconds, v => _working.SilenceHoldSeconds = v, "0.0");

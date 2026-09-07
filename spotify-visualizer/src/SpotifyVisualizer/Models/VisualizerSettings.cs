@@ -62,6 +62,7 @@ public sealed class VisualizerSettings
     public MouseHotkeyButton HotkeyMouseButton { get; set; } = MouseHotkeyButton.XButton1;
 
     // ----- Silence / no-Spotify behavior -----
+    public bool GateOnSpotifyPlaybackState { get; set; } = true; // also go quiet whenever Spotify itself reports paused/stopped
     public OnSilenceBehavior SilenceBehavior { get; set; } = OnSilenceBehavior.FadeOut;
     public double SilenceThreshold { get; set; } = 0.025;   // bar level below which audio counts as "quiet"
     public double SilenceHoldSeconds { get; set; } = 1.5;   // how long it must stay quiet before reacting

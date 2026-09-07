@@ -98,16 +98,20 @@ public sealed class SpectrumAnalyzer
 
             for (var bar = 0; bar < barCount; bar++)
             {
-                var magnitude = AverageMagnitudeForBand(bar, barCount, usableBins, binHz, logLow, logHigh);
+                var magnitude = RmsMagnitudeForBand(bar, barCount, usableBins, binHz, logLow, logHigh);
 
-                var normalized = magnitude / (_fftSize * 0.25) * sensitivity;
+                // Real streamed music sits far below a synthetic full-scale tone (Spotify
+                // loudness-normalizes playback, and energy is spread across the whole
+                // spectrum rather than concentrated), so the baseline gain here is tuned
+                // for that reality rather than for line-level test tones.
+                var normalized = magnitude / (_fftSize * 0.035) * sensitivity;
                 if (normalized < noiseGate)
                 {
                     normalized = 0;
                 }
 
                 // Perceptual compression: quiet passages still animate, loud ones don't pin at 1.
-                var shaped = Math.Min(Math.Pow(Math.Clamp(normalized, 0, 4), 0.6), 1.0);
+                var shaped = Math.Min(Math.Pow(Math.Clamp(normalized, 0, 4), 0.5), 1.0);
 
                 _jitterPhase[bar] += 0.0021f + bar * 0.00003f;
                 var wobble = 1.0 + Math.Sin(_jitterPhase[bar]) * jitterAmount * 0.5;
@@ -122,7 +126,7 @@ public sealed class SpectrumAnalyzer
         }
     }
 
-    private double AverageMagnitudeForBand(int bar, int barCount, int usableBins, double binHz, double logLow, double logHigh)
+    private double RmsMagnitudeForBand(int bar, int barCount, int usableBins, double binHz, double logLow, double logHigh)
     {
         var t0 = (double)bar / barCount;
         var t1 = (double)(bar + 1) / barCount;
@@ -132,14 +136,17 @@ public sealed class SpectrumAnalyzer
         var bin0 = Math.Clamp((int)(f0 / binHz), 1, usableBins - 1);
         var bin1 = Math.Clamp((int)(f1 / binHz), bin0 + 1, usableBins);
 
-        double sum = 0;
+        // RMS rather than a plain average: real music has a few dominant bins per band
+        // and many near-silent ones, and RMS (unlike a mean) doesn't get washed out by
+        // that - it tracks the loud bins that actually carry the perceived energy.
+        double sumSquares = 0;
         for (var bin = bin0; bin < bin1; bin++)
         {
             var re = _re[bin];
             var im = _im[bin];
-            sum += Math.Sqrt(re * re + im * im);
+            sumSquares += re * re + im * im;
         }
-        return sum / (bin1 - bin0);
+        return Math.Sqrt(sumSquares / (bin1 - bin0));
     }
 
     private void CopyWindowedSamples()

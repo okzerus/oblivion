@@ -13,7 +13,6 @@
     <AssemblyName>SpotifyVisualizer</AssemblyName>
     <RootNamespace>SpotifyVisualizer</RootNamespace>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
 
   <ItemGroup>

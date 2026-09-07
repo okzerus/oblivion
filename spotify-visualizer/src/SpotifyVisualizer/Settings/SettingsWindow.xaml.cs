@@ -59,6 +59,8 @@ public partial class SettingsWindow : Window
         AddHeader("Audio source");
         AddTextBox("Target process name", () => _working.TargetProcessName, v => _working.TargetProcessName = v);
         AddCheckBox("Include child processes", () => _working.IncludeChildProcesses, v => _working.IncludeChildProcesses = v);
+        AddCheckBox("Auto-gain (work the same at any volume)", () => _working.AutoGainEnabled, v => _working.AutoGainEnabled = v);
+        AddSlider("Auto-gain speed", 0.0, 1.0, () => _working.AutoGainSpeed, v => _working.AutoGainSpeed = v);
         AddSlider("Sensitivity", 0.1, 4.0, () => _working.Sensitivity, v => _working.Sensitivity = v);
         AddSlider("Attack speed", 0.05, 1.0, () => _working.AttackSpeed, v => _working.AttackSpeed = v);
         AddSlider("Decay speed", 0.01, 1.0, () => _working.DecaySpeed, v => _working.DecaySpeed = v);

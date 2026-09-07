@@ -35,11 +35,24 @@ public sealed class TrayIconManager : IDisposable
         _notifyIcon.DoubleClick += (_, _) => ToggleRequested?.Invoke();
     }
 
-    public void SetStatus(bool visible, bool capturingAudio)
+    public void SetStatus(bool visible, bool capturingAudio, IReadOnlyList<int> activePids)
     {
         _toggleItem.Text = visible ? "Hide" : "Show";
-        var suffix = capturingAudio ? string.Empty : " (waiting for Spotify)";
-        _notifyIcon.Text = $"Spotify Visualizer - {(visible ? "visible" : "hidden")}{suffix}";
+
+        string suffix;
+        if (!capturingAudio)
+        {
+            suffix = " (waiting for Spotify)";
+        }
+        else
+        {
+            var shown = activePids.Take(3);
+            suffix = $" (PID {string.Join(", ", shown)}{(activePids.Count > 3 ? ", ..." : "")})";
+        }
+
+        var text = $"Spotify Visualizer - {(visible ? "visible" : "hidden")}{suffix}";
+        // NotifyIcon.Text is capped at 127 chars by Windows; truncate defensively rather than throw.
+        _notifyIcon.Text = text.Length > 127 ? text[..127] : text;
     }
 
     private static Icon BuildIcon()

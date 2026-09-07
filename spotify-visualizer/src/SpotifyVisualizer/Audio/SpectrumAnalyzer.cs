@@ -22,6 +22,10 @@ public sealed class SpectrumAnalyzer
 
     private float[] _barLevels = Array.Empty<float>();
     private float[] _jitterPhase = Array.Empty<float>();
+    private float[] _rawMagnitudes = Array.Empty<float>();
+
+    private float _agcReference;
+    private float _agcFloor;
 
     public SpectrumAnalyzer(int fftSize)
     {
@@ -39,6 +43,8 @@ public sealed class SpectrumAnalyzer
             _re = new float[_fftSize];
             _im = new float[_fftSize];
             _window = BuildHannWindow(_fftSize);
+            _agcFloor = (float)(_fftSize * 0.002);
+            _agcReference = (float)(_fftSize * 0.01);
         }
     }
 
@@ -76,7 +82,9 @@ public sealed class SpectrumAnalyzer
         double noiseGate,
         double jitterAmount,
         double lowHz,
-        double highHz)
+        double highHz,
+        bool autoGainEnabled,
+        double autoGainSpeed)
     {
         lock (_lock)
         {
@@ -96,15 +104,37 @@ public sealed class SpectrumAnalyzer
             var logLow = Math.Log(Math.Max(lowHz, binHz));
             var logHigh = Math.Log(Math.Max(highHz, lowHz * 2));
 
+            var peakMagnitude = 0f;
             for (var bar = 0; bar < barCount; bar++)
             {
-                var magnitude = RmsMagnitudeForBand(bar, barCount, usableBins, binHz, logLow, logHigh);
+                var magnitude = (float)RmsMagnitudeForBand(bar, barCount, usableBins, binHz, logLow, logHigh);
+                _rawMagnitudes[bar] = magnitude;
+                if (magnitude > peakMagnitude)
+                {
+                    peakMagnitude = magnitude;
+                }
+            }
 
-                // Real streamed music sits far below a synthetic full-scale tone (Spotify
-                // loudness-normalizes playback, and energy is spread across the whole
-                // spectrum rather than concentrated), so the baseline gain here is tuned
-                // for that reality rather than for line-level test tones.
-                var normalized = magnitude / (_fftSize * 0.035) * sensitivity;
+            double referenceLevel;
+            if (autoGainEnabled)
+            {
+                // Auto-gain: continuously calibrate against how loud the source actually is
+                // right now, so the same musical dynamics look the same whether Spotify (or
+                // the system volume) is quiet or loud - the noise gate below is what still
+                // keeps true silence from being amplified into fake movement.
+                UpdateAutoGainReference(peakMagnitude, autoGainSpeed);
+                referenceLevel = _agcReference;
+            }
+            else
+            {
+                // Manual mode: fixed calibration, tuned for typical loudness-normalized
+                // streamed music; Sensitivity is then the only knob.
+                referenceLevel = _fftSize * 0.035;
+            }
+
+            for (var bar = 0; bar < barCount; bar++)
+            {
+                var normalized = _rawMagnitudes[bar] / Math.Max(referenceLevel, 1e-6) * sensitivity;
                 if (normalized < noiseGate)
                 {
                     normalized = 0;
@@ -137,8 +167,31 @@ public sealed class SpectrumAnalyzer
         {
             EnsureBarState(barCount);
             DecayTowardsZero(decay);
+            // Relax the auto-gain reference back toward baseline while nothing's playing, so
+            // it doesn't sit stale at whatever the last track's loudness was.
+            _agcReference = Math.Max(_agcReference * 0.98f, _agcFloor);
             return (float[])_barLevels.Clone();
         }
+    }
+
+    private void UpdateAutoGainReference(float peakMagnitude, double speed)
+    {
+        var s = Math.Clamp(speed, 0, 1);
+        if (peakMagnitude > _agcReference)
+        {
+            // Fast attack: latch onto a louder passage (or a volume increase) quickly.
+            var attackRate = (float)(0.15 + s * 0.55);
+            _agcReference += (peakMagnitude - _agcReference) * attackRate;
+        }
+        else
+        {
+            // Slow release: don't deflate the reference during a brief quiet moment, but
+            // still drift down over several seconds so a quieter track or volume level
+            // eventually reads at full range too.
+            var releaseRate = (float)(0.0015 + s * 0.01);
+            _agcReference += (peakMagnitude - _agcReference) * releaseRate;
+        }
+        _agcReference = Math.Max(_agcReference, _agcFloor);
     }
 
     private double RmsMagnitudeForBand(int bar, int barCount, int usableBins, double binHz, double logLow, double logHigh)
@@ -184,6 +237,7 @@ public sealed class SpectrumAnalyzer
 
         _barLevels = new float[barCount];
         _jitterPhase = new float[barCount];
+        _rawMagnitudes = new float[barCount];
         for (var i = 0; i < barCount; i++)
         {
             _jitterPhase[i] = (float)(_jitterRandom.NextDouble() * Math.PI * 2);

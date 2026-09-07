@@ -103,9 +103,19 @@ public partial class OverlayWindow : Window
 
     internal void UpdateFrame(float[] barValues, Color[] barColors, float[]? peakLevels, float visibilityFade, NativeMethods.POINT? cursorScreen)
     {
-        Point? cursorLocal = cursorScreen is { } p
-            ? new Point(p.X - _pendingBounds.X, p.Y - _pendingBounds.Y)
-            : null;
+        Point? cursorLocal = null;
+        if (cursorScreen is { } p && _pendingBounds.W > 0 && _pendingBounds.H > 0 && ActualWidth > 0 && ActualHeight > 0)
+        {
+            // _pendingBounds is in physical screen pixels (SetWindowPos/GetCursorPos space);
+            // BarsCanvas renders in WPF's device-independent units. At any display scaling
+            // other than 100% those two spaces don't line up 1:1, which is why the fade used
+            // to drift off from the real cursor position. Measuring the actual ratio between
+            // the two here (rather than looking up the DPI ourselves) is correct regardless of
+            // which monitor/scale factor this window ends up on.
+            var scaleX = ActualWidth / _pendingBounds.W;
+            var scaleY = ActualHeight / _pendingBounds.H;
+            cursorLocal = new Point((p.X - _pendingBounds.X) * scaleX, (p.Y - _pendingBounds.Y) * scaleY);
+        }
 
         _bars.UpdateFrame(new BarFrame
         {

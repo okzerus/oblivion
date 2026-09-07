@@ -27,7 +27,9 @@ public sealed class VisualizerSettings
     // ----- Audio response -----
     public string TargetProcessName { get; set; } = "Spotify";
     public bool IncludeChildProcesses { get; set; } = true;
-    public double Sensitivity { get; set; } = 1.0;      // linear gain applied before mapping to bar length
+    public bool AutoGainEnabled { get; set; } = true;   // auto-normalize to whatever volume Spotify is playing at
+    public double AutoGainSpeed { get; set; } = 0.5;    // 0..1, how quickly the auto-gain reference adapts
+    public double Sensitivity { get; set; } = 1.0;      // extra multiplier on top of auto-gain (or the whole gain, if auto-gain is off)
     public double AttackSpeed { get; set; } = 0.55;     // 0..1, how quickly a bar can rise per frame
     public double DecaySpeed { get; set; } = 0.10;      // 0..1, how quickly a bar falls per frame
     public double NoiseGate { get; set; } = 0.015;      // magnitudes below this are treated as silence

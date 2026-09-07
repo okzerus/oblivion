@@ -83,7 +83,7 @@ public partial class App : Application
     {
         if (_controller != null && _tray != null)
         {
-            _tray.SetStatus(_controller.IsVisible, _controller.IsCapturingAudio);
+            _tray.SetStatus(_controller.IsVisible, _controller.IsCapturingAudio, _controller.ActiveProcessIds);
         }
     }
 

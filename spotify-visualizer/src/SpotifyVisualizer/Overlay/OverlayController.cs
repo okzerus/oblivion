@@ -66,6 +66,7 @@ public sealed class OverlayController : IDisposable
 
     public bool IsVisible => _visible;
     public bool IsCapturingAudio => _capture?.IsCapturing ?? false;
+    public IReadOnlyList<int> ActiveProcessIds => _capture?.ActiveProcessIds ?? Array.Empty<int>();
 
     public void ApplySettings(VisualizerSettings settings)
     {
@@ -213,14 +214,17 @@ public sealed class OverlayController : IDisposable
         if (hasCapture)
         {
             bars = _analyzer.ComputeBars(barCount, _settings.Sensitivity, _settings.AttackSpeed, _settings.DecaySpeed,
-                _settings.NoiseGate, _settings.JitterAmount, _settings.LowFrequencyHz, _settings.HighFrequencyHz);
+                _settings.NoiseGate, _settings.JitterAmount, _settings.LowFrequencyHz, _settings.HighFrequencyHz,
+                _settings.AutoGainEnabled, _settings.AutoGainSpeed);
 
             if (useStereo)
             {
                 leftBars = _leftAnalyzer.ComputeBars(barCount, _settings.Sensitivity, _settings.AttackSpeed, _settings.DecaySpeed,
-                    _settings.NoiseGate, _settings.JitterAmount, _settings.LowFrequencyHz, _settings.HighFrequencyHz);
+                    _settings.NoiseGate, _settings.JitterAmount, _settings.LowFrequencyHz, _settings.HighFrequencyHz,
+                    _settings.AutoGainEnabled, _settings.AutoGainSpeed);
                 rightBars = _rightAnalyzer.ComputeBars(barCount, _settings.Sensitivity, _settings.AttackSpeed, _settings.DecaySpeed,
-                    _settings.NoiseGate, _settings.JitterAmount, _settings.LowFrequencyHz, _settings.HighFrequencyHz);
+                    _settings.NoiseGate, _settings.JitterAmount, _settings.LowFrequencyHz, _settings.HighFrequencyHz,
+                    _settings.AutoGainEnabled, _settings.AutoGainSpeed);
             }
         }
         else

@@ -44,6 +44,12 @@ public sealed class ProcessLoopbackCapture : IDisposable
         get { lock (_lock) { return _workers.Count > 0; } }
     }
 
+    /// <summary>The process ID(s) currently being captured, for diagnostics (e.g. the tray tooltip).</summary>
+    public IReadOnlyList<int> ActiveProcessIds
+    {
+        get { lock (_lock) { return _workers.Select(w => w.ProcessId).ToArray(); } }
+    }
+
     public void Start()
     {
         if (_running)
@@ -120,7 +126,7 @@ public sealed class ProcessLoopbackCapture : IDisposable
                     continue;
                 }
 
-                var worker = new StreamWorker(pid, _includeChildProcesses, RaiseSamples);
+                var worker = new StreamWorker(pid, _processName, _includeChildProcesses, RaiseSamples);
                 worker.Start();
                 _workers.Add(worker);
             }
@@ -141,15 +147,17 @@ public sealed class ProcessLoopbackCapture : IDisposable
         public int ProcessId { get; }
         public bool Faulted { get; private set; }
 
+        private readonly string _expectedProcessName;
         private readonly bool _includeTree;
         private readonly Action<float[], float[], float[], int> _onSamples;
         private readonly CancellationTokenSource _cts = new();
         private Thread? _thread;
         private AudioClient? _audioClient;
 
-        public StreamWorker(int processId, bool includeTree, Action<float[], float[], float[], int> onSamples)
+        public StreamWorker(int processId, string expectedProcessName, bool includeTree, Action<float[], float[], float[], int> onSamples)
         {
             ProcessId = processId;
+            _expectedProcessName = expectedProcessName;
             _includeTree = includeTree;
             _onSamples = onSamples;
         }
@@ -172,6 +180,18 @@ public sealed class ProcessLoopbackCapture : IDisposable
 
             try
             {
+                // The PID was resolved by name a moment ago on a different thread; Windows can
+                // reuse a PID for an unrelated process the instant the original one exits, so
+                // re-check the identity right before activating rather than trusting it blindly.
+                using (var check = Process.GetProcessById(ProcessId))
+                {
+                    if (!string.Equals(check.ProcessName, _expectedProcessName, StringComparison.OrdinalIgnoreCase))
+                    {
+                        Faulted = true;
+                        return;
+                    }
+                }
+
                 var nativeClient = ProcessLoopbackInterop
                     .ActivateProcessLoopbackAsync(ProcessId, _includeTree)
                     .GetAwaiter()

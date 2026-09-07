@@ -59,6 +59,43 @@ public sealed class VisualizerSettings
     public bool HotkeyAlt { get; set; } = false;
     public MouseHotkeyButton HotkeyMouseButton { get; set; } = MouseHotkeyButton.XButton1;
 
+    // ----- Silence / no-Spotify behavior -----
+    public OnSilenceBehavior SilenceBehavior { get; set; } = OnSilenceBehavior.FadeOut;
+    public double SilenceThreshold { get; set; } = 0.025;   // bar level below which audio counts as "quiet"
+    public double SilenceHoldSeconds { get; set; } = 1.5;   // how long it must stay quiet before reacting
+    public double SilenceFadeOutSeconds { get; set; } = 1.5;
+    public double SilenceFadeInSeconds { get; set; } = 0.3; // snappier: pop back in as soon as sound resumes
+    public double IdlePulseSpeed { get; set; } = 0.5;       // cycles/sec, GentleIdlePulse mode
+    public double IdlePulseAmount { get; set; } = 0.12;     // 0..1 of MaxBarLengthPx, GentleIdlePulse mode
+
+    // ----- Cursor-proximity fade -----
+    public bool CursorFadeEnabled { get; set; } = true;
+    public double CursorFadeRadiusPx { get; set; } = 220.0;      // along the strip, how wide the fade dip is
+    public double CursorFadeCrossAxisMarginPx { get; set; } = 100.0; // how far off the strip the cursor still counts as "near"
+    public double CursorFadeStrength { get; set; } = 1.0;        // 0..1, how fully bars vanish right under the cursor
+
+    // ----- Repeating pattern -----
+    public int RepeatCount { get; set; } = 1;               // tile the same bar pattern this many times across the edge
+    public double RepeatSpacingPx { get; set; } = 28.0;
+    public bool RepeatAlternateMirror { get; set; } = true;  // mirror every other tile for a less mechanical repeat
+
+    // ----- Asymmetry / stereo (FromCenter growth only) -----
+    public bool StereoSplit { get; set; }                    // left half of the strip driven by the left channel, right by right
+    public double AsymmetryAmount { get; set; } = 0.15;       // 0..1, how far the two halves drift from a perfect mirror
+
+    // ----- Peak-hold caps -----
+    public bool PeakHoldEnabled { get; set; }
+    public double PeakHoldFallSpeed { get; set; } = 0.02;    // 0..1 per frame
+    public double PeakHoldThicknessPx { get; set; } = 2.0;
+
+    // ----- Reflection -----
+    public bool ReflectionEnabled { get; set; }
+    public double ReflectionOpacity { get; set; } = 0.35;
+    public double ReflectionLengthFraction { get; set; } = 0.4; // fraction of a bar's own length
+
+    // ----- Color variation -----
+    public double ColorVariationAmount { get; set; } = 0.0;  // 0..1, per-bar hue jitter on top of the chosen color mode
+
     public VisualizerSettings Clone()
     {
         return (VisualizerSettings)MemberwiseClone();

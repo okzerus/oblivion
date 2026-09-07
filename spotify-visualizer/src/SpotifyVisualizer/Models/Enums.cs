@@ -31,3 +31,11 @@ public enum BarGrowthStyle
     FromEdge,   // bars grow away from the screen edge, left-to-right across the strip
     FromCenter, // bars grow away from the edge, mirrored outward from the strip's center
 }
+
+public enum OnSilenceBehavior
+{
+    FadeOut,        // bars decay to nothing and the whole overlay fades out
+    StayVisible,    // bars just decay down to their resting length, no extra fade
+    KeepLastFrame,  // freeze on the last frame that had real audio
+    GentleIdlePulse, // replace with a soft, slow ambient pulse instead of going flat
+}

@@ -103,6 +103,10 @@ internal static class NativeMethods
 
     public static int GetXButton(uint mouseData) => (int)(mouseData >> 16) & 0xFFFF;
 
+    // ----- Global cursor position (physical pixels, same space as SetWindowPos) -----
+    [DllImport("user32.dll", SetLastError = true)]
+    public static extern bool GetCursorPos(out POINT lpPoint);
+
     // ----- Single-instance mutex naming, and OS build check -----
     [DllImport("ntdll.dll")]
     private static extern int RtlGetVersion(ref OSVERSIONINFOEX versionInfo);

@@ -18,8 +18,12 @@ public sealed class ProcessLoopbackCapture : IDisposable
     private const int SampleRate = 48000;
     private const int Channels = 2;
 
-    /// <summary>Raised on a background thread with mono float samples in [-1, 1] and the sample rate.</summary>
-    public event Action<float[], int>? SamplesAvailable;
+    /// <summary>
+    /// Raised on a background thread with mono, left, and right float samples in [-1, 1]
+    /// plus the sample rate. Left/right are provided (not just mono) so stereo-aware
+    /// visualization modes can use the real stereo image instead of a downmix.
+    /// </summary>
+    public event Action<float[], float[], float[], int>? SamplesAvailable;
 
     private readonly string _processName;
     private readonly bool _includeChildProcesses;
@@ -123,7 +127,8 @@ public sealed class ProcessLoopbackCapture : IDisposable
         }
     }
 
-    private void RaiseSamples(float[] mono, int sampleRate) => SamplesAvailable?.Invoke(mono, sampleRate);
+    private void RaiseSamples(float[] mono, float[] left, float[] right, int sampleRate) =>
+        SamplesAvailable?.Invoke(mono, left, right, sampleRate);
 
     public void Dispose()
     {
@@ -137,12 +142,12 @@ public sealed class ProcessLoopbackCapture : IDisposable
         public bool Faulted { get; private set; }
 
         private readonly bool _includeTree;
-        private readonly Action<float[], int> _onSamples;
+        private readonly Action<float[], float[], float[], int> _onSamples;
         private readonly CancellationTokenSource _cts = new();
         private Thread? _thread;
         private AudioClient? _audioClient;
 
-        public StreamWorker(int processId, bool includeTree, Action<float[], int> onSamples)
+        public StreamWorker(int processId, bool includeTree, Action<float[], float[], float[], int> onSamples)
         {
             ProcessId = processId;
             _includeTree = includeTree;
@@ -207,17 +212,23 @@ public sealed class ProcessLoopbackCapture : IDisposable
                         if (framesAvailable > 0)
                         {
                             var mono = new float[framesAvailable];
+                            var left = new float[framesAvailable];
+                            var right = new float[framesAvailable];
                             if ((flags & AudioClientBufferFlags.Silent) == 0 && buffer != IntPtr.Zero)
                             {
                                 var interleaved = new float[framesAvailable * Channels];
                                 Marshal.Copy(buffer, interleaved, 0, interleaved.Length);
                                 for (var i = 0; i < framesAvailable; i++)
                                 {
-                                    mono[i] = (interleaved[i * Channels] + interleaved[i * Channels + 1]) * 0.5f;
+                                    var l = interleaved[i * Channels];
+                                    var r = interleaved[i * Channels + 1];
+                                    left[i] = l;
+                                    right[i] = r;
+                                    mono[i] = (l + r) * 0.5f;
                                 }
                             }
 
-                            _onSamples(mono, SampleRate);
+                            _onSamples(mono, left, right, SampleRate);
                         }
 
                         captureClient.ReleaseBuffer(framesAvailable);

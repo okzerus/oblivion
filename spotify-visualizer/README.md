@@ -32,6 +32,21 @@ audio, always on top (including full-screen games), click-through, and toggled w
   margin, growth style (edge-to-edge or mirrored from center), attack/decay speed,
   sensitivity, noise gate, FFT size, frequency range, every color-mode parameter, opacity,
   glow, target FPS, and the hotkey itself. See Settings (tray icon -> Settings...).
+- **Fades out when it's quiet or Spotify isn't running** (configurable: fade out, just settle
+  to resting height, freeze on the last active frame, or switch to a soft ambient idle pulse
+  instead - tray icon -> Settings -> "When it's quiet / Spotify isn't running").
+- **Fades out near your mouse cursor** so it never visually clutters whatever you're pointing
+  at right by the screen edge - configurable radius, strength, and how far off the edge the
+  cursor still triggers it.
+- **Repeating pattern**: instead of one continuous run of bars, tile the same pattern
+  multiple times across an edge (optionally mirrored on alternating repeats) so it doesn't
+  read as "one clump in the middle."
+- **Stereo split + asymmetry**: with centered growth, the left half of the strip can be
+  driven by Spotify's actual left channel and the right half by the right channel (real
+  stereo image, not a fake effect), plus an independent asymmetry wobble that keeps the
+  overall shape centered while breaking a few-pixel-perfect mirror.
+- **Peak-hold caps, a fading tip trail past each bar, and per-bar color variation** for extra
+  visual texture - all optional, off by default.
 
 ## Requirements
 
@@ -54,6 +69,38 @@ Or open `SpotifyVisualizer.sln` in Visual Studio 2022+ and run.
 
 The app has no main window - it runs from the system tray. Right-click the tray icon for
 Show/Hide, Settings, and Exit.
+
+## Building a standalone .exe
+
+`dotnet build` only produces a `SpotifyVisualizer.exe` that still needs its `.dll`s sitting
+next to it and the .NET 8 runtime installed. To get one self-contained file you can copy
+anywhere and just double-click:
+
+```
+.\publish.ps1
+```
+
+which runs:
+
+```
+dotnet publish src\SpotifyVisualizer -c Release -r win-x64 --self-contained true `
+    -p:PublishSingleFile=true -p:PublishReadyToRun=true -p:IncludeNativeLibrariesForSelfExtract=true `
+    -o publish
+```
+
+That bundles the .NET runtime into `publish\SpotifyVisualizer.exe` (~150 MB, but nothing else
+needs to be installed on the machine it runs on). If everyone running it already has the
+[.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) installed, use
+`.\publish.ps1 -SelfContained:$false` instead for a much smaller (~1 MB) exe that depends on
+that runtime being present.
+
+Either way the output is one file: copy `publish\SpotifyVisualizer.exe` wherever you like
+(e.g. `C:\Program Files\SpotifyVisualizer\` or just your desktop) - it doesn't need an
+installer. To have it start automatically, put a shortcut to it in
+`shell:startup` (Win+R -> `shell:startup`). Since it requests administrator elevation, that
+shortcut needs "Run as administrator" checked in its properties, and Windows will prompt for
+UAC consent every time it starts unless you also set it up via Task Scheduler with "Run with
+highest privileges" (that route doesn't show a UAC prompt).
 
 ### Why it asks for administrator
 

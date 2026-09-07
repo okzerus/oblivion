@@ -126,6 +126,21 @@ public sealed class SpectrumAnalyzer
         }
     }
 
+    /// <summary>
+    /// Decays bar levels toward zero without analyzing any audio - used when there's no
+    /// active capture (e.g. Spotify isn't running), since otherwise stale samples already
+    /// sitting in the ring buffer would keep getting re-analyzed into a frozen spectrum.
+    /// </summary>
+    public float[] DecayOnly(int barCount, double decay)
+    {
+        lock (_lock)
+        {
+            EnsureBarState(barCount);
+            DecayTowardsZero(decay);
+            return (float[])_barLevels.Clone();
+        }
+    }
+
     private double RmsMagnitudeForBand(int bar, int barCount, int usableBins, double binHz, double logLow, double logHigh)
     {
         var t0 = (double)bar / barCount;

@@ -88,6 +88,43 @@ public partial class SettingsWindow : Window
         AddCheckBox("Shift", () => _working.HotkeyShift, v => _working.HotkeyShift = v);
         AddCheckBox("Alt", () => _working.HotkeyAlt, v => _working.HotkeyAlt = v);
         AddComboEnum("Mouse button", () => _working.HotkeyMouseButton, v => _working.HotkeyMouseButton = v);
+
+        AddHeader("When it's quiet / Spotify isn't running");
+        AddComboEnum("Behavior", () => _working.SilenceBehavior, v => _working.SilenceBehavior = v);
+        AddSlider("Silence threshold", 0.0, 0.2, () => _working.SilenceThreshold, v => _working.SilenceThreshold = v);
+        AddSlider("Hold before reacting (s)", 0.0, 10.0, () => _working.SilenceHoldSeconds, v => _working.SilenceHoldSeconds = v, "0.0");
+        AddSlider("Fade out duration (s)", 0.1, 8.0, () => _working.SilenceFadeOutSeconds, v => _working.SilenceFadeOutSeconds = v, "0.0");
+        AddSlider("Fade back in duration (s)", 0.05, 3.0, () => _working.SilenceFadeInSeconds, v => _working.SilenceFadeInSeconds = v, "0.00");
+        AddSlider("Idle pulse speed (cycles/s)", 0.05, 3.0, () => _working.IdlePulseSpeed, v => _working.IdlePulseSpeed = v, "0.00");
+        AddSlider("Idle pulse amount", 0.0, 0.5, () => _working.IdlePulseAmount, v => _working.IdlePulseAmount = v);
+
+        AddHeader("Fade near the mouse cursor");
+        AddCheckBox("Enabled", () => _working.CursorFadeEnabled, v => _working.CursorFadeEnabled = v);
+        AddSlider("Fade radius (px)", 20, 800, () => _working.CursorFadeRadiusPx, v => _working.CursorFadeRadiusPx = v, "0");
+        AddSlider("Trigger distance off the edge (px)", 0, 400, () => _working.CursorFadeCrossAxisMarginPx, v => _working.CursorFadeCrossAxisMarginPx = v, "0");
+        AddSlider("Fade strength", 0.0, 1.0, () => _working.CursorFadeStrength, v => _working.CursorFadeStrength = v);
+
+        AddHeader("Repeating pattern");
+        AddIntSlider("Repeat count", 1, 12, () => _working.RepeatCount, v => _working.RepeatCount = v);
+        AddSlider("Spacing between repeats (px)", 0, 200, () => _working.RepeatSpacingPx, v => _working.RepeatSpacingPx = v, "0");
+        AddCheckBox("Mirror every other repeat", () => _working.RepeatAlternateMirror, v => _working.RepeatAlternateMirror = v);
+
+        AddHeader("Asymmetry (centered growth style only)");
+        AddCheckBox("Stereo split (left/right channel drives each half)", () => _working.StereoSplit, v => _working.StereoSplit = v);
+        AddSlider("Asymmetry amount", 0.0, 1.0, () => _working.AsymmetryAmount, v => _working.AsymmetryAmount = v);
+
+        AddHeader("Peak-hold caps");
+        AddCheckBox("Enabled", () => _working.PeakHoldEnabled, v => _working.PeakHoldEnabled = v);
+        AddSlider("Fall speed", 0.001, 0.2, () => _working.PeakHoldFallSpeed, v => _working.PeakHoldFallSpeed = v, "0.000");
+        AddSlider("Cap thickness (px)", 1, 10, () => _working.PeakHoldThicknessPx, v => _working.PeakHoldThicknessPx = v, "0.0");
+
+        AddHeader("Reflection / tip trail");
+        AddCheckBox("Enabled", () => _working.ReflectionEnabled, v => _working.ReflectionEnabled = v);
+        AddSlider("Opacity", 0.0, 1.0, () => _working.ReflectionOpacity, v => _working.ReflectionOpacity = v);
+        AddSlider("Length (fraction of bar)", 0.0, 1.5, () => _working.ReflectionLengthFraction, v => _working.ReflectionLengthFraction = v);
+
+        AddHeader("Color variation");
+        AddSlider("Per-bar variation amount", 0.0, 1.0, () => _working.ColorVariationAmount, v => _working.ColorVariationAmount = v);
     }
 
     private void ToggleEdge(ScreenEdges edge, bool on)

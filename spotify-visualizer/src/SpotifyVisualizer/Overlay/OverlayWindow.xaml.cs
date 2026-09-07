@@ -17,6 +17,9 @@ public partial class OverlayWindow : Window
 {
     public ScreenEdges Edge { get; }
 
+    /// <summary>This edge's current physical-pixel screen bounds, updated by <see cref="ApplyGeometry"/>.</summary>
+    public (int X, int Y, int W, int H) Bounds => _pendingBounds;
+
     private readonly BarsCanvas _bars;
     private IntPtr _hwnd;
     private (int X, int Y, int W, int H) _pendingBounds;
@@ -58,7 +61,8 @@ public partial class OverlayWindow : Window
 
         var screen = System.Windows.Forms.Screen.PrimaryScreen?.Bounds ?? new System.Drawing.Rectangle(0, 0, 1920, 1080);
         var extraGlow = settings.GlowEnabled ? settings.GlowRadiusPx * 2 : 0;
-        var stripThickness = Math.Max(8, (int)Math.Round(settings.MaxBarLengthPx + settings.EdgeMarginPx + extraGlow));
+        var extraReflection = settings.ReflectionEnabled ? settings.MaxBarLengthPx * Math.Clamp(settings.ReflectionLengthFraction, 0, 2) : 0;
+        var stripThickness = Math.Max(8, (int)Math.Round(settings.MaxBarLengthPx + settings.EdgeMarginPx + extraGlow + extraReflection));
 
         _pendingBounds = Edge switch
         {
@@ -97,7 +101,21 @@ public partial class OverlayWindow : Window
             NativeMethods.SWP_NOMOVE | NativeMethods.SWP_NOSIZE | NativeMethods.SWP_NOACTIVATE);
     }
 
-    public void UpdateFrame(float[] barValues, Color[] barColors) => _bars.UpdateFrame(barValues, barColors);
+    internal void UpdateFrame(float[] barValues, Color[] barColors, float[]? peakLevels, float visibilityFade, NativeMethods.POINT? cursorScreen)
+    {
+        Point? cursorLocal = cursorScreen is { } p
+            ? new Point(p.X - _pendingBounds.X, p.Y - _pendingBounds.Y)
+            : null;
+
+        _bars.UpdateFrame(new BarFrame
+        {
+            Values = barValues,
+            Colors = barColors,
+            PeakLevels = peakLevels,
+            VisibilityFade = visibilityFade,
+            CursorLocal = cursorLocal,
+        });
+    }
 
     protected override void OnClosed(EventArgs e)
     {

@@ -45,4 +45,40 @@ public static class AdaptivePalette
 
         return Color.FromRgb(r, g, b);
     }
+
+    public static (double H, double S, double L) ToHsl(Color color)
+    {
+        double r = color.R / 255.0, g = color.G / 255.0, b = color.B / 255.0;
+        var max = Math.Max(r, Math.Max(g, b));
+        var min = Math.Min(r, Math.Min(g, b));
+        var l = (max + min) / 2.0;
+
+        if (max - min < 1e-6)
+        {
+            return (0, 0, l);
+        }
+
+        var delta = max - min;
+        var s = l > 0.5 ? delta / (2.0 - max - min) : delta / (max + min);
+
+        double h;
+        if (max == r)
+        {
+            h = 60 * (((g - b) / delta) % 6);
+        }
+        else if (max == g)
+        {
+            h = 60 * (((b - r) / delta) + 2);
+        }
+        else
+        {
+            h = 60 * (((r - g) / delta) + 4);
+        }
+        if (h < 0)
+        {
+            h += 360;
+        }
+
+        return (h, s, l);
+    }
 }

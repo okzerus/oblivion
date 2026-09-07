@@ -70,7 +70,6 @@ APPCOMMAND_MEDIA_PLAY_PAUSE = 14
 
 SW_RESTORE = 9
 SW_SHOW = 5
-SW_MINIMIZE = 6
 
 HWND_TOPMOST = -1
 HWND_NOTOPMOST = -2
@@ -259,17 +258,30 @@ def is_spotify_process_running():
 
 
 def launch_spotify():
-    try:
-        os.startfile("spotify:")
-        return
-    except OSError:
-        logging.warning("spotify: URI launch failed, trying the installed exe path")
-
+    """Runs Spotify.exe. If Spotify is already running - even fully hidden in
+    the tray - its own single-instance handling activates and shows the
+    existing window instead of starting a second copy. That's also the most
+    reliable way to bring a tray-hidden window back: poking it directly with
+    ShowWindow can leave its Chromium-based UI visually frozen, but letting
+    Spotify wake itself up this way does not."""
     exe = os.path.join(os.environ.get("APPDATA", ""), "Spotify", "Spotify.exe")
     if os.path.isfile(exe):
         subprocess.Popen([exe])
-    else:
-        logging.error("Could not find Spotify.exe to launch it")
+        return
+
+    try:
+        os.startfile("spotify:")
+    except OSError:
+        logging.error("Could not find Spotify.exe (checked %s) or the spotify: URI handler", exe)
+
+
+def wait_for_condition(predicate, timeout, interval=0.1):
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        if predicate():
+            return True
+        time.sleep(interval)
+    return False
 
 
 def send_appcommand(cmd):
@@ -287,18 +299,16 @@ def send_appcommand(cmd):
 
 
 def force_foreground(hwnd):
-    was_hidden = not user32.IsWindowVisible(hwnd)
-
-    if was_hidden:
-        # Spotify's Chromium-based UI can come back from a full tray-hide
-        # (no taskbar icon) frozen - unanimated, unresponsive - if it's just
-        # shown directly. Cycling it through minimize -> restore forces the
-        # same "unminimize" path a normal taskbar restore takes, which
-        # reliably wakes the renderer back up.
-        user32.ShowWindow(hwnd, SW_SHOW)
-        user32.ShowWindow(hwnd, SW_MINIMIZE)
-        time.sleep(0.05)
-        user32.ShowWindow(hwnd, SW_RESTORE)
+    if not user32.IsWindowVisible(hwnd):
+        # Showing a fully tray-hidden window directly (ShowWindow, even a
+        # minimize/restore cycle) can leave Spotify's Chromium-based UI
+        # visually frozen - unanimated, unresponsive. Re-running Spotify.exe
+        # triggers its own single-instance activation instead, which wakes
+        # and shows the existing window correctly - the same thing that
+        # happens when you launch it again from the Start menu while it's
+        # already running.
+        launch_spotify()
+        wait_for_condition(lambda: user32.IsWindowVisible(hwnd), timeout=3.0)
     elif user32.IsIconic(hwnd):
         user32.ShowWindow(hwnd, SW_RESTORE)
     else:
@@ -338,7 +348,12 @@ def force_foreground(hwnd):
 def toggle_spotify():
     hwnd = find_spotify_window()
     if hwnd and user32.IsWindow(hwnd):
-        if user32.GetForegroundWindow() == hwnd:
+        # A window that's already hidden (tray-minimized) can be left
+        # registered as the foreground window by Windows even after it's no
+        # longer visible - checking IsWindowVisible first avoids treating
+        # that stale state as "focused" and sending it a second, no-op
+        # WM_CLOSE instead of actually bringing it back.
+        if user32.IsWindowVisible(hwnd) and user32.GetForegroundWindow() == hwnd:
             logging.info("Spotify already focused, sending close (tray-minimize)")
             user32.PostMessageW(hwnd, WM_CLOSE, 0, 0)
         else:

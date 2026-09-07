@@ -64,11 +64,23 @@ def build_authorize_url(client_id, code_challenge, state):
     return f"{AUTH_URL}?{urllib.parse.urlencode(params)}"
 
 
+def _send(req):
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            raw = resp.read()
+    except urllib.error.HTTPError as e:
+        # Spotify's error responses carry a useful JSON body (e.g. "invalid
+        # grant" / "invalid redirect URI") that a bare HTTPError discards -
+        # surface it so failures are actually debuggable.
+        detail = e.read().decode("utf-8", "replace")
+        raise urllib.error.HTTPError(e.url, e.code, f"{e.reason}: {detail}", e.headers, None) from None
+    return json.loads(raw) if raw else None
+
+
 def _post_form(url, fields):
     data = urllib.parse.urlencode(fields).encode("ascii")
     req = urllib.request.Request(url, data=data, method="POST")
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        return json.loads(resp.read())
+    return _send(req)
 
 
 def exchange_code_for_tokens(client_id, code, code_verifier):
@@ -108,9 +120,7 @@ def _api_request(method, path, token, body=None):
     req.add_header("Authorization", f"Bearer {token}")
     if data is not None:
         req.add_header("Content-Type", "application/json")
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        raw = resp.read()
-    return json.loads(raw) if raw else None
+    return _send(req)
 
 
 def get_currently_playing_track_id(token):
@@ -141,3 +151,15 @@ def toggle_like_current_track():
         return "unliked"
     _api_request("PUT", f"/me/tracks?ids={track_id}", token)
     return "liked"
+
+
+if __name__ == "__main__":
+    # Run this directly (`python spotify_api.py`) to see exactly why the
+    # like hotkey isn't doing anything - spotify_hotkeys.py only logs this
+    # to a file, which is easy to miss.
+    print("Credentials file:", CREDENTIALS_FILE)
+    try:
+        print("Result:", toggle_like_current_track())
+    except Exception:
+        import traceback
+        traceback.print_exc()

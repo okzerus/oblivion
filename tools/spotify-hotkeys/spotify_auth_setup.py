@@ -15,7 +15,7 @@ Before running:
 import http.server
 import secrets
 import sys
-import threading
+import time
 import urllib.parse
 import webbrowser
 
@@ -26,11 +26,20 @@ PORT = 8888
 
 class _CallbackHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
-        query = urllib.parse.urlparse(self.path).query
-        params = urllib.parse.parse_qs(query)
+        parsed = urllib.parse.urlparse(self.path)
+        if parsed.path != "/callback":
+            # Ignore anything but the actual OAuth redirect - browsers often
+            # fire a stray /favicon.ico request too, and handling that as if
+            # it were the real callback would wipe out the real code/state.
+            self.send_response(404)
+            self.end_headers()
+            return
+
+        params = urllib.parse.parse_qs(parsed.query)
         self.server.auth_code = params.get("code", [None])[0]
         self.server.auth_state = params.get("state", [None])[0]
         self.server.auth_error = params.get("error", [None])[0]
+        self.server.auth_received = True
 
         self.send_response(200)
         self.send_header("Content-Type", "text/html; charset=utf-8")
@@ -54,20 +63,23 @@ def main():
     auth_url = spotify_api.build_authorize_url(client_id, challenge, state)
 
     server = http.server.HTTPServer(("127.0.0.1", PORT), _CallbackHandler)
+    server.timeout = 5
     server.auth_code = None
     server.auth_state = None
     server.auth_error = None
-    thread = threading.Thread(target=server.handle_request, daemon=True)
-    thread.start()
+    server.auth_received = False
 
     print("Открываю браузер для авторизации...")
     print(f"Если он не откроется сам, перейдите по ссылке:\n{auth_url}")
     webbrowser.open(auth_url)
-    thread.join(timeout=180)
+
+    deadline = time.monotonic() + 180
+    while time.monotonic() < deadline and not server.auth_received:
+        server.handle_request()
 
     if server.auth_error:
         sys.exit(f"Spotify отказал в доступе: {server.auth_error}")
-    if not server.auth_code:
+    if not server.auth_received:
         sys.exit("Не дождались кода авторизации (тайм-аут 3 минуты).")
     if server.auth_state != state:
         sys.exit("state не совпадает, авторизация отклонена из соображений безопасности.")

@@ -324,7 +324,12 @@ def send_appcommand(cmd):
         hwnd, WM_APPCOMMAND, hwnd, lparam, SMTO_ABORTIFHUNG, 2000, ctypes.byref(result)
     )
     if not ok:
-        logging.warning("SendMessageTimeoutW timed out for command %s", cmd)
+        logging.warning(
+            "SendMessageTimeoutW timed out for command %s (hwnd=%s, error=%s)",
+            cmd, hwnd, ctypes.get_last_error(),
+        )
+    else:
+        logging.info("Sent command %s to hwnd=%s", cmd, hwnd)
 
 
 def force_foreground(hwnd):
@@ -423,6 +428,7 @@ ACTIONS = {
 def worker_loop():
     while True:
         action = action_queue.get()
+        logging.info("Handling action %s", action)
         try:
             ACTIONS[action]()
         except Exception:
@@ -453,19 +459,28 @@ _swallow_state = {XBUTTON1: False, XBUTTON2: False}
 
 
 def low_level_mouse_proc(n_code, w_param, l_param):
-    if n_code == 0:
-        info = ctypes.cast(l_param, ctypes.POINTER(MSLLHOOKSTRUCT)).contents
-        x_button = (info.mouseData >> 16) & 0xFFFF
+    try:
+        if n_code == 0:
+            info = ctypes.cast(l_param, ctypes.POINTER(MSLLHOOKSTRUCT)).contents
+            x_button = (info.mouseData >> 16) & 0xFFFF
 
-        if w_param == WM_XBUTTONDOWN and x_button in _swallow_state:
-            action = classify_xbutton(x_button, is_key_down(VK_CONTROL), is_key_down(VK_SHIFT))
-            if action:
-                action_queue.put(action)
-                _swallow_state[x_button] = True
+            if w_param == WM_XBUTTONDOWN and x_button in _swallow_state:
+                action = classify_xbutton(x_button, is_key_down(VK_CONTROL), is_key_down(VK_SHIFT))
+                if action:
+                    logging.info("Hotkey detected (x_button=%s) -> %s", x_button, action)
+                    action_queue.put(action)
+                    _swallow_state[x_button] = True
+                    return 1
+            elif w_param == WM_XBUTTONUP and _swallow_state.get(x_button):
+                _swallow_state[x_button] = False
                 return 1
-        elif w_param == WM_XBUTTONUP and _swallow_state.get(x_button):
-            _swallow_state[x_button] = False
-            return 1
+    except Exception:
+        # A hook callback must never let an exception escape uncaught: ctypes
+        # swallows it invisibly (there's no console under pythonw to print
+        # it to), and a hook that keeps erroring out can end up treated as
+        # unresponsive by Windows. Log it and fall through to
+        # CallNextHookEx so a bug here never blocks normal mouse input.
+        logging.exception("Error in mouse hook callback")
 
     return user32.CallNextHookEx(None, n_code, w_param, l_param)
 

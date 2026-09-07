@@ -37,6 +37,7 @@ import subprocess
 import sys
 import threading
 import time
+import traceback
 from ctypes import wintypes
 
 if os.name != "nt":
@@ -428,6 +429,9 @@ ACTIONS = {
 def worker_loop():
     while True:
         action = action_queue.get()
+        if isinstance(action, tuple) and action[0] == "__hook_error__":
+            logging.error("Error in mouse hook callback:\n%s", action[1])
+            continue
         logging.info("Handling action %s", action)
         try:
             ACTIONS[action]()
@@ -459,6 +463,15 @@ _swallow_state = {XBUTTON1: False, XBUTTON2: False}
 
 
 def low_level_mouse_proc(n_code, w_param, l_param):
+    # WH_MOUSE_LL runs inside the system-wide input pipeline: EVERY mouse
+    # event for EVERY app on the desktop is serialized through this
+    # callback, not just the ones we care about. It must return almost
+    # instantly - no logging, no disk I/O, nothing that can block even
+    # occasionally - or the entire desktop's mouse input can stall until it
+    # does (this bit us: an earlier version logged from here, and enough
+    # rapid clicks were able to freeze mouse input system-wide, only fixed
+    # by a lock/unlock cycle). Anything that needs logging is handed to the
+    # worker thread via the queue instead of being logged here directly.
     try:
         if n_code == 0:
             info = ctypes.cast(l_param, ctypes.POINTER(MSLLHOOKSTRUCT)).contents
@@ -467,7 +480,6 @@ def low_level_mouse_proc(n_code, w_param, l_param):
             if w_param == WM_XBUTTONDOWN and x_button in _swallow_state:
                 action = classify_xbutton(x_button, is_key_down(VK_CONTROL), is_key_down(VK_SHIFT))
                 if action:
-                    logging.info("Hotkey detected (x_button=%s) -> %s", x_button, action)
                     action_queue.put(action)
                     _swallow_state[x_button] = True
                     return 1
@@ -475,12 +487,10 @@ def low_level_mouse_proc(n_code, w_param, l_param):
                 _swallow_state[x_button] = False
                 return 1
     except Exception:
-        # A hook callback must never let an exception escape uncaught: ctypes
-        # swallows it invisibly (there's no console under pythonw to print
-        # it to), and a hook that keeps erroring out can end up treated as
-        # unresponsive by Windows. Log it and fall through to
-        # CallNextHookEx so a bug here never blocks normal mouse input.
-        logging.exception("Error in mouse hook callback")
+        # Must never let an exception escape uncaught (ctypes would swallow
+        # it invisibly), but formatting/logging it must still happen off
+        # this thread - so just hand the traceback text to the worker.
+        action_queue.put(("__hook_error__", traceback.format_exc()))
 
     return user32.CallNextHookEx(None, n_code, w_param, l_param)
 

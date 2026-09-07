@@ -368,8 +368,15 @@ def send_appcommand(cmd):
         return
     lparam = cmd << 16
     result = ctypes.c_size_t(0)
+    # wParam is documented as "the window that has focus" - not the target
+    # window itself, which is what this passed before. Spotify is normally
+    # not focused (it's sitting hidden in the tray), so that was a lie the
+    # real OS media-key dispatch never tells it; matching the real
+    # semantics here is what stops Windows from showing its media OSD for
+    # what it otherwise reads as a not-quite-standard app command.
+    wparam = user32.GetForegroundWindow()
     ok = user32.SendMessageTimeoutW(
-        hwnd, WM_APPCOMMAND, hwnd, lparam, SMTO_ABORTIFHUNG, 2000, ctypes.byref(result)
+        hwnd, WM_APPCOMMAND, wparam, lparam, SMTO_ABORTIFHUNG, 2000, ctypes.byref(result)
     )
     if not ok:
         logging.warning(

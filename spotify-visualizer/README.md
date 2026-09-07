@@ -50,9 +50,16 @@ audio, always on top (including full-screen games), click-through, and toggled w
 
 ## Requirements
 
-- **Windows 10 build 19041 (version 2004) or newer**, or Windows 11. Per-process loopback
-  capture is a hard OS requirement - the app checks the build number on startup and refuses
-  to run below it.
+- **Windows 11, or Windows Server 2022+ (build 20348+), for Spotify-only capture to actually
+  isolate Spotify.** `ActivateAudioInterfaceAsync` itself works from Windows 10 build 19041
+  (version 2004), but Microsoft only documents the *process-scoping* parameters - the part
+  that keeps this to Spotify instead of your whole PC - as supported from build 20348, which
+  no released consumer Windows 10 build reaches (10 tops out at 19045). Below that, the app
+  still runs and activation still "succeeds," but the OS can silently ignore the process
+  filter and hand back the entire system audio mix instead - it'll look like it's working
+  while actually reacting to everything, not just Spotify. The app warns about this on
+  startup if it detects an unsupported build; if you've hit exactly that ("it reacts to
+  audio even when Spotify is paused"), this is almost certainly why.
 - **.NET 8 SDK** to build.
 - Spotify desktop app (not required to be running at launch - the overlay waits for it and
   attaches automatically once it starts, and re-attaches if you restart Spotify).

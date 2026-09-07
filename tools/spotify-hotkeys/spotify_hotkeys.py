@@ -255,7 +255,7 @@ def is_spotify_process_running():
         kernel32.CloseHandle(snapshot)
 
 
-def launch_spotify():
+def launch_spotify(extra_args=None):
     """Runs Spotify.exe. If Spotify is already running - even fully hidden in
     the tray - its own single-instance handling activates and shows the
     existing window instead of starting a second copy. That's also the most
@@ -264,7 +264,7 @@ def launch_spotify():
     Spotify wake itself up this way does not."""
     exe = os.path.join(os.environ.get("APPDATA", ""), "Spotify", "Spotify.exe")
     if os.path.isfile(exe):
-        subprocess.Popen([exe])
+        subprocess.Popen([exe, *(extra_args or [])])
         return
 
     try:
@@ -280,6 +280,26 @@ def wait_for_condition(predicate, timeout, interval=0.1):
             return True
         time.sleep(interval)
     return False
+
+
+def launch_spotify_hidden():
+    """Used only at script startup: launches Spotify without ever showing its
+    window on screen. --minimized is a best-effort hint Spotify's launcher
+    accepts, but isn't guaranteed to keep it out of sight by itself, so this
+    also waits for the window to appear and immediately sends it the same
+    WM_CLOSE that tray-minimizes it everywhere else in this script."""
+    launch_spotify(["--minimized"])
+    hwnd = None
+    if wait_for_condition(lambda: bool(find_spotify_window()), timeout=20.0, interval=0.2):
+        hwnd = find_spotify_window()
+    if not hwnd:
+        logging.warning("Spotify window didn't appear within 20s of launching")
+        return
+    # Give it a moment to actually start pumping messages before closing it -
+    # sending WM_CLOSE the instant the window handle exists risks landing
+    # before Spotify's own message loop is ready to act on it.
+    time.sleep(0.5)
+    user32.PostMessageW(hwnd, WM_CLOSE, 0, 0)
 
 
 def send_appcommand(cmd):
@@ -464,11 +484,13 @@ def main():
     ensure_single_instance()
     logging.info("Starting Spotify mouse hotkeys")
 
-    if not is_spotify_process_running():
-        logging.info("Spotify isn't running, launching it")
-        launch_spotify()
-
     threading.Thread(target=worker_loop, daemon=True).start()
+
+    if not is_spotify_process_running():
+        logging.info("Spotify isn't running, launching it minimized to the tray")
+        # Runs in the background so the (up to ~20s) wait for its window to
+        # appear doesn't delay installing the mouse hook below.
+        threading.Thread(target=launch_spotify_hidden, daemon=True).start()
 
     hook_proc = HOOKPROC(low_level_mouse_proc)
     module_handle = kernel32.GetModuleHandleW(None)

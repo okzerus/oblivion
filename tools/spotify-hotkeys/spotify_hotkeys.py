@@ -464,6 +464,10 @@ def main():
     ensure_single_instance()
     logging.info("Starting Spotify mouse hotkeys")
 
+    if not is_spotify_process_running():
+        logging.info("Spotify isn't running, launching it")
+        launch_spotify()
+
     threading.Thread(target=worker_loop, daemon=True).start()
 
     hook_proc = HOOKPROC(low_level_mouse_proc)

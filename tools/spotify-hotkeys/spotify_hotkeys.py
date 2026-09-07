@@ -2,20 +2,25 @@
 Global mouse hotkeys for controlling the Spotify desktop client on Windows.
 
 Controls:
-    mouse3 (middle click)             -> play / pause
-    ctrl + mouse3                     -> previous track
-    ctrl + mouse4 (side button, x1)   -> next track
-    ctrl + shift + mouse4             -> bring Spotify to front, or if it
+    mouse5 (side button, x2)          -> play / pause
+    shift + mouse5                    -> next track
+    shift + mouse4 (side button, x1)  -> previous track
+    ctrl + shift + mouse5             -> bring Spotify to front, or if it
                                           already has focus, close it
                                           (Spotify's own "minimize to tray on
                                           close" setting turns that into a
                                           tray-minimize instead of a real exit)
+    ctrl + shift + mouse4             -> like/unlike the currently playing
+                                          track (needs spotify_api.py set up
+                                          once via spotify_auth_setup.py)
 
-Commands are delivered with WM_APPCOMMAND sent directly to Spotify's window
-handle instead of the system-wide media-key APIs (keybd_event /
-SendMessage(HWND_BROADCAST, ...)). This keeps the Windows media OSD off
-screen and prevents the command from reaching any other app that also
-listens for media keys (e.g. a browser tab playing something on YouTube).
+Playback commands are delivered with WM_APPCOMMAND sent directly to
+Spotify's window handle instead of the system-wide media-key APIs
+(keybd_event / SendMessage(HWND_BROADCAST, ...)). This keeps the Windows
+media OSD off screen and prevents the command from reaching any other app
+that also listens for media keys (e.g. a browser tab playing something on
+YouTube). "Like" has no such OS-level command, so it goes through the
+Spotify Web API instead (see spotify_api.py).
 
 Only the mouse buttons above are captured (via a low-level mouse hook), and
 only when the required modifier is actually held; every other click passes
@@ -31,10 +36,13 @@ import queue
 import subprocess
 import sys
 import threading
+import time
 from ctypes import wintypes
 
 if os.name != "nt":
     sys.exit("This script only runs on Windows.")
+
+import spotify_api
 
 user32 = ctypes.WinDLL("user32", use_last_error=True)
 kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
@@ -43,14 +51,13 @@ kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
 
 WH_MOUSE_LL = 14
 
-WM_MBUTTONDOWN = 0x0207
-WM_MBUTTONUP = 0x0208
 WM_XBUTTONDOWN = 0x020B
 WM_XBUTTONUP = 0x020C
 WM_APPCOMMAND = 0x0319
 WM_CLOSE = 0x0010
 
 XBUTTON1 = 0x0001
+XBUTTON2 = 0x0002
 
 VK_CONTROL = 0x11
 VK_SHIFT = 0x10
@@ -63,6 +70,7 @@ APPCOMMAND_MEDIA_PLAY_PAUSE = 14
 
 SW_RESTORE = 9
 SW_SHOW = 5
+SW_MINIMIZE = 6
 
 HWND_TOPMOST = -1
 HWND_NOTOPMOST = -2
@@ -73,6 +81,8 @@ SMTO_ABORTIFHUNG = 0x0002
 
 PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
 ERROR_ALREADY_EXISTS = 183
+
+TH32CS_SNAPPROCESS = 0x00000002
 
 SPOTIFY_WINDOW_CLASS = "SpotifyMainWindow"
 SPOTIFY_PROCESS_NAME = "spotify.exe"
@@ -92,6 +102,21 @@ class MSLLHOOKSTRUCT(ctypes.Structure):
         ("flags", wintypes.DWORD),
         ("time", wintypes.DWORD),
         ("dwExtraInfo", ctypes.c_void_p),
+    ]
+
+
+class PROCESSENTRY32W(ctypes.Structure):
+    _fields_ = [
+        ("dwSize", wintypes.DWORD),
+        ("cntUsage", wintypes.DWORD),
+        ("th32ProcessID", wintypes.DWORD),
+        ("th32DefaultHeapID", ctypes.POINTER(ctypes.c_ulong)),
+        ("th32ModuleID", wintypes.DWORD),
+        ("cntThreads", wintypes.DWORD),
+        ("th32ParentProcessID", wintypes.DWORD),
+        ("pcPriClassBase", ctypes.c_long),
+        ("dwFlags", wintypes.DWORD),
+        ("szExeFile", ctypes.c_wchar * 260),
     ]
 
 
@@ -162,6 +187,14 @@ kernel32.CloseHandle.argtypes = [wintypes.HANDLE]
 kernel32.QueryFullProcessImageNameW.restype = wintypes.BOOL
 kernel32.QueryFullProcessImageNameW.argtypes = [wintypes.HANDLE, wintypes.DWORD, wintypes.LPWSTR, ctypes.POINTER(wintypes.DWORD)]
 kernel32.GetCurrentThreadId.restype = wintypes.DWORD
+kernel32.CreateToolhelp32Snapshot.restype = wintypes.HANDLE
+kernel32.CreateToolhelp32Snapshot.argtypes = [wintypes.DWORD, wintypes.DWORD]
+kernel32.Process32FirstW.restype = wintypes.BOOL
+kernel32.Process32FirstW.argtypes = [wintypes.HANDLE, ctypes.POINTER(PROCESSENTRY32W)]
+kernel32.Process32NextW.restype = wintypes.BOOL
+kernel32.Process32NextW.argtypes = [wintypes.HANDLE, ctypes.POINTER(PROCESSENTRY32W)]
+
+INVALID_HANDLE_VALUE = ctypes.c_void_p(-1).value
 
 
 # --- helpers -----------------------------------------------------------------
@@ -208,6 +241,23 @@ def find_spotify_window():
     return found["hwnd"]
 
 
+def is_spotify_process_running():
+    snapshot = kernel32.CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0)
+    if not snapshot or snapshot == INVALID_HANDLE_VALUE:
+        return False
+    try:
+        entry = PROCESSENTRY32W()
+        entry.dwSize = ctypes.sizeof(PROCESSENTRY32W)
+        has_entry = kernel32.Process32FirstW(snapshot, ctypes.byref(entry))
+        while has_entry:
+            if entry.szExeFile.lower() == SPOTIFY_PROCESS_NAME:
+                return True
+            has_entry = kernel32.Process32NextW(snapshot, ctypes.byref(entry))
+        return False
+    finally:
+        kernel32.CloseHandle(snapshot)
+
+
 def launch_spotify():
     try:
         os.startfile("spotify:")
@@ -237,7 +287,19 @@ def send_appcommand(cmd):
 
 
 def force_foreground(hwnd):
-    if user32.IsIconic(hwnd):
+    was_hidden = not user32.IsWindowVisible(hwnd)
+
+    if was_hidden:
+        # Spotify's Chromium-based UI can come back from a full tray-hide
+        # (no taskbar icon) frozen - unanimated, unresponsive - if it's just
+        # shown directly. Cycling it through minimize -> restore forces the
+        # same "unminimize" path a normal taskbar restore takes, which
+        # reliably wakes the renderer back up.
+        user32.ShowWindow(hwnd, SW_SHOW)
+        user32.ShowWindow(hwnd, SW_MINIMIZE)
+        time.sleep(0.05)
+        user32.ShowWindow(hwnd, SW_RESTORE)
+    elif user32.IsIconic(hwnd):
         user32.ShowWindow(hwnd, SW_RESTORE)
     else:
         user32.ShowWindow(hwnd, SW_SHOW)
@@ -275,17 +337,31 @@ def force_foreground(hwnd):
 
 def toggle_spotify():
     hwnd = find_spotify_window()
-    if not hwnd or not user32.IsWindow(hwnd):
-        logging.info("Spotify not running, launching it")
-        launch_spotify()
+    if hwnd and user32.IsWindow(hwnd):
+        if user32.GetForegroundWindow() == hwnd:
+            logging.info("Spotify already focused, sending close (tray-minimize)")
+            user32.PostMessageW(hwnd, WM_CLOSE, 0, 0)
+        else:
+            logging.info("Bringing Spotify to the foreground")
+            force_foreground(hwnd)
         return
 
-    if user32.GetForegroundWindow() == hwnd:
-        logging.info("Spotify already focused, sending close (tray-minimize)")
-        user32.PostMessageW(hwnd, WM_CLOSE, 0, 0)
+    if is_spotify_process_running():
+        logging.info("Spotify process is running but has no window yet, not launching another instance")
+        return
+
+    logging.info("Spotify process not found, launching it")
+    launch_spotify()
+
+
+def toggle_like():
+    result = spotify_api.toggle_like_current_track()
+    if result == "not_configured":
+        logging.warning("Like feature isn't set up yet - run spotify_auth_setup.py once")
+    elif result == "nothing_playing":
+        logging.info("Nothing is currently playing, nothing to like")
     else:
-        logging.info("Bringing Spotify to the foreground")
-        force_foreground(hwnd)
+        logging.info("Current track %s", result)
 
 
 # --- action queue / worker thread --------------------------------------------
@@ -297,6 +373,7 @@ ACTIONS = {
     "previous": lambda: send_appcommand(APPCOMMAND_MEDIA_PREVIOUSTRACK),
     "next": lambda: send_appcommand(APPCOMMAND_MEDIA_NEXTTRACK),
     "toggle_spotify": toggle_spotify,
+    "like": toggle_like,
 }
 
 
@@ -311,30 +388,42 @@ def worker_loop():
 
 # --- low-level mouse hook -----------------------------------------------------
 
+def classify_xbutton(x_button, ctrl, shift):
+    if x_button == XBUTTON1:
+        if shift and ctrl:
+            return "like"
+        if shift:
+            return "previous"
+        return None
+    if x_button == XBUTTON2:
+        if shift and ctrl:
+            return "toggle_spotify"
+        if shift:
+            return "next"
+        if not ctrl:
+            return "playpause"
+        return None
+    return None
+
+
 # Tracks whether we swallowed a button-down so the matching button-up is
 # swallowed too, even if a modifier key changed state mid-click.
-_swallow_state = {"middle": False, "x1": False}
+_swallow_state = {XBUTTON1: False, XBUTTON2: False}
 
 
 def low_level_mouse_proc(n_code, w_param, l_param):
     if n_code == 0:
         info = ctypes.cast(l_param, ctypes.POINTER(MSLLHOOKSTRUCT)).contents
-
-        if w_param == WM_MBUTTONDOWN:
-            action_queue.put("previous" if is_key_down(VK_CONTROL) else "playpause")
-            _swallow_state["middle"] = True
-            return 1
-        if w_param == WM_MBUTTONUP and _swallow_state["middle"]:
-            _swallow_state["middle"] = False
-            return 1
-
         x_button = (info.mouseData >> 16) & 0xFFFF
-        if w_param == WM_XBUTTONDOWN and x_button == XBUTTON1 and is_key_down(VK_CONTROL):
-            action_queue.put("toggle_spotify" if is_key_down(VK_SHIFT) else "next")
-            _swallow_state["x1"] = True
-            return 1
-        if w_param == WM_XBUTTONUP and x_button == XBUTTON1 and _swallow_state["x1"]:
-            _swallow_state["x1"] = False
+
+        if w_param == WM_XBUTTONDOWN and x_button in _swallow_state:
+            action = classify_xbutton(x_button, is_key_down(VK_CONTROL), is_key_down(VK_SHIFT))
+            if action:
+                action_queue.put(action)
+                _swallow_state[x_button] = True
+                return 1
+        elif w_param == WM_XBUTTONUP and _swallow_state.get(x_button):
+            _swallow_state[x_button] = False
             return 1
 
     return user32.CallNextHookEx(None, n_code, w_param, l_param)

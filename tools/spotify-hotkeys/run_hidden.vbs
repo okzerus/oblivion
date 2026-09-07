@@ -1,4 +1,4 @@
-' Launches spotify_hotkeys.py with pythonw.exe, completely hidden - no
+' Launches hotkeys.py with pythonw.exe, completely hidden - no
 ' console window, not even a brief flash. Double-click this file directly,
 ' or point Task Scheduler's Action at it instead of at python(w).exe.
 '
@@ -12,4 +12,4 @@ scriptDir = fso.GetParentFolderName(WScript.ScriptFullName)
 
 Set shell = CreateObject("WScript.Shell")
 shell.CurrentDirectory = scriptDir
-shell.Run "pythonw """ & scriptDir & "\spotify_hotkeys.py""", 0, False
+shell.Run "pythonw """ & scriptDir & "\hotkeys.py""", 0, False

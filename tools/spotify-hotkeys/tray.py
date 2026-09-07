@@ -1,18 +1,18 @@
 """
 Launches Spotify hidden to the tray, then exits immediately. Does nothing
 else - no hook, no logging setup, no lingering process - kept deliberately
-separate from spotify_hotkeys.py so the one thing that has to run at the
-most contested moment of the boot sequence (Task Scheduler's "At system
+separate from hotkeys.py so the one thing that has to run at the most
+contested moment of the boot sequence (Task Scheduler's "At system
 startup") has the smallest possible footprint and the shortest possible
 lifetime.
 
 Point Task Scheduler's "At system startup" trigger at this script (or its
 compiled form - see README.md for why --onedir is recommended over
---onefile), and a separate task with the "At log on" trigger at
-spotify_hotkeys itself.
+--onefile), and a separate task with the "At log on" trigger at hotkeys
+itself.
 
-Same technique as spotify_hotkeys.py's launch_spotify_hidden(): SW_HIDE is
-passed as the process's initial show-window state (the same trick as
+Same technique as hotkeys.py's launch_spotify_hidden(): SW_HIDE is passed
+as the process's initial show-window state (the same trick as
 ShellExecute(..., SW_HIDE)), which keeps a well-behaved Win32 app's main
 window from ever being drawn in the first place - Spotify's tray icon
 still appears normally, since that's created independently of the main

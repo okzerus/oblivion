@@ -3,8 +3,8 @@ Global mouse hotkeys for controlling the Spotify desktop client on Windows.
 
 Controls:
     mouse5 (side button, x2)          -> play / pause
-    shift + mouse5                    -> next track
-    shift + mouse4 (side button, x1)  -> previous track
+    ctrl + mouse5                     -> next track
+    ctrl + mouse4 (side button, x1)   -> previous track
     ctrl + shift + mouse5             -> bring Spotify to front, or if it
                                           already has focus, close it
                                           (Spotify's own "minimize to tray on
@@ -82,13 +82,23 @@ ERROR_ALREADY_EXISTS = 183
 
 TH32CS_SNAPPROCESS = 0x00000002
 
+WM_DESTROY = 0x0002
+WM_WTSSESSION_CHANGE = 0x02B1
+WTS_SESSION_LOGON = 0x5
+WTS_SESSION_UNLOCK = 0x8
+NOTIFY_FOR_THIS_SESSION = 0
+HWND_MESSAGE = -3
+WM_APP = 0x8000
+WM_APP_REHOOK = WM_APP + 1
+REHOOK_WATCHDOG_INTERVAL = 20.0
+
 SPOTIFY_WINDOW_CLASS = "SpotifyMainWindow"
 SPOTIFY_PROCESS_NAME = "spotify.exe"
 
 LOG_DIR = os.path.join(
     os.environ.get("LOCALAPPDATA", os.path.expanduser("~")), "SpotifyHotkeys"
 )
-LOG_FILE = os.path.join(LOG_DIR, "spotify_hotkeys.log")
+LOG_FILE = os.path.join(LOG_DIR, "hotkeys.log")
 
 
 # --- ctypes structures / prototypes -----------------------------------------
@@ -121,6 +131,22 @@ class PROCESSENTRY32W(ctypes.Structure):
 LRESULT = ctypes.c_ssize_t
 HOOKPROC = ctypes.WINFUNCTYPE(LRESULT, ctypes.c_int, wintypes.WPARAM, wintypes.LPARAM)
 ENUMWINDOWSPROC = ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
+WNDPROC = ctypes.WINFUNCTYPE(LRESULT, wintypes.HWND, wintypes.UINT, wintypes.WPARAM, wintypes.LPARAM)
+
+
+class WNDCLASSW(ctypes.Structure):
+    _fields_ = [
+        ("style", wintypes.UINT),
+        ("lpfnWndProc", WNDPROC),
+        ("cbClsExtra", ctypes.c_int),
+        ("cbWndExtra", ctypes.c_int),
+        ("hInstance", wintypes.HINSTANCE),
+        ("hIcon", wintypes.HICON),
+        ("hCursor", wintypes.HANDLE),
+        ("hbrBackground", wintypes.HBRUSH),
+        ("lpszMenuName", wintypes.LPCWSTR),
+        ("lpszClassName", wintypes.LPCWSTR),
+    ]
 
 # HWND/HANDLE/HMODULE are void pointers in ctypes.wintypes, so these
 # prototypes are correct on 64-bit Python too - without them ctypes assumes a
@@ -173,6 +199,21 @@ user32.IsWindowVisible.argtypes = [wintypes.HWND]
 user32.GetWindowTextLengthW.restype = ctypes.c_int
 user32.GetWindowTextLengthW.argtypes = [wintypes.HWND]
 user32.keybd_event.argtypes = [wintypes.BYTE, wintypes.BYTE, wintypes.DWORD, ctypes.c_void_p]
+user32.RegisterClassW.restype = wintypes.WORD
+user32.RegisterClassW.argtypes = [ctypes.POINTER(WNDCLASSW)]
+user32.CreateWindowExW.restype = wintypes.HWND
+user32.CreateWindowExW.argtypes = [
+    wintypes.DWORD, wintypes.LPCWSTR, wintypes.LPCWSTR, wintypes.DWORD,
+    ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_int,
+    wintypes.HWND, wintypes.HMENU, wintypes.HINSTANCE, ctypes.c_void_p,
+]
+user32.DefWindowProcW.restype = LRESULT
+user32.DefWindowProcW.argtypes = [wintypes.HWND, wintypes.UINT, wintypes.WPARAM, wintypes.LPARAM]
+user32.DestroyWindow.restype = wintypes.BOOL
+user32.DestroyWindow.argtypes = [wintypes.HWND]
+user32.PostQuitMessage.argtypes = [ctypes.c_int]
+user32.PostThreadMessageW.restype = wintypes.BOOL
+user32.PostThreadMessageW.argtypes = [wintypes.DWORD, wintypes.UINT, wintypes.WPARAM, wintypes.LPARAM]
 
 kernel32.GetModuleHandleW.restype = wintypes.HMODULE
 kernel32.GetModuleHandleW.argtypes = [wintypes.LPCWSTR]
@@ -191,6 +232,12 @@ kernel32.Process32FirstW.restype = wintypes.BOOL
 kernel32.Process32FirstW.argtypes = [wintypes.HANDLE, ctypes.POINTER(PROCESSENTRY32W)]
 kernel32.Process32NextW.restype = wintypes.BOOL
 kernel32.Process32NextW.argtypes = [wintypes.HANDLE, ctypes.POINTER(PROCESSENTRY32W)]
+
+wtsapi32 = ctypes.WinDLL("wtsapi32", use_last_error=True)
+wtsapi32.WTSRegisterSessionNotification.restype = wintypes.BOOL
+wtsapi32.WTSRegisterSessionNotification.argtypes = [wintypes.HWND, wintypes.DWORD]
+wtsapi32.WTSUnRegisterSessionNotification.restype = wintypes.BOOL
+wtsapi32.WTSUnRegisterSessionNotification.argtypes = [wintypes.HWND]
 
 INVALID_HANDLE_VALUE = ctypes.c_void_p(-1).value
 
@@ -429,8 +476,12 @@ ACTIONS = {
 def worker_loop():
     while True:
         action = action_queue.get()
-        if isinstance(action, tuple) and action[0] == "__hook_error__":
-            logging.error("Error in mouse hook callback:\n%s", action[1])
+        if isinstance(action, tuple):
+            if action[0] == "__hook_error__":
+                logging.error("Error in mouse hook callback:\n%s", action[1])
+            elif action[0] == "__log__":
+                _, level, message = action
+                getattr(logging, level)(message)
             continue
         logging.info("Handling action %s", action)
         try:
@@ -439,19 +490,28 @@ def worker_loop():
             logging.exception("Error while handling action %s", action)
 
 
+def log_async(level, message):
+    """Logging must never happen directly on the main/hook thread (see
+    low_level_mouse_proc) - even outside the hook callback itself, keeping
+    that a hard rule everywhere avoids ever having to re-litigate whether a
+    particular spot is "safe enough" to log from directly. Hands the message
+    to the worker thread instead."""
+    action_queue.put(("__log__", level, message))
+
+
 # --- low-level mouse hook -----------------------------------------------------
 
 def classify_xbutton(x_button, ctrl, shift):
     if x_button == XBUTTON1:
-        if shift and not ctrl:
+        if ctrl and not shift:
             return "previous"
         return None
     if x_button == XBUTTON2:
-        if shift and ctrl:
+        if ctrl and shift:
             return "toggle_spotify"
-        if shift:
+        if ctrl:
             return "next"
-        if not ctrl:
+        if not shift:
             return "playpause"
         return None
     return None
@@ -493,6 +553,102 @@ def low_level_mouse_proc(n_code, w_param, l_param):
         action_queue.put(("__hook_error__", traceback.format_exc()))
 
     return user32.CallNextHookEx(None, n_code, w_param, l_param)
+
+
+# --- hook install / self-healing ---------------------------------------------
+#
+# A running low-level mouse hook can be silently orphaned by a desktop
+# switch - most commonly the secure-desktop switch Windows does for the lock
+# screen - and keep "running" while no longer seeing any real input, with no
+# error anywhere. This isn't limited to the very first install at startup
+# (see the Shell_TrayWnd wait below): a hook that's been working fine can
+# stop dead after a completely ordinary lock/unlock cycle later in the day.
+#
+# Two independent, complementary safety nets cover this instead of trying to
+# pin down the exact trigger conditions (which turned out to be inconsistent
+# across attempts): reinstalling immediately on a WTS session-unlock
+# notification (fast, needs a message window to receive it), and
+# reinstalling unconditionally on a fixed timer regardless of any specific
+# trigger (slower to notice, but needs nothing else to work and caps the
+# worst-case outage at one interval). Either one alone recovers from this;
+# together they make a permanently-dead hook effectively impossible.
+
+_hook_proc = None
+_hook_handle = None
+_wnd_proc_ref = None
+
+MESSAGE_WINDOW_CLASS = "SpotifyHotkeysSessionMonitor"
+
+
+def install_hook():
+    global _hook_proc, _hook_handle
+    if _hook_proc is None:
+        _hook_proc = HOOKPROC(low_level_mouse_proc)
+    module_handle = kernel32.GetModuleHandleW(None)
+    handle = user32.SetWindowsHookExW(WH_MOUSE_LL, _hook_proc, module_handle, 0)
+    if not handle:
+        log_async("error", "Failed to install mouse hook (error %s)" % ctypes.get_last_error())
+        return False
+    _hook_handle = handle
+    return True
+
+
+def reinstall_hook():
+    global _hook_handle
+    log_async("info", "Reinstalling mouse hook")
+    old_handle, _hook_handle = _hook_handle, None
+    if old_handle:
+        user32.UnhookWindowsHookEx(old_handle)
+    install_hook()
+
+
+def wnd_proc(hwnd, msg, wparam, lparam):
+    if msg == WM_WTSSESSION_CHANGE and wparam in (WTS_SESSION_UNLOCK, WTS_SESSION_LOGON):
+        reinstall_hook()
+        return 0
+    if msg == WM_DESTROY:
+        user32.PostQuitMessage(0)
+        return 0
+    return user32.DefWindowProcW(hwnd, msg, wparam, lparam)
+
+
+def create_message_window():
+    """A window that never appears on screen (HWND_MESSAGE parent), created
+    only so WTSRegisterSessionNotification has somewhere to deliver
+    WM_WTSSESSION_CHANGE to."""
+    global _wnd_proc_ref
+    _wnd_proc_ref = WNDPROC(wnd_proc)
+    wndclass = WNDCLASSW()
+    wndclass.style = 0
+    wndclass.lpfnWndProc = _wnd_proc_ref
+    wndclass.cbClsExtra = 0
+    wndclass.cbWndExtra = 0
+    wndclass.hInstance = kernel32.GetModuleHandleW(None)
+    wndclass.hIcon = None
+    wndclass.hCursor = None
+    wndclass.hbrBackground = None
+    wndclass.lpszMenuName = None
+    wndclass.lpszClassName = MESSAGE_WINDOW_CLASS
+    if not user32.RegisterClassW(ctypes.byref(wndclass)):
+        log_async("warning", "RegisterClassW failed (error %s), session-unlock auto-recovery disabled - the periodic watchdog still covers this" % ctypes.get_last_error())
+        return None
+
+    hwnd = user32.CreateWindowExW(
+        0, MESSAGE_WINDOW_CLASS, MESSAGE_WINDOW_CLASS, 0,
+        0, 0, 0, 0, HWND_MESSAGE, None, wndclass.hInstance, None,
+    )
+    if not hwnd:
+        log_async("warning", "CreateWindowExW failed (error %s), session-unlock auto-recovery disabled - the periodic watchdog still covers this" % ctypes.get_last_error())
+        return None
+    return hwnd
+
+
+def watchdog_loop(main_thread_id):
+    while True:
+        time.sleep(REHOOK_WATCHDOG_INTERVAL)
+        # Must run on the thread that owns the hook/message loop, so this
+        # only asks it to reinstall rather than doing so directly here.
+        user32.PostThreadMessageW(main_thread_id, WM_APP_REHOOK, 0, 0)
 
 
 # --- setup / entry point -------------------------------------------------------
@@ -540,21 +696,35 @@ def main():
     ):
         logging.warning("Shell_TrayWnd not found within 60s, installing the hook anyway")
 
-    hook_proc = HOOKPROC(low_level_mouse_proc)
-    module_handle = kernel32.GetModuleHandleW(None)
-    hook_handle = user32.SetWindowsHookExW(WH_MOUSE_LL, hook_proc, module_handle, 0)
-    if not hook_handle:
-        logging.error("Failed to install mouse hook (error %s)", ctypes.get_last_error())
+    if not install_hook():
+        # No hook exists yet at this point, so a direct log call here is
+        # safe - and more reliable than the queued one inside install_hook()
+        # itself, which races against the process actually exiting.
+        logging.error("Failed to install mouse hook, exiting")
         sys.exit(1)
 
-    logging.info("Mouse hook installed, listening for input")
+    message_hwnd = create_message_window()
+    if message_hwnd and not wtsapi32.WTSRegisterSessionNotification(message_hwnd, NOTIFY_FOR_THIS_SESSION):
+        log_async("warning", "WTSRegisterSessionNotification failed (error %s)" % ctypes.get_last_error())
+
+    main_thread_id = kernel32.GetCurrentThreadId()
+    threading.Thread(target=watchdog_loop, args=(main_thread_id,), daemon=True).start()
+
+    log_async("info", "Mouse hook installed, listening for input")
     msg = wintypes.MSG()
     try:
         while user32.GetMessageW(ctypes.byref(msg), None, 0, 0) > 0:
+            if msg.message == WM_APP_REHOOK:
+                reinstall_hook()
+                continue
             user32.TranslateMessage(ctypes.byref(msg))
             user32.DispatchMessageW(ctypes.byref(msg))
     finally:
-        user32.UnhookWindowsHookEx(hook_handle)
+        if message_hwnd:
+            wtsapi32.WTSUnRegisterSessionNotification(message_hwnd)
+            user32.DestroyWindow(message_hwnd)
+        if _hook_handle:
+            user32.UnhookWindowsHookEx(_hook_handle)
         logging.info("Mouse hook removed, exiting")
 
 

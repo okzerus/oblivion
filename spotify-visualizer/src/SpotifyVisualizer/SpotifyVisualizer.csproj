@@ -20,4 +20,18 @@
     <PackageReference Include="NAudio.Wasapi" Version="2.2.1" />
   </ItemGroup>
 
+  <!--
+    Having both UseWPF and UseWindowsForms enabled makes the SDK implicitly add global
+    usings for System.Drawing and System.Windows.Forms project-wide (see
+    https://github.com/dotnet/sdk/issues/37608), which collides with the WPF equivalents
+    (System.Windows.Application, System.Windows.Media.Color, System.Threading.Timer vs.
+    System.Windows.Forms.Timer, etc.) that most files here explicitly import. Every file
+    that actually needs the WinForms/GDI+ types (TrayIconManager, ScreenColorSampler)
+    already imports them explicitly, so it's safe to drop these two from the implicit set.
+  -->
+  <ItemGroup>
+    <Using Remove="System.Drawing" />
+    <Using Remove="System.Windows.Forms" />
+  </ItemGroup>
+
 </Project>

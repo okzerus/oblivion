@@ -255,7 +255,7 @@ def is_spotify_process_running():
         kernel32.CloseHandle(snapshot)
 
 
-def launch_spotify(extra_args=None):
+def launch_spotify():
     """Runs Spotify.exe. If Spotify is already running - even fully hidden in
     the tray - its own single-instance handling activates and shows the
     existing window instead of starting a second copy. That's also the most
@@ -264,7 +264,7 @@ def launch_spotify(extra_args=None):
     Spotify wake itself up this way does not."""
     exe = os.path.join(os.environ.get("APPDATA", ""), "Spotify", "Spotify.exe")
     if os.path.isfile(exe):
-        subprocess.Popen([exe, *(extra_args or [])])
+        subprocess.Popen([exe])
         return
 
     try:
@@ -283,23 +283,34 @@ def wait_for_condition(predicate, timeout, interval=0.1):
 
 
 def launch_spotify_hidden():
-    """Used only at script startup: launches Spotify without ever showing its
-    window on screen. --minimized is a best-effort hint Spotify's launcher
-    accepts, but isn't guaranteed to keep it out of sight by itself, so this
-    also waits for the window to appear and immediately sends it the same
-    WM_CLOSE that tray-minimizes it everywhere else in this script."""
-    launch_spotify(["--minimized"])
+    """Used only at script startup: launches Spotify without its window ever
+    appearing on screen, by passing SW_HIDE as the process's initial
+    show-window state - the same trick as ShellExecute(..., SW_HIDE). A
+    well-behaved Win32 app shows its main window with ShowWindow(hwnd,
+    nCmdShow) using exactly that startup hint, so this keeps it from being
+    drawn in the first place; Spotify's tray icon still appears normally,
+    since that's created independently of the main window's visibility.
+    --minimized was tried first but only minimizes to the taskbar, not the
+    tray."""
+    exe = os.path.join(os.environ.get("APPDATA", ""), "Spotify", "Spotify.exe")
+    if os.path.isfile(exe):
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        startupinfo.wShowWindow = subprocess.SW_HIDE
+        subprocess.Popen([exe], startupinfo=startupinfo)
+    else:
+        logging.warning("Could not find Spotify.exe at %s, falling back to a visible launch", exe)
+        launch_spotify()
+
+    # Safety net in case a future Spotify version stops honoring SW_HIDE (or
+    # the spotify: URI fallback above was used, which offers no way to hint
+    # a hidden start at all): if the window shows up anyway, tray-minimize it
+    # the same way the hotkey does.
     hwnd = None
     if wait_for_condition(lambda: bool(find_spotify_window()), timeout=20.0, interval=0.2):
         hwnd = find_spotify_window()
-    if not hwnd:
-        logging.warning("Spotify window didn't appear within 20s of launching")
-        return
-    # Give it a moment to actually start pumping messages before closing it -
-    # sending WM_CLOSE the instant the window handle exists risks landing
-    # before Spotify's own message loop is ready to act on it.
-    time.sleep(0.5)
-    user32.PostMessageW(hwnd, WM_CLOSE, 0, 0)
+    if hwnd and user32.IsWindowVisible(hwnd):
+        user32.PostMessageW(hwnd, WM_CLOSE, 0, 0)
 
 
 def send_appcommand(cmd):

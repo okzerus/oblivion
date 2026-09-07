@@ -10,17 +10,17 @@ Controls:
                                           (Spotify's own "minimize to tray on
                                           close" setting turns that into a
                                           tray-minimize instead of a real exit)
-    ctrl + shift + mouse4             -> like/unlike the currently playing
-                                          track (needs spotify_api.py set up
-                                          once via spotify_auth_setup.py)
+
+(There's no "like current track" binding: Spotify's Web API player
+endpoints - the only way to know what's currently playing without asking
+the window itself - require Premium, so that feature was dropped.)
 
 Playback commands are delivered with WM_APPCOMMAND sent directly to
 Spotify's window handle instead of the system-wide media-key APIs
 (keybd_event / SendMessage(HWND_BROADCAST, ...)). This keeps the Windows
 media OSD off screen and prevents the command from reaching any other app
 that also listens for media keys (e.g. a browser tab playing something on
-YouTube). "Like" has no such OS-level command, so it goes through the
-Spotify Web API instead (see spotify_api.py).
+YouTube).
 
 Only the mouse buttons above are captured (via a low-level mouse hook), and
 only when the required modifier is actually held; every other click passes
@@ -41,8 +41,6 @@ from ctypes import wintypes
 
 if os.name != "nt":
     sys.exit("This script only runs on Windows.")
-
-import spotify_api
 
 user32 = ctypes.WinDLL("user32", use_last_error=True)
 kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
@@ -330,19 +328,25 @@ def force_foreground(hwnd):
     # then drop the topmost flag again so Spotify doesn't stay pinned on top.
     user32.SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE)
     user32.SetWindowPos(hwnd, HWND_NOTOPMOST, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE)
-    ok = user32.SetForegroundWindow(hwnd)
+    user32.SetForegroundWindow(hwnd)
 
     if attached_fg:
         user32.AttachThreadInput(cur_thread, fg_thread, False)
     if attached_target:
         user32.AttachThreadInput(cur_thread, target_thread, False)
 
-    if not ok:
-        # Last-resort trick: a synthetic Alt keypress satisfies the check
-        # Windows uses to decide whether a foreground switch is allowed.
+    # Confirm the switch actually landed before returning instead of trusting
+    # SetForegroundWindow's return value - right after waking Spotify up
+    # from a full tray-hide in particular, its own activation and ours can
+    # race, occasionally leaving GetForegroundWindow() not yet updated by
+    # the time this returns. If a later press reads that stale state before
+    # it settles, it misjudges whether Spotify is currently focused (e.g.
+    # a close request right after opening silently doing nothing).
+    if not wait_for_condition(lambda: user32.GetForegroundWindow() == hwnd, timeout=0.5):
         user32.keybd_event(VK_MENU, 0, 0, None)
         user32.SetForegroundWindow(hwnd)
         user32.keybd_event(VK_MENU, 0, KEYEVENTF_KEYUP, None)
+        wait_for_condition(lambda: user32.GetForegroundWindow() == hwnd, timeout=0.5)
 
 
 def toggle_spotify():
@@ -356,6 +360,10 @@ def toggle_spotify():
         if user32.IsWindowVisible(hwnd) and user32.GetForegroundWindow() == hwnd:
             logging.info("Spotify already focused, sending close (tray-minimize)")
             user32.PostMessageW(hwnd, WM_CLOSE, 0, 0)
+            # WM_CLOSE is posted asynchronously; wait for it to actually take
+            # effect so a rapid next press doesn't read the still-visible
+            # window and send a redundant close instead of reopening.
+            wait_for_condition(lambda: not user32.IsWindowVisible(hwnd), timeout=1.0)
         else:
             logging.info("Bringing Spotify to the foreground")
             force_foreground(hwnd)
@@ -369,16 +377,6 @@ def toggle_spotify():
     launch_spotify()
 
 
-def toggle_like():
-    result = spotify_api.toggle_like_current_track()
-    if result == "not_configured":
-        logging.warning("Like feature isn't set up yet - run spotify_auth_setup.py once")
-    elif result == "nothing_playing":
-        logging.info("Nothing is currently playing, nothing to like")
-    else:
-        logging.info("Current track %s", result)
-
-
 # --- action queue / worker thread --------------------------------------------
 
 action_queue = queue.Queue()
@@ -388,7 +386,6 @@ ACTIONS = {
     "previous": lambda: send_appcommand(APPCOMMAND_MEDIA_PREVIOUSTRACK),
     "next": lambda: send_appcommand(APPCOMMAND_MEDIA_NEXTTRACK),
     "toggle_spotify": toggle_spotify,
-    "like": toggle_like,
 }
 
 
@@ -405,9 +402,7 @@ def worker_loop():
 
 def classify_xbutton(x_button, ctrl, shift):
     if x_button == XBUTTON1:
-        if shift and ctrl:
-            return "like"
-        if shift:
+        if shift and not ctrl:
             return "previous"
         return None
     if x_button == XBUTTON2:

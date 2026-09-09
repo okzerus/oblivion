@@ -6,9 +6,9 @@ title @s subtitle {"text":"На восходе Солнца...","italic":true,"c
 
 
 ###   Э Ф Ф Е К Т Ы
-execute unless entity @s[tag=obl.vanilla.slowness] run tag @s add obl.custom_slowness
+tag @s[tag=!obl.vanilla.slowness] add obl.custom_slowness
 effect give @s minecraft:slowness 3 1 true
-execute unless entity @s[tag=obl.vanilla.darkness] run tag @s add obl.custom_darkness
+tag @s[tag=!obl.vanilla.slowness] add obl.custom_darkness
 effect give @s minecraft:darkness 3 9 true
 playsound minecraft:block.respawn_anchor.set_spawn player @s ~ ~ ~ 1 0.85
 playsound minecraft:item.armor.equip_netherite player @s ~ ~ ~ 1 0.85

@@ -79,7 +79,7 @@ execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=smal
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=wither_skull] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ^ ^ ^3
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=ender_pearl] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.1 ~
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=tnt] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.25 ~
-execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=potion] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.1 ~
+execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=#obl:potions] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.1 ~
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=experience_bottle] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~.1 ~
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] if entity @s[type=firework_rocket] as @e[type=marker,tag=obl.temp.motion_modify] at @s run tp @s ~ ~-.02 ~
 ## SPEED

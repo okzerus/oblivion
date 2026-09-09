@@ -1,6 +1,9 @@
 ###   С П И С О К   Щ И Т О В
 # 
 
+###   О Т Л А Д К А
+tellraw @s[tag=obl.debug] [{"text":"Отжал щит!"}]
+
 ###   П А Р И Р О В А Н И Е
 tag @s add obl.temp.parried
 execute if entity @s[tag=obl.temp.parried_direct] run function obl:tech/parrying/direct/reflect

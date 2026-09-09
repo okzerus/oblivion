@@ -17,7 +17,7 @@ scoreboard objectives add obl.health dummy
 scoreboard objectives add obl.health_old dummy
 scoreboard objectives add obl.damage_taken dummy
 scoreboard objectives add obl.holding_rmb dummy
-scoreboard objectives add obl.shield.using dummy
+scoreboard objectives add obl.using_shield dummy
 scoreboard objectives add obl.shield.cleanup dummy
 scoreboard objectives add obl.shield.preparing dummy
 scoreboard objectives add obl.effect.scorchfield.count dummy

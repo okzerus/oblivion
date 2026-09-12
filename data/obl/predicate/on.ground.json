@@ -1,20 +1,9 @@
 {
-  "condition": "minecraft:inverted",
-  "term": {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "minecraft:stepping_on": {
-        "block": {
-          "blocks": [
-            "minecraft:void_air",
-            "minecraft:cave_air",
-            "minecraft:air",
-            "minecraft:structure_void",
-            "minecraft:light"
-          ]
-        }
-      }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "flags": {
+      "is_on_ground": true
     }
   }
 }

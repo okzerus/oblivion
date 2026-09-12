@@ -1,6 +1,6 @@
 ###   S T A R T
 data merge entity @s {NoGravity:0b}
-tag @s remove obl.dont_move
+tag @s remove obl.freeze
 tag @s remove obl.projectile.reflected
 tag @s remove obl.projectile.parried
 

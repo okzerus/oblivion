@@ -12,9 +12,9 @@ scoreboard players operation @s[tag=!obl.projectile.no_owner] obl.id = @e[type=#
 ## Добавляем тег, чтобы эта функция не выполнялась повторно
 tag @s add obl.projectile.init
 ## Если источник - игрок, добавляем отдельный тег
-execute if entity @e[type=#obl:all_mobs,tag=obl.temp.projectile_owner,type=player] run tag @s add obl.projectile.player_owner
+execute if entity @e[type=player,tag=obl.temp.projectile_owner] run tag @s add obl.projectile.player_owner
 ## Если источник - всполох, добавляем отдельный тег
-execute if entity @e[type=#obl:all_mobs,tag=obl.temp.projectile_owner,type=blaze] run tag @s add obl.projectile.blaze_owner
+execute if entity @e[type=blaze,tag=obl.temp.projectile_owner] run tag @s add obl.projectile.blaze_owner
 ## Если снаряд - Стрела помощи, убираем её урон
 # execute if data entity @s {Color:15695597} run tag @s add obl.arrow.arrow_of_support
 # execute if entity @s[tag=obl.arrow.arrow_of_support] run data merge entity @s {damage:-100.0d}

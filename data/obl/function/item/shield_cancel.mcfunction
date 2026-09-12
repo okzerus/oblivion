@@ -5,12 +5,13 @@
 tellraw @s[tag=obl.debug] [{"text":"Отжал щит!"}]
 
 ###   П А Р И Р О В А Н И Е
-tag @s add obl.temp.parried
-execute if entity @s[tag=obl.temp.parried_direct] run function obl:tech/parrying/direct/reflect
-execute if entity @s[tag=obl.temp.parried_projectile] run function obl:tech/parrying/projectile/reflect
+execute if entity @s[tag=obl.parry_success.direct] run function obl:tech/parrying/direct/reflect
+execute if entity @s[tag=obl.parry_success.projectile] run function obl:tech/parrying/projectile/reflect
 
 ###   О Ч И С Т К А
-tag @s remove obl.temp.parried
-tag @s remove obl.temp.parried_direct
-tag @s remove obl.temp.parried_projectile
+tag @s remove obl.can_parry.projectile
+tag @s remove obl.can_parry.direct
+tag @s remove obl.parry_success
+tag @s remove obl.parry_success.direct
+tag @s remove obl.parry_success.projectile
 scoreboard players set @s obl.using_shield 0

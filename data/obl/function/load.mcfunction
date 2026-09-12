@@ -43,6 +43,13 @@ scoreboard objectives add obl.weapon.fanged_assassin.autumn_red.cd dummy
 scoreboard objectives add obl.weapon.fanged_assassin.fox_dance.cd dummy
 scoreboard objectives add obl.weapon.fanged_assassin.fox_dance.ray dummy
 scoreboard objectives add obl.weapon.fanged_assassin.accelerando dummy
+### Парирование
+scoreboard objectives add obl.parry.cd dummy
+scoreboard objectives add obl.parry.count dummy
+scoreboard objectives add obl.parry.tick dummy
+scoreboard objectives add obl.parry.after_tick dummy
+scoreboard objectives add obl.parry.spam_cd dummy
+scoreboard objectives add obl.parried_by_id dummy
 
 
 scoreboard objectives add obl.weapon.was_using.crack_of_dawn dummy

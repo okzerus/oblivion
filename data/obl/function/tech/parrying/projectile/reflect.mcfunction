@@ -70,9 +70,9 @@ execute as @e[type=item,tag=obl.temp.reflected] run data modify entity @s Throwe
 # Фейерверк: Меняет полёт на горизонтальный и обновляем продолжительность полёта
 execute as @e[type=firework_rocket,tag=obl.temp.reflected] run data merge entity @s {ShotAtAngle:1b,Life:1}
 # Трезубец: Увеличиваем урон
-execute as @e[type=trident,tag=obl.temp.reflected] run function obl:tech/parrying/projectile/modify_damage
+execute as @e[type=trident,tag=obl.temp.reflected,tag=!obl.parry_damage] run function obl:tech/parrying/projectile/modify_damage
 # Стрела: Увеличиваем урон и добавляем пронзание
-execute as @e[type=#minecraft:arrows,tag=obl.temp.reflected] run function obl:tech/parrying/projectile/modify_damage
+execute as @e[type=#minecraft:arrows,tag=obl.temp.reflected,tag=!obl.parry_damage] run function obl:tech/parrying/projectile/modify_damage
 # Падающий блок: Обновляем продолжительность полёта и урон от падения (наковальня онли)
 execute as @e[type=falling_block,tag=obl.temp.reflected] run data merge entity @s {FallHurtAmount:12f,Time:1}
 # Наковальня: Добавляем нестабильности для последовательных парирований

@@ -39,9 +39,9 @@ execute if entity @s[tag=obl.temp.no_reflected] anchored eyes positioned ^ ^ ^3 
 # Стандартный откат
 scoreboard players set @s obl.parry.cd 20
 # Если парированный снаряд был от игрока, время отката утраивается (PvP баланс)
-execute if entity @e[type=#obl:parryable,tag=obl.projectile.player_owner] run scoreboard players set @s obl.parry.cd 60
+execute if entity @e[type=#obl:parryable,tag=obl.temp.reflected,tag=obl.projectile.player_owner,tag=!obl.temp.same_owner] run scoreboard players set @s obl.parry.cd 60
 ## Повреждение щита
-execute if entity @s[gamemode=!creative,predicate=obl:items/hold.shield] run function obl:tech/parrying/shield_damage
+execute if entity @s[gamemode=!creative,predicate=obl:holding/shield_both] run function obl:tech/parrying/shield_damage
 ## Положительные эффекты
 execute if entity @e[type=#obl:parryable,tag=obl.temp.reflected,tag=!obl.temp.same_owner,tag=!obl.no_parry_buffs] run function obl:tech/parrying/buff
 ## Спецэффекты

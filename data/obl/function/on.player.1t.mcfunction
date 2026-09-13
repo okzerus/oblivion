@@ -84,6 +84,9 @@ execute as @e[tag=obl.temp.success_hit] run tag @s remove obl.temp.success_hit
 # Отмена ПКМ
 execute if entity @s[tag=!obl.using_shield,scores={obl.using_shield=1..}] run function obl:item/shield_cancel
 tag @s remove obl.using_shield
+# Добавляем описание с кадром парирования
+execute if predicate obl:holding/vanilla_shield run item modify entity @s weapon.mainhand obl:shield
+execute if predicate obl:holding/vanilla_shield_off run item modify entity @s weapon.offhand obl:shield
 
 #################################################################################################################################################################
 

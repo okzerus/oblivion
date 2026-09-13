@@ -20,7 +20,7 @@ particle minecraft:firework ~ ~.5 ~ 0 0 0 4 400 force
 summon lightning_bolt ~ ~-8 ~
 summon lightning_bolt ~ ~-8 ~
 ## Призываем крипера для взрыва блоков
-summon creeper ~ ~-128 ~ {fuse:0,ExplosionRadius:5,Tags:["obl.temp.parried_lightning"],CustomName:["Парированная молния"],active_effects:[{id:invisibility,duration:-1,show_particles:0b}]}
+summon creeper ~ ~-128 ~ {Fuse:0,ExplosionRadius:5,Tags:["obl.temp.parried_lightning"],CustomName:["Парированная молния"]}
 execute as @e[type=creeper,limit=1,sort=nearest,tag=obl.temp.parried_lightning] at @s run tp @s ~ ~127.3 ~
 
 ###   О Ч И С Т К А

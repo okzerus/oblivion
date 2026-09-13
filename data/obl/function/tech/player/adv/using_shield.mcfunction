@@ -15,6 +15,9 @@ execute if score @s obl.using_shield matches 15 run tellraw @s[tag=obl.debug] [{
 ###   К А Д Р Ы   П А Р И Р О В А Н И Я
 ## Пропускает кадры парирования если парирование на откате (ВСЁ ПОТОМУ ЧТО Я УМНЫЙ ДЕЛАЮ ВСЁ ПРАВИЛЬНО):
 execute if score @s obl.parry.cd matches 1.. run scoreboard players set @s obl.using_shield 16
+## Убираем теги перед выдачей:
+tag @s remove obl.can_parry.projectile
+tag @s remove obl.can_parry.direct
 ## Кадр парирования для снарядов:
 execute if score @s obl.using_shield matches 1..5 run tag @s add obl.can_parry.projectile
 ## Кадр парирования для контактных:

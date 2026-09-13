@@ -15,4 +15,4 @@ particle dust{color:[0.99,0.13,0.01],scale:2} ~ ~1 ~ 5 2 5 0 200 normal
 playsound block.fire.extinguish master @a[distance=..8] ~ ~ ~ 1 0.8
 
 tag @s remove obl.weapon.fanged_assassin.fox_dance.autumn_red.finish
-scoreboard players set @s obl.weapon.fanged_assassin.autumn_red.cd 1200
+scoreboard players set @s obl.weapon.fanged_assassin.autumn_red.cd 2400

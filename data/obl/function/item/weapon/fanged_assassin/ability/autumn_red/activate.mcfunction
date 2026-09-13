@@ -15,7 +15,8 @@ playsound oblivion:misc.fanged_assassin.mono.autumn_red.start.2 master @s ~ ~100
 
 scoreboard players set @s obl.weapon.fanged_assassin.autumn_red 600
 effect give @s speed 30 1
-item modify entity @s weapon.mainhand obl:fanged_assassin/initial
+attribute @s attack_speed modifier add obl.empower.autumn_red 4 add_value
+
 
 ###
 tag @s remove obl.weapon.fanged_assassin.fox_dance.autumn_red.activate

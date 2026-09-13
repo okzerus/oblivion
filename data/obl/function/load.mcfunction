@@ -4,6 +4,8 @@
 scoreboard objectives add obl.const dummy
 scoreboard players set #zero obl.const 0
 scoreboard players set #two obl.const 2
+scoreboard objectives add obl.time_of_day dummy
+execute store result score #time obl.time_of_day run time query day
 ## Разное
 scoreboard objectives add obl.frozen_spawners dummy
 scoreboard players set #frozen_spawners obl.frozen_spawners 0
@@ -30,8 +32,6 @@ scoreboard objectives add obl.hit_cooldown dummy
 scoreboard objectives add obl.spawner.id dummy
 scoreboard objectives add obl.spawner.death_count dummy
 scoreboard objectives add obl.spawner.difficulty dummy
-scoreboard objectives add obl.time_of_day dummy
-execute store result score #time obl.time_of_day run time query day
 scoreboard objectives add obl.weapon.gluttony.combo dummy
 scoreboard objectives add obl.weapon.gluttony.decay dummy
 scoreboard objectives add obl.weapon.gluttony.fangs dummy
@@ -50,6 +50,9 @@ scoreboard objectives add obl.parry.tick dummy
 scoreboard objectives add obl.parry.after_tick dummy
 scoreboard objectives add obl.parry.spam_cd dummy
 scoreboard objectives add obl.parried_by_id dummy
+
+
+scoreboard objectives add obl.empower.damage_test dummy
 
 
 scoreboard objectives add obl.weapon.was_using.crack_of_dawn dummy

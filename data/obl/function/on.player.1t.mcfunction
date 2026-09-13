@@ -114,6 +114,7 @@ execute if score @s obl.parry.spam_cd matches 0 run function obl:tech/parrying/s
 
 
 
+execute unless score @s obl.empower.damage_test matches ..0 run function obl:tech/empower/test/damage_test
 
 
 ###   Т И К   Ж И З Н И (?)

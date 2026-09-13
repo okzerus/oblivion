@@ -16,7 +16,7 @@ execute if predicate obl:holding/fanged_assassin unless predicate obl:is.sneakin
 execute if predicate obl:holding/crack_of_dawn unless score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run function obl:item/weapon/crack_of_dawn/ability/charging
 
 # Оскал Убийцы/Fanged Assassin
-execute if predicate obl:holding/fanged_assassin if predicate obl:is.sneaking unless score @s obl.weapon.fanged_assassin.autumn_red.cd matches 1.. at @s run function obl:item/weapon/fanged_assassin/ability/autumn_red/charging
+execute if predicate obl:holding/fanged_assassin if predicate obl:is.sneaking unless score @s obl.weapon.fanged_assassin.autumn_red.cd matches 1.. unless score @s obl.weapon.fanged_assassin.autumn_red matches 1.. at @s run function obl:item/weapon/fanged_assassin/ability/autumn_red/charging
 
 
 ###   О Ч И С Т К А

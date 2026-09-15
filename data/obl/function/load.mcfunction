@@ -54,6 +54,9 @@ scoreboard objectives add obl.parry.after_tick dummy
 scoreboard objectives add obl.parry.spam_cd dummy
 scoreboard objectives add obl.parried_by_id dummy
 scoreboard objectives add obl.parried_decay dummy
+## Столкновение вёдер с жидкостью (детект по факту физики, см. bucket.check)
+scoreboard objectives add obl.parried_item.speed_sq dummy
+scoreboard objectives add obl.parried_item.speed_sq_old dummy
 
 
 scoreboard objectives add obl.empower.damage_test dummy

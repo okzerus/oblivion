@@ -1,5 +1,5 @@
 # Сохраняем фитиль динамита в счёт
-execute store score #tnt_fuse obl run data get entity @s fuse
+execute store result score #tnt_fuse obl run data get entity @s fuse
 # Выдаём парирующему игроку ачивку за парирование динамита за 1-5 тиков до взрыва
 execute if score #tnt_fuse obl matches 1..5 run advancement grant @p[tag=obl.temp.parrying] only obl:advancements/weaponry/shield/additions/tnt.low_fuse
 

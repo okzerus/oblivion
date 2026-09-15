@@ -8,7 +8,7 @@ tag @s add obl.temp.reflecting
 scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
 scoreboard players operation #id.temp obl.id = @s obl.id
 # Временно тегаем парированные снаряды соответствующие сохранённому айди с помощью предиката
-tag @e[type=#obl:parryable,tag=obl.projectile.parried,predicate=obl:matching_score.parrying] add obl.temp.reflected
+tag @e[type=#obl:parryable,tag=obl.parried,predicate=obl:matching_score.parrying] add obl.temp.reflected
 # Если никаких снарядов не было тегнуто, даём сущности соответстующий тег
 execute unless entity @e[type=#obl:parryable,tag=obl.temp.reflected] run tag @s add obl.temp.no_reflected
 # Временно тегаем снаряды если их айди и так совпадали с айди сущности
@@ -94,7 +94,7 @@ execute as @e[type=shulker_bullet,tag=obl.temp.reflected] at @s summon shulker_b
 scoreboard players set @s obl.parry.tick 0
 tag @e[type=#obl:parryable] remove obl.temp.same_owner
 tag @e[type=#obl:parryable] remove obl.temp.reflected
-tag @e[type=#obl:parryable] remove obl.projectile.parried
+tag @e[type=#obl:parryable] remove obl.parried
 tag @e[type=#obl:parryable] remove obl.parry_strength.1
 tag @e[type=#obl:parryable] remove obl.parry_strength.2
 tag @e[type=#obl:parryable] remove obl.parry_strength.3

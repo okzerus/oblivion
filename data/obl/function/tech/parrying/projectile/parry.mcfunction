@@ -4,12 +4,10 @@
 ###   П А Р И Р О В А Н И Е
 ## Выполняется НА парируемом объекте, используя ранее временно-тегнутую сущность как ту, кто парировала.
 # Даём этому снаряду тег о том, что он был парирован.
-tag @s add obl.projectile.parried
+tag @s add obl.parried
 # Даём теги сущности которая парировала
 tag @n[type=#obl:all_mobs,tag=obl.temp.parrying] add obl.parry_success
 tag @n[type=#obl:all_mobs,tag=obl.temp.parrying] add obl.parry_success.projectile
-# Отключаем директ парирование на время парирования снаряда
-tag @n[type=#obl:all_mobs,tag=obl.temp.parrying] add obl.disable.direct_parry
 # Сохраняем айди сущности, которая парировала этот снаряд, внутрь снаряда
 scoreboard players operation @s obl.parried_by_id = @n[type=#obl:all_mobs,tag=obl.temp.parrying] obl.id
 # Даём игроку достижения за последовательное парирование

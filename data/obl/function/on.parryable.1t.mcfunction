@@ -15,12 +15,12 @@ tag @s[type=#obl:parryable.onground_check,tag=obl.on_ground,predicate=!obl:on.gr
 # Трезубец: Если попал в цель после рефлекта, выполняем функцию.
 execute if entity @s[type=trident,tag=obl.projectile.reflected,tag=!obl.trident.dealt_damage,nbt={DealtDamage:1b}] run function obl:tech/parrying/projectile/list/trident.hit
 # Снаряд шалкера: В состоянии парирования, ежетиково устанавливаем движение на 0 и тепаем к ранее созданному маркеру (других способов остановить снаряд попросту нет)
-data merge entity @s[type=shulker_bullet,tag=obl.projectile.parried] {Motion:[0.0d,0.0d,0.0d]}
-tp @s[type=shulker_bullet,tag=obl.projectile.parried] @n[type=marker,tag=obl.shulker_bullet_teleporter]
+data merge entity @s[type=shulker_bullet,tag=obl.parried] {Motion:[0.0d,0.0d,0.0d]}
+tp @s[type=shulker_bullet,tag=obl.parried] @n[type=marker,tag=obl.shulker_bullet_teleporter]
 # Поплавок: В состоянии парирования, ежетиково устанавливаем движение на 0
-data merge entity @s[type=fishing_bobber,tag=obl.projectile.parried] {Motion:[0.0d,0.0d,0.0d]}
+data merge entity @s[type=fishing_bobber,tag=obl.parried] {Motion:[0.0d,0.0d,0.0d]}
 # Фейерверк: В состоянии парирования, ежетиково устанавливаем движение на 0
-data merge entity @s[type=firework_rocket,tag=obl.projectile.parried] {Motion:[0.0d,0.0d,0.0d]}
+data merge entity @s[type=firework_rocket,tag=obl.parried] {Motion:[0.0d,0.0d,0.0d]}
 # Предмет: После парирования, выполняем функции в зависимости от типа предмета
 execute if entity @s[type=item,tag=obl.projectile.reflected] run function obl:tech/parrying/projectile/list/item/tick
 ## Дополнительные проверки:
@@ -45,8 +45,8 @@ execute if entity @s[type=#obl:parryable_mobs] run function obl:tech/parrying/pr
 ###   З А С Т Р Я В Ш И Е   С Н А Р Я Д Ы
 ## Избавляемся от застрявших снарядов - по истечению obl.parried_decay, автоматически рефлектим снаряд прямо вниз/удаляем. 
 ## На случай, если с парировавшей сущностью что-то произошло до рефлекта.
-scoreboard players remove @s[tag=obl.projectile.parried,scores={obl.parried_decay=1..}] obl.parried_decay 1
-execute if entity @s[tag=obl.projectile.parried,scores={obl.parried_decay=0}] run function obl:tech/parrying/projectile/decay
+scoreboard players remove @s[tag=obl.parried,scores={obl.parried_decay=1..}] obl.parried_decay 1
+execute if entity @s[tag=obl.parried,scores={obl.parried_decay=0}] run function obl:tech/parrying/projectile/decay
 
 ###   Ч А С Т И Ц Ы
 ## Если снаряд парирован и в полёте, излучает частицы

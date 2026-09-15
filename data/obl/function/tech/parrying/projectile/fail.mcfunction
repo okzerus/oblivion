@@ -25,12 +25,12 @@ tellraw @s[tag=obl.debug] [{"text":"Провалил парирование."}]
 tag @s add obl.temp.failed_parry
 # Разморозка снаряда и запуск в сущность, провалившую парирование
 scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
-execute as @e[type=#obl:parryable,tag=obl.projectile.parried,predicate=obl:matching_score.parrying] at @s run function obl:tech/parrying/projectile/list/fail
+execute as @e[type=#obl:parryable,tag=obl.parried,predicate=obl:matching_score.parrying] at @s run function obl:tech/parrying/projectile/list/fail
 # Нереализовано
-#execute as @e[type=magma_cube,tag=obl.boss.black_death,tag=obl.projectile.parried,predicate=obl:matching_score.parrying] at @s run function obl:abilities/bosses/black_death/charged_explode
-#execute as @e[type=marker,tag=obl.projectile.curses,tag=obl.projectile.parried,predicate=obl:matching_score.parrying] at @s run function obl:tech/projectiles/hit/cursed_beam
-#execute as @e[type=marker,tag=obl.projectile.curses.accessory,tag=obl.projectile.parried,predicate=obl:matching_score.parrying] at @s run function obl:tech/projectiles/hit/cursed_beam.accessory
-#execute as @e[type=marker,tag=obl.projectile.yamato_sword,tag=obl.projectile.parried,predicate=obl:matching_score.parrying] at @s run function obl:tech/projectiles/hit/yamato_sword
+#execute as @e[type=magma_cube,tag=obl.boss.black_death,tag=obl.parried,predicate=obl:matching_score.parrying] at @s run function obl:abilities/bosses/black_death/charged_explode
+#execute as @e[type=marker,tag=obl.projectile.curses,tag=obl.parried,predicate=obl:matching_score.parrying] at @s run function obl:tech/projectiles/hit/cursed_beam
+#execute as @e[type=marker,tag=obl.projectile.curses.accessory,tag=obl.parried,predicate=obl:matching_score.parrying] at @s run function obl:tech/projectiles/hit/cursed_beam.accessory
+#execute as @e[type=marker,tag=obl.projectile.yamato_sword,tag=obl.parried,predicate=obl:matching_score.parrying] at @s run function obl:tech/projectiles/hit/yamato_sword
 
 ###   О Ч И С Т К А
 scoreboard players set @s obl.parry.tick 0

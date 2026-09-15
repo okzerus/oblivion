@@ -117,9 +117,9 @@ execute if score @s obl.parry.cd matches 1.. run scoreboard players remove @s ob
 execute if entity @s[tag=obl.parry_success] run scoreboard players add @s obl.parry.tick 1
 execute if score @s[tag=obl.parry_success.direct] obl.parry.tick matches 7.. run function obl:tech/parrying/direct/fail
 execute if score @s[tag=obl.parry_success.projectile] obl.parry.tick matches 20.. run function obl:tech/parrying/projectile/fail
-## ОТСУТСТВИЕ СНАРЯДА
+## ОТСУТСТВИЕ ЦЕЛИ
 scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
-execute if entity @s[tag=obl.parry_success,tag=!obl.just_parried_fucking_lightning] unless entity @n[type=#obl:parryable,tag=obl.projectile.parried,predicate=obl:matching_score.parrying] run function obl:tech/parrying/projectile/fail
+execute if entity @s[tag=obl.parry_success,tag=!obl.just_parried_fucking_lightning] unless entity @n[tag=obl.parried,predicate=obl:matching_score.parrying] run function obl:tech/parrying/projectile/fail
 ## БАФФЫ
 #execute if entity @s[tag=obl.empowered.parry] run scoreboard players remove @s obl.parry.empower_tick 1
 #execute if score @s[tag=obl.empowered.parry.direct] obl.parry.empower_tick matches 0 run function obl:tech/parrying/direct/buff.end

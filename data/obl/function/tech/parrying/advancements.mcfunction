@@ -6,6 +6,10 @@ scoreboard players add @s obl.parry.overall_count 1
 execute if score @s obl.parry.overall_count matches 100.. run advancement grant @s only obl:advancements/weaponry/shield/additions/parry.100
 execute if score @s obl.parry.overall_count matches 1000.. run advancement grant @s only obl:advancements/weaponry/shield/additions/parry.1000
 execute if score @s obl.parry.overall_count matches 10000.. run advancement grant @s only obl:advancements/weaponry/shield/additions/parry.10000
+# Парирование на пол хп
+advancement grant @s[scores={obl.player_health=1}] only obl:advancements/weaponry/shield/additions/half_a_heart
+# Контактное парирование
+advancement grant @s[tag=obl.temp.direct_parrying] only obl:advancements/weaponry/shield/additions/close_and_personal
 # Парирование моба
 execute if entity @n[type=#obl:parryable,tag=obl.temp.reflected,tag=obl.parryable_mob] run advancement grant @s only obl:advancements/weaponry/shield/additions/whole_mob
 # Парирование молнии

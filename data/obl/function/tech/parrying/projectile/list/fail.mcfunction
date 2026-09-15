@@ -23,7 +23,7 @@ kill @s[type=ender_pearl]
 ###   О Ч И С Т К А
 tag @s remove obl.temp.same_owner
 tag @s remove obl.temp.reflected
-tag @s remove obl.projectile.parried
+tag @s remove obl.parried
 tag @s remove obl.parry_strength.1
 tag @s remove obl.parry_strength.2
 tag @s remove obl.parry_strength.3

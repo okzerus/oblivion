@@ -10,7 +10,7 @@ execute if entity @s[tag=obl.item.lava_bucket] run playsound minecraft:item.buck
 # Находим парировавшего через айди
 scoreboard players operation #id.temp obl.id = @s obl.id
 tag @p[predicate=obl:matching_score] add obl.temp.owner
-execute at @s align xyz positioned ~.5 ~ ~.5 facing entity @p[tag=obl.temp.owner] eyes rotated ~ 0 run summon item ^ ^ ^.5 {Item:{id:"minecraft:bucket",Count:1b},Tags:["obl.glow_berried"],Glowing:1b}
+execute at @s align xyz positioned ~.5 ~ ~.5 facing entity @p[tag=obl.temp.owner] eyes rotated ~ 0 run summon item ^ ^ ^.55 {Item:{id:"minecraft:bucket",Count:1b},Tags:["obl.glow_berried"],Glowing:1b}
 scoreboard players set @e[type=item,limit=1,sort=nearest,tag=obl.glow_berried] obl.glowing.cd 140
 
 ## Очистка

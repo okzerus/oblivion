@@ -1,5 +1,4 @@
 {
   "exhaustion": 5.0,
-  "message_id": "obl.parry",
-  "scaling": "when_caused_by_living_non_player"
+  "message_id": "obl.parry"
 }

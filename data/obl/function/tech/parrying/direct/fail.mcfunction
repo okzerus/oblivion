@@ -27,6 +27,9 @@ tellraw @s[tag=obl.debug] [{"text":"Провалил парирование."}]
 # Ищем парированные цели по айди
 scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
 tag @e[tag=obl.parried,predicate=obl:matching_score.parrying] add obl.temp.target
+## Убираем модификаторы
+execute as @e[type=#obl:all_mobs,tag=obl.temp.target] run attribute @s minecraft:movement_speed modifier remove obl.parried
+execute as @e[type=#obl:all_mobs,tag=obl.temp.target] run attribute @s minecraft:attack_damage modifier remove obl.parried
 ## Вместо нанесения урона по цели, наносим урон по сущности, провалившей парирование, от лица цели
 # Считываем текущий урон цели в счёт
 execute as @n[type=#obl:all_mobs,tag=obl.temp.target] run say asd
@@ -43,14 +46,11 @@ execute store result storage obl:damage value int 1 run scoreboard players get #
 function obl:tech/parrying/direct/damage with storage obl:damage
 ## Убираем экран парирования
 title @a[tag=obl.temp.target] title ""
-## Убираем модификаторы
-execute as @e[type=#obl:all_mobs,tag=obl.temp.target] run attribute @s minecraft:movement_speed modifier remove obl.parried
-execute as @e[type=#obl:all_mobs,tag=obl.temp.target] run attribute @s minecraft:attack_damage modifier remove obl.parried
 
 
 ###   О Ч И С Т К А
 scoreboard players set @s obl.parry.tick 0
-scoreboard players reset @e[type=#obl:all_mobs,tag=obl.temp.parry_victim] obl.parried_by_id
+scoreboard players reset @e[type=#obl:all_mobs,tag=obl.temp.target] obl.parried_by_id
 execute as @e[type=#obl:all_mobs,tag=obl.temp.target] run data merge entity @s[type=!player] {NoAI:0b,NoGravity:0b}
 tag @e[type=#obl:all_mobs,tag=obl.temp.target] remove obl.parried
 tag @e[type=#obl:all_mobs] remove obl.temp.target

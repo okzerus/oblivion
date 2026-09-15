@@ -1,2 +1,2 @@
-$execute if entity @s[tag=obl.temp.failed_parry] run damage @s $(value) obl:parry by @n[type=#obl:all_mobs,tag=obl.temp.target]
+$damage @s[tag=obl.temp.failed_parry] $(value) obl:parry by @n[type=#obl:all_mobs,tag=obl.temp.target]
 $execute unless entity @s[tag=obl.temp.failed_parry] as @e[type=#obl:all_mobs,tag=obl.temp.reflected] run damage @s $(value) obl:parry by @p[tag=obl.temp.reflecting]

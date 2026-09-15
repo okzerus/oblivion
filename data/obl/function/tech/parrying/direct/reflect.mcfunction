@@ -58,6 +58,7 @@ execute as @e[type=#obl:all_mobs,tag=obl.temp.reflected] run attribute @s minecr
 execute as @e[type=#obl:all_mobs,tag=obl.temp.reflected] run data merge entity @s[type=!player] {NoAI:0b,NoGravity:0b}
 tag @e[type=#obl:all_mobs,tag=obl.temp.reflected] remove obl.parried
 tag @e[type=#obl:all_mobs] remove obl.temp.reflected
+tag @s remove obl.temp.reflecting
 tag @s remove obl.temp.parried
 tag @s remove obl.temp.direct_parrying
 tag @s remove obl.parry_success

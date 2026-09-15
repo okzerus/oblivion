@@ -20,6 +20,7 @@
       "minecraft:blocks_attacks": {
         "block_delay_seconds": 0.0,
         "disable_cooldown_scale": 1.0,
+        "bypassed_by": "#minecraft:bypasses_shield",
         "damage_reductions": [
           {
             "base": 0.0,

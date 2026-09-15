@@ -15,6 +15,8 @@ tag @s add obl.projectile.init
 execute if entity @e[type=player,tag=obl.temp.projectile_owner] run tag @s add obl.projectile.player_owner
 ## Если источник - всполох, добавляем отдельный тег
 execute if entity @e[type=blaze,tag=obl.temp.projectile_owner] run tag @s add obl.projectile.blaze_owner
+## Если снаряд разрешено парировать сущности с таким же айди, добавляем отдельный тег
+tag @s[type=#obl:parryable.allowed_self_parry] add obl.allow_self_parry
 ## Если снаряд - Стрела помощи, убираем её урон
 # execute if data entity @s {Color:15695597} run tag @s add obl.arrow.arrow_of_support
 # execute if entity @s[tag=obl.arrow.arrow_of_support] run data merge entity @s {damage:-100.0d}

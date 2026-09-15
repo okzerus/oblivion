@@ -1,0 +1,26 @@
+{
+	"values": [
+		"#minecraft:arrows",
+		"minecraft:trident",
+		"minecraft:egg",
+		"minecraft:dragon_fireball",
+		"minecraft:falling_block",
+		"minecraft:firework_rocket",
+		"minecraft:fireball",
+		"minecraft:small_fireball",
+		"minecraft:llama_spit",
+		"minecraft:splash_potion",
+		"minecraft:lingering_potion",
+		"minecraft:shulker_bullet",
+		"minecraft:snowball",
+		"minecraft:wither_skull",
+		"minecraft:fishing_bobber",
+		"minecraft:experience_bottle",
+		"minecraft:item",
+		"minecraft:wind_charge",
+		"minecraft:breeze_wind_charge",
+		"minecraft:block_display",
+		"minecraft:armor_stand",
+		"minecraft:tnt"
+	]
+}

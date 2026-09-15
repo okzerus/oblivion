@@ -1,0 +1,1 @@
+tag @s remove obl.just_parried_fucking_lightning

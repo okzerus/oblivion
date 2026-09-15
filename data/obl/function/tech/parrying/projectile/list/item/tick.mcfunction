@@ -1,0 +1,2 @@
+# Вёдра жидкости: Проверяем, если предмет стукнулся об какой-либо блок - разливаем жидкость, оставляем пустое ведро.
+execute if entity @s[tag=obl.item.liquid_bucket] run function obl:tech/parrying/projectile/list/item/bucket.check

@@ -1,0 +1,10 @@
+{
+	"values": [
+		"minecraft:magma_cube",
+		"minecraft:sulfur_cube",
+		"minecraft:zombie",
+		"minecraft:zombified_piglin",
+		"minecraft:item",
+		"minecraft:tnt"
+	]
+}

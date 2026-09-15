@@ -16,8 +16,13 @@
 
 
 ###   О Д И Н   Т И К
+## Ведём серверный тик для последующей проверки реконнекта игрока
+execute store result score #server obl.server_time run time query gametime
+## На КАЖДОЙ сущности
 execute as @e at @s run function obl:on.entity.1t
+## На КАЖДОМ игроке
 execute as @a at @s run function obl:on.player.1t
+## ТОЛЬКО на сущностях, относящихся к парируемым снарядам
 execute as @e[type=#obl:parryable] at @s run function obl:on.parryable.1t
 
 

@@ -7,10 +7,10 @@ execute if entity @s[gamemode=!creative,predicate=obl:holding/shield_both] run f
 scoreboard players set @s obl.parry.cd 50
 # Если парированный снаряд был от игрока, время отката утраивается (PvP баланс)
 execute if entity @e[type=#obl:parryable,tag=obl.temp.reflected,tag=obl.projectile.player_owner,tag=!obl.temp.same_owner] run scoreboard players set @s obl.parry.cd 150
-## Визуальные дебаффы
-effect clear @s[tag=obl.custom_slowness] slowness
-effect clear @s[tag=obl.custom_blindness] blindness
-effect give @s[tag=obl.custom_blindness] blindness 1 0 true
+## Убираем экран парирования
+title @s title ""
+## Убираем модификатор скорости
+attribute @s minecraft:movement_speed modifier remove obl.parrying
 ## Взрываем поглощённую молнию на игроке
 execute if entity @s[tag=obl.just_parried_fucking_lightning] run function obl:tech/parrying/projectile/list/lightning_bolt.fail
 ## Спецэффекты

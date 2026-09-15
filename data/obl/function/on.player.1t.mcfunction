@@ -16,32 +16,51 @@
 execute unless entity @s[tag=obl.first_join] run function obl:tech/player/first_join/init
 scoreboard players operation #id.temp obl.id = @s obl.id
 
+###   Р Е К О Н Н Е К Т
+## ПРОВЕРКА
+# Пихаем ранее сохранённое серверное время игрока в счёт для проверки
+scoreboard players operation @s obl.server_time.check = @s obl.server_time
+# Бёрм число настоящего серверного время и отнимаем его из счёта для проверки
+scoreboard players operation @s obl.server_time.check -= #server obl.server_time
+# Если разница 20 или больше (1 секунда), игрок перезашёл
+execute if score @s obl.server_time.check matches 20.. run function obl:tech/player/reconnect
+## СИНХРОНИЗАЦИЯ
+scoreboard players operation @s obl.server_time = #server obl.server_time
+
 ###   N B T   И Г Р О К А   В   Х Р А Н И Л И Щ Е
 # надеюсь не понадобится
 
 
 #################################################################################################################################################################
 
-###   Х О Д Ь Б А   /   Б Е Г   /   П А Д Е Н И Е
+###   П Р О В Е Р К А   Д В И Ж Е Н И Я
 
-## Очистка перед командами
-tag @s remove obl.mid_air
-tag @s remove obl.on_ground
-tag @s remove obl.walking
+## Если игрок прыгнул, выполняем функцию при прыжке
+execute if score @s obl.jumping matches 1.. run function obl:tech/player/movement/jumping
+## Если игрок был в воздухе и приземлился, выполняем функцию при приземлении
+execute if entity @s[tag=obl.mid_air,predicate=obl:on.ground] run function obl:tech/player/movement/landing
+## Если игрок оторвался от земли, выполняем функцию
+execute if entity @s[tag=obl.on_ground,predicate=!obl:on.ground] run function obl:tech/player/movement/left_ground
+
+## Очистка перед проверкой
+tag @s remove obl.moving
 tag @s remove obl.sprinting
+tag @s remove obl.ascending
+tag @s remove obl.falling
 tag @s remove obl.sneaking
-## Если игрок в воздухе/жидкости, даём тег
-execute unless predicate obl:on.ground run tag @s add obl.mid_air
-## Если игрок стоит на земле, даём тег
-execute unless predicate obl:on.ground run tag @s add obl.on_ground
-## Если игрок не в воздухе и получает счёт ходьбы, выполняем функцию при хождении
-execute if score @s[tag=!obl.mid_air] obl.walking matches 1.. run function obl:tech/player/is.walking
-## Если игрок не в воздухе и получает счёт ходьбы, выполняем функцию при беге
-execute if score @s[tag=!obl.mid_air] obl.sprinting matches 1.. run function obl:tech/player/is.sprinting
-## Если игрок в воздухе, но не стоит на не-твёрдых блоках, выполняем функцию при падении
-execute if entity @s[tag=obl.mid_air] unless predicate obl:stepping_on.non_solid run function obl:tech/player/on_ground
+
 ## Если игрок крадётся, выполняем функцию
 execute if predicate obl:is.sneaking run function obl:tech/player/sneaking
+## Если игрок бежит, выполняем функцию при беге
+execute if predicate obl:is.sprinting run function obl:tech/player/movement/sprinting
+## Если игрок двигается, но не бежит, выполняем функцию при движении
+execute if predicate obl:is.moving unless predicate obl:is.sprinting run function obl:tech/player/movement/moving
+## Если игрок в воздухе, и не имеет дистанции падения, выполняем функцию при взлёте
+execute if entity @s[tag=obl.mid_air,predicate=!obl:is.falling] run function obl:tech/player/movement/ascending
+## Если игрок в воздухе, и имеет дистанцию падения, выполняем функцию при падении
+execute if entity @s[tag=obl.mid_air,predicate=obl:is.falling] run function obl:tech/player/movement/falling
+
+### нереализовано
 ## Если игрок крался и перестал, выполняем функцию
 #execute if score @s obl.player_sneaking matches 1.. unless predicate obl:is.sneaking run function obl:tech/player/on.player_sneaking.end
 #execute if score @s obl.double_sneak.time matches 1.. run scoreboard players remove @s obl.double_sneak.time 1
@@ -98,6 +117,9 @@ execute if score @s obl.parry.cd matches 1.. run scoreboard players remove @s ob
 execute if entity @s[tag=obl.parry_success] run scoreboard players add @s obl.parry.tick 1
 execute if score @s[tag=obl.parry_success.direct] obl.parry.tick matches 7.. run function obl:tech/parrying/direct/fail
 execute if score @s[tag=obl.parry_success.projectile] obl.parry.tick matches 20.. run function obl:tech/parrying/projectile/fail
+## ОТСУТСТВИЕ СНАРЯДА
+scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
+execute if entity @s[tag=obl.parry_success,tag=!obl.just_parried_fucking_lightning] unless entity @n[type=#obl:parryable,tag=obl.projectile.parried,predicate=obl:matching_score.parrying] run function obl:tech/parrying/projectile/fail
 ## БАФФЫ
 #execute if entity @s[tag=obl.empowered.parry] run scoreboard players remove @s obl.parry.empower_tick 1
 #execute if score @s[tag=obl.empowered.parry.direct] obl.parry.empower_tick matches 0 run function obl:tech/parrying/direct/buff.end

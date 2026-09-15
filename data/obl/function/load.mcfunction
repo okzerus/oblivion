@@ -12,6 +12,8 @@ scoreboard players set #frozen_spawners obl.frozen_spawners 0
 scoreboard objectives add obl.spawner.id dummy
 scoreboard objectives add obl dummy
 scoreboard objectives add obl.id dummy
+scoreboard objectives add obl.server_tick dummy
+scoreboard objectives add obl.server_tick.check dummy
 scoreboard objectives add obl.random dummy
 scoreboard objectives add obl.p1 dummy
 scoreboard objectives add obl.p2 dummy
@@ -37,6 +39,7 @@ scoreboard objectives add obl.weapon.gluttony.decay dummy
 scoreboard objectives add obl.weapon.gluttony.fangs dummy
 scoreboard objectives add obl.double_sneak.time dummy
 scoreboard objectives add obl.sneaking dummy
+scoreboard objectives add obl.jumping minecraft.custom:minecraft.jump
 scoreboard objectives add obl.weapon.gluttony.insatiable_hunger.interval dummy
 scoreboard objectives add obl.weapon.fanged_assassin.autumn_red dummy
 scoreboard objectives add obl.weapon.fanged_assassin.autumn_red.cd dummy
@@ -50,6 +53,7 @@ scoreboard objectives add obl.parry.tick dummy
 scoreboard objectives add obl.parry.after_tick dummy
 scoreboard objectives add obl.parry.spam_cd dummy
 scoreboard objectives add obl.parried_by_id dummy
+scoreboard objectives add obl.parried_decay dummy
 
 
 scoreboard objectives add obl.empower.damage_test dummy

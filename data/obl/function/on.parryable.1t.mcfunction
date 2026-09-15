@@ -13,7 +13,7 @@ tag @s[type=#obl:parryable.inground_check,tag=obl.projectile.reflected,tag=obl.i
 tag @s[type=#obl:parryable.onground_check,tag=!obl.on_ground,predicate=obl:on.ground] add obl.on_ground
 tag @s[type=#obl:parryable.onground_check,tag=obl.on_ground,predicate=!obl:on.ground] remove obl.on_ground
 # Трезубец: Если попал в цель после рефлекта, выполняем функцию.
-execute if entity @s[type=trident,tag=obl.projectile.reflected,tag=!obl.dealt_damage,nbt={DealtDamage:1b}] run function obl:tech/parrying/projectile/list/trident.hit
+execute if entity @s[type=trident,tag=obl.projectile.reflected,tag=!obl.trident.dealt_damage,nbt={DealtDamage:1b}] run function obl:tech/parrying/projectile/list/trident.hit
 # Снаряд шалкера: В состоянии парирования, ежетиково устанавливаем движение на 0 и тепаем к ранее созданному маркеру (других способов остановить снаряд попросту нет)
 data merge entity @s[type=shulker_bullet,tag=obl.projectile.parried] {Motion:[0.0d,0.0d,0.0d]}
 tp @s[type=shulker_bullet,tag=obl.projectile.parried] @n[type=marker,tag=obl.shulker_bullet_teleporter]

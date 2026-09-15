@@ -60,6 +60,7 @@ scoreboard objectives add obl.parried_tnt.fuse dummy
 scoreboard objectives add obl.parried_anvil.count dummy
 scoreboard objectives add obl.parried_item.speed_sq dummy
 scoreboard objectives add obl.parried_item.speed_sq.old dummy
+scoreboard objectives add obl.parried_item.motion_y.old dummy
 
 
 scoreboard objectives add obl.empower.damage_test dummy

@@ -15,7 +15,10 @@ execute if score @s obl.parried_item.speed_sq.old matches 2500.. if score #temp.
 # Запоминаем скорость для сравнения в следующем тике
 scoreboard players operation @s obl.parried_item.speed_sq.old = @s obl.parried_item.speed_sq
 
-# Отдельный чек пола/потолка
+# Потолок - реактивно, как и горизонталь: скрипты выполняются уже после физики этого тика, так что "смотрим на блок, пока скорость ещё вверх" опаздывает - к моменту проверки скорость от удара уже обнулена. Сравниваем с прошлым тиком: только что летел вверх ощутимо быстро, а теперь почти замер - гравитация так резко не тормозит
 execute store result score #temp.item_y obl run data get entity @s Motion[1] 1000
-execute if score #temp.item_y obl matches 100.. unless block ~ ~.7 ~ #obl:non_solid run function obl:tech/parrying/projectile/list/item/bucket.place
+execute if score @s obl.parried_item.motion_y.old matches 200.. if score #temp.item_y obl matches ..60 run function obl:tech/parrying/projectile/list/item/bucket.place
+scoreboard players operation @s obl.parried_item.motion_y.old = #temp.item_y obl
+
+# Пол - по направлению вертикальной скорости, смотрим вниз только если летит вниз
 execute if score #temp.item_y obl matches ..-100 unless block ~ ~-.7 ~ #obl:non_solid run function obl:tech/parrying/projectile/list/item/bucket.place

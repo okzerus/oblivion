@@ -14,10 +14,11 @@
 
 ###   Б А Ф Ф Ы
 ## Пепелище (Scorchfield)
-#execute if score @s obl.effect.scorchfield.count matches 1.. run function obl:effect/scorchfield/tick
+execute if score @s[tag=!obl.effect.scorchfield] obl.effect.scorchfield.count matches 1.. run function obl:effect/scorchfield/inflict
+execute if entity @s[tag=obl.effect.scorchfield] run function obl:effect/scorchfield/tick
 ## Ожог (Scorch)
-#execute if score @s[tag=!obl.effect.scorch] obl. run function obl:effect/scorch/inflict
-#execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
+execute if score @s[tag=!obl.effect.scorch] obl.effect.scorch.tick run function obl:effect/scorch/inflict
+execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
 
 
 

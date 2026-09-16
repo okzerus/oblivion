@@ -25,4 +25,4 @@ scoreboard players set @s obl.effect.scorchfield.decay 300
 scoreboard players operation @e[sort=nearest,limit=1,type=#obl:all_mobs,tag=obl.temp.hit] obl.damage_taken /= #two obl.const
 scoreboard players operation @s obl.effect.scorchfield.count += @e[sort=nearest,limit=1,type=#obl:all_mobs,tag=obl.temp.hit] obl.damage_taken 
 ## Накладывает Ожог
-execute as @e[sort=nearest,limit=1,type=#obl:all_mobs,tag=obl.temp.hit,tag=!obl.effect.scorch] run function obl:effect/scorch/inflict
+scoreboard players set @e[sort=nearest,limit=1,type=#obl:all_mobs,tag=obl.temp.hit,tag=!obl.effect.scorch] obl.effect.scorch.tick 200

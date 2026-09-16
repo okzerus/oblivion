@@ -1,5 +1,4 @@
 ###   Ф У Н К Ц И Я
-tag @s add obl.effect.scorchfield
 ## Неуязвимость к дебаффу Ожог при 100+ счётчике Пепелища.
 execute if score @s obl.effect.scorchfield.count matches 100.. run tag @s add obl.scorch_immune
 ## Спад эффекта. Постоянно устанавливается на 300 при наложении эффекта Пепелища. (item/weapon/crack_of_dawn/hit), Или когда цели получают урон от Ожога в пределах действия Пепелища (tech/effect/debuff/scorch/tick).

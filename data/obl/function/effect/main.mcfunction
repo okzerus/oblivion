@@ -8,10 +8,23 @@
 #                                                                                                                                                               #
 #################################################################################################################################################################
 
-# Из tick.mcfunction
-# Выполнение функций каждые 10 тиков.
+# Из on.mobs.1t.mcfunction
 
-## Детект смерти моба
-execute as @e[type=marker,tag=obl.death_detector] on vehicle unless data entity @s {DeathTime:0s} run function obl:tech/spawner/death_detect
-execute as @e[tag=obl.spawner.passenger_mob] unless entity @s[tag=obl.spawner.passenger_mob.lost_vehicle] on vehicle unless data entity @s {DeathTime:0s} run function obl:tech/spawner/death_detect
 
+
+###   Б А Ф Ф Ы
+## Пепелище (Scorchfield)
+#execute if score @s obl.effect.scorchfield.count matches 1.. run function obl:effect/scorchfield/tick
+## Ожог (Scorch)
+#execute if score @s[tag=!obl.effect.scorch] obl. run function obl:effect/scorch/inflict
+#execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
+
+
+
+
+#################################################################################################################################################################
+
+###   К О Н Е Ц
+## ОЧИСТКА
+execute unless score @s obl.effect.scorchfield.count matches 100.. run tag @s remove obl.scorch_immune
+execute unless score @s obl.effect.scorchfield.count matches 1.. run tag @s remove obl.effect.scorchfield

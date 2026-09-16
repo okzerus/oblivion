@@ -11,29 +11,21 @@
 # Из tick.mcfunction
 # Выполнение функций каждый тик, на каждую сущность.
 
-###   Я Й Ц А   А Д М И Н А
+
+
+###   Т Е Х Н И Ч Е С К И Е
+## Яйца админа
 execute if entity @s[type=marker,tag=obl.admin_summoner] run function obl:tech/admin_summoner
-
-###   З Д О Р О В Ь Е
-# Обновить здоровье сущности из NBT
-execute store result score @s obl.health run data get entity @s Health
-
-
-###   Э Ф Ф Е К Т Ы
-# Ожог
-execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
-
-
-## Объявление
+## Объявление об эффектах
 execute if entity @s[type=text_display,tag=obl.announcement_marker] run function obl:tech/tick.announcement_marker
+## Визуальные эффекты
+execute as @s[type=block_display,tag=obl.vfx] run function obl:tech/vfx.1t
 
 
-###   В И З У А Л Ь Н Ы Е   Э Ф Ф Е К Т Ы
-execute as @s[tag=obl.vfx] run function obl:tech/vfx.1t
 
-
-###   Н Е О Б Ы Ч Н Ы Е   Э Ф Ф Е К Т Ы   ( U N U S U A L S )
+###   U N U S U A L S
 execute if entity @s[type=marker,tag=obl.circling_unusual] run function obl:tech/unusual/main.marker
+
 
 
 ###   С П А В Н Е Р Ы
@@ -46,9 +38,3 @@ execute if entity @s[type=marker,tag=obl.spawner,tag=!obl.spawner.init] run func
 execute as @s[type=marker,tag=obl.spawner] unless block ~ ~ ~ spawner run function obl:tech/spawner/destroy
 # Проверка смерти для моба-транспорт
 execute as @s[tag=obl.spawner.vehicle_mob] unless predicate obl:has_passenger run function obl:tech/add.death_marker
-
-###   О Ч И С Т К А
-tag @s remove obl.temp.took_damage
-
-#execute if entity @s[type=marker,tag=obl.spawner,tag=!obl.spawner.init] run scoreboard players set @s obl.spawner.difficulty 3
-#execute if entity @s[type=marker,tag=obl.spawner,tag=!obl.spawner.init] run scoreboard players set @s obl.spawner.death_count 19

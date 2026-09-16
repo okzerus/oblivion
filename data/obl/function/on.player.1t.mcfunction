@@ -146,11 +146,7 @@ execute unless score @s obl.empower.damage_test matches ..0 run function obl:tec
 ###   Э Ф Ф Е К Т Ы
 
 ###   Э Ф Ф Е К Т Ы   А Б Л И В О Н А
-## Пепелище (Scorchfield)
-execute if score @s obl.effect.scorchfield.count matches 1.. run function obl:effect/scorchfield/tick
-## ОЧИСТКА
-execute unless score @s obl.effect.scorchfield.count matches 100.. run tag @s remove obl.scorch_immune
-execute unless score @s obl.effect.scorchfield.count matches 1.. run tag @s remove obl.effect.scorchfield
+## перенёс в obl:effects/main
 
 ###   U N U S U A L
 ## DEFAULT

@@ -14,6 +14,11 @@ attribute @s minecraft:gravity base set 0.0
 ## Сбрасываем набранную инерцию падения
 tp @s @s
 
+###   Я К О Р Ь   П О З И Ц И И
+## Маркер, привязанный по айди, на который игрок телепортируется каждый тик (не даёт сместиться в стороны)
+execute at @s run summon marker ~ ~ ~ {Tags:["obl.parry.fall_anchor"]}
+scoreboard players operation @e[type=marker,tag=obl.parry.fall_anchor,limit=1,sort=nearest] obl.parried_by_id = @s obl.id
+
 ###   З В У К
 function obl:tech/parrying/sound
 

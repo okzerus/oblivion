@@ -117,6 +117,9 @@ execute if score @s obl.parry.cd matches 1 run function obl:tech/parrying/ready
 execute if score @s obl.parry.cd matches 1.. run scoreboard players remove @s obl.parry.cd 1
 ## ПРОВАЛ ПАРИРОВАНИЯ
 execute if entity @s[tag=obl.parry_success] run scoreboard players add @s obl.parry.tick 1
+## ФИКСАЦИЯ ПОЗИЦИИ ВО ВРЕМЯ ПАРИРОВАНИЯ ПАДЕНИЯ (телепорт на позицию своего маркера-якоря по айди)
+scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
+execute if entity @s[tag=obl.parry_success.fall] at @e[type=marker,tag=obl.parry.fall_anchor,predicate=obl:matching_score.parrying,limit=1] run tp @s ~ ~ ~
 execute if score @s[tag=obl.parry_success.direct] obl.parry.tick matches 7.. run function obl:tech/parrying/direct/fail
 execute if score @s[tag=obl.parry_success.projectile] obl.parry.tick matches 20.. run function obl:tech/parrying/projectile/fail
 execute if score @s[tag=obl.parry_success.fall] obl.parry.tick matches 10.. run function obl:tech/parrying/fall/fail

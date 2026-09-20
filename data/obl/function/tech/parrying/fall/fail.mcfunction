@@ -13,6 +13,10 @@ scoreboard players operation #fall_damage obl *= #three obl.const
 execute store result storage obl:damage value int 1 run scoreboard players get #fall_damage obl
 function obl:tech/parrying/fall/damage with storage obl:damage
 
+###   П О В Р Е Ж Д Е Н И Е   Щ И Т А
+tag @s add obl.temp.parry_fail
+execute if entity @s[gamemode=!creative,predicate=obl:holding/shield_both] run function obl:tech/parrying/shield_damage
+
 ###   О Т К А Т
 scoreboard players set @s obl.parry.cd 120
 
@@ -23,6 +27,8 @@ title @s title ""
 tellraw @s[tag=obl.debug] [{"text":"Провалил парирование падения."}]
 
 ###   О Ч И С Т К А
+scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
+kill @e[type=marker,tag=obl.parry.fall_anchor,predicate=obl:matching_score.parrying]
 scoreboard players set @s obl.parry.tick 0
 scoreboard players set @s obl.parry.fall_count 0
 tag @s remove obl.parry_success

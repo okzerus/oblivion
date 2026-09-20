@@ -59,6 +59,8 @@ execute if predicate obl:is.moving unless predicate obl:is.sprinting run functio
 execute if entity @s[tag=obl.mid_air,predicate=!obl:is.falling] run function obl:tech/player/movement/ascending
 ## Если игрок в воздухе, и имеет дистанцию падения, выполняем функцию при падении
 execute if entity @s[tag=obl.mid_air,predicate=obl:is.falling] run function obl:tech/player/movement/falling
+## Если игрок больше не падает, сбрасываем накопленный счётчик падения для парирования
+execute unless entity @s[tag=obl.mid_air,predicate=obl:is.falling] if score @s obl.parry.fall_count matches 1.. run scoreboard players set @s obl.parry.fall_count 0
 
 ### нереализовано
 ## Если игрок крался и перестал, выполняем функцию
@@ -117,9 +119,10 @@ execute if score @s obl.parry.cd matches 1.. run scoreboard players remove @s ob
 execute if entity @s[tag=obl.parry_success] run scoreboard players add @s obl.parry.tick 1
 execute if score @s[tag=obl.parry_success.direct] obl.parry.tick matches 7.. run function obl:tech/parrying/direct/fail
 execute if score @s[tag=obl.parry_success.projectile] obl.parry.tick matches 20.. run function obl:tech/parrying/projectile/fail
+execute if score @s[tag=obl.parry_success.fall] obl.parry.tick matches 10.. run function obl:tech/parrying/fall/fail
 ## ОТСУТСТВИЕ ЦЕЛИ
 scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
-execute if entity @s[tag=obl.parry_success,tag=!obl.just_parried_fucking_lightning] unless entity @n[tag=obl.parried,predicate=obl:matching_score.parrying] run function obl:tech/parrying/projectile/fail
+execute if entity @s[tag=obl.parry_success,tag=!obl.just_parried_fucking_lightning,tag=!obl.parry_success.fall] unless entity @n[tag=obl.parried,predicate=obl:matching_score.parrying] run function obl:tech/parrying/projectile/fail
 ## БАФФЫ
 #execute if entity @s[tag=obl.empowered.parry] run scoreboard players remove @s obl.parry.empower_tick 1
 #execute if score @s[tag=obl.empowered.parry.direct] obl.parry.empower_tick matches 0 run function obl:tech/parrying/direct/buff.end

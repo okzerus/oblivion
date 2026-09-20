@@ -7,4 +7,8 @@ execute if entity @s[tag=obl.debug,tag=obl.jumped] run say Приземлилс�
 
 tag @s remove obl.jumped
 
+###   П А Р И Р О В А Н И Е   П А Д Е Н И Я
+execute if entity @s[tag=obl.parry.fall_safe] run attribute @s minecraft:safe_fall_distance modifier remove obl.parrying
+tag @s remove obl.parry.fall_safe
+
 # function oblivion:tech/unusual/effects.on_ground

@@ -7,6 +7,7 @@ tellraw @s[tag=obl.debug] [{"text":"Отжал щит!"}]
 ###   П А Р И Р О В А Н И Е
 execute if entity @s[tag=obl.parry_success.direct] run function obl:tech/parrying/direct/reflect
 execute if entity @s[tag=obl.parry_success.projectile] run function obl:tech/parrying/projectile/reflect
+execute if entity @s[tag=obl.parry_success.fall] run function obl:tech/parrying/fall/reflect
 
 ###   С П Е Ц Э Ф Ф Е К Т Ы
 function obl:tech/parrying/svfx/sfx.shield_down
@@ -17,4 +18,5 @@ tag @s remove obl.can_parry
 tag @s remove obl.parry_success
 tag @s remove obl.parry_success.direct
 tag @s remove obl.parry_success.projectile
+tag @s remove obl.parry_success.fall
 scoreboard players set @s obl.using_shield 0

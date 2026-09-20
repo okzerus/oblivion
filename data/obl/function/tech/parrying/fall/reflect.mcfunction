@@ -1,21 +1,20 @@
-###   В О С С Т А Н О В Л Е Н И Е   Г Р А В И Т А Ц И И
-execute store result storage obl:fall value double 0.000001 run scoreboard players get @s obl.parry.fall_gravity
-function obl:tech/parrying/fall/restore_gravity with storage obl:fall
-
 ###   Б Е З О П А С Н О Е   П Р И З Е М Л Е Н И Е
 # Даём щедрый запас безопасной дистанции падения до момента приземления (очищается в movement/landing)
 attribute @s minecraft:safe_fall_distance modifier add obl.parrying 1000 add_value
 tag @s add obl.parry.fall_safe
 
 ###   Р А З Р Я Д К А   Э Н Е Р Г И И
-## Редиректим накопленную кинетическую энергию в блоки под ногами
-execute anchored eyes positioned ^ ^ ^1 run setblock ~ ~ ~ air destroy
-execute anchored eyes positioned ^ ^ ^2 run setblock ~ ~ ~ air destroy
-execute anchored eyes positioned ^ ^ ^3 run setblock ~ ~ ~ air destroy
+## Редиректим накопленную кинетическую энергию в блоки по направлению взгляда
+execute anchored eyes run function obl:tech/parrying/fall/raycast
 
-###   С П Е Ц Э Ф Ф Е К Т Ы
-playsound minecraft:entity.generic.explode player @s ~ ~ ~ 1 1.4
-particle minecraft:explosion ~ ~ ~ 0 0 0 0 1
+###   В И З У А Л Ь Н Ы Й   И М П А К Т
+## Подбрасываем игрока отрицательной гравитацией на пару тиков; обычная гравитация возвращается в revert_launch
+attribute @s minecraft:gravity base set -0.08
+scoreboard players set @s obl.parry.fall_launch 3
+
+###   О Т К А Т
+scoreboard players set @s obl.parry.cd 60
+
 ## Убираем экран парирования
 title @s title ""
 

@@ -134,6 +134,9 @@ execute if entity @s[tag=obl.parry_success,tag=!obl.just_parried_fucking_lightni
 #execute if entity @s[tag=obl.just_parried_fucking_lightning] run particle minecraft:electric_spark ~ ~.5 ~ 0 0 0 4 5
 execute if score @s obl.parry.spam_cd matches 1.. run scoreboard players remove @s obl.parry.spam_cd 1
 execute if score @s obl.parry.spam_cd matches 0 run function obl:tech/parrying/spam.remove
+## Подброс отрицательной гравитацией после успешного парирования падения
+execute if score @s obl.parry.fall_launch matches 1.. run scoreboard players remove @s obl.parry.fall_launch 1
+execute if score @s obl.parry.fall_launch matches 0 run function obl:tech/parrying/fall/revert_launch
 
 #################################################################################################################################################################
 

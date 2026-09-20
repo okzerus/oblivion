@@ -13,6 +13,9 @@ scoreboard players operation #fall_damage obl *= #three obl.const
 execute store result storage obl:damage value int 1 run scoreboard players get #fall_damage obl
 function obl:tech/parrying/fall/damage with storage obl:damage
 
+###   О Т К А Т
+scoreboard players set @s obl.parry.cd 120
+
 ## Убираем экран парирования
 title @s title ""
 

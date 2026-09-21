@@ -9,7 +9,11 @@ execute anchored eyes run function obl:tech/parrying/fall/raycast
 
 ###   В И З У А Л Ь Н Ы Й   И М П А К Т
 ## Подбрасываем игрока отрицательной гравитацией на пару тиков; обычная гравитация возвращается в revert_launch
-attribute @s minecraft:gravity base set -0.55
+## Сила подброса растёт вместе с высотой падения
+execute if score @s obl.parry.fall_count matches 10..32 run attribute @s minecraft:gravity base set -0.24
+execute if score @s obl.parry.fall_count matches 33..64 run attribute @s minecraft:gravity base set -0.48
+execute if score @s obl.parry.fall_count matches 65..128 run attribute @s minecraft:gravity base set -0.64
+execute if score @s obl.parry.fall_count matches 129.. run attribute @s minecraft:gravity base set -1.0
 scoreboard players set @s obl.parry.fall_launch 3
 
 ###   П О В Р Е Ж Д Е Н И Е   Щ И Т А

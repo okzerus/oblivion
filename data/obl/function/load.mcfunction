@@ -6,7 +6,6 @@ scoreboard players set #zero obl.const 0
 scoreboard players set #two obl.const 2
 scoreboard players set #three obl.const 3
 scoreboard players set #four obl.const 4
-scoreboard players set #twenty obl.const 20
 scoreboard objectives add obl.time_of_day dummy
 execute store result score #time obl.time_of_day run time query day
 ## Разное

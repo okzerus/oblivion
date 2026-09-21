@@ -3,5 +3,5 @@ execute unless entity @s[tag=obl.parry_success.fall] run scoreboard players add 
 
 ###   П Р О В Е Р К А   П А Р И Р О В А Н И Я
 # Порог ~10 тиков падения примерно соответствует моменту, с которого падение начало бы наносить реальный урон
-# Работает только если под игроком (на 1.5 блока ниже) есть твёрдый блок
-execute unless entity @s[tag=obl.parry_success.fall] if score @s obl.parry.fall_count matches 10.. if entity @s[tag=obl.can_parry,x_rotation=80..90] unless block ~ ~-1.5 ~ #obl:non_solid run function obl:tech/parrying/fall/parry
+# Работает только если под игроком есть твёрдый блок (глубина проверки считается в ground_probe)
+execute unless entity @s[tag=obl.parry_success.fall] if score @s obl.parry.fall_count matches 10.. if entity @s[tag=obl.can_parry,tag=obl.parry.fall_near_ground,x_rotation=80..90] run function obl:tech/parrying/fall/parry

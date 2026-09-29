@@ -9,9 +9,9 @@
           "type": "minecraft:item",
           "name": "minecraft:pale_oak_log",
           "weight": 13,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -24,9 +24,9 @@
           "type": "minecraft:item",
           "name": "minecraft:pale_oak_planks",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -39,9 +39,9 @@
           "type": "minecraft:item",
           "name": "minecraft:pale_oak_leaves",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -54,9 +54,9 @@
           "type": "minecraft:item",
           "name": "minecraft:pale_moss_block",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -69,9 +69,9 @@
           "type": "minecraft:item",
           "name": "minecraft:pale_oak_sapling",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -84,9 +84,9 @@
           "type": "minecraft:item",
           "name": "minecraft:stick",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -99,9 +99,9 @@
           "type": "minecraft:item",
           "name": "minecraft:dirt",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -119,9 +119,9 @@
           "type": "minecraft:item",
           "name": "minecraft:pale_moss_carpet",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -134,9 +134,9 @@
           "type": "minecraft:item",
           "name": "minecraft:pale_hanging_moss",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -149,9 +149,9 @@
           "type": "minecraft:item",
           "name": "minecraft:short_grass",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -164,9 +164,9 @@
           "type": "minecraft:item",
           "name": "minecraft:cobweb",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -179,9 +179,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bone",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -194,9 +194,9 @@
           "type": "minecraft:item",
           "name": "minecraft:string",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -209,9 +209,9 @@
           "type": "minecraft:item",
           "name": "minecraft:resin_clump",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -224,9 +224,9 @@
           "type": "minecraft:item",
           "name": "minecraft:coal",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,

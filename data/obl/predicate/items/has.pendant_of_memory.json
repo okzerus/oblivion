@@ -1,9 +1,9 @@
-[
+
   {
-    "condition": "minecraft:entity_properties",
+    "type": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-      "nbt": "{Inventory:[{id:\"minecraft:amethyst_shard\",tag:{obl.item.pendant_of_memory:1b}}]}"
+      "minecraft:nbt": "{Inventory:[{id:\"minecraft:amethyst_shard\",tag:{obl.item.pendant_of_memory:1b}}]}"
     }
   }
-]
+

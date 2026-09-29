@@ -1,41 +1,45 @@
-[
-  {
-    "function": "minecraft:set_lore",
-    "mode": "append",
-    "lore": [
+{
+	"type": "sequence",
+	"functions":
+    [
       {
-        "text": "Кадр парирования: 0.00-0.25 сек. (5 тиков)",
-        "color": "gray",
-        "italic": false
+        "type": "minecraft:set_lore",
+        "mode": "append",
+        "lore": [
+          {
+            "text": "Кадр парирования: 0.00-0.25 сек. (5 тиков)",
+            "color": "gray",
+            "italic": false
+          }
+        ]
+      },
+      {
+        "type": "minecraft:set_custom_data",
+        "tag": "{obl.shield:1b}"
+      },
+      {
+        "type": "minecraft:set_components",
+        "components": {
+          "minecraft:blocks_attacks": {
+            "block_delay_seconds": 0.0,
+            "disable_cooldown_scale": 1.0,
+            "bypassed_by": "#minecraft:bypasses_shield",
+            "damage_reductions": [
+              {
+                "base": 0.0,
+                "factor": 1,
+                "horizontal_blocking_angle": 90.0
+              }
+            ],
+            "item_damage": {
+              "threshold": 3.0,
+              "base": 0.0,
+              "factor": 1.0
+            },
+            "block_sound": "minecraft:item.shield.block",
+            "disabled_sound": "minecraft:item.shield.break"
+          }
+        }
       }
     ]
-  },
-  {
-    "function": "minecraft:set_custom_data",
-    "tag": "{obl.shield:1b}"
-  },
-  {
-    "function": "minecraft:set_components",
-    "components": {
-      "minecraft:blocks_attacks": {
-        "block_delay_seconds": 0.0,
-        "disable_cooldown_scale": 1.0,
-        "bypassed_by": "#minecraft:bypasses_shield",
-        "damage_reductions": [
-          {
-            "base": 0.0,
-            "factor": 1,
-            "horizontal_blocking_angle": 90.0
-          }
-        ],
-        "item_damage": {
-          "threshold": 3.0,
-          "base": 0.0,
-          "factor": 1.0
-        },
-        "block_sound": "minecraft:item.shield.block",
-        "disabled_sound": "minecraft:item.shield.break"
-      }
-    }
-  }
-]
+}

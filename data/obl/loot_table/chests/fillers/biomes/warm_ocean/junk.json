@@ -33,10 +33,11 @@
               "weight": 1
             }
           ],
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -52,10 +53,11 @@
           "type": "minecraft:item",
           "name": "minecraft:sand",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -66,10 +68,11 @@
           "type": "minecraft:item",
           "name": "minecraft:seagrass",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 2,
                 "max": 4
               }
@@ -80,10 +83,11 @@
           "type": "minecraft:item",
           "name": "minecraft:kelp",
           "weight": 2,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               }
@@ -94,10 +98,11 @@
           "type": "minecraft:item",
           "name": "minecraft:bone_meal",
           "weight": 2,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               }
@@ -108,10 +113,11 @@
           "type": "minecraft:item",
           "name": "minecraft:bone",
           "weight": 1,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -119,7 +125,7 @@
           ]
         }
       ],
-      "functions": []
+      "modifier": []
     },
     {
       "rolls": 1,
@@ -127,10 +133,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:raw_copper",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -138,12 +145,12 @@
           ]
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.33
         }
-      ]
+      
     }
   ]
 }

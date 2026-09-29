@@ -9,9 +9,9 @@
           "type": "minecraft:item",
           "name": "minecraft:raw_gold",
           "weight": 13,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -24,9 +24,9 @@
           "type": "minecraft:item",
           "name": "minecraft:raw_iron",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -39,9 +39,9 @@
           "type": "minecraft:item",
           "name": "minecraft:raw_copper",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -54,9 +54,9 @@
           "type": "minecraft:item",
           "name": "minecraft:brick",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -69,9 +69,9 @@
           "type": "minecraft:item",
           "name": "minecraft:flint",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -84,9 +84,9 @@
           "type": "minecraft:item",
           "name": "minecraft:coal",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -99,9 +99,9 @@
           "type": "minecraft:item",
           "name": "minecraft:clay_ball",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -114,9 +114,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bone",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -129,12 +129,11 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.6
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",
@@ -165,9 +164,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bone_meal",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -180,9 +179,9 @@
           "type": "minecraft:item",
           "name": "minecraft:clay",
           "weight": 7,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -195,21 +194,22 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.25
-        }
-      ],
+        },
+      
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:brush",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.15,
                 "max": 0.7
@@ -226,9 +226,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bone_block",
           "weight": 7,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -241,9 +241,9 @@
           "type": "minecraft:item",
           "name": "minecraft:emerald",
           "weight": 5,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,

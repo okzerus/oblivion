@@ -61,7 +61,7 @@ execute as @e[type=#obl:parryable,tag=obl.temp.reflected] at @s run function obl
 execute as @e[type=#obl:parryable,tag=obl.temp.reflected] run data modify entity @s[type=!ender_pearl,type=!trident,type=!shulker_bullet,type=!item] Owner set from entity @n[type=#obl:all_mobs,tag=obl.temp.reflecting] UUID
 ## Модификаторы снарядов
 # Эндер-жемчуг: Если парирующий игрок крадётся, заменяет владельца жемчуга на его самого
-execute as @e[type=ender_pearl,tag=obl.temp.reflected] if entity @p[tag=obl.temp.reflecting,predicate=obl:is.sneaking] run data modify entity @s Owner set from entity @p[type=#obl:all_mobs,tag=obl.temp.reflecting] UUID
+execute as @e[type=ender_pearl,tag=obl.temp.reflected] if entity @p[tag=obl.temp.reflecting,predicate=obl:is.sneaking] run data modify entity @s Owner set from entity @p[tag=obl.temp.reflecting] UUID
 # Предмет: Заменяет UUID метающего на того, кто парировал
 execute as @e[type=item,tag=obl.temp.reflected] run data modify entity @s Thrower set from entity @n[type=#obl:all_mobs,tag=obl.temp.reflecting] UUID
 # Предмет: Добавляем полсекунды задержки перед подбиранием предмета

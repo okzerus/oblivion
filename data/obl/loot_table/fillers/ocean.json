@@ -9,9 +9,9 @@
           "type": "minecraft:item",
           "name": "minecraft:gravel",
           "weight": 14,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 4,
@@ -24,9 +24,9 @@
           "type": "minecraft:item",
           "name": "minecraft:sand",
           "weight": 13,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 4,
@@ -39,9 +39,9 @@
           "type": "minecraft:item",
           "name": "minecraft:dirt",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -54,9 +54,9 @@
           "type": "minecraft:item",
           "name": "minecraft:kelp",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -69,9 +69,9 @@
           "type": "minecraft:item",
           "name": "minecraft:seagrass",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -84,9 +84,9 @@
           "type": "minecraft:item",
           "name": "minecraft:cobblestone",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -99,9 +99,9 @@
           "type": "minecraft:item",
           "name": "minecraft:clay_ball",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -119,9 +119,9 @@
           "type": "minecraft:item",
           "name": "minecraft:cod",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -134,9 +134,9 @@
           "type": "minecraft:item",
           "name": "minecraft:salmon",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -149,9 +149,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bone",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -164,9 +164,9 @@
           "type": "minecraft:item",
           "name": "minecraft:string",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -179,9 +179,9 @@
           "type": "minecraft:item",
           "name": "minecraft:rotten_flesh",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -194,9 +194,9 @@
           "type": "minecraft:item",
           "name": "minecraft:ink_sac",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -209,9 +209,9 @@
           "type": "minecraft:item",
           "name": "minecraft:stick",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -224,9 +224,9 @@
           "type": "minecraft:item",
           "name": "minecraft:prismarine_shard",
           "weight": 7,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,

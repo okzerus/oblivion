@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/rails"
+          "value": "obl:chests/fillers/rails"
         }
       ]
     },
@@ -15,17 +15,17 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/mountains/chest/resources.junk",
+          "value": "obl:chests/fillers/biomes/mountains/chest/resources.junk",
           "weight": 5
         },
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/mountains/chest/resources.rare",
+          "value": "obl:chests/fillers/biomes/mountains/chest/resources.rare",
           "weight": 5
         },
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/mountains/chest/resources.treasure",
+          "value": "obl:chests/fillers/biomes/mountains/chest/resources.treasure",
           "weight": 1
         }
       ]
@@ -35,7 +35,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/mountains/main"
+          "value": "obl:chests/fillers/biomes/mountains/main"
         }
       ]
     }

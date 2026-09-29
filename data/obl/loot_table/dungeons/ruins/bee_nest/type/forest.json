@@ -9,144 +9,142 @@
           "type": "minecraft:item",
           "name": "minecraft:mossy_cobblestone",
           "weight": 12,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:cobweb",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:bone_meal",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:brown_mushroom",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:red_mushroom",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:spider_eye",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 2 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 2 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:oak_leaves",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:short_grass",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:oak_sapling",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:dirt",
           "weight": 7,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
           ]
         }
       ]
     },
     {
       "rolls": 1,
-      "conditions": [
-        { "condition": "minecraft:random_chance", "chance": 0.5 }
-      ],
+      "condition": 
+        { "type": "minecraft:random_chance", "chance": 0.5 },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:rabbit_hide",
           "weight": 12,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:leather",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:arrow",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:string",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:apple",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 4 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 4 } }
           ]
         }
       ]
     },
     {
       "rolls": 1,
-      "conditions": [
-        { "condition": "minecraft:random_chance", "chance": 0.12 }
-      ],
+      "condition": 
+        { "type": "minecraft:random_chance", "chance": 0.12 },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:spyglass",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Стекло смотрителя",

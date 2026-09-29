@@ -1,15 +1,13 @@
-[
-  {
-    "condition": "minecraft:any_of",
-    "terms": [
-      {
-		"condition": "minecraft:weather_check",
-		"raining": true
-      },
-      {
-		"condition": "minecraft:weather_check",
-		"thundering": true
-      }
-    ]
-  }
-]
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:weather_check",
+      "raining": true
+    },
+    {
+      "type": "minecraft:weather_check",
+      "thundering": true
+    }
+  ]
+}

@@ -6,12 +6,12 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/badlands/barrel/resources.junk",
+          "value": "obl:chests/fillers/biomes/badlands/barrel/resources.junk",
           "weight": 5
         },
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/badlands/barrel/resources.rare",
+          "value": "obl:chests/fillers/biomes/badlands/barrel/resources.rare",
           "weight": 1
         }
       ]
@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/badlands/main"
+          "value": "obl:chests/fillers/biomes/badlands/main"
         }
       ]
     },
@@ -30,7 +30,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/badlands/junk"
+          "value": "obl:chests/fillers/biomes/badlands/junk"
         }
       ]
     }

@@ -9,9 +9,9 @@
           "type": "minecraft:item",
           "name": "minecraft:melon_slice",
           "weight": 14,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 4,
@@ -24,9 +24,9 @@
           "type": "minecraft:item",
           "name": "minecraft:melon_seeds",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -39,9 +39,9 @@
           "type": "minecraft:item",
           "name": "minecraft:cocoa_beans",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -54,9 +54,9 @@
           "type": "minecraft:item",
           "name": "minecraft:pumpkin",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -69,9 +69,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bone_meal",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -84,9 +84,9 @@
           "type": "minecraft:item",
           "name": "minecraft:wheat_seeds",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -99,9 +99,9 @@
           "type": "minecraft:item",
           "name": "minecraft:dirt",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -114,20 +114,19 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition":
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.55
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:melon",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -140,9 +139,9 @@
           "type": "minecraft:item",
           "name": "minecraft:pumpkin_seeds",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -155,9 +154,9 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_carrot",
           "weight": 7,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -170,9 +169,9 @@
           "type": "minecraft:item",
           "name": "minecraft:cookie",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -185,20 +184,19 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition":
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.12
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:melon",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 6,
@@ -211,9 +209,9 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_carrot",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,

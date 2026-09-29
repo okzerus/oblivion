@@ -9,9 +9,9 @@
           "type": "minecraft:item",
           "name": "minecraft:dark_oak_planks",
           "weight": 13,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 4,
@@ -24,9 +24,9 @@
           "type": "minecraft:item",
           "name": "minecraft:cobblestone",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 4,
@@ -39,9 +39,9 @@
           "type": "minecraft:item",
           "name": "minecraft:white_wool",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -54,9 +54,9 @@
           "type": "minecraft:item",
           "name": "minecraft:red_carpet",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -69,9 +69,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bookshelf",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -84,9 +84,9 @@
           "type": "minecraft:item",
           "name": "minecraft:glass_pane",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -99,9 +99,9 @@
           "type": "minecraft:item",
           "name": "minecraft:torch",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -114,9 +114,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_ingot",
           "weight": 7,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -129,12 +129,11 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition":
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.55
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",
@@ -150,10 +149,11 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_hoe",
           "weight": 6,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.5,
                 "max": 0.85
@@ -175,12 +175,11 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition":
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.12
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",

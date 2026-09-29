@@ -1,34 +1,38 @@
-[
-	{
-		"condition": "minecraft:entity_properties",
-		"entity": "this",
-		"predicate": {
-			"minecraft:equipment": {
-				"mainhand": {
-					"items": [
-						"minecraft:wooden_hoe"
-					]
-				}
-			}
-		}
-	},
-	{
-		"condition": "minecraft:inverted",
-		"term": {
-			"condition": "minecraft:entity_properties",
+{
+  "type": "minecraft:all_of",
+  "terms":
+	[
+		{
+			"type": "minecraft:entity_properties",
 			"entity": "this",
 			"predicate": {
 				"minecraft:equipment": {
 					"mainhand": {
 						"items": [
 							"minecraft:wooden_hoe"
-						],
-						"predicates": {
-							"minecraft:custom_data": "{obl.scythe:1b}"
+						]
+					}
+				}
+			}
+		},
+		{
+			"type": "minecraft:inverted",
+			"term": {
+				"type": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"minecraft:equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:wooden_hoe"
+							],
+							"predicates": {
+								"minecraft:custom_data": "{obl.scythe:1b}"
+							}
 						}
 					}
 				}
 			}
 		}
-	}
-]
+	]
+}

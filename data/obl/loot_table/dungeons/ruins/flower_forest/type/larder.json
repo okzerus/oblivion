@@ -9,9 +9,9 @@
           "type": "minecraft:item",
           "name": "minecraft:apple",
           "weight": 16,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -24,9 +24,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bread",
           "weight": 13,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -39,9 +39,9 @@
           "type": "minecraft:item",
           "name": "minecraft:honey_bottle",
           "weight": 11,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -54,9 +54,9 @@
           "type": "minecraft:item",
           "name": "minecraft:carrot",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -69,9 +69,9 @@
           "type": "minecraft:item",
           "name": "minecraft:potato",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -84,9 +84,9 @@
           "type": "minecraft:item",
           "name": "minecraft:wheat",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -99,9 +99,9 @@
           "type": "minecraft:item",
           "name": "minecraft:cookie",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -114,9 +114,9 @@
           "type": "minecraft:item",
           "name": "minecraft:beetroot",
           "weight": 7,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -129,9 +129,9 @@
           "type": "minecraft:item",
           "name": "minecraft:cooked_rabbit",
           "weight": 6,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -149,20 +149,19 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition":
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.5
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:apple",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -175,9 +174,9 @@
           "type": "minecraft:item",
           "name": "minecraft:baked_potato",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -190,9 +189,9 @@
           "type": "minecraft:item",
           "name": "minecraft:honey_bottle",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -215,12 +214,11 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition":
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.14
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",
@@ -230,12 +228,11 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition":
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.015
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",

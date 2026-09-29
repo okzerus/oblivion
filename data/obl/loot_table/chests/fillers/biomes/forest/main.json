@@ -6,12 +6,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:grass",
+          "name": "minecraft:short_grass",
           "weight": 1,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -22,10 +23,11 @@
           "type": "minecraft:item",
           "name": "minecraft:oak_log",
           "weight": 2,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -41,16 +43,16 @@
           "type": "minecraft:item",
           "name": "minecraft:tall_grass",
           "weight": 2,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               }
             }
-          ],
-          "conditions": []
+          ]
         },
         {
           "type": "minecraft:item",
@@ -58,22 +60,22 @@
           "weight": 1
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_count",
+          "type": "minecraft:set_count",
           "count": {
+				"type": "minecraft:uniform",
             "min": 1,
             "max": 2
-          },
-          "conditions": []
+          }
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.5
         }
-      ]
+      
     },
     {
       "rolls": 1,
@@ -81,10 +83,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:oak_leaves",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               }
@@ -99,22 +102,22 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:apple",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
-              },
-              "conditions": []
+              }
             }
           ],
-          "conditions": [
+          "condition": 
             {
-              "condition": "minecraft:random_chance",
+              "type": "minecraft:random_chance",
               "chance": 0.5
             }
-          ]
+          
         }
       ]
     }

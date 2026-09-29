@@ -9,9 +9,9 @@
           "type": "minecraft:item",
           "name": "minecraft:arrow",
           "weight": 14,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 5,
@@ -24,9 +24,9 @@
           "type": "minecraft:item",
           "name": "minecraft:dark_oak_planks",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 4,
@@ -39,9 +39,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_ingot",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -54,9 +54,9 @@
           "type": "minecraft:item",
           "name": "minecraft:tripwire_hook",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -69,9 +69,9 @@
           "type": "minecraft:item",
           "name": "minecraft:wheat",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -84,9 +84,9 @@
           "type": "minecraft:item",
           "name": "minecraft:potato",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -99,9 +99,9 @@
           "type": "minecraft:item",
           "name": "minecraft:string",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -114,9 +114,9 @@
           "type": "minecraft:item",
           "name": "minecraft:torch",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3,
@@ -129,21 +129,21 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition":
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.55
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:crossbow",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.3,
                 "max": 0.75
@@ -155,9 +155,9 @@
           "type": "minecraft:item",
           "name": "minecraft:emerald",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -170,9 +170,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_ingot",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -190,20 +190,19 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition":
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.12
-        }
-      ],
+        },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:emerald",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,

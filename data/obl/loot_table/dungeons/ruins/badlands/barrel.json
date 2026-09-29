@@ -13,12 +13,12 @@
     },
     {
       "rolls": 1,
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.08
-        }
-      ],
+        },
+      
       "entries": [
         {
           "type": "minecraft:loot_table",

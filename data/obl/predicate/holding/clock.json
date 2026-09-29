@@ -1,53 +1,57 @@
-[
-	{
-		"condition": "minecraft:entity_properties",
-		"entity": "this",
-		"predicate": {
-			"minecraft:equipment": {
-				"mainhand": {
-					"items": [
-						"minecraft:clock"
-					]
-				}
-			}
-		}
-	},
-	{
-		"condition": "minecraft:inverted",
-		"term": {
-			"condition": "minecraft:entity_properties",
+{
+  "type": "minecraft:all_of",
+  "terms":
+	[
+		{
+			"type": "minecraft:entity_properties",
 			"entity": "this",
 			"predicate": {
 				"minecraft:equipment": {
 					"mainhand": {
 						"items": [
 							"minecraft:clock"
-						],
-						"predicates": {
-							"minecraft:custom_data": "{obl.clock:1b}"
+						]
+					}
+				}
+			}
+		},
+		{
+			"type": "minecraft:inverted",
+			"term": {
+				"type": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"minecraft:equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:clock"
+							],
+							"predicates": {
+								"minecraft:custom_data": "{obl.clock:1b}"
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+			"type": "minecraft:inverted",
+			"term": {
+				"type": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"minecraft:equipment": {
+						"mainhand": {
+							"items": [
+								"minecraft:clock"
+							],
+							"predicates": {
+								"minecraft:custom_data": "{dnl:{id:4004}}"
+							}
 						}
 					}
 				}
 			}
 		}
-	},
-	{
-		"condition": "minecraft:inverted",
-		"term": {
-			"condition": "minecraft:entity_properties",
-			"entity": "this",
-			"predicate": {
-				"minecraft:equipment": {
-					"mainhand": {
-						"items": [
-							"minecraft:clock"
-						],
-						"predicates": {
-							"minecraft:custom_data": "{dnl:{id:4004}}"
-						}
-					}
-				}
-			}
-		}
-	}
-]
+	]
+}

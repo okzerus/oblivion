@@ -8,10 +8,11 @@
           "type": "minecraft:item",
           "name": "minecraft:sand",
           "weight": 1,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               }
@@ -22,10 +23,11 @@
           "type": "minecraft:item",
           "name": "minecraft:dead_bush",
           "weight": 1,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               }
@@ -40,10 +42,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:cactus",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -58,10 +61,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:arrow",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 4
               }
@@ -82,10 +86,11 @@
           "type": "minecraft:item",
           "name": "minecraft:rabbit_hide",
           "weight": 7,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -93,12 +98,12 @@
           ]
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.5
         }
-      ]
+      
     },
     {
       "rolls": 1,
@@ -106,10 +111,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:raw_gold",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -117,12 +123,12 @@
           ]
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.33
         }
-      ]
+      
     },
     {
       "rolls": 1,
@@ -130,10 +136,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:stone_shovel",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "min": 0.1,
                 "max": 0.5
               }
@@ -141,12 +148,12 @@
           ]
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.33
         }
-      ]
+      
     },
     {
       "rolls": 1,
@@ -156,12 +163,12 @@
           "name": "minecraft:map"
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.33
         }
-      ]
+      
     }
   ]
 }

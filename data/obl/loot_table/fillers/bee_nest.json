@@ -4,9 +4,9 @@
   "pools": [
     {
       "rolls": 1,
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_count",
+          "type": "minecraft:set_count",
           "count": {
             "type": "minecraft:uniform",
             "min": 1,
@@ -79,9 +79,9 @@
           "type": "minecraft:item",
           "name": "minecraft:honeycomb",
           "weight": 14,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -94,9 +94,9 @@
           "type": "minecraft:item",
           "name": "minecraft:honey_bottle",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -109,9 +109,9 @@
           "type": "minecraft:item",
           "name": "minecraft:glass_bottle",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -124,9 +124,9 @@
           "type": "minecraft:item",
           "name": "minecraft:sugar",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,

@@ -9,120 +9,120 @@
           "type": "minecraft:item",
           "name": "minecraft:yellow_dye",
           "weight": 12,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:red_dye",
           "weight": 12,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:light_gray_dye",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:magenta_dye",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:white_wool",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:pink_dye",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:orange_dye",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:blue_dye",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:white_dye",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:string",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
           ]
         }
       ]
     },
     {
       "rolls": 1,
-      "conditions": [
-        { "condition": "minecraft:random_chance", "chance": 0.5 }
-      ],
+      "condition":
+        { "type": "minecraft:random_chance", "chance": 0.5 },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:shears",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_damage", "damage": { "type": "minecraft:uniform", "min": 0.3, "max": 0.75 } }
+          "modifier": [
+            { "type": "minecraft:set_damage", "damage": {
+				"type": "minecraft:uniform", "type": "minecraft:uniform", "min": 0.3, "max": 0.75 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:white_carpet",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:pink_wool",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 4 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 4 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:yellow_wool",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 4 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 4 } }
           ]
         },
         {
@@ -139,16 +139,15 @@
     },
     {
       "rolls": 1,
-      "conditions": [
-        { "condition": "minecraft:random_chance", "chance": 0.12 }
-      ],
+      "condition":
+        { "type": "minecraft:random_chance", "chance": 0.12 },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:flower_banner_pattern",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:lore": [
                   { "text": "Знак тех, кто жил среди цветов", "color": "gray", "italic": true }

@@ -8,10 +8,11 @@
           "type": "minecraft:item",
           "name": "minecraft:apple",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -22,15 +23,15 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_apple",
           "weight": 1,
-          "functions": []
+          "modifier": []
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.5
         }
-      ]
+      
     },
     {
       "rolls": 1,
@@ -39,17 +40,19 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_axe",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "min": 0.25,
                 "max": 0.75
               }
             },
             {
-              "function": "minecraft:enchant_with_levels",
+              "type": "minecraft:enchant_with_levels",
               "levels": {
+				"type": "minecraft:uniform",
                 "min": 5,
                 "max": 30
               }
@@ -60,9 +63,9 @@
           "type": "minecraft:item",
           "name": "minecraft:goat_horn",
           "weight": 2,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_instrument",
+              "type": "minecraft:set_instrument",
               "options": "minecraft:feel_goat_horn"
             }
           ]
@@ -83,13 +86,13 @@
           "weight": 1
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.5
         }
-      ]
+      
     }
   ],
-  "functions": []
+  "modifier": []
 }

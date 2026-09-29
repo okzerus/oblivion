@@ -14,8 +14,8 @@ execute if score #1s_passed obl matches 1 if score @p[distance=..15] obl.effect.
 
 ###   У Р О Н
 ## Увеличивает интервал между нанесением урона в зависимости от силы дебаффа.
-scoreboard players set @s[scores={obl.effect.scorch.strength=1] obl.effect.scorch.interval 30
-scoreboard players set @s[scores={obl.effect.scorch.strength=2] obl.effect.scorch.interval 20
+scoreboard players set @s[scores={obl.effect.scorch.strength=1}] obl.effect.scorch.interval 30
+scoreboard players set @s[scores={obl.effect.scorch.strength=2}] obl.effect.scorch.interval 20
 scoreboard players remove @s obl.effect.scorch.interval 1
 ## Наносит урон в зависимости от силы эффекта.
 damage @s[scores={obl.effect.scorch.strength=1,obl.effect.scorch.interval=0}] 1 obl:scorch by @p[tag=obl.effect.scorchfield]

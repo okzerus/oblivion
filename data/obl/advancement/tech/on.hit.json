@@ -7,22 +7,26 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:is_projectile",
+                "id": "#minecraft:is_projectile",
                 "expected": false
               },
               {
-                "id": "minecraft:avoids_guardian_thorns",
+                "id": "#minecraft:avoids_guardian_thorns",
                 "expected": false
               },
               {
-                "id": "obl:skips_hit",
+                "id": "#obl:skips_hit",
                 "expected": false
               }
             ]
           }
         },
         "entity": {
-          "minecraft:entity_type": "#obl:all_mobs"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#obl:all_mobs"
+          }
         }
       }
     }

@@ -8,10 +8,11 @@
           "type": "minecraft:item",
           "name": "minecraft:dried_kelp_block",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -22,9 +23,9 @@
           "type": "minecraft:item",
           "name": "minecraft:potion",
           "weight": 2,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_potion",
+              "type": "minecraft:set_potion",
               "id": "minecraft:water_breathing"
             }
           ]
@@ -33,10 +34,11 @@
           "type": "minecraft:item",
           "name": "minecraft:wet_sponge",
           "weight": 1,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -47,10 +49,11 @@
           "type": "minecraft:item",
           "name": "minecraft:nautilus_shell",
           "weight": 1,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+				"type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
               }
@@ -58,12 +61,12 @@
           ]
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.5
         }
-      ]
+      
     },
     {
       "rolls": 1,
@@ -72,17 +75,19 @@
           "type": "minecraft:item",
           "name": "minecraft:fishing_rod",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "min": 0.25,
                 "max": 0.75
               }
             },
             {
-              "function": "minecraft:enchant_with_levels",
+              "type": "minecraft:enchant_with_levels",
               "levels": {
+				"type": "minecraft:uniform",
                 "min": 5,
                 "max": 30
               }
@@ -93,9 +98,9 @@
           "type": "minecraft:item",
           "name": "minecraft:goat_horn",
           "weight": 2,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_instrument",
+              "type": "minecraft:set_instrument",
               "options": "minecraft:dream_goat_horn"
             }
           ]
@@ -116,12 +121,12 @@
           "weight": 1
         }
       ],
-      "conditions": [
+      "condition": 
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.2
         }
-      ]
+      
     }
   ]
 }

@@ -4,9 +4,9 @@
   "pools": [
     {
       "rolls": 1,
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_count",
+          "type": "minecraft:set_count",
           "count": {
             "type": "minecraft:uniform",
             "min": 2,
@@ -94,9 +94,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bone_meal",
           "weight": 14,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -109,9 +109,9 @@
           "type": "minecraft:item",
           "name": "minecraft:short_grass",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
@@ -124,9 +124,9 @@
           "type": "minecraft:item",
           "name": "minecraft:oak_sapling",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -139,9 +139,9 @@
           "type": "minecraft:item",
           "name": "minecraft:honeycomb",
           "weight": 9,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -154,9 +154,9 @@
           "type": "minecraft:item",
           "name": "minecraft:wheat_seeds",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -169,9 +169,9 @@
           "type": "minecraft:item",
           "name": "minecraft:birch_sapling",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -184,9 +184,9 @@
           "type": "minecraft:item",
           "name": "minecraft:flower_pot",
           "weight": 6,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,

@@ -1,104 +1,108 @@
-[
-    {
-        "function": "minecraft:set_name",
-        "entity": "this",
-		"target": "item_name",
-        "name": {
-            "text": "Каменная коса",
-            "italic": false
-       }
-    },
-    {
-		"function": "minecraft:set_lore",
-		"mode": "insert",
-		"lore": [
+{
+	"type": "sequence",
+	"functions":
+		[
 			{
-				"text": "",
-				"color": "gray",
-				"italic": false
-			},
-			{
-				"text": "Когда в ведущей руке:",
-				"color": "gray",
-				"italic": false
-			},
-			{
-				"text": " Урон: 3",
-				"color": "dark_green",
-				"italic": false
-			},
-			{
-				"text": " Скорость атаки: 1.6",
-				"color": "dark_green",
-				"italic": false
-			},
-			[
-			{
-				"text": " Повреждение брони: Шанс 7% на 6 секунд, ",
-				"color": "dark_green",
-				"italic": false
-			},
-			{
-				"text": "-4",
-				"color": "dark_aqua",
-				"italic": false
-			},
-			{
-				"text": " очка защиты",
-				"color": "dark_green",
-				"italic": false
+				"type": "minecraft:set_name",
+				"entity": "this",
+				"target": "item_name",
+				"name": {
+					"text": "Каменная коса",
+					"italic": false
 			}
-			],
-			[
-			{
-				"text": " Кровотечение: Сила I, Шанс 18%",
-				"color": "dark_green",
-				"italic": false
 			},
 			{
-				"text": "(-3%/ЧБ) ",
-				"color": "red",
-				"italic": false
+				"type": "minecraft:set_lore",
+				"mode": "insert",
+				"lore": [
+					{
+						"text": "",
+						"color": "gray",
+						"italic": false
+					},
+					{
+						"text": "Когда в ведущей руке:",
+						"color": "gray",
+						"italic": false
+					},
+					{
+						"text": " Урон: 3",
+						"color": "dark_green",
+						"italic": false
+					},
+					{
+						"text": " Скорость атаки: 1.6",
+						"color": "dark_green",
+						"italic": false
+					},
+					[
+					{
+						"text": " Повреждение брони: Шанс 7% на 6 секунд, ",
+						"color": "dark_green",
+						"italic": false
+					},
+					{
+						"text": "-4",
+						"color": "dark_aqua",
+						"italic": false
+					},
+					{
+						"text": " очка защиты",
+						"color": "dark_green",
+						"italic": false
+					}
+					],
+					[
+					{
+						"text": " Кровотечение: Сила I, Шанс 18%",
+						"color": "dark_green",
+						"italic": false
+					},
+					{
+						"text": "(-3%/ЧБ) ",
+						"color": "red",
+						"italic": false
+					},
+					{
+						"text": "на 13",
+						"color": "dark_green",
+						"italic": false
+					},
+					{
+						"text": "(-1.5/ЧБ) ",
+						"color": "red",
+						"italic": false
+					},
+					{
+						"text": "секунд",
+						"color": "dark_green",
+						"italic": false
+					}
+					]
+				]
 			},
 			{
-				"text": "на 13",
-				"color": "dark_green",
-				"italic": false
+				"type": "minecraft:set_custom_data",
+				"tag": "{obl.scythe:1b,obl.scythe.stone:1b,HideFlags:2}"
 			},
 			{
-				"text": "(-1.5/ЧБ) ",
-				"color": "red",
-				"italic": false
-			},
-			{
-				"text": "секунд",
-				"color": "dark_green",
-				"italic": false
-			}
-			]
-	    ]
-	},
-	{
-        "function": "minecraft:set_custom_data",
-        "tag": "{obl.scythe:1b,obl.scythe.stone:1b,HideFlags:2}"
-    },
-    {
-		"function": "minecraft:set_attributes",
-		"modifiers": [
-			{
-				"attribute": "minecraft:attack_damage",
-				"id": "minecraft:base_attack_damage",
-				"amount": 3,
-				"operation": "add_value",
-				"slot": "mainhand"
-			},
-			{
-				"attribute": "minecraft:attack_speed",
-				"id": "minecraft:base_attack_speed",
-				"amount": -2.4,
-				"operation": "add_value",
-				"slot": "mainhand"
+				"type": "minecraft:set_attributes",
+				"modifiers": [
+					{
+						"attribute": "minecraft:attack_damage",
+						"id": "minecraft:base_attack_damage",
+						"amount": 3,
+						"operation": "add_value",
+						"slot": "mainhand"
+					},
+					{
+						"attribute": "minecraft:attack_speed",
+						"id": "minecraft:base_attack_speed",
+						"amount": -2.4,
+						"operation": "add_value",
+						"slot": "mainhand"
+					}
+				]
 			}
 		]
-	}
-]
+}

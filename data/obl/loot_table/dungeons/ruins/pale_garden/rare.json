@@ -9,10 +9,11 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_pickaxe",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.4,
                 "max": 0.8
@@ -24,10 +25,11 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_axe",
           "weight": 15,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.4,
                 "max": 0.8
@@ -39,10 +41,11 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_shovel",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.4,
                 "max": 0.8
@@ -54,10 +57,11 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_hoe",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.4,
                 "max": 0.8
@@ -69,10 +73,11 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_pickaxe",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.5,
                 "max": 0.85
@@ -84,10 +89,11 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_axe",
           "weight": 4,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.5,
                 "max": 0.85
@@ -99,10 +105,11 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_shovel",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.5,
                 "max": 0.85
@@ -114,10 +121,11 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_hoe",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+				"type": "minecraft:uniform",
                 "type": "minecraft:uniform",
                 "min": 0.5,
                 "max": 0.85
@@ -129,9 +137,9 @@
           "type": "minecraft:item",
           "name": "minecraft:goat_horn",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_instrument",
+              "type": "minecraft:set_instrument",
               "options": [
                 "minecraft:dream_goat_horn"
               ]
@@ -152,9 +160,9 @@
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
           "weight": 5,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
                   "minecraft:protection": 1
@@ -167,9 +175,9 @@
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
                   "minecraft:protection": 2
@@ -182,9 +190,9 @@
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
           "weight": 4,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
                   "minecraft:bane_of_arthropods": 2
@@ -197,9 +205,9 @@
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
           "weight": 3,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
                   "minecraft:bane_of_arthropods": 3

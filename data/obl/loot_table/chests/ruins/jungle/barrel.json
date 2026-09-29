@@ -6,12 +6,12 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/jungle/barrel/resources.junk",
+          "value": "obl:chests/fillers/biomes/jungle/barrel/resources.junk",
           "weight": 5
         },
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/jungle/barrel/resources.rare",
+          "value": "obl:chests/fillers/biomes/jungle/barrel/resources.rare",
           "weight": 1
         }
       ]
@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/jungle/main"
+          "value": "obl:chests/fillers/biomes/jungle/main"
         }
       ]
     },
@@ -30,7 +30,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "obl:chests/fillers/biomes/jungle/junk"
+          "value": "obl:chests/fillers/biomes/jungle/junk"
         }
       ]
     }

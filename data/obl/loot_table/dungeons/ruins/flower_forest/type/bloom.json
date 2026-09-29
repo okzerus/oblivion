@@ -9,153 +9,151 @@
           "type": "minecraft:item",
           "name": "minecraft:lilac",
           "weight": 12,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:rose_bush",
           "weight": 12,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:peony",
           "weight": 12,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:dandelion",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:poppy",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:bone_meal",
           "weight": 10,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 3, "max": 8 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:oxeye_daisy",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:cornflower",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 6 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:allium",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:azure_bluet",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         }
       ]
     },
     {
       "rolls": 1,
-      "conditions": [
-        { "condition": "minecraft:random_chance", "chance": 0.5 }
-      ],
+      "condition":
+        { "type": "minecraft:random_chance", "chance": 0.5 },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:red_tulip",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:orange_tulip",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:white_tulip",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:pink_tulip",
           "weight": 9,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:lily_of_the_valley",
           "weight": 8,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 4 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 4 } }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:flower_pot",
           "weight": 7,
-          "functions": [
-            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
+          "modifier": [
+            { "type": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } }
           ]
         }
       ]
     },
     {
       "rolls": 1,
-      "conditions": [
-        { "condition": "minecraft:random_chance", "chance": 0.12 }
-      ],
+      "condition":
+        { "type": "minecraft:random_chance", "chance": 0.12 },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:suspicious_stew",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:suspicious_stew_effects": [
                   { "id": "minecraft:regeneration", "duration": 160 }
@@ -169,9 +167,9 @@
           "type": "minecraft:item",
           "name": "minecraft:suspicious_stew",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:suspicious_stew_effects": [
                   { "id": "minecraft:fire_resistance", "duration": 80 }

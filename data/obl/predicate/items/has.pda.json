@@ -1,9 +1,9 @@
-[
+
   {
-    "condition": "minecraft:entity_properties",
+    "type": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-      "nbt": "{Inventory:[{tag:{CustomModelData:45000}}]}"
+      "minecraft:nbt": "{Inventory:[{tag:{CustomModelData:45000}}]}"
     }
   }
-]
+

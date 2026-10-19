@@ -15,6 +15,7 @@
 ## КОМАНДЫ НА ИГРОКЕ
 execute unless entity @s[tag=obl.first_join] run function obl:tech/player/first_join/init
 scoreboard players operation #id.temp obl.id = @s obl.id
+scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
 
 ###   Р Е К О Н Н Е К Т
 ## ПРОВЕРКА
@@ -117,14 +118,10 @@ execute if score @s obl.parry.cd matches 1 run function obl:tech/parrying/ready
 execute if score @s obl.parry.cd matches 1.. run scoreboard players remove @s obl.parry.cd 1
 ## ПРОВАЛ ПАРИРОВАНИЯ
 execute if entity @s[tag=obl.parry_success] run scoreboard players add @s obl.parry.tick 1
-## ФИКСАЦИЯ ПОЗИЦИИ ВО ВРЕМЯ ПАРИРОВАНИЯ ПАДЕНИЯ (телепорт на позицию своего маркера-якоря по айди)
-scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
-execute if entity @s[tag=obl.parry_success.fall] at @e[type=marker,tag=obl.parry.fall_anchor,predicate=obl:matching_score.parrying,limit=1] run tp @s ~ ~ ~
 execute if score @s[tag=obl.parry_success.direct] obl.parry.tick matches 7.. run function obl:tech/parrying/direct/fail
 execute if score @s[tag=obl.parry_success.projectile] obl.parry.tick matches 20.. run function obl:tech/parrying/projectile/fail
 execute if score @s[tag=obl.parry_success.fall] obl.parry.tick matches 10.. run function obl:tech/parrying/fall/fail
 ## ОТСУТСТВИЕ ЦЕЛИ
-scoreboard players operation #id.temp obl.parried_by_id = @s obl.id
 execute if entity @s[tag=obl.parry_success,tag=!obl.just_parried_fucking_lightning,tag=!obl.parry_success.fall] unless entity @n[tag=obl.parried,predicate=obl:matching_score.parrying] run function obl:tech/parrying/projectile/fail
 ## БАФФЫ
 #execute if entity @s[tag=obl.empowered.parry] run scoreboard players remove @s obl.parry.empower_tick 1
@@ -137,9 +134,11 @@ execute if entity @s[tag=obl.parry_success,tag=!obl.just_parried_fucking_lightni
 #execute if entity @s[tag=obl.just_parried_fucking_lightning] run particle minecraft:electric_spark ~ ~.5 ~ 0 0 0 4 5
 execute if score @s obl.parry.spam_cd matches 1.. run scoreboard players remove @s obl.parry.spam_cd 1
 execute if score @s obl.parry.spam_cd matches 0 run function obl:tech/parrying/spam.remove
-## Подброс отрицательной гравитацией после успешного парирования падения
-execute if score @s obl.parry.fall_launch matches 1.. run scoreboard players remove @s obl.parry.fall_launch 1
-execute if score @s obl.parry.fall_launch matches 0 run function obl:tech/parrying/fall/revert_launch
+## Парирование падения
+# Спецэффекты после рефлекта
+execute if entity @s[tag=obl.parry.fall_safe] run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0.5 3
+# Фиксация позиции во время парирования падения
+execute if entity @s[tag=obl.parry_success.fall] at @n[type=marker,tag=obl.parry.fall_anchor,predicate=obl:matching_score] run tp @s ~ ~ ~
 
 #################################################################################################################################################################
 

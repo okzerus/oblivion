@@ -1,14 +1,13 @@
 tag @s add obl.on_ground
 tag @s remove obl.mid_air
 
-## Отладка:
-execute if entity @s[tag=obl.debug,tag=!obl.jumped] run say Приземлился
-execute if entity @s[tag=obl.debug,tag=obl.jumped] run say Приземлился после прыжка
-
-tag @s remove obl.jumped
-
-###   П А Р И Р О В А Н И Е   П А Д Е Н И Я
-execute if entity @s[tag=obl.parry.fall_safe] run attribute @s minecraft:safe_fall_distance modifier remove obl.parrying
+## Парирование падения
+attribute @s[tag=obl.parry.fall_safe] minecraft:safe_fall_distance modifier remove obl.parrying
 tag @s remove obl.parry.fall_safe
 
-# function oblivion:tech/unusual/effects.on_ground
+## Отладка:
+execute if entity @s[tag=obl.debug.movement,tag=!obl.jumped] run say Приземлился
+execute if entity @s[tag=obl.debug.movement,tag=obl.jumped] run say Приземлился после прыжка
+
+tag @s remove obl.jumped
+scoreboard players set @s obl.falling_distance 0

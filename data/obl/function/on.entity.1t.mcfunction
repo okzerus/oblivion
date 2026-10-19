@@ -14,6 +14,9 @@
 
 
 ###   Т Е Х Н И Ч Е С К И Е
+## Если сущность - маркер, которая требует другую сущность для существования, убиваем его, если таковая не найдена
+scoreboard players operation #id.temp obl.id = @s obl.id
+execute if entity @s[type=marker,tag=obl.needs_match] unless entity @e[type=#obl:all_mobs,predicate=obl:matching_score] run kill @s
 ## Яйца админа
 execute if entity @s[type=marker,tag=obl.admin_summoner] run function obl:tech/admin_summoner
 ## Объявление об эффектах

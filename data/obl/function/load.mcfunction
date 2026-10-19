@@ -26,6 +26,7 @@ scoreboard objectives add obl.holding_rmb dummy
 scoreboard objectives add obl.using_shield dummy
 scoreboard objectives add obl.shield.cleanup dummy
 scoreboard objectives add obl.shield.preparing dummy
+scoreboard objectives add obl.attribute.gravity dummy
 scoreboard objectives add obl.effect.scorchfield.count dummy
 scoreboard objectives add obl.effect.scorchfield.decay dummy
 scoreboard objectives add obl.effect.scorch.tick dummy
@@ -42,6 +43,7 @@ scoreboard objectives add obl.weapon.gluttony.fangs dummy
 scoreboard objectives add obl.double_sneak.time dummy
 scoreboard objectives add obl.sneaking dummy
 scoreboard objectives add obl.jumping minecraft.custom:minecraft.jump
+scoreboard objectives add obl.falling_distance dummy
 scoreboard objectives add obl.weapon.gluttony.insatiable_hunger.interval dummy
 scoreboard objectives add obl.weapon.fanged_assassin.autumn_red dummy
 scoreboard objectives add obl.weapon.fanged_assassin.autumn_red.cd dummy
@@ -61,10 +63,6 @@ scoreboard objectives add obl.parried_anvil.count dummy
 scoreboard objectives add obl.parried_item.speed_sq dummy
 scoreboard objectives add obl.parried_item.speed_sq.old dummy
 scoreboard objectives add obl.parried_item.motion_y.old dummy
-scoreboard objectives add obl.parry.fall_count dummy
-scoreboard objectives add obl.parry.fall_gravity dummy
-scoreboard objectives add obl.parry.fall_launch dummy
-scoreboard objectives add obl.parry.fall_raycast dummy
 
 
 scoreboard objectives add obl.empower.damage_test dummy

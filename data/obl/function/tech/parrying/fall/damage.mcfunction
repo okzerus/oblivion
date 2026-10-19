@@ -1,1 +1,1 @@
-$damage @s $(value) minecraft:fall
+$damage @s $(value) minecraft:fall by @p[tag=obl.temp.damage_source]

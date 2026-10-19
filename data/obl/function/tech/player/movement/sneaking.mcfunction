@@ -16,7 +16,7 @@ execute if predicate obl:holding/gluttony run function obl:item/weapon/gluttony/
 #execute unless entity @s[tag=obl.empowered.murasama] unless score @s obl.murasama.blood matches 75.. if score @s obl.murasama.startup.ripper matches 8.. run title @s actionbar [{"text":"[","color":"#9C1111"},{"text":" Недостаточно крови!","color":"#D11212"},{"text":" ]","color":"#9C1111"}]
 
 ## Отладка
-execute if entity @s[tag=obl.debug] run say мыш (кродеться)
+execute if entity @s[tag=obl.debug.movement] run say мыш (кродеться)
 
 
 

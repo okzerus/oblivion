@@ -10,6 +10,10 @@ title @s subtitle ""
 attribute @s minecraft:movement_speed modifier add obl.parried -100 add_value
 attribute @s minecraft:attack_damage modifier add obl.parried -100 add_value
 data merge entity @s[type=!player] {NoAI:1b,NoGravity:1b}
+# Проигрываем звук парирования
+function obl:tech/parrying/sound
+# Отключаем парирование снарядов на время контактного парирования
+tag @s add obl.disable_projectile_parrying
 
 
 ###   Н А   Ж Е Р Т В Е
@@ -21,10 +25,6 @@ title @p[tag=obl.temp.victim] title {"text":"\uE001","shadow_color":[0,0,0,0]}
 title @p[tag=obl.temp.victim] subtitle ""
 # Модификатор скорости
 execute as @e[type=#obl:all_mobs,tag=obl.temp.victim] run attribute @s minecraft:movement_speed modifier add obl.parrying -100 add_value
-# Отключаем парирование снарядов на время контактного парирования
-tag @n[type=#obl:all_mobs,tag=obl.temp.parrying] add obl.disable_projectile_parrying
-# Проигрываем звук парирования
-execute as @n[type=#obl:all_mobs,tag=obl.temp.victim] run function obl:tech/parrying/sound
 
 
 ###   О Ч И С Т К А

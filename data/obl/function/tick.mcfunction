@@ -28,6 +28,9 @@ execute store result score #server obl.server_time run time query gametime
 ###   И Н Т Е Р В А Л Ы
 ## Насчитываем разные интервалы и возвращаем #X_passed как 1 для последующих проверок в тикингах ниже.
 ## Пример использования: execute if score #5t_passed obl matches 1 run say Эта команда выполнится раз в 5 тиков, не смотря на то что проверяется каждый тик.
+# 2 тика
+scoreboard players add #2t_counting obl 1
+execute if score #2t_counting obl matches 5 run scoreboard players set #2t_passed obl 1
 # 5 тиков
 scoreboard players add #5t_counting obl 1
 execute if score #5t_counting obl matches 5 run scoreboard players set #5t_passed obl 1
@@ -82,6 +85,7 @@ execute as @e[type=#obl:parryable] at @s run function obl:on.parryable.1t
 
 
 ###   О Ч И С Т К А
+execute if score #2t_counting obl matches 2 run scoreboard players set #2t_counting obl 0
 execute if score #5t_counting obl matches 5 run scoreboard players set #5t_counting obl 0
 execute if score #10t_counting obl matches 10 run scoreboard players set #10t_counting obl 0
 execute if score #1s_counting obl matches 20 run scoreboard players set #1s_counting obl 0
@@ -92,6 +96,7 @@ execute if score #30s_counting obl matches 600 run scoreboard players set #30s_c
 execute if score #1m_counting obl matches 1200 run scoreboard players set #1m_counting obl 0
 execute if score #5m_counting obl matches 6000 run scoreboard players set #5m_counting obl 0
 execute if score #10m_counting obl matches 12000 run scoreboard players set #10m_counting obl 0
+scoreboard players set #2t_passed obl 0
 scoreboard players set #5t_passed obl 0
 scoreboard players set #10t_passed obl 0
 scoreboard players set #1s_passed obl 0

@@ -33,6 +33,11 @@ scoreboard objectives add obl.effect.scorch.tick dummy
 scoreboard objectives add obl.effect.scorch.strength dummy
 scoreboard objectives add obl.effect.scorch.interval dummy
 scoreboard objectives add obl.weapon.crack_of_dawn.ability.cd dummy
+scoreboard objectives add obl.effect.bleed.tick dummy
+scoreboard objectives add obl.effect.bleed.intensity dummy
+scoreboard objectives add obl.effect.bleed.interval dummy
+scoreboard objectives add obl.effect.bleed.potency dummy
+scoreboard objectives add obl.effect.bleed.count dummy
 scoreboard objectives add obl.hit_cooldown dummy
 scoreboard objectives add obl.spawner.id dummy
 scoreboard objectives add obl.spawner.death_count dummy

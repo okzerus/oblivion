@@ -19,6 +19,9 @@ execute if entity @s[tag=obl.effect.scorchfield] run function obl:effect/scorchf
 ## Ожог (Scorch)
 execute if score @s[tag=!obl.effect.scorch] obl.effect.scorch.tick matches 1.. run function obl:effect/scorch/inflict
 execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
+## Кровотечение (Bleed)
+execute if score @s[tag=!obl.effect.bleed] obl.effect.bleed.tick matches 1.. run function obl:effect/bleed/inflict
+execute if entity @s[tag=obl.effect.bleed] run function obl:effect/bleed/tick
 
 
 

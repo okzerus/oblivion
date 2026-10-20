@@ -30,7 +30,8 @@ tellraw @s[tag=obl.debug] [{"text":"Нанесено урона: "},{"score":{"n
 ###   Ф У Н К Ц И И
 # Если нашли сущность получившую урон, переходим к проверке используемого оружия
 execute if entity @s[tag=!obl.temp.success_hit,tag=!obl.hit_cooldown] run function obl:item/weapon/on.hit
-
+# Если сущность под эффектом кровотечения, снижаем интервал
+scoreboard players remove @e[type=#obl:all_mobs,tag=obl.temp.hit,tag=obl.effect.bleed] obl.effect.bleed.interval 15
 
 ###   О Т К А Т   Х И Т А
 ## Базовое КД в 5 тиков для того чтобы избежать ЛКМ спам игроком для быстрой активации способностей оружия активирующихся при хите. 

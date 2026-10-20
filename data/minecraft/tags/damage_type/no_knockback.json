@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "obl:scorch"
+    "obl:scorch",
+    "obl:bleeding"
   ]
 }

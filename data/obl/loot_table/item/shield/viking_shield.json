@@ -1,0 +1,190 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "modifier": [
+            {
+                "type": "minecraft:set_components",
+                "components": {
+                "minecraft:blocks_attacks": {
+                    "block_delay_seconds": 0.0,
+                    "disable_cooldown_scale": 1.0,
+                    "bypassed_by": "#minecraft:bypasses_shield",
+                    "damage_reductions": [
+                    {
+                        "base": 0.0,
+                        "factor": 1,
+                        "horizontal_blocking_angle": 90.0
+                    }
+                    ],
+                    "item_damage": {
+                    "threshold": 3.0,
+                    "base": 0.0,
+                    "factor": 1.0
+                    },
+                    "block_sound": "minecraft:item.shield.block",
+                    "disabled_sound": "minecraft:item.shield.break"
+                }
+                }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Щит викинга",
+                "color": "#8feacf",
+                "italic": false
+              },
+              "target": "item_name"
+            },
+            {
+              "type": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "МИЛЛИОНОВ",
+                  "color": "#70bca6",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                  "text": "Пассивная способность:",
+                  "color": "gray",
+                  "italic": false
+                  },
+                  {
+                    "text": " ГРХХ!",
+                    "color": "red",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": " Успешное парирование атаки усиляет следующую ",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                [
+                    {
+                    "text": " атаку носителя на",
+                    "color": "dark_green",
+                    "italic": false
+                    },
+                    {
+                    "text": " +2 Урона",
+                    "color": "red",
+                    "italic": false
+                    },
+                    {
+                    "text": ", до следующего удара",
+                    "color": "dark_green",
+                    "italic": false
+                    }
+                ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Комплект \"Берсерк\" 3/3",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Бонус полного комплекта:",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Каждая пустая половина сердца первой",
+                  "color": "aqua",
+                  "italic": false
+                },
+                [
+                {
+                  "text": "строки будет усилять носителя:",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": " +0.3 Урона",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": ",",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": " +0.5 Брони",
+                  "color": "gray",
+                  "italic": false
+                }
+              ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: 2",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": false
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": false
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": false
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": false
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": false
+				    }
+                ]
+              ],
+              "mode": "insert"
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{obl.weapon.id:\"viking_shield\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

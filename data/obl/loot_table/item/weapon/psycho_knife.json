@@ -1,0 +1,304 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
+          "modifier": [
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:attribute_modifiers"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": "Нож психа",
+              "target": "item_name"
+            },
+            {
+              "type": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Хочешь знать, откуда эти шрамы?",
+                  "color": "gray",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                  "text": "Пассивная способность:",
+                  "color": "gray",
+                  "italic": false
+                  },
+                  {
+                    "text": " Я Уже Рядом",
+                    "color": "red",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": " Если у игрока есть эффект ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Невидимость",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": ", активирует ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Скрытность",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": " Когда активна ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Скрытность",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": ":",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": " +100% Урон",
+                    "color": "red",
+                    "italic": false
+                  },
+                  {
+                    "text": ",",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": " -25% Скорость Передвижения",
+                    "color": "aqua",
+                    "italic": false
+                  },
+                  {
+                    "text": ", снижена",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": " Высота Прыжка",
+                    "color": "aqua",
+                    "italic": false
+                  },
+                  {
+                    "text": ".",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": " При нанесении урона, игрок выходит из ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Скрытности",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": ", теряет эффект",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": " Невидимость",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": " и не может входить в ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Скрытность",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": " в течении 10 секунд.",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                  "text": "Пассивная способность:",
+                  "color": "gray",
+                  "italic": false
+                  },
+                  {
+                    "text": " Синдром Человека-Невидимки",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": " Даёт эффект истинной ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Невидимости",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": ", если игрок",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": " крадётся или стоит, ничего не имеет в обеих руках (кроме ножа)",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " а также в слотах брони.",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": "Требуемый уровень: ",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "text": "5",
+                    "color": "gold",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": "Пре",
+                    "color": "#FEA0EE",
+                    "italic": true
+                  },
+                  {
+                    "text": "дме",
+                    "color": "#FFB2FA",
+                    "italic": true
+                  },
+                  {
+                    "text": "т За",
+                    "color": "#FFC1FE",
+                    "italic": true
+                  },
+                  {
+                    "text": "бве",
+                    "color": "#FFD9FF",
+                    "italic": true
+                  },
+                  {
+                    "text": "ния",
+                    "color": "#FFE8FF",
+                    "italic": true
+                  }
+                ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 10",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 2.0",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "type": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:attack_speed",
+                  "id": "obl:psycho_knife.attack_speed",
+                  "amount": -2.0,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:attack_damage",
+                  "id": "obl:psycho_knife.attack_damage",
+                  "amount": 9,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{obl.weapon.id:\"psycho_knife\",obl.weapon:1}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

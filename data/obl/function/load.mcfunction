@@ -55,6 +55,9 @@ scoreboard objectives add obl.weapon.fanged_assassin.autumn_red.cd dummy
 scoreboard objectives add obl.weapon.fanged_assassin.fox_dance.cd dummy
 scoreboard objectives add obl.weapon.fanged_assassin.fox_dance.ray dummy
 scoreboard objectives add obl.weapon.fanged_assassin.accelerando dummy
+scoreboard objectives add obl.effect.rage dummy
+scoreboard objectives add obl.weapon.psycho_knife.cd dummy
+scoreboard objectives add obl.weapon.viking_axe.cd dummy
 ### Парирование
 scoreboard objectives add obl.parry.cd dummy
 scoreboard objectives add obl.parry.count dummy
@@ -68,6 +71,7 @@ scoreboard objectives add obl.parried_anvil.count dummy
 scoreboard objectives add obl.parried_item.speed_sq dummy
 scoreboard objectives add obl.parried_item.speed_sq.old dummy
 scoreboard objectives add obl.parried_item.motion_y.old dummy
+
 
 
 scoreboard objectives add obl.empower.damage_test dummy

@@ -1,0 +1,209 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_axe",
+          "modifier": [
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:attribute_modifiers"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Топор Викинга",
+                "color": "#8feacf"
+              },
+              "target": "item_name"
+            },
+            {
+              "type": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "МОЩИ",
+                  "color": "#70bca6",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                  "text": "Пассивная способность:",
+                  "color": "gray",
+                  "italic": false
+                  },
+                  {
+                    "text": " АААААААААА!",
+                    "color": "red",
+                    "italic": false
+                  }
+                ],
+				[
+					{
+						"text": " 30% Шанс получить бафф ",
+						"color": "dark_green",
+						"italic": false
+					},
+					{
+						"text": "\"В ярости!\"",
+						"color": "#c30d0f",
+						"italic": false
+					}
+				],
+				{
+				  "text": " при убийстве любого моба",
+			      "color": "dark_green",
+				  "italic": false
+				},
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Комплект \"Берсерк\" 3/3",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Бонус полного комплекта:",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Каждая пустая половина сердца первой",
+                  "color": "aqua",
+                  "italic": false
+                },
+                [
+                {
+                  "text": "строки будет усилять носителя:",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": " +0.3 Урона",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": ",",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": " +0.5 Брони",
+                  "color": "gray",
+                  "italic": false
+                }
+              ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: 2",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ],
+                  {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                  {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Урон: 9",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " Скорость атаки: 0.9",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "type": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:attack_speed",
+                  "id": "obl:viking_axe.attack_speed",
+                  "amount": -3.1,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:attack_damage",
+                  "id": "obl:viking_axe.attack_damage",
+                  "amount": 8,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{obl.weapon.id:\"viking_axe\",obl.weapon:1}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

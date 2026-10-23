@@ -84,6 +84,10 @@ execute if predicate obl:holding/fanged_assassin run function obl:item/weapon/fa
 execute unless score @s obl.weapon.fanged_assassin.accelerando matches 0 unless predicate obl:holding/fanged_assassin run scoreboard players set @s obl.weapon.fanged_assassin.accelerando 0
 execute if predicate obl:holding/fanged_assassin if score @s obl.weapon.fanged_assassin.autumn_red matches 0 if entity @s[tag=obl.weapon.fanged_assassin.fox_dance.autumn_red] run function obl:item/weapon/fanged_assassin/ability/autumn_red/revert
 
+# Нож психа
+execute if predicate obl:holding/psycho_knife run function obl:item/weapon/psycho_knife/tick
+execute if entity @s[tag=obl.weapon.psycho_knife.stealth_from_effect] unless predicate obl:holding/psycho_knife run function obl:item/weapon/psycho_knife/revert
+
 ## КУЛДАУН ОРУЖИЯ
 # Анти-ЛКМ-спам КД
 execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
@@ -92,6 +96,10 @@ execute if score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run function
 # Способности "Оскал Убийцы"
 execute if score @s obl.weapon.fanged_assassin.fox_dance.cd matches 1.. run function obl:item/weapon/fanged_assassin/ability/fox_dance/cd
 execute if score @s obl.weapon.fanged_assassin.autumn_red.cd matches 1.. run function obl:item/weapon/fanged_assassin/ability/autumn_red/cd
+
+## СПОСОБНОСТИ ПОЛНОГО КОМПЛЕКТА
+# Полный комплект "Берсерк"
+execute if predicate obl:full_set/viking run function obl:item/full_set/viking/main
 
 ## ИСПОЛЬЗОВАНИЕ ОРУЖИЯ
 # Удерживание ПКМ детектится через ачивку; функция по пути obl:tech/player/adv/on.rmb.mcfunction

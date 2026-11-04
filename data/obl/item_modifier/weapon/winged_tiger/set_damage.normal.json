@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:set_attributes",
+  "modifiers": [
+    {
+      "attribute": "minecraft:attack_damage",
+      "id": "obl:winged_tiger.damage",
+      "amount": 9.0,
+      "operation": "add_value",
+      "slot": "mainhand"
+    },
+    {
+      "attribute": "minecraft:attack_speed",
+      "id": "obl:winged_tiger.speed",
+      "amount": -2.6,
+      "operation": "add_value",
+      "slot": "mainhand"
+    }
+  ]
+}

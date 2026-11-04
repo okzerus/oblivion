@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:set_lore",
+  "mode": "replace_section",
+  "offset": 6,
+  "size": 1,
+  "entity": "this",
+  "lore": [
+    [
+      { "text": "Обойма: ", "color": "gray", "italic": false },
+      { "text": "Свирепые Патроны «Тигроубийцы» ", "color": "#db581c", "italic": false },
+      { "score": { "name": "@s", "objective": "obl.weapon.winged_tiger.ammo.savage" }, "color": "red", "italic": false },
+      { "text": "/6", "color": "gray", "italic": false }
+    ]
+  ]
+}

@@ -6,7 +6,7 @@ scoreboard players set @s[scores={obl.effect.bleed.intensity=3}] obl.effect.blee
 scoreboard players set @s[scores={obl.effect.bleed.intensity=4}] obl.effect.bleed.interval 100
 scoreboard players set @s[scores={obl.effect.bleed.intensity=5}] obl.effect.bleed.interval 50
 ## Убираем 1 счёт кровотечения
-scoreboard players remove @s obl.effect.bleed.count 1
+# scoreboard players remove @s obl.effect.bleed.count 1
 
 
 ###   У Р О Н
@@ -25,4 +25,4 @@ execute if entity @s[tag=obl.honey_bleeding] anchored eyes run particle block{bl
 
 
 ###   К О Н Е Ц
-execute if score @s obl.effect.bleed.count matches 0 run function obl:effect/bleed/end
+# execute if score @s obl.effect.bleed.count matches 0 run function obl:effect/bleed/end

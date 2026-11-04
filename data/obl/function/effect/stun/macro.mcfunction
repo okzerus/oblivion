@@ -1,0 +1,1 @@
+$title @s subtitle [{"text":"[","color":"#75aca4"},{"storage":"obl:stun","nbt":"s[$(c)]","color":"aqua","interpret":true},{"storage":"obl:stun","nbt":"s[$(e)]","color":"gray","interpret":true},{"text":"]","color":"#75aca4"}]

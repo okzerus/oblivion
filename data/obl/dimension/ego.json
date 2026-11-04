@@ -1,0 +1,13 @@
+{
+  "type": "obl:ego",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "obl:ego",
+      "features": false,
+      "lakes": false,
+      "structure_overrides": [],
+      "layers": []
+    }
+  }
+}

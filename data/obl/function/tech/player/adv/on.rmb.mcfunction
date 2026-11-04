@@ -10,13 +10,13 @@ scoreboard players add @s obl.holding_rmb 1
 # Оскал Убийцы/Fanged Assassin
 execute if predicate obl:holding/fanged_assassin unless predicate obl:is.sneaking unless score @s obl.weapon.fanged_assassin.fox_dance.cd matches 1.. at @s run function obl:item/weapon/fanged_assassin/ability/fox_dance/activate
 
-
 ## УДЕРЖИВАНИЕ:
 # Проблеск Зари/Crack of Dawn
 execute if predicate obl:holding/crack_of_dawn unless score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run function obl:item/weapon/crack_of_dawn/ability/charging
-
 # Оскал Убийцы/Fanged Assassin
 execute if predicate obl:holding/fanged_assassin if predicate obl:is.sneaking unless score @s obl.weapon.fanged_assassin.autumn_red.cd matches 1.. unless score @s obl.weapon.fanged_assassin.autumn_red matches 1.. at @s run function obl:item/weapon/fanged_assassin/ability/autumn_red/charging
+# Крылатый Тигр/Winged Tiger
+execute if predicate obl:holding/winged_tiger at @s run function obl:item/weapon/winged_tiger/rmb_hold
 
 
 ###   О Ч И С Т К А

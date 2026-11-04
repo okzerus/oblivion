@@ -1,15 +1,13 @@
 ## Функция
+# Если цель уже имела этот эффект, выполняем функцию повышения уровня вместо этой
+execute if entity @s[tag=obl.effect.bleed] run return run function obl:effect/bleed/next_level
+# Отменяем эффект если tick не был установлен
+execute unless score @s obl.effect.bleed.tick matches 1.. run return run tellraw @a[tag=obl.debug] "\n[Отладка] Для правильной работы Кровотечения нужно установить значение obl.effect.bleed.tick перед инфликтом эффетка.\n"
+# Устанавливаем стандартные значения для нового эффекта
 tag @s add obl.effect.bleed
-# Устанавливаем стандартную длительность эффекта если она не была изменена заранее
-scoreboard players set @s[scores={obl.effect.bleed.tick=..0}] obl.effect.bleed.tick 600
-# Устанавливаем стандартный интервал до получения урона
-scoreboard players set @s[scores={obl.effect.bleed.potency=..0}] obl.effect.bleed.interval 60
-# Сила влияет на кол-во получаемого урона за раз
-scoreboard players set @s[scores={obl.effect.bleed.potency=..0}] obl.effect.bleed.potency 1
-# Интенсивность влияет на интервал перед следующим возможным получением урона
-scoreboard players set @s[scores={obl.effect.bleed.intensity=..0}] obl.effect.bleed.intensity 1
-# Количество влияет на кол-вол возможных получением урона перед досрочным истечением эффекта
-scoreboard players set @s[scores={obl.effect.bleed.count=..0}] obl.effect.bleed.count 1
+execute unless score @s obl.effect.bleed.potency matches 1.. run scoreboard players set @s obl.effect.bleed.potency 1
+execute unless score @s obl.effect.bleed.intensity matches 1.. run scoreboard players set @s obl.effect.bleed.intensity 1
+scoreboard players set @s obl.effect.bleed.interval 0
 
 ## Оповещение над сущностью
 execute anchored eyes positioned ^ ^ ^ run summon minecraft:text_display ~ ~.5 ~ {text:{text:"Кровотечение!",color:"#fd1b2a"},background:905969664,billboard:"center",Tags:["obl.announce.bleed","obl.announcement_marker"]}

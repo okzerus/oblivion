@@ -28,6 +28,19 @@ execute if score @s obl.server_time.check matches 20.. run function obl:tech/pla
 ## СИНХРОНИЗАЦИЯ
 scoreboard players operation @s obl.server_time = #server obl.server_time
 
+###   Р Е Ж И М   Б О Я
+## Если игрок находится в режиме боя, тикаем вниз и убираем его по истечению счёта
+## Источники режима боя:
+# Получение урона от живой сущности // obl:tech/player/adv/on.hurt.living_entity
+# Нанесение урона по мобу // obl:tech/player/adv/on.hit
+execute if entity @s[tag=obl.in_combat] run function obl:tech/combat/tick
+
+###   Э Г О
+## Погружение в свой мир
+execute if entity @s[tag=obl.ego.withdrawing] run function obl:tech/player/ego/withdrawing/main
+## Внутри Эго
+execute if entity @s[tag=obl.ego] run function obl:tech/player/ego/main
+
 ###   N B T   И Г Р О К А   В   Х Р А Н И Л И Щ Е
 # надеюсь не понадобится
 
@@ -48,10 +61,9 @@ tag @s remove obl.moving
 tag @s remove obl.sprinting
 tag @s remove obl.ascending
 tag @s remove obl.falling
-tag @s remove obl.sneaking
 
 ## Если игрок крадётся, выполняем функцию
-execute if predicate obl:is.sneaking run function obl:tech/player/sneaking
+execute if predicate obl:is.sneaking run function obl:tech/player/movement/sneaking
 ## Если игрок бежит, выполняем функцию при беге
 execute if predicate obl:is.sprinting run function obl:tech/player/movement/sprinting
 ## Если игрок двигается, но не бежит, выполняем функцию при движении
@@ -63,9 +75,9 @@ execute if entity @s[tag=obl.mid_air,predicate=obl:is.falling] run function obl:
 ## Если игрок больше не падает, сбрасываем накопленный счётчик падения для парирования
 execute unless entity @s[tag=obl.mid_air,predicate=obl:is.falling] if score @s obl.parry.fall_count matches 1.. run scoreboard players set @s obl.parry.fall_count 0
 
-### нереализовано
 ## Если игрок крался и перестал, выполняем функцию
-#execute if score @s obl.player_sneaking matches 1.. unless predicate obl:is.sneaking run function obl:tech/player/on.player_sneaking.end
+execute if entity @s[tag=obl.sneaking,predicate=!obl:is.sneaking] run function obl:tech/player/movement/stopped_sneaking
+# нереализовано
 #execute if score @s obl.double_sneak.time matches 1.. run scoreboard players remove @s obl.double_sneak.time 1
 
 
@@ -84,22 +96,25 @@ execute if predicate obl:holding/fanged_assassin run function obl:item/weapon/fa
 execute unless score @s obl.weapon.fanged_assassin.accelerando matches 0 unless predicate obl:holding/fanged_assassin run scoreboard players set @s obl.weapon.fanged_assassin.accelerando 0
 execute if predicate obl:holding/fanged_assassin if score @s obl.weapon.fanged_assassin.autumn_red matches 0 if entity @s[tag=obl.weapon.fanged_assassin.fox_dance.autumn_red] run function obl:item/weapon/fanged_assassin/ability/autumn_red/revert
 
+# Крылатый Тигр
+execute if entity @s[predicate=obl:holding/winged_tiger] run function obl:item/weapon/winged_tiger/tick
+execute if entity @s[predicate=!obl:holding/winged_tiger,tag=obl.holding.winged_tiger] run function obl:item/weapon/winged_tiger/tick
+execute if entity @s[tag=!obl.in_combat,scores={obl.weapon.winged_tiger.active=1..},predicate=!obl:holding/winged_tiger] run scoreboard players remove @s obl.weapon.winged_tiger.active 1
+execute if score @s obl.weapon.winged_tiger.active matches 0 run function obl:item/weapon/winged_tiger/ammo/reset_spent
+execute if entity @s[tag=obl.weapon.winged_tiger.tanglecleaver_window,predicate=!obl:holding/winged_tiger] run function obl:item/weapon/winged_tiger/ability/tanglecleaver/window_deactivate
+
 ## КУЛДАУН ОРУЖИЯ
 # Анти-ЛКМ-спам КД
 execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
-# Способности "Проблеск Зари"
-execute if score @s obl.weapon.crack_of_dawn.ability.cd matches 1.. run function obl:item/weapon/crack_of_dawn/ability/cd
-# Способности "Оскал Убийцы"
-execute if score @s obl.weapon.fanged_assassin.fox_dance.cd matches 1.. run function obl:item/weapon/fanged_assassin/ability/fox_dance/cd
-execute if score @s obl.weapon.fanged_assassin.autumn_red.cd matches 1.. run function obl:item/weapon/fanged_assassin/ability/autumn_red/cd
+# Общий КД способностей оружия
+function obl:item/weapon/cd
 
 ## ИСПОЛЬЗОВАНИЕ ОРУЖИЯ
 # Удерживание ПКМ детектится через ачивку; функция по пути obl:tech/player/adv/on.rmb.mcfunction
 # Отмена ПКМ
 execute if entity @s[tag=!obl.holding_rmb,scores={obl.holding_rmb=1..}] run function obl:item/rmb_cancel
 tag @s remove obl.holding_rmb
-## Очистка
-execute as @e[tag=obl.temp.success_hit] run tag @s remove obl.temp.success_hit
+tag @s remove obl.temp.success_hit
 
 ## ИСПОЛЬЗОВАНИЕ ЩИТА
 # Удерживание ПКМ детектится через ачивку; функция по пути obl:tech/player/adv/using_shield.mcfunction
@@ -131,7 +146,7 @@ execute if entity @s[tag=obl.parry_success,tag=!obl.just_parried_fucking_lightni
 #execute if entity @s[tag=obl.parry.sound_pitch] run scoreboard players remove @s obl.parry.after_tick 1
 #execute if score @s[tag=obl.parry.sound_pitch] obl.parry.after_tick matches 0 run function obl:tech/parrying/reset.sound_pitch
 ## ДР.
-#execute if entity @s[tag=obl.just_parried_fucking_lightning] run particle minecraft:electric_spark ~ ~.5 ~ 0 0 0 4 5
+execute if entity @s[tag=obl.just_parried_fucking_lightning] run particle minecraft:electric_spark ~ ~.5 ~ 0 0 0 4 5
 execute if score @s obl.parry.spam_cd matches 1.. run scoreboard players remove @s obl.parry.spam_cd 1
 execute if score @s obl.parry.spam_cd matches 0 run function obl:tech/parrying/spam.remove
 ## Парирование падения
@@ -154,7 +169,7 @@ execute unless score @s obl.empower.damage_test matches ..0 run function obl:tec
 ###   Э Ф Ф Е К Т Ы
 
 ###   Э Ф Ф Е К Т Ы   А Б Л И В О Н А
-## перенёс в obl:effects/main
+function obl:effect/main
 
 ###   U N U S U A L
 ## DEFAULT

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:copy_custom_data",
+  "source": { "type": "minecraft:storage", "source": "obl:winged_tiger" },
+  "ops": [
+    { "source": "ammo", "target": "\"obl.ammo\"", "op": "replace" }
+  ]
+}

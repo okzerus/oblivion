@@ -13,15 +13,25 @@
 
 
 ###   Б А Ф Ф Ы
-## Пепелище (Scorchfield)
+## Пепелище
 execute if score @s[tag=!obl.effect.scorchfield] obl.effect.scorchfield.count matches 1.. run function obl:effect/scorchfield/inflict
 execute if entity @s[tag=obl.effect.scorchfield] run function obl:effect/scorchfield/tick
-## Ожог (Scorch)
+## Регенерация
+execute if entity @s[tag=obl.effect.regen] run function obl:effect/regen/tick
+
+###   Д Е Б А Ф Ф Ы
+## Ожог
 execute if score @s[tag=!obl.effect.scorch] obl.effect.scorch.tick matches 1.. run function obl:effect/scorch/inflict
 execute if entity @s[tag=obl.effect.scorch] run function obl:effect/scorch/tick
-## Кровотечение (Bleed)
+## Кровотечение
 execute if score @s[tag=!obl.effect.bleed] obl.effect.bleed.tick matches 1.. run function obl:effect/bleed/inflict
 execute if entity @s[tag=obl.effect.bleed] run function obl:effect/bleed/tick
+## Оглушение
+execute if score @s[tag=!obl.effect.stun] obl.effect.stun.tick matches 1.. run function obl:effect/stun/inflict
+execute if entity @s[tag=obl.effect.stun] run function obl:effect/stun/tick
+## Тремор
+execute if entity @s[tag=obl.effect.tremor] run function obl:effect/tremor/tick
+execute if entity @s[tag=obl.effect.tremor_burst] run function obl:effect/tremor/burst/tick
 
 
 

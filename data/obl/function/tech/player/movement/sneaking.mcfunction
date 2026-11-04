@@ -1,19 +1,18 @@
 ###   Т И К   Ш И Ф Т А
+tag @s add obl.sneaking
 scoreboard players add @s obl.sneaking 1
 
 ###   О Б Н А Р У Ж Е Н И Е   Д В О Й Н О Г О   Н А Ж А Т И Я
-execute if score @s obl.double_sneak.time matches 1.. run function oblivion:tech/double_sneak
+#execute if score @s obl.double_sneak.time matches 1.. run function oblivion:tech/double_sneak
 
 ###   О Р У Ж И Я
 # Чревоугодие
 execute if predicate obl:holding/gluttony run function obl:item/weapon/gluttony/sneaking
-## старый код
-#execute unless score @s obl.used.cursed_armor_sword matches 1 if predicate oblivion:items/hold.cursedarmor.both anchored eyes run function oblivion:items/abilities/cursed_armor_sword/ability
-#execute unless entity @s[tag=obl.empowered.murasama] if predicate oblivion:items/hold.murasama.both run scoreboard players add @s obl.murasama.startup.ripper 1
-#execute unless entity @s[tag=obl.empowered.murasama] if score @s obl.murasama.blood matches 75.. if score @s obl.murasama.startup.ripper matches 1 run effect give @s darkness 10 0 true
-#execute unless entity @s[tag=obl.empowered.murasama] if score @s obl.murasama.blood matches 75.. if score @s obl.murasama.startup.ripper matches 1 run playsound minecraft:block.beacon.activate hostile @s ~ ~ ~ 1 1.7
-#execute unless entity @s[tag=obl.empowered.murasama] if score @s obl.murasama.blood matches 75.. if score @s obl.murasama.startup.ripper matches 20 run function oblivion:items/abilities/murasama/ripper
-#execute unless entity @s[tag=obl.empowered.murasama] unless score @s obl.murasama.blood matches 75.. if score @s obl.murasama.startup.ripper matches 8.. run title @s actionbar [{"text":"[","color":"#9C1111"},{"text":" Недостаточно крови!","color":"#D11212"},{"text":" ]","color":"#9C1111"}]
+
+###   Э Г О
+## Погружение в свой мир
+execute if entity @s[scores={obl.sneaking=100},x_rotation=-15..15] run function obl:tech/player/ego/withdrawing/main
+
 
 ## Отладка
 execute if entity @s[tag=obl.debug.movement] run say мыш (кродеться)

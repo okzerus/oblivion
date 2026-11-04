@@ -6,6 +6,10 @@ scoreboard players set #zero obl.const 0
 scoreboard players set #two obl.const 2
 scoreboard players set #three obl.const 3
 scoreboard players set #four obl.const 4
+scoreboard players set #ten obl.const 10
+scoreboard players set #100 obl.const 100
+scoreboard players set #1000 obl.const 1000
+scoreboard players set #10000 obl.const 10000
 scoreboard objectives add obl.time_of_day dummy
 execute store result score #time obl.time_of_day run time query day
 ## Разное
@@ -14,9 +18,12 @@ scoreboard players set #frozen_spawners obl.frozen_spawners 0
 scoreboard objectives add obl.spawner.id dummy
 scoreboard objectives add obl dummy
 scoreboard objectives add obl.id dummy
+scoreboard objectives add obl.id.combat dummy
+scoreboard objectives add obl.in_combat dummy
 scoreboard objectives add obl.server_tick dummy
 scoreboard objectives add obl.server_tick.check dummy
 scoreboard objectives add obl.random dummy
+scoreboard objectives add obl.ego.withdraw_progress dummy
 scoreboard objectives add obl.p1 dummy
 scoreboard objectives add obl.p2 dummy
 scoreboard objectives add obl.health dummy
@@ -27,21 +34,35 @@ scoreboard objectives add obl.using_shield dummy
 scoreboard objectives add obl.shield.cleanup dummy
 scoreboard objectives add obl.shield.preparing dummy
 scoreboard objectives add obl.attribute.gravity dummy
+data modify storage obl:stun s set value ["","■","■■","■■■","■■■■","■■■■■","■■■■■■","■■■■■■■","■■■■■■■■","■■■■■■■■■","■■■■■■■■■■"]
+scoreboard objectives add obl.effect.stun.tick dummy
+scoreboard objectives add obl.effect.stun.max dummy
 scoreboard objectives add obl.effect.scorchfield.count dummy
 scoreboard objectives add obl.effect.scorchfield.decay dummy
 scoreboard objectives add obl.effect.scorch.tick dummy
-scoreboard objectives add obl.effect.scorch.strength dummy
 scoreboard objectives add obl.effect.scorch.interval dummy
-scoreboard objectives add obl.weapon.crack_of_dawn.ability.cd dummy
+scoreboard objectives add obl.effect.scorch.intensity dummy
+scoreboard objectives add obl.effect.scorch.potency dummy
+scoreboard objectives add obl.effect.tremor.tick dummy
+scoreboard objectives add obl.effect.tremor.count dummy
+scoreboard objectives add obl.effect.tremor.decay dummy
+scoreboard objectives add obl.effect.tremor.decay_max dummy
+scoreboard objectives add obl.effect.tremor_burst.tick dummy
 scoreboard objectives add obl.effect.bleed.tick dummy
 scoreboard objectives add obl.effect.bleed.intensity dummy
 scoreboard objectives add obl.effect.bleed.interval dummy
 scoreboard objectives add obl.effect.bleed.potency dummy
 scoreboard objectives add obl.effect.bleed.count dummy
+scoreboard objectives add obl.effect.regen.tick dummy
+scoreboard objectives add obl.effect.regen.intensity dummy
+scoreboard objectives add obl.effect.regen.interval dummy
+scoreboard objectives add obl.effect.regen.potency dummy
+scoreboard objectives add obl.effect.regen.count dummy
 scoreboard objectives add obl.hit_cooldown dummy
 scoreboard objectives add obl.spawner.id dummy
 scoreboard objectives add obl.spawner.death_count dummy
 scoreboard objectives add obl.spawner.difficulty dummy
+scoreboard objectives add obl.weapon.crack_of_dawn.ability.cd dummy
 scoreboard objectives add obl.weapon.gluttony.combo dummy
 scoreboard objectives add obl.weapon.gluttony.decay dummy
 scoreboard objectives add obl.weapon.gluttony.fangs dummy
@@ -55,6 +76,13 @@ scoreboard objectives add obl.weapon.fanged_assassin.autumn_red.cd dummy
 scoreboard objectives add obl.weapon.fanged_assassin.fox_dance.cd dummy
 scoreboard objectives add obl.weapon.fanged_assassin.fox_dance.ray dummy
 scoreboard objectives add obl.weapon.fanged_assassin.accelerando dummy
+scoreboard objectives add obl.weapon.winged_tiger.hud_mode dummy
+scoreboard objectives add obl.weapon.winged_tiger.ammo.normal dummy
+scoreboard objectives add obl.weapon.winged_tiger.ammo.savage dummy
+scoreboard objectives add obl.weapon.winged_tiger.ammo_spent dummy
+scoreboard objectives add obl.weapon.winged_tiger.reloading dummy
+scoreboard objectives add obl.weapon.winged_tiger.active dummy
+scoreboard objectives add obl.weapon.winged_tiger.tanglecleaver.cd dummy
 ### Парирование
 scoreboard objectives add obl.parry.cd dummy
 scoreboard objectives add obl.parry.count dummy

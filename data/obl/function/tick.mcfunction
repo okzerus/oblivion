@@ -30,7 +30,7 @@ execute store result score #server obl.server_time run time query gametime
 ## Пример использования: execute if score #5t_passed obl matches 1 run say Эта команда выполнится раз в 5 тиков, не смотря на то что проверяется каждый тик.
 # 2 тика
 scoreboard players add #2t_counting obl 1
-execute if score #2t_counting obl matches 5 run scoreboard players set #2t_passed obl 1
+execute if score #2t_counting obl matches 2 run scoreboard players set #2t_passed obl 1
 # 5 тиков
 scoreboard players add #5t_counting obl 1
 execute if score #5t_counting obl matches 5 run scoreboard players set #5t_passed obl 1
@@ -71,8 +71,8 @@ execute if score #10m_counting obl matches 12000 run scoreboard players set #10m
 ###   Т И К И Н Г
 # На КАЖДОЙ сущности
 execute as @e at @s run function obl:on.entity.1t
-# На КАЖДОМ мобе+игроке
-execute as @e[type=#obl:all_mobs] at @s run function obl:on.mob.1t
+# На КАЖДОМ мобе
+execute as @e[type=#obl:all_mobs,type=!player] at @s run function obl:on.mob.1t
 # ТОЛЬКО на игроке
 execute as @a at @s run function obl:on.player.1t
 # ТОЛЬКО на сущностях, относящихся к парируемым снарядам
@@ -85,17 +85,17 @@ execute as @e[type=#obl:parryable] at @s run function obl:on.parryable.1t
 
 
 ###   О Ч И С Т К А
-execute if score #2t_counting obl matches 2 run scoreboard players set #2t_counting obl 0
-execute if score #5t_counting obl matches 5 run scoreboard players set #5t_counting obl 0
-execute if score #10t_counting obl matches 10 run scoreboard players set #10t_counting obl 0
-execute if score #1s_counting obl matches 20 run scoreboard players set #1s_counting obl 0
-execute if score #3s_counting obl matches 60 run scoreboard players set #3s_counting obl 0
-execute if score #5s_counting obl matches 100 run scoreboard players set #5s_counting obl 0
-execute if score #10s_counting obl matches 200 run scoreboard players set #10s_counting obl 0
-execute if score #30s_counting obl matches 600 run scoreboard players set #30s_counting obl 0
-execute if score #1m_counting obl matches 1200 run scoreboard players set #1m_counting obl 0
-execute if score #5m_counting obl matches 6000 run scoreboard players set #5m_counting obl 0
-execute if score #10m_counting obl matches 12000 run scoreboard players set #10m_counting obl 0
+execute if score #2t_counting obl matches 2.. run scoreboard players set #2t_counting obl 0
+execute if score #5t_counting obl matches 5.. run scoreboard players set #5t_counting obl 0
+execute if score #10t_counting obl matches 10.. run scoreboard players set #10t_counting obl 0
+execute if score #1s_counting obl matches 20.. run scoreboard players set #1s_counting obl 0
+execute if score #3s_counting obl matches 60.. run scoreboard players set #3s_counting obl 0
+execute if score #5s_counting obl matches 100.. run scoreboard players set #5s_counting obl 0
+execute if score #10s_counting obl matches 200.. run scoreboard players set #10s_counting obl 0
+execute if score #30s_counting obl matches 600.. run scoreboard players set #30s_counting obl 0
+execute if score #1m_counting obl matches 1200.. run scoreboard players set #1m_counting obl 0
+execute if score #5m_counting obl matches 6000.. run scoreboard players set #5m_counting obl 0
+execute if score #10m_counting obl matches 12000.. run scoreboard players set #10m_counting obl 0
 scoreboard players set #2t_passed obl 0
 scoreboard players set #5t_passed obl 0
 scoreboard players set #10t_passed obl 0

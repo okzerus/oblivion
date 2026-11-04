@@ -1,2 +1,0 @@
-execute store result score #rng obl run random value 1..100
-execute if score #rng obl matches 1..10 as @e[type=#obl:all_mobs,tag=!obl.scorch_immune,tag=!obl.effect.scorch,distance=..5] at @s run function obl:effect/scorch/inflict

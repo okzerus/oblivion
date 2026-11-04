@@ -2,7 +2,7 @@
 ## Отсчёт длительности эффекта
 scoreboard players remove @s obl.effect.bleed.tick 1
 ## Пассивный откат интервала до следующего возможного получения урона с других источников (при атаке, при ходьбе, и т.д.)
-execute if score #2t_passed obl matches 1 run scoreboard players remove @s[scores={obl.effect.bleed.interval=..1}] obl.effect.bleed.interval 1
+execute if score #2t_passed obl matches 1 run scoreboard players remove @s[scores={obl.effect.bleed.interval=1..}] obl.effect.bleed.interval 1
 ## Наносим урон, если интервал достиг нуля
 execute if score @s obl.effect.bleed.interval matches ..0 run function obl:effect/bleed/damage
 

@@ -1,0 +1,666 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_sword",
+          "modifier": [
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "consume_seconds": 2147483647,
+                  "sound": "intentionally_empty",
+                  "has_consume_particles": false
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{obl.weapon.id:\"winged_tiger\",obl.weapon:1,obl.rmb_ability:1,obl.ammo:{normal:12,savage:-1,spent:0}}"
+            },
+			{
+		      "type": "minecraft:toggle_tooltips",
+                "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
+			},
+			{
+              "type": "minecraft:set_attributes",
+                "modifiers": [
+                {
+                  "attribute": "minecraft:attack_damage",
+                  "id": "obl:winged_tiger.damage",
+                  "amount": 9.0,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:attack_speed",
+                  "id": "obl:winged_tiger.speed",
+                  "amount": -2.6,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "target": "item_name",
+              "name": {
+              "text": "Крылатый Тигр",
+              "color": "#faddb6"
+              }
+            },
+            {
+              "type": "minecraft:set_lore",
+              "mode": "insert",
+              "lore": [
+                {
+                  "text": "Y'all don't go on huntin' tigers without preparin' yerselves to get chomped 'tween one of them jaws!",
+                  "color": "#742936",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда в ведущей руке:",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": " Урон при атаке: ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": " 6",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "+4",
+                    "color": "#e4ad47",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": " Скорость атаки: 1.4",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": "Обойма: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Патроны «Тигроубийцы»",
+                    "color": "#e4ad47",
+                    "italic": false
+                  },
+                  {
+                    "text": " 12",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "text": "/12",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "Потрачено патронов:",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": " 0",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": "/48",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Навыки:",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": " Перезарядка",
+                    "color": "#00fefe",
+                    "italic": false
+                  },
+                  {
+                    "text": " - Удерживание [ПКМ]:",
+                    "color": "gold",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "  - Перезаряжает 1 ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Патрон «Тигроубийцы»",
+                    "color": "#e4ad47",
+                    "italic": false
+                  },
+                  {
+                    "text": " раз в полсекунды.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "  - При полностью опустошённой обойме, перезаряжает в 6 ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Свирепых Патронов «Тигроубийцы»",
+                    "color": "#db581c",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "  - Удерживание [Shift] при перезарядке позволит досрочно перезарядиться в ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Свирепые Патроны «Тигроубийцы»",
+                    "color": "#db581c",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "  - Если ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Свирепых Патронов «Тигроубийцы»",
+                    "color": "#db581c",
+                    "italic": false
+                  },
+                  {
+                    "text": " осталось 0, перезаряжает в 12 ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Патронов «Тигроубийцы»",
+                    "color": "#e4ad47",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                  "text": " Рассечение [快刀亂麻]",
+                  "color": "#fe0000",
+                  "italic": false
+                  },
+                  {
+                    "text": " - Нажатие [Shift] + [Прыжок]:",
+                    "color": "gold",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "  - Тратит 3 ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Патрона «Тигроубийцы»",
+                    "color": "#e4ad47",
+                    "italic": false
+                  },
+                  {
+                    "text": " / 1 ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Свирепый Патрон «Тигроубийцы»",
+                    "color": "#db581c",
+                    "italic": false
+                  },
+                  {
+                    "text": " для подброса носителя в воздух.",
+                    "color": "gray",
+                    "italic": false
+                  }
+				],
+                {
+                    "text": "  - При приземлении, наносит 12 урона огнём всем целям в радиусе 7 блоков.",
+                    "color": "gray",
+                    "italic": false
+                },
+                [
+                  {
+                    "text": "     Если во время падения была проведена атака по цели, вместо этого провоцирует на ней ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "[Сотрясение - Ожог]",
+                    "color": "#feb000",
+                    "italic": false
+                  }
+				],
+                {
+                  "text": "     - Поглощает весь Тремор, нанося урон огнём равный его количеству умноженного на уровень Ожога на цели",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                {
+                  "text": "     - Оглушает цель с ХП ниже чем (Тремор)% от максимального, с продолжительностью в (Тремор) тиков.",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                {
+                  "text": "  Откат: 30 секунд",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": " Совершенный шквал клинков Свирепого Тигроубийцы [超絕猛虎殺擊亂斬]",
+                    "color": "#fe0000",
+                    "italic": false
+                  },
+                  {
+                    "text": " - [Shift] + Удерживание [ПКМ]:",
+                    "color": "gold",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "  - При наличии 6 ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Свирепых Патронов «Тигроубийцы»",
+                    "color": "#db581c",
+                    "italic": false
+                  },
+                  {
+                    "text": " в обойме, проводит серию из шести мощных ударов.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+			    [
+                  {
+                    "text": "     - Каждый удар дополнительно накладывает 1 единицу ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "[Тремора]",
+                    "color": "#fbe545",
+                    "italic": false
+                  }
+				],
+                [
+                  {
+                    "text": "     - Шестой удар из серии провоцирует ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "[Сотрясение - Ожог]",
+                    "color": "#feb000",
+                    "italic": false
+                  },
+                  {
+                    "text": " на всех целях в радиусе 7 блоков.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "  - Если активен ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Синь (心) - Звезда Тяньтуй [天退星]",
+                    "color": "#fef452",
+                    "italic": false
+                  },
+                  {
+                    "text": ";",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "     - Каждый удар дополнительно провоцирует урон от ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "[Ожога]",
+                    "color": "#eb5721",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": "     - Шестой удар из серии дополнительно наносит 24 урона огнём.",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "  Откат: 3 минуты",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Пассивные способности:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "  Клинок Звезды Тяньтуй [天退星刀]",
+                  "color": "#f02242",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": "  - Если заряжены ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Патроны «Тигроубийцы»",
+                    "color": "#e4ad47",
+                    "italic": false
+                  },
+                  {
+                    "text": ";",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "     - Атаки наносят на 4 больше урона, накладывают ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "[Ожог]",
+                    "color": "#eb5721",
+                    "italic": false
+                  },
+                  {
+                    "text": " I на 8 сек. и 1 единицу ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "[Тремора]",
+                    "color": "#fbe545",
+                    "italic": false
+                  },
+                  {
+                    "text": " до 10.",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "  - Если заряжены ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Свирепые Патроны «Тигроубийцы»",
+                    "color": "#db581c",
+                    "italic": false
+                  },
+                  {
+                    "text": ";",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "     - Атаки наносят на 10 больше урона, накладывают ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "[Ожог]",
+                    "color": "#eb5721",
+                    "italic": false
+                  },
+                  {
+                    "text": " II на 15 сек. и 2 единицы ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "[Тремора]",
+                    "color": "#fbe545",
+                    "italic": false
+                  },
+                  {
+                    "text": " до 20.",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "  - Счётчик Потраченных патронов растёт с каждым использованным ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Патроном «Тигроубийцы»",
+                    "color": "#e4ad47",
+                    "italic": false
+                  },
+                  {
+                    "text": " и обнуляется",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+                ],
+                {
+                  "text": "     только, если оружие не удерживается и носитель не участвовал в бою более 30 секунд.",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "     Использование или удерживание оружия в руке сбрасывает и останавливает таймер.",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "  Синь (心)",
+                  "color": "#fef452",
+                  "italic": false
+                },
+                [
+                  {
+                    "text": "  - После использования в общей сумме 48 ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Патронов «Тигроубийцы»",
+                    "color": "#e4ad47",
+                    "italic": false
+                  }
+		        ],
+				[
+                  {
+                    "text": "     носитель входит в состояние ",
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "text": "Синь (心) - Звезда Тяньтуй [天退星]",
+                    "color": "#fef452",
+                    "italic": false
+                  },
+                  {
+                    "text": " до окончания боя.",
+                    "color": "dark_green",
+                    "italic": false
+                  }
+				],
+                {
+                  "text": "     - Носитель получает 20% бонус к очкам брони, +5 к урону и 10% бонус к скорости атаки.",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                {
+                  "text": "     - Повышает уровень накладываемого Ожога на 1.",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                {
+                  "text": "     - Атаки дополнительно накладывают 1 единицу Тремора.",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			      {
+                    "text": "Пре",
+                    "color": "#FEA0EE",
+                    "italic": true
+				  },
+			      {
+                    "text": "дме",
+                    "color": "#FFB2FA",
+                    "italic": true
+				  },
+			      {
+                    "text": "т За",
+                    "color": "#FFC1FE",
+                    "italic": true
+			      },
+			      {
+                    "text": "бве",
+                    "color": "#FFD9FF",
+                    "italic": true
+				  },
+			      {
+                    "text": "ния",
+                    "color": "#FFE8FF",
+                    "italic": true
+				  }
+                ],
+                [
+			      {
+                    "text": "St",
+                    "color": "#cf1919",
+                    "italic": true
+				  },
+			      {
+                    "text": "ar",
+                    "color": "#cf1919",
+                    "italic": true
+				  },
+			      {
+                    "text": " of",
+                    "color": "#c40a0a",
+                    "italic": true
+			      },
+			      {
+                    "text": " th",
+                    "color": "#b80606",
+                    "italic": true
+				  },
+			      {
+                    "text": "e ",
+                    "color": "#af0404",
+                    "italic": true
+				  },
+			      {
+                    "text": "Ci",
+                    "color": "#a80404",
+                    "italic": true
+				  },
+			      {
+                    "text": "ty",
+                    "color": "#9e0000",
+                    "italic": true
+				  }
+                ]
+              ]
+	        }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+$execute unless entity @s[tag=obl.temp.negative] run summon minecraft:text_display ~ ~ ~ {text:{text:"+$(x) | $(y)/$(z)",color:"#ffef7d"},background:905969664,billboard:"center",Tags:["obl.announce.tremor","obl.announcement_marker","obl.temp.set_id"]}
+$execute if entity @s[tag=obl.temp.negative] run summon minecraft:text_display ~ ~ ~ {text:{text:"-$(x) | $(y)",color:"red"},background:905969664,billboard:"center",Tags:["obl.announce.tremor","obl.announcement_marker","obl.temp.set_id"]}

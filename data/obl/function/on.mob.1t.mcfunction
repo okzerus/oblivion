@@ -11,11 +11,22 @@
 # Из tick.mcfunction
 # Выполнение функций каждый тик, на каждого моба+игрока.
 
+tag @s add obl.temp.mob
+
 
 
 ###   З Д О Р О В Ь Е
 ## Обновить здоровье сущности из NBT
 execute store result score @s obl.health run data get entity @s Health
+
+###   Р Е Ж И М   Б О Я
+## Форсим в бой мобов которые таргетят игрока в любом случае
+execute unless entity @s[tag=obl.in_combat] run function obl:tech/combat/force_mob
+## Если моб находится в режиме боя, тикаем вниз и убираем его по истечению счёта
+## Источники режима боя:
+# Получение урона от игрока // obl:tech/player/adv/on.hit
+# Нанесение урона игроку // obl:tech/player/adv/on.hurt.living_entity
+execute if entity @s[tag=obl.in_combat] run function obl:tech/combat/tick
 
 
 
@@ -27,3 +38,4 @@ function obl:effect/main
 
 ###   О Ч И С Т К А
 tag @s remove obl.temp.took_damage
+tag @s remove obl.temp.mob

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:set_lore",
+  "mode": "replace_section",
+  "offset": 6,
+  "size": 1,
+  "entity": "this",
+  "lore": [
+    [
+      { "text": "Обойма: ", "color": "gray", "italic": false },
+      { "text": "Патроны «Тигроубийцы» ", "color": "#e4ad47", "italic": false },
+      { "score": { "name": "@s", "objective": "obl.weapon.winged_tiger.ammo.normal" }, "color": "gold", "italic": false },
+      { "text": "/12", "color": "gray", "italic": false }
+    ]
+  ]
+}

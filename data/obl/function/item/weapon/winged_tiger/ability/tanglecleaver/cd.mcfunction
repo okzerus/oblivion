@@ -1,0 +1,2 @@
+scoreboard players remove @s obl.weapon.winged_tiger.tanglecleaver.cd 1
+execute if score @s obl.weapon.winged_tiger.tanglecleaver.cd matches ..0 run function obl:item/weapon/winged_tiger/ability/tanglecleaver/ready

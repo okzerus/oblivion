@@ -1,0 +1,1 @@
+$attribute @s minecraft:max_health modifier add obl:to_heal $(x) add_value

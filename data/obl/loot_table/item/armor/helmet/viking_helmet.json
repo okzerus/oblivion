@@ -1,0 +1,188 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_helmet",
+          "modifier": [
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:attribute_modifiers"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Шлем викинга",
+                "color": "#8feacf",
+                "italic": false
+              },
+              "target": "item_name"
+            },
+            {
+              "type": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "ДВАДЦАТЬ",
+                  "color": "#70bca6",
+                  "italic": true
+                },
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Комплект \"Берсерк\" 3/3",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Бонус полного комплекта:",
+                  "color": "dark_aqua",
+                  "italic": false
+                },
+                {
+                  "text": "Каждая пустая половина сердца первой",
+                  "color": "aqua",
+                  "italic": false
+                },
+                [
+                {
+                  "text": "строки будет усилять носителя:",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": " +0.3 Урона",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": ",",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": " +0.5 Брони",
+                  "color": "gray",
+                  "italic": false
+                }
+              ],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+				[
+					{
+						"text": "Требуемый уровень: 2",
+						"color": "gold",
+						"italic": false
+					}
+				],
+                {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                [
+			        {
+                       "text": "Пре",
+                       "color": "#FEA0EE",
+                       "italic": true
+				    },
+			        {
+                       "text": "дме",
+                       "color": "#FFB2FA",
+                       "italic": true
+				    },
+			        {
+                       "text": "т За",
+                       "color": "#FFC1FE",
+                       "italic": true
+				    },
+			        {
+                       "text": "бве",
+                       "color": "#FFD9FF",
+                       "italic": true
+				    },
+			        {
+                       "text": "ния",
+                       "color": "#FFE8FF",
+                       "italic": true
+				    }
+                  ],
+                  {
+                  "text": "",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Когда надето на голову:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+2.5 Броня",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+1.5 Твёрдость брони",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+0.5 Сопротивление отбрасыванию",
+                  "color": "blue",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "type": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:armor",
+                  "id": "obl:viking_helmet.armor",
+                  "amount": 0.5,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:armor_toughness",
+                  "id": "obl:viking_helmet.armor_toughness",
+                  "amount": 1.5,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:knockback_resistance",
+                  "id": "obl:viking_helmet.knockback_resistance",
+                  "amount": 0.5,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{obl.armor.id:\"viking_hemlet\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

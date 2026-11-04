@@ -103,11 +103,19 @@ execute if entity @s[tag=!obl.in_combat,scores={obl.weapon.winged_tiger.active=1
 execute if score @s obl.weapon.winged_tiger.active matches 0 run function obl:item/weapon/winged_tiger/ammo/reset_spent
 execute if entity @s[tag=obl.weapon.winged_tiger.tanglecleaver_window,predicate=!obl:holding/winged_tiger] run function obl:item/weapon/winged_tiger/ability/tanglecleaver/window_deactivate
 
+# Нож психа
+execute if predicate obl:holding/psycho_knife run function obl:item/weapon/psycho_knife/tick
+execute if entity @s[tag=obl.weapon.psycho_knife.stealth_from_effect] unless predicate obl:holding/psycho_knife run function obl:item/weapon/psycho_knife/revert
+
 ## КУЛДАУН ОРУЖИЯ
 # Анти-ЛКМ-спам КД
 execute if score @s obl.hit_cooldown matches 1.. run scoreboard players remove @s obl.hit_cooldown 1
 # Общий КД способностей оружия
 function obl:item/weapon/cd
+
+## СПОСОБНОСТИ ПОЛНОГО КОМПЛЕКТА
+# Полный комплект "Берсерк"
+execute if predicate obl:full_set/viking run function obl:item/full_set/viking/main
 
 ## ИСПОЛЬЗОВАНИЕ ОРУЖИЯ
 # Удерживание ПКМ детектится через ачивку; функция по пути obl:tech/player/adv/on.rmb.mcfunction

@@ -30,6 +30,10 @@ execute as @s[type=block_display,tag=obl.vfx] run function obl:tech/vfx.1t
 execute if entity @s[type=marker,tag=obl.circling_unusual] run function obl:tech/unusual/main.marker
 
 
+###   V F X
+execute if entity @s[type=item_display,tag=obl.vfx] run function obl:tech/vfx.1t
+
+
 
 ###   С П А В Н Е Р Ы
 # Проверка на наличие моба в спавнере

@@ -32,6 +32,8 @@ execute if entity @s[tag=obl.effect.stun] run function obl:effect/stun/tick
 ## Тремор
 execute if entity @s[tag=obl.effect.tremor] run function obl:effect/tremor/tick
 execute if entity @s[tag=obl.effect.tremor_burst] run function obl:effect/tremor/burst/tick
+## Гнев (Rage)
+execute if entity @s[tag=obl.effect.enraged] run function obl:effect/rage/tick
 
 
 

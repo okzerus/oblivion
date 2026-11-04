@@ -1,0 +1,43 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "killing_blow": {
+          "tags": [
+            {
+              "id": "#minecraft:is_projectile",
+              "expected": false
+            }
+          ]
+        },
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#obl:all_mobs"
+          }
+        },
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": [
+                  "minecraft:iron_axe"
+                ],
+                "predicates": {
+                  "minecraft:custom_data": "{obl.weapon.id:\"viking_axe\"}"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "obl:item/weapon/viking_axe/kill"
+  }
+}

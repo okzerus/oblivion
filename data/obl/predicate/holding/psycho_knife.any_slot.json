@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:slots": {
+      "hotbar.*": {
+        "items": "minecraft:iron_sword",
+        "predicates": {
+          "minecraft:custom_data": "{obl.weapon.id:\"psycho_knife\"}"
+        }
+      }
+    }
+  }
+}

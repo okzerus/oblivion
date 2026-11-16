@@ -113,7 +113,7 @@ scoreboard objectives setdisplay sidebar obl.weapon.fanged_assassin.autumn_red
 
 
 ### К О Н Е Ц
-execute unless score first_load obl matches 1 run tellraw @a {"text": "oblivion datapack successfully installed", "color": "#203ee6","bold": true}
-execute if score first_load obl matches 1 run tellraw @a {"text": "oblivion datapack successfully reloaded", "color": "#203ee6","bold": true}
+execute unless score #first_load obl matches 1 run tellraw @a {"text": "oblivion datapack successfully installed", "color": "#203ee6","bold": true}
+execute if score #first_load obl matches 1 run tellraw @a {"text": "oblivion datapack successfully reloaded", "color": "#203ee6","bold": true}
 execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
-scoreboard players set first_load obl 1
+scoreboard players set #first_load obl 1
